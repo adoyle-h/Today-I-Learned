@@ -62,3 +62,7 @@ adoyle    926414  926413  0 15:08 ?        00:00:00 (sd-pam)
 > journalctl 用来查询 systemd-journald 服务收集到的日志。systemd-journald 服务是 systemd init 系统提供的收集系统日志的服务。
 
 - https://www.cnblogs.com/sparkdev/p/8795141.html
+
+### systemd-analyze
+
+查看启动顺序和时间 `systemd-analyze plot --order > systemd-startup.svg`

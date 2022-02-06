@@ -2,6 +2,8 @@
 
 ### 概念
 
+![](https://www.thomas-krenn.com/de/wikiDE/images/e/e0/Linux-storage-stack-diagram_v4.10.png)
+
 根据存储内容分类：
 
 - 块存储
@@ -13,10 +15,8 @@
 - 直连存储 (DAS, Direct Attach Storage)
 - 共享存储
   - SAN (Storage Area Network)
-    - FC-SAN
-    - IP-SAN
-    - iSCSI-SAN
-  - iSCSI
+    - FC-SAN: 通过光纤通道转发 scsi 协议
+    - IP-SAN: iSCSI 协议，通过 TCP/IP 转发 scsi 协议
   - NFS
   - FTP
   - SMB

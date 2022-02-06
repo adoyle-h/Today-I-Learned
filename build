@@ -218,8 +218,9 @@ async function build() {
         (filename) => enterDir(filename, __dirname, null, 2)
     );
 
+
     const structure = [
-        {h1: '今天我学了什么 (Today I learned)'},
+        {h1: '今天我学了什么 (Today I Learned)'},
         {blockquote: pkg.description},
         {md: absPath('_docs/intro.md')},
         {md: absPath('_docs/issue.md')},

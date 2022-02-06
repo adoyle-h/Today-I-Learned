@@ -44,6 +44,9 @@ HereDoc 详见 [./here-strings-and-here-documents.md](./here-strings-and-here-do
 
 使用 tee 命令拆分输出
 
+### 管道重定向
+
+`|&` 把上一个命令的 stderr 输出到 stdout。
 
 ### 只传递 stderr
 

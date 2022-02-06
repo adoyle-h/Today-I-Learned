@@ -1,14 +1,21 @@
-# 今天我学了什么 (Today I learned)
+# 今天我学了什么 (Today I Learned)
 
 > 博观而约取，厚积而薄发。
 
-碎片化知识笔记。
+ADoyle 的碎片化知识笔记。
+
+## 内容约定
 
 所有文件一旦创建就不会改变路径，以保证永久链接。
 文章内容可能随时会改动。
 
 部分外部链接会引用 [archive.today 链接](https://archive.today/)，以保证永久链接。
 由于 archive.today 可能被国内屏蔽，因此建议挂代理浏览。
+
+部分外部链接使用原链接的考虑因素是，
+
+1. 原文内容会更新，比如 wiki 类型的文章。
+2. 原链接很稳定，即使变动也会有重定向到最新的内容链接。
 
 
 ## 反馈问题或建议
@@ -22,7 +29,7 @@
 
 ## 版权声明
 
-Copyright (c) 2016-2021 ADoyle (adoyle.h@gmail.com). The project is licensed under the **BSD 3-clause License**.
+Copyright (c) 2016-2022 ADoyle (adoyle.h@gmail.com). The project is licensed under the **BSD 3-clause License**.
 
 See the [LICENSE][] file for the specific language governing permissions and limitations under the License.
 
@@ -152,6 +159,7 @@ See the [LICENSE][] file for the specific language governing permissions and lim
 - [Podman](docker/podman.md)
 - [在后台运行 docker 容器且不会自动退出](docker/run-docker-in-background.md)
 - [docker security_opt](docker/security-opt.md)
+- [Docker 安全](docker/security.md)
 - [volume](docker/volume.md)
 
 ## Elixir
@@ -242,6 +250,7 @@ See the [LICENSE][] file for the specific language governing permissions and lim
 
 - [固件 (Firmware)](hardware/firmware.md)
 - [网件 R6900 刷梅林固件](hardware/netgear-R6900-asuswrt-merlin.md)
+- [USB](hardware/usb.md)
 
 ## Javascript
 
@@ -305,10 +314,15 @@ See the [LICENSE][] file for the specific language governing permissions and lim
 - [Bash 的坑](linux/bash-pitfalls.md)
 - [Bash 小技巧](linux/bash-tricks.md)
 - [BIOS](linux/bios.md)
+- [Block Layer](linux/block-layer.md)
+- [BootLoader](linux/boot-loader.md)
 - [BPF 与 XDP](linux/bpf-xdp.md)
+- [btrfs](linux/btrfs.md)
+- [内存的 buffer 和 cache](linux/buffer-and-cache-in-memory.md)
 - [在容器中构建 Package](linux/build-package-in-container.md)
 - [CFS (Completely Fair Scheduler)](linux/cfs.md)
 - [更改默认 shell](linux/change-default-shell.md)
+- [clamav](linux/clamav.md)
 - [命令格式标准](linux/command-arguments-syntax-standard.md)
 - [linux 命令被 hash 缓存](linux/command-be-hashed.md)
 - [compgen](linux/compgen.md)
@@ -317,6 +331,7 @@ See the [LICENSE][] file for the specific language governing permissions and lim
 - [上下文切换](linux/context-switch.md)
 - [CPU](linux/cpu.md)
 - [判断文件编码](linux/detect-encoding-of-file.md)
+- [Device Mapper](linux/device-mapper.md)
 - [diff 与 patch](linux/diff-and-patch.md)
 - [shutdown, poweroff, halt 的不同](linux/differences-between-shutdown-poweroff-halt.md)
 - [硬盘分区](linux/disk-partition.md)
@@ -327,22 +342,27 @@ See the [LICENSE][] file for the specific language governing permissions and lim
 - [ELF 文件](linux/elf.md)
 - [终端开启真彩色 (true color)](linux/enable-true-color-in-terminal.md)
 - [用环境变量替换文本内容 envsubst](linux/envsubst.md)
+- [ExtFS (Extended File System)](linux/ext-fs.md)
+- [快速删除文件](linux/fast-delete-files.md)
 - [快速创建大文件](linux/fast-generate-large-file.md)
 - [快速删文件](linux/fast-remove-files.md)
 - [文件描述符，open file table 与 inode](linux/fd-oft-inode.md)
 - [file 命令](linux/file-command.md)
 - [CentOS 与 Debian 文件上的差异](linux/file-differences-between-centos-and-debian.md)
 - [Linux 文件系统](linux/file-system.md)
+- [文件路径](linux/files.md)
 - [find -print0 的坑](linux/find-print0-pitfall.md)
 - [ftrace](linux/ftrace.md)
 - [GPG 与 Keybase](linux/gpg-and-keybase.md)
 - [gpg 与 gpg-agent](linux/gpg.md)
 - [grep](linux/grep.md)
+- [GNU GRUB](linux/grub.md)
 - [hash 命令](linux/hash-command.md)
 - [Here Strings 与 Here Documents](linux/here-strings-and-here-documents.md)
 - [隐藏进程](linux/hidden-process.md)
 - [Hostname in Linux](linux/hostname.md)
 - [查看进程的环境变量](linux/inspect-process-environment.md)
+- [安装 Linux 系统](linux/install-linux-system.md)
 - [网络接口名称的 @](linux/interface-name-with-@.md)
 - [中断](linux/interrupt.md)
 - [调用原生 shell 命令](linux/invoke-origin-shell-command-with-backslash.md)
@@ -363,10 +383,13 @@ See the [LICENSE][] file for the specific language governing permissions and lim
 - [netns](linux/netns.md)
 - [netstat 与 ss](linux/netstat-and-ss.md)
 - [网络接口配置 (ifcfg)](linux/network-interface-configuration.md)
+- [硬盘空间占满问题](linux/no-space-left-on-device.md)
 - [nsenter](linux/nsenter.md)
 - [NTP 时间同步](linux/ntp.md)
 - [OverlayFS](linux/overylay-fs.md)
+- [PAM](linux/pam.md)
 - [perf 命令](linux/perf.md)
+- [不需要 root 权限执行 ping](linux/ping-without-sudo.md)
 - [管道重定向](linux/pipe-redirect.md)
 - [/proc/interrupts](linux/proc-interrupts.md)
 - [进程内存](linux/process-memory.md)
@@ -384,16 +407,21 @@ See the [LICENSE][] file for the specific language governing permissions and lim
 - [sshd -R 参数](linux/sshd--R.md)
 - [strace](linux/strace.md)
 - [sudo and su](linux/sudo-and-su.md)
+- [syslinux](linux/syslinux.md)
 - [Linux 系统调用](linux/system-call.md)
 - [systemd-resolved](linux/systemd-resolved.md)
 - [systemd](linux/systemd.md)
 - [tailf](linux/tailf.md)
+- [tar](linux/tar.md)
 - [基于内存的虚拟文件系统 tmpfs/ramfs/RamDisk](linux/temporary-fs-in-memory.md)
+- [Linux Thermal 框架](linux/thermal-framework.md)
 - [线程与进程](linux/thread-and-process.md)
 - [time 命令](linux/time.md)
+- [UFW](linux/ufw.md)
 - [UNIX Domain Socket](linux/unix-domain-socket.md)
 - [unlink 是删除任何文件](linux/unlink.md)
 - [/usr/bin/env](linux/usr-bin-env.md)
+- [虚拟文件系统 (VFS, Virtual File System)](linux/virtual-file-system.md)
 - [虚拟内存](linux/virtual-memory.md)
 - [奇怪的 ESC](linux/weird-esc-key.md)
 - [Welcome Message Banner](linux/welcome-message-banner.md)
@@ -434,6 +462,7 @@ See the [LICENSE][] file for the specific language governing permissions and lim
 记录网络相关知识
 
 - [ARP](network/arp.md)
+- [组播地址](network/boardcast-ip.md)
 - [网桥 (Bridge)](network/bridge.md)
 - [DHCP](network/dhcp.md)
 - [DNS SRV](network/dns_srv.md)
@@ -574,6 +603,7 @@ See the [LICENSE][] file for the specific language governing permissions and lim
 
 ## 安全攻防
 
+- [不要在生产环境绑定 0.0.0.0](security/do-not-bind-0.0.0.0.md)
 - [Kali Linux](security/kali.md)
 - [Reverse Shell](security/reverse-shell.md)
 
