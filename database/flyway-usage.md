@@ -1,1 +1,1 @@
-重定向至[这里](../storage/flyway-usage.md)
+../storage/flyway-usage.md

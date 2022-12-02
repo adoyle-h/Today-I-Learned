@@ -1,1 +1,1 @@
-重定向至[这里](../../storage/etcd/etcdctl.md)
+../../storage/etcd/etcdctl.md
