@@ -64,6 +64,7 @@ See the [LICENSE][] file for the specific language governing permissions and lim
     <li><a href="#%E8%AF%AD%E8%A8%80%E8%AE%BE%E8%AE%A1">语言设计</a></li>
     <li><a href="#linux">Linux</a></li>
     <li><a href="#language%20server%20protocol%20(lsp)">Language Server Protocol (LSP)</a></li>
+    <li><a href="#lua">Lua</a></li>
     <li><a href="#mac">Mac</a></li>
     <li><a href="#%E6%95%B0%E5%AD%A6">数学</a></li>
     <li><a href="#%E7%BD%91%E7%BB%9C">网络</a></li>
@@ -77,6 +78,7 @@ See the [LICENSE][] file for the specific language governing permissions and lim
     <li><a href="#redis">Redis</a></li>
     <li><a href="#ruby">Ruby</a></li>
     <li><a href="#%E5%AE%89%E5%85%A8%E6%94%BB%E9%98%B2">安全攻防</a></li>
+    <li><a href="#shell">Shell</a></li>
     <li><a href="#startup">Startup</a></li>
     <li>
       <a href="#%E5%AD%98%E5%82%A8">存储</a>
@@ -303,6 +305,7 @@ See the [LICENSE][] file for the specific language governing permissions and lim
 - [ab 与 wrk 比较](linux/ab-vs-wrk.md)
 - [ABI](linux/abi.md)
 - [用户线程，内核线程，CPU 超线程技术](linux/about-multi-thread.md)
+- [用户增加用户组](linux/add-group-to-user.md)
 - [Alfred 找不到文件](linux/alfred-cannot-find-files.md)
 - [anon_inode](linux/anon_inode.md)
 - [ansible 部署到 centos7 时，不能找到 service](linux/ansible-deploy-fault-with-centos7-and-service.md)
@@ -361,6 +364,7 @@ See the [LICENSE][] file for the specific language governing permissions and lim
 - [Here Strings 与 Here Documents](linux/here-strings-and-here-documents.md)
 - [隐藏进程](linux/hidden-process.md)
 - [Hostname in Linux](linux/hostname.md)
+- [iconv](linux/iconv.md)
 - [查看进程的环境变量](linux/inspect-process-environment.md)
 - [安装 Linux 系统](linux/install-linux-system.md)
 - [网络接口名称的 @](linux/interface-name-with-@.md)
@@ -370,11 +374,14 @@ See the [LICENSE][] file for the specific language governing permissions and lim
 - [iproute2 与 ifconfig 命令](linux/iproute2-vs-ifconfig.md)
 - [iptables 与 nftables](linux/iptables.md)
 - [Linux 内核模块](linux/kernel-module.md)
+- [Linux 内核](linux/kernel.md)
 - [kswapd0](linux/kswapd0.md)
+- [libc](linux/libc.md)
 - [Linux 日志文件](linux/log-files.md)
 - [lsof 与 fuser](linux/lsof-and-fuser.md)
 - [LVM (Logical Volume Manager)](linux/lvm.md)
 - [制作 deb 包](linux/make-deb-package.md)
+- [man 命令](linux/man.md)
 - [mdadm](linux/mdadm.md)
 - [命令行中的乱码](linux/messy-codes-in-console.md)
 - [创建临时文件的命令](linux/mktemp.md)
@@ -393,12 +400,14 @@ See the [LICENSE][] file for the specific language governing permissions and lim
 - [管道重定向](linux/pipe-redirect.md)
 - [/proc/interrupts](linux/proc-interrupts.md)
 - [进程内存](linux/process-memory.md)
-- [慎用双引号与单引号](linux/quotes-in-bash.md)
 - [命令行中提示用户 Yes/No](linux/read-prompt.md)
+- [rm 命令](linux/rm.md)
 - [rsync 与 scp](linux/rsync-and-scp.md)
+- [用别的用户运行命令](linux/run-command-with-different-user.md)
 - [runit](linux/runit.md)
 - [SATA 热拔插](linux/sata-hotplug.md)
 - [程序的退出码 (Exit Code)](linux/script-exit-code.md)
+- [sed](linux/sed.md)
 - [在 alpine 中找不到 setup-apkcache 等 setup-* 命令](linux/setup-scripts-in-alpine.md)
 - [shebang](linux/shebang.md)
 - [共享内存](linux/shm.md)
@@ -414,6 +423,7 @@ See the [LICENSE][] file for the specific language governing permissions and lim
 - [tailf](linux/tailf.md)
 - [tar](linux/tar.md)
 - [基于内存的虚拟文件系统 tmpfs/ramfs/RamDisk](linux/temporary-fs-in-memory.md)
+- [Terminfo](linux/terminfo.md)
 - [Linux Thermal 框架](linux/thermal-framework.md)
 - [线程与进程](linux/thread-and-process.md)
 - [time 命令](linux/time.md)
@@ -436,6 +446,11 @@ See the [LICENSE][] file for the specific language governing permissions and lim
 - https://langserver.org/
 
 - [YAML Language Server](lsp/yaml-language-server.md)
+
+## Lua
+
+- [lua 没有 continue 关键字](lua/continue.md)
+- [lua 错误处理](lua/error.md)
 
 ## Mac
 
@@ -525,6 +540,7 @@ See the [LICENSE][] file for the specific language governing permissions and lim
 - [Alfred Workflow debug 技巧](others/alfred-workflow-debug.md)
 - [Github Markdown 中的锚点引用](others/anchor-in-github-markdown.md)
 - [永久链接](others/archive-webpage.md)
+- [脱字符 (caret)](others/caret.md)
 - [Chrome 小技巧](others/chrome-tricks.md)
 - [Mac 文件系统的剪切快捷键](others/cut-in-mac-file-system.md)
 - [YAML 中的 Date 类型陷阱](others/date-trap-in-yaml.md)
@@ -555,11 +571,13 @@ See the [LICENSE][] file for the specific language governing permissions and lim
 - [在中国注册 Google 账号](others/register-google-account-in-china.md)
 - [在 Github Markdown 中如何填写图片的链接](others/relative-link-in-github-markdown.md)
 - [Markdown 里写反引号](others/reverse-quote-in-markdown.md)
+- [rsync](others/rsync.md)
 - [Semver](others/semver.md)
 - [SSL 证书](others/ssl-cert.md)
 - [mac 里的 tmux 内无法用 sublime 打开文件](others/subl-in-tmux-on-mac.md)
 - [vim textwidth=78 的约定](others/textwidth-78-of-vim.md)
 - [KB 与 KiB 的不同](others/the-difference-between-kb-and-kib.md)
+- [时间回跳问题](others/time-backward-issue.md)
 - [UTF-8 vs UTF-16](others/utf-8-vs-utf-16.md)
 - [Vagrant DNS](others/vagrant-dns.md)
 - [vagrant-vbguest](others/vagrant-vbguest.md)
@@ -606,6 +624,16 @@ See the [LICENSE][] file for the specific language governing permissions and lim
 - [不要在生产环境绑定 0.0.0.0](security/do-not-bind-0.0.0.0.md)
 - [Kali Linux](security/kali.md)
 - [Reverse Shell](security/reverse-shell.md)
+
+## Shell
+
+- [Bash 镜像有 bug](shell/bash-docker-image-has-bug.md)
+- [bash error exit](shell/bash-error-exit.md)
+- [bash history](shell/bash-history.md)
+- [bash 开启 vi 模式](shell/bash-in-vi-mode.md)
+- [学习 Bash](shell/bash-learning.md)
+- [Bash 的坑](shell/bash-pitfalls.md)
+- [Bash 小技巧](shell/bash-tricks.md)
 
 ## Startup
 
