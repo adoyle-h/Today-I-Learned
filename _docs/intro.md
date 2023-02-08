@@ -1,4 +1,5 @@
 ADoyle 的碎片化知识笔记。
+https://adoyle.me/Today-I-Learned/
 
 ## 内容约定
 
