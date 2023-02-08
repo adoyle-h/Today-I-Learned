@@ -24,6 +24,7 @@
 - [diff 多个文件](#diff-多个文件)
 - [在每行末尾添加文字](#在每行末尾添加文字)
 - [输入换行符 ^M](#输入换行符-m)
+- [查看变量在哪被修改](#查看变量在哪被修改)
 
 <!-- /MarkdownTOC -->
 
@@ -166,3 +167,7 @@ vim documentation 有两个章节：[object-motions][] 和 [object-select][]。�
 ### 输入换行符 ^M
 
 按下组合键 `Ctrl-V` 和 `Ctrl-M`。
+
+### 查看变量在哪被修改
+
+`:verbose set option?`

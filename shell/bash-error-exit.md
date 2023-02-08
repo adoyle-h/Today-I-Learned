@@ -1,6 +1,12 @@
 ## bash error exit
 
-`set -o errexit` 这个选项对于 `$()` 这种子进程调用方式是无效的。
+以下几种情况都会导致 `set -o errexit` 失效。
+
+1. 在子进程中，errexit 选项会被重置。而创建子进程的方法有：`$()`
+2. 对于 test 使用场景，errexit 会失效。
+3. 在 `while` 或 `until` 中
+4. 在 if 条件中
+5. 在 `&&` 或 `||` 或 `|` 之前
 
 ### 例如
 
@@ -30,12 +36,13 @@ main "$@"
 
 输出结果:
 
+```
 =1=
 ./fail:行12: foo: 未找到命令
 =2=0
 =3=before throw_error
 after throw_error
-
+```
 
 ### 使用 errtrace 和 trap
 
@@ -74,7 +81,9 @@ main "$@"
 
 输出结果:
 
+```
 =1=
 ./fail:行12: foo: 未找到命令
 trap!
 Shell 已返回1
+```

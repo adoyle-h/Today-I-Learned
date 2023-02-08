@@ -48,6 +48,10 @@
 - `source_amd64.go` 只在 amd64 架构下构建。
 - `source_windows_amd64.go` 只在 windows 系统且是 amd64 架构下构建。
 
+## GOARCH
+
+- `go tool dist list -json` 显示所有支持运行的平台
+
 ### 参考
 
 - [Go 注释的魔力](https://learnku.com/go/t/34696)

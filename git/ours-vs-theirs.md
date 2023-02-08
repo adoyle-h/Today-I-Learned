@@ -2,6 +2,8 @@
 
 代码冲突时批量选择某一边的修改。
 
+图解：https://nitaym.github.io/ourstheirs/
+
 https://howchoo.com/g/njcyntcxmwq/git-merge-conflicts-rebase-ours-theirs#using-ourstheirs-during-a-rebase
 
 |                           | git merge master | git rebase master |

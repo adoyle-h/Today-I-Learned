@@ -110,61 +110,33 @@ bash -c 'echo "${arr[@]}"'  # It prints empty
 ```
 
 - https://stackoverflow.com/questions/5564418/exporting-an-array-in-bash-script
-_ https://www.mail-archive.com/bug-bash@gnu.org/msg01774.html
+- https://www.mail-archive.com/bug-bash@gnu.org/msg01774.html
 
 
 ## 数组赋值在管道执行完毕后会重置
 
 ```sh
-#!/usr/bin/env bash
-
-f() {
-  local str
-  while read -r str; do
-    echo $str > /dev/tty
-    list+=( "[$str]" )
-  done
-}
-
-output_list() {
-  printf '1\n2\n3\n'
-}
-
-h1() {
-  local list=()
-
-  output_list | f
-
-  echo '----------'
-  echo "${list[@]}"
-}
-
-h2() {
-  local list=()
-  f < <(output_list)
-  echo '----------'
-  echo "${list[@]}"
-}
-
-h1
-h2
+printf 'a.c\nb.z\nc.z\n' | while read -r path; do
+  COMPREPLY+=( "$path" )
+done
+echo "${COMPREPLY[@]}"
 ```
 
-输出
+打印出来是空的。因为默认情况下所有管道内的命令都是运行在子进程里的。
+即 `while read` 和 `COMPREPLY+=( "$path" )` 都运行在子进程，所以父进程的 `COMPREPLY` 值并没有改变。
 
+**解决方法**
+
+改写成这样
+
+```sh
+while read -r path; do
+  COMPREPLY+=( "$path" )
+done < <(printf 'a.c\nb.z\nc.z\n')
+echo "${COMPREPLY[@]}"
 ```
-1
-2
-3
-----------
 
-1
-2
-3
-----------
-[1] [2] [3]
-```
 
-相关 issue: https://stackoverflow.com/questions/36340599/how-does-shopt-s-lastpipe-affect-bash-script-behavior
+或者使用 `shopt -s lastpipe` 开启 lastpipe，可以让管道中最后一个命令运行在当前 shell 环境。（这个方法可能没用）
 
-`shopt -s lastpipe` 开启 lastpipe，可以让管道中最后一个命令运行在当前 shell 环境。默认情况下所有命令都是运行在后台的。
+相关链接 https://stackoverflow.com/questions/36340599/how-does-shopt-s-lastpipe-affect-bash-script-behavior

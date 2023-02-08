@@ -1,54 +1,5 @@
 # Bash 小技巧
 
-## TOC
-
-<!-- MarkdownTOC GFM -->
-
-- [man bash](#man-bash)
-    - [查看 bash built-in 命令的帮助文档](#查看-bash-built-in-命令的帮助文档)
-- [help help](#help-help)
-- [终端快捷键](#终端快捷键)
-    - [光标移动快捷键](#光标移动快捷键)
-    - [大小写转换](#大小写转换)
-    - [其他快捷键](#其他快捷键)
-- [kill %jobspec](#kill-jobspec)
-- [<Tab> 补全文件路径开启颜色](#tab-补全文件路径开启颜色)
-- [bash-completion](#bash-completion)
-- [PS1 等提示符的定义](#ps1-等提示符的定义)
-- [右侧打印](#右侧打印)
-- [打印所有 bash options (set -o 或 shopt)](#打印所有-bash-options-set--o-或-shopt)
-- [提取一句话的第一个单词](#提取一句话的第一个单词)
-- [/usr/libexec/path_helper](#usrlibexecpath_helper)
-- [设置环境变量与命令写同一行](#设置环境变量与命令写同一行)
-- [declare -r 与 readonly 的区别](#declare--r-与-readonly-的区别)
-- [得到上层绝对路径的快捷方法](#得到上层绝对路径的快捷方法)
-- [xtrace](#xtrace)
-- [让 xtrace 打印更多信息](#让-xtrace-打印更多信息)
-- [$- 查询 set options 开启状况](#--查询-set-options-开启状况)
-- [extglob](#extglob)
-- [分解字符串成数组](#分解字符串成数组)
-- [在字符串里用换行符](#在字符串里用换行符)
-- [`=~` 的正则表达式](#-的正则表达式)
-- [BASH 的 PS1/PS2/PS3/PS4](#bash-的-ps1ps2ps3ps4)
-- [BASH PS1 需要包裹](#bash-ps1-需要包裹)
-- [目录是可执行的](#目录是可执行的)
-- [获得字符的转义码](#获得字符的转义码)
-- [使用 bind 改变键盘字符的触发效果](#使用-bind-改变键盘字符的触发效果)
-- [用 ANSI Escape Code 改变 Shell 文字样式](#用-ansi-escape-code-改变-shell-文字样式)
-- [判断当前程序是否由管道传参](#判断当前程序是否由管道传参)
-- [BSD 和 GNU 正则表达式的不同](#bsd-和-gnu-正则表达式的不同)
-- [正则匹配](#正则匹配)
-- [bind 某些快捷键](#bind-某些快捷键)
-- [通过 shell 编程输出字符串到 readline 的缓存区里](#通过-shell-编程输出字符串到-readline-的缓存区里)
-- [${!var} 语法](#var-语法)
-- [查看一个变量是否是 export 的](#查看一个变量是否是-export-的)
-- [获得纳秒/毫秒时间](#获得纳秒毫秒时间)
-- [: 开头的作用](#-开头的作用)
-- [bash -c 选项](#bash--c-选项)
-- [IFS](#ifs)
-
-<!-- /MarkdownTOC -->
-
 ## man bash
 
 在 /usr/share/doc/bash/ 能找到 bash PDF 和 HTML 文档。
@@ -69,23 +20,7 @@
 
 ## 终端快捷键
 
-实质是 Readline 的功能。[Readline Cheat Sheet](https://readline.kablamo.org/emacs.html)
-
-### 光标移动快捷键
-
-![光标移动快捷键](https://cdn.adoyle.top/share/moving_cli.png)
-
-### 大小写转换
-
-- `alt+u` 转大写。
-- `alt+l` 转小写。
-- `alt+c` 转首字母大写。
-
-参考 https://askubuntu.com/a/903481
-
-### 其他快捷键
-
-- `ctrl+_` 撤销上一步。
+实质是 Readline 的功能。详见[这里](./readline.md)。
 
 ## kill %jobspec
 
@@ -178,21 +113,6 @@ path=$(pwd)      # 例如 /a/b/c
 # 移除掉从末尾匹配到 `/*` 的部分
 echo ${path%/*}  # => /a/b
 ```
-
-## xtrace
-
-使用 `set -o xtrace` 来跟踪命令，获取更详细的 debug 信息。
-
-自 Bash 4 开始支持 `BASH_XTRACEFD` 变量，它能改变 xtrace 输出指向到哪个文件描述符里，但最好别改动它，因为关闭 BASH_XTRACEFD 会导致文件描述符也关闭。
-BASH_XTRACEFD 默认为 2，所以 xtrace 默认输出到标准错误流。
-
-## 让 xtrace 打印更多信息
-
-通过修改 PS4 变量，比如下面这行会打印当前文件名:行号:当前函数。
-
-`PS4='+[${BASH_SOURCE}:${LINENO}:${FUNCNAME[0]:+${FUNCNAME[0]}}()]: '`
-
-参考自 http://wiki.bash-hackers.org/scripting/debuggingtips#making_xtrace_more_useful
 
 ## $- 查询 set options 开启状况
 
@@ -400,4 +320,27 @@ bash -c 选项确保命令的参数替换 (expansion) 是在一个新的 bash �
 
 ## IFS
 
-IFS 默认值是 `<space><tab><newline>`。
+IFS 默认值是 `$' \t\n'`（空格，Tab，换行符）。
+可以用 `printf '%q' "$IFS"` 显示 IFS 的值。
+
+## (cmd) 与 { cmd; } 的区别
+
+- `(cmd)` 运行在 [subshell][]，可以读取父进程的变量，但无法修改父进程的变量。
+- `{ cmd; }` 运行在当前进程，且可以修改当前进程里的变量。
+
+## | 与 < <(cmd) 的区别
+
+因为每个在 `|` 的命令是运行在 [subshell][] 里的。而 subshell 里的程序无法修改外层的变量。
+
+```sh
+k=(1 2 3)
+( echo "${k[@]}" )         # print 1 2 3
+( k[0]=4; echo "${k[@]}" ) # print 4 2 3
+echo "${k[@]}"             # print 1 2 3
+```
+
+https://superuser.com/a/1348950
+
+`cmd2 < <(cmd)` 中 `cmd` 也不能修改当前进程的变量。但是 `cmd2` 是运行在当前进程的，可以修改。
+
+[subshell]: ./subshell-and-child-process.md

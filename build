@@ -134,7 +134,7 @@ ${tocStr}
 
 async function getTitle(path) {
     const content = await readFile(path, {encoding: 'utf8'});
-    const matched = content.match(/^##? ?(.+)/);
+    const matched = content.match(/##? (.+)/);
     if (!matched) return '';
 
     let title = matched[1];
@@ -220,6 +220,7 @@ async function build() {
 
 
     const structure = [
+        {md: absPath('_docs/meta.md')},
         {h1: '今天我学了什么 (Today I Learned)'},
         {blockquote: pkg.description},
         {md: absPath('_docs/intro.md')},

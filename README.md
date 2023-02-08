@@ -1,3 +1,9 @@
+---
+title: Home
+nav_order: 1
+---
+
+
 # 今天我学了什么 (Today I Learned)
 
 > 博观而约取，厚积而薄发。
@@ -29,7 +35,7 @@ ADoyle 的碎片化知识笔记。
 
 ## 版权声明
 
-Copyright (c) 2016-2022 ADoyle (adoyle.h@gmail.com). The project is licensed under the **BSD 3-clause License**.
+Copyright (c) 2016-2023 ADoyle (adoyle.h@gmail.com). The project is licensed under the **BSD 3-clause License**.
 
 See the [LICENSE][] file for the specific language governing permissions and limitations under the License.
 
@@ -140,12 +146,15 @@ See the [LICENSE][] file for the specific language governing permissions and lim
 - [ContainerD OverlayFS](docker/containerd-overlayfs.md)
 - [Containerd](docker/containerd.md)
 - [容器里的 Core Dump](docker/core-dump-in-container.md)
+- [容器里的 CPU 信息](docker/cpu-in-container.md)
 - [device or resource busy](docker/device-or-resource-busy.md)
 - [docker-compose 启动容器顺序](docker/docker-compose-startup-order.md)
 - [Docker 容器与 Cgroup](docker/docker-container-and-cgroup.md)
 - [进入 docker for mac 的虚拟机](docker/docker-for-mac-tty.md)
+- [docker for mac](docker/docker-for-mac.md)
 - [学习 Docker](docker/docker-learning.md)
 - [Docker OverlayFS](docker/docker-overlayfs.md)
+- [Docker 的坑](docker/docker-pitfalls.md)
 - [Docker Run With Namespace](docker/docker-run-with-namespace.md)
 - [Docker Tag/Id/Digest](docker/docker-tag-id-digests.md)
 - [docker 小技巧](docker/docker-tricks.md)
@@ -154,6 +163,8 @@ See the [LICENSE][] file for the specific language governing permissions and lim
 - [修正 alpine 镜像的时区问题](docker/fix-timezone-in-alpine-image.md)
 - [修正 Docker for mac 时区问题](docker/fix-timezone-in-docker-for-mac.md)
 - [Docker for Mac 中磁盘文件占用过大](docker/large-disk-space-usage-in-docker-for-mac.md)
+- [构建多架构镜像](docker/multi-arch-build.md)
+- [docker 多阶段构建 (Multi-Stage Build)](docker/multi-stage-build.md)
 - [nerdctl 容器](docker/nerdctl-container.md)
 - [nerdctl 网络](docker/nerdctl-network.md)
 - [nerdctl](docker/nerdctl.md)
@@ -234,8 +245,11 @@ See the [LICENSE][] file for the specific language governing permissions and lim
 - [git 小技巧](git/git-tricks.md)
 - [git credentials](git/gitcredentials.md)
 - [gitignore 与 gitkeep](git/gitignore-with-gitkeep.md)
+- [grafted commit](git/grafted-commit.md)
 - [忽略 Git submodule](git/ignore-git-submodule.md)
 - [--ours vs --theirs](git/ours-vs-theirs.md)
+- [git proxy](git/proxy.md)
+- [Git sign-off](git/sign-off.md)
 
 ## Go
 
@@ -252,6 +266,7 @@ See the [LICENSE][] file for the specific language governing permissions and lim
 
 - [固件 (Firmware)](hardware/firmware.md)
 - [网件 R6900 刷梅林固件](hardware/netgear-R6900-asuswrt-merlin.md)
+- [网络交换机](hardware/network-switch.md)
 - [USB](hardware/usb.md)
 
 ## Javascript
@@ -270,6 +285,7 @@ See the [LICENSE][] file for the specific language governing permissions and lim
 
 ## K8S
 
+- [OCI、CNI](k8s/OCI-spec.md)
 - [Cilium](k8s/cilium.md)
 - [调试 CrashLoopBackOff 状态的 Pod](k8s/debug-CrashLoopBackOff-pod.md)
 - [Helm](k8s/helm.md)
@@ -293,9 +309,13 @@ See the [LICENSE][] file for the specific language governing permissions and lim
 
 记录编程语言的内部设计与思想
 
+- [CFLAGS](language/CFLAGS.md)
 - [Actor 并发模型](language/actor.md)
+- [编译器](language/compiler.md)
 - [协程 (Coroutine)](language/coroutine.md)
 - [CSP 并发模型](language/csp.md)
+- [Debuger](language/debuger.md)
+- [栈帧](language/stack-frame.md)
 
 ## Linux
 
@@ -306,6 +326,7 @@ See the [LICENSE][] file for the specific language governing permissions and lim
 - [ABI](linux/abi.md)
 - [用户线程，内核线程，CPU 超线程技术](linux/about-multi-thread.md)
 - [用户增加用户组](linux/add-group-to-user.md)
+- [ag 和 rg](linux/ag-and-rg.md)
 - [Alfred 找不到文件](linux/alfred-cannot-find-files.md)
 - [anon_inode](linux/anon_inode.md)
 - [ansible 部署到 centos7 时，不能找到 service](linux/ansible-deploy-fault-with-centos7-and-service.md)
@@ -477,6 +498,7 @@ See the [LICENSE][] file for the specific language governing permissions and lim
 记录网络相关知识
 
 - [ARP](network/arp.md)
+- [自治系统 (Autonomous System)](network/autonomous-system.md)
 - [组播地址](network/boardcast-ip.md)
 - [网桥 (Bridge)](network/bridge.md)
 - [DHCP](network/dhcp.md)
@@ -487,6 +509,7 @@ See the [LICENSE][] file for the specific language governing permissions and lim
 - [NAT](network/nat.md)
 - [pfctl](network/pfctl.md)
 - [Samba](network/samba.md)
+- [SDN](network/sdn.md)
 - [TCP Buffer 大小](network/tcp-buffer-size.md)
 - [vxlan](network/vxlan.md)
 
@@ -542,10 +565,12 @@ See the [LICENSE][] file for the specific language governing permissions and lim
 - [永久链接](others/archive-webpage.md)
 - [脱字符 (caret)](others/caret.md)
 - [Chrome 小技巧](others/chrome-tricks.md)
+- [复制粘贴好过手写](others/copy-paste-better-than-handwriting.md)
 - [Mac 文件系统的剪切快捷键](others/cut-in-mac-file-system.md)
 - [YAML 中的 Date 类型陷阱](others/date-trap-in-yaml.md)
 - [文件命名，下划线还是中划线？](others/file-naming-with-underscores-and-dashes.md)
 - [github 中 markdown 折叠文本](others/fold-text-in-github.md)
+- [fzf](others/fzf.md)
 - [从微信公众号提取原图](others/get-raw-image-from-weixin.md)
 - [Github Template (模板)](others/github-template.md)
 - [gRPC](others/grpc.md)
@@ -555,6 +580,7 @@ See the [LICENSE][] file for the specific language governing permissions and lim
 - [如何在 github 项目里搜索代码](others/how-to-use-github-to-browse-codes.md)
 - [Hyper.js 中文问题](others/hyper-js-chinese-problems.md)
 - [无法在 Tmux 显示图片](others/imgcat-not-work-in-tmux.md)
+- [Jekyll](others/jekyll.md)
 - [Jinja2](others/jinja2.md)
 - [Language Server Protocol](others/language-server-protocol.md)
 - [箴言](others/maxim.md)
@@ -627,6 +653,8 @@ See the [LICENSE][] file for the specific language governing permissions and lim
 
 ## Shell
 
+- [多行字符串赋值给变量](shell/assign-multi-lines-string-to-variable.md)
+- [bash completion](shell/bash-completion.md)
 - [Bash 镜像有 bug](shell/bash-docker-image-has-bug.md)
 - [bash error exit](shell/bash-error-exit.md)
 - [bash history](shell/bash-history.md)
@@ -634,6 +662,11 @@ See the [LICENSE][] file for the specific language governing permissions and lim
 - [学习 Bash](shell/bash-learning.md)
 - [Bash 的坑](shell/bash-pitfalls.md)
 - [Bash 小技巧](shell/bash-tricks.md)
+- [`printf '%s\n' $@` 为何可以打印多行？](shell/printf-array.md)
+- [Readline](shell/readline.md)
+- [学习 Shell](shell/shell-learning.md)
+- [Bash 的 subshell 与子进程](shell/subshell-and-child-process.md)
+- [Bash xtrace](shell/xtrace.md)
 
 ## Startup
 
@@ -667,6 +700,7 @@ See the [LICENSE][] file for the specific language governing permissions and lim
 记录我的碎片式思考
 
 - [CLD 图](thinking/causal-loop-diagram.md)
+- [声明式配置 vs 编程式配置](thinking/declarable-vs-programmable.md)
 - [项目代码如何组织](thinking/how-to-make-code-organization.md)
 - [如何编程](thinking/how-to-programming.md)
 - [不完整的函数](thinking/non-total-function.md)
@@ -681,6 +715,7 @@ See the [LICENSE][] file for the specific language governing permissions and lim
 
 ## Vim
 
+- [<C-I> 在 nvim 里等同于 <Tab>](vim/ctrl-i-in-neovim.md)
 - [学习 Neovim](vim/neovim-learning.md)
 - [在 vim 中执行 shell 命令，同时将结果输出到 buffer](vim/pipe-shell-output-to-buffer.md)
 - [vim 插件教程](vim/plugins-tutorial.md)
