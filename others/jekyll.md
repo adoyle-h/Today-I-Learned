@@ -9,10 +9,13 @@
 - `permalink: pretty`，url 是 `/title/`。
 - `permalink: none`，url 是 `/title.html`。
 
-## url 不是链接是纯文本
+## url 没有渲染成链接
 
-jekyll 使用的 kramdown 不像 Github 那样可以自动把 url 显示成链接。它只会显示纯文本。
+bare url 渲染成链接的功能属于 Markdown 扩展语法 (Extended Syntax)，即  [Automatic URL Linking](https://www.markdownguide.org/extended-syntax/#automatic-url-linking)，
 
-解决方法是用 `<url>` 或者 `[url](url)` 才行。这也是 markdown 的基础语法。
+jekyll 使用的 kramdown 来处理 markdown。虽然它说[支持 Automatic URL Linking](https://www.markdownguide.org/tools/jekyll/)，但实际上从 [2016 年起](https://github.com/gettalong/kramdown/issues/306)到 2023 年 2 月，实际上它都不支持。参考这个 [Issue](https://github.com/kramdown/parser-gfm/issues/17) 和这个 [Issue](https://github.com/barryclark/jekyll-now/issues/459#issuecomment-561336350)。
 
-参考 https://kramdown.gettalong.org/syntax.html#automatic-links
+有两种解决方法
+
+1. `_config.yml` 设置 `markdown: GFM`，使用 Github 的 markdown 处理器来处理。
+2. 用 `<url>` 或者 `[url](url)`。这是 markdown 的[基础语法](https://www.markdownguide.org/basic-syntax/#links)，也是 [kramdown 支持的语法](https://kramdown.gettalong.org/syntax.html#automatic-links)。

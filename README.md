@@ -264,9 +264,12 @@ See the [LICENSE][] file for the specific language governing permissions and lim
 
 ## 硬件
 
+- [微处理器 MCU](hardware/MCU.md)
+- [RFID](hardware/RFID.md)
 - [固件 (Firmware)](hardware/firmware.md)
 - [网件 R6900 刷梅林固件](hardware/netgear-R6900-asuswrt-merlin.md)
 - [网络交换机](hardware/network-switch.md)
+- [无线电波 (Radio Waves)](hardware/radio-waves.md)
 - [USB](hardware/usb.md)
 
 ## Javascript

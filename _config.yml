@@ -14,6 +14,8 @@ exclude:
   - README.md
   - .github
 
+markdown: GFM
+permalink: none
 remote_theme: just-the-docs/just-the-docs
 
 # Default config: https://github.com/just-the-docs/just-the-docs/blob/main/_config.yml
@@ -23,7 +25,6 @@ title: 今天我学了什么
 description: 博观而约取，厚积而薄发。ADoyle 的碎片化知识笔记。
 logo: https://media.githubusercontent.com/media/adoyle-h/_imgs/master/assets/logo.png
 favicon_ico: ./.jekyll/assets/favicon.ico
-permalink: none
 footer_content:
   Copyright 2016-2023 ADoyle (adoyle.h@gmail.com). The project is licensed under <b>BSD 3-clause License</b>.<br>
   Source code at <a href="https://github.com/adoyle-h/my-development-tools">https://github.com/adoyle-h/Today-I-Learned</a>
@@ -31,7 +32,7 @@ footer_content:
 last_edit_timestamp: true
 color_scheme: dark
 back_to_top: true
-back_to_top_text: "Back to Top"
+back_to_top_text: ⬆ 返回顶部
 
 search_enabled: true
 search:
