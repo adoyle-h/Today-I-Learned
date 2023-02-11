@@ -19,3 +19,11 @@ jekyll 使用的 kramdown 来处理 markdown。虽然它说[支持 Automatic URL
 
 1. `_config.yml` 设置 `markdown: GFM`，使用 Github 的 markdown 处理器来处理。
 2. 用 `<url>` 或者 `[url](url)`。这是 markdown 的[基础语法](https://www.markdownguide.org/basic-syntax/#links)，也是 [kramdown 支持的语法](https://kramdown.gettalong.org/syntax.html#automatic-links)。
+
+## pages-gem
+
+因为 Github Page 默认使用 Jekyll 来编译。
+Github 提供了 [pages-gem](https://github.com/github/pages-gem) 来一键安装 Github Page 编译依赖。
+
+然而 pages-gem 可能存在一个问题，导致在本地 `jekyll build` 以及 `jekyll serve` 得到的 index.html 格式不对。
+详见 https://github.com/github/pages-gem/issues/657

@@ -34,11 +34,15 @@ https://adoyle.me/Today-I-Learned/
 
 ## 版权声明
 
-Copyright (c) 2016-2023 ADoyle (adoyle.h@gmail.com). The project is licensed under the **BSD 3-clause License**.
+Copyright 2016-2023 ADoyle (adoyle.h@gmail.com). Some Rights Reserved.
+The project is licensed under the **BSD 3-clause License**.
 
-See the [LICENSE][] file for the specific language governing permissions and limitations under the License.
+Read the [LICENSE][] file for the specific language governing permissions and limitations under the License.
+
+Read the [NOTICE][] file distributed with this work for additional information regarding copyright ownership.
 
 [LICENSE]: ./LICENSE
+[NOTICE]: ./NOTICE
 
 
 ## TOC
@@ -141,7 +145,7 @@ See the [LICENSE][] file for the specific language governing permissions and lim
 
 ## Docker
 
-- [Alpine 镜像](docker/alpine.md)
+- [Alpine Linux](docker/alpine.md)
 - [ContainerD OverlayFS](docker/containerd-overlayfs.md)
 - [Containerd](docker/containerd.md)
 - [容器里的 Core Dump](docker/core-dump-in-container.md)
@@ -330,6 +334,7 @@ See the [LICENSE][] file for the specific language governing permissions and lim
 - [用户增加用户组](linux/add-group-to-user.md)
 - [ag 和 rg](linux/ag-and-rg.md)
 - [Alfred 找不到文件](linux/alfred-cannot-find-files.md)
+- [Alpine Linux](linux/alpine.md)
 - [anon_inode](linux/anon_inode.md)
 - [ansible 部署到 centos7 时，不能找到 service](linux/ansible-deploy-fault-with-centos7-and-service.md)
 - [apt](linux/apt.md)
@@ -346,6 +351,7 @@ See the [LICENSE][] file for the specific language governing permissions and lim
 - [btrfs](linux/btrfs.md)
 - [内存的 buffer 和 cache](linux/buffer-and-cache-in-memory.md)
 - [在容器中构建 Package](linux/build-package-in-container.md)
+- [Busybox](linux/busybox.md)
 - [CFS (Completely Fair Scheduler)](linux/cfs.md)
 - [更改默认 shell](linux/change-default-shell.md)
 - [clamav](linux/clamav.md)
@@ -396,6 +402,7 @@ See the [LICENSE][] file for the specific language governing permissions and lim
 - [IO、select、epoll](linux/io-select-epoll.md)
 - [iproute2 与 ifconfig 命令](linux/iproute2-vs-ifconfig.md)
 - [iptables 与 nftables](linux/iptables.md)
+- [kconfig](linux/kconfig.md)
 - [Linux 内核模块](linux/kernel-module.md)
 - [Linux 内核](linux/kernel.md)
 - [kswapd0](linux/kswapd0.md)
@@ -409,6 +416,7 @@ See the [LICENSE][] file for the specific language governing permissions and lim
 - [命令行中的乱码](linux/messy-codes-in-console.md)
 - [创建临时文件的命令](linux/mktemp.md)
 - [mount](linux/mount.md)
+- [musl libc](linux/musl-libc.md)
 - [Netfilter](linux/netfilter.md)
 - [netns](linux/netns.md)
 - [netstat 与 ss](linux/netstat-and-ss.md)
@@ -416,11 +424,13 @@ See the [LICENSE][] file for the specific language governing permissions and lim
 - [硬盘空间占满问题](linux/no-space-left-on-device.md)
 - [nsenter](linux/nsenter.md)
 - [NTP 时间同步](linux/ntp.md)
+- [OpenRC](linux/openrc.md)
 - [OverlayFS](linux/overylay-fs.md)
 - [PAM](linux/pam.md)
 - [perf 命令](linux/perf.md)
 - [不需要 root 权限执行 ping](linux/ping-without-sudo.md)
 - [管道重定向](linux/pipe-redirect.md)
+- [PostmarketOS](linux/postmarketos.md)
 - [/proc/interrupts](linux/proc-interrupts.md)
 - [进程内存](linux/process-memory.md)
 - [命令行中提示用户 Yes/No](linux/read-prompt.md)
@@ -585,6 +595,7 @@ See the [LICENSE][] file for the specific language governing permissions and lim
 - [Jekyll](others/jekyll.md)
 - [Jinja2](others/jinja2.md)
 - [Language Server Protocol](others/language-server-protocol.md)
+- [Makefile](others/makefile.md)
 - [箴言](others/maxim.md)
 - [元语法 （Metasyntax)](others/metasyntax.md)
 - [乱码问题](others/mojibake.md)
@@ -645,6 +656,7 @@ See the [LICENSE][] file for the specific language governing permissions and lim
 
 ## Ruby
 
+- [Ruby 代理镜像](ruby/proxy.md)
 - [使用 scientist 科学重构代码](ruby/using-scientist-for-refactoring.md)
 
 ## 安全攻防

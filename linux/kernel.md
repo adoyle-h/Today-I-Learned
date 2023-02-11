@@ -1,6 +1,13 @@
-## Linux 内核
+# Linux 内核
 
-### 升级内核
+- https://www.kernel.org/doc/html/latest/
+
+## 编译内核
+
+- [kconfig](./kconfig.md)
+- [Kernel Build System](https://www.kernel.org/doc/html/latest/kbuild/)
+
+## 升级内核
 
 以 debian 系统为例。
 

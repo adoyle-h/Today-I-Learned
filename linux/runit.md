@@ -1,3 +1,6 @@
+---
+tags: [init]
+---
 ## runit
 
 [runit](http://smarden.org/runit/) 是一个 init 服务管理工具。类似于 systemd 的简单版。

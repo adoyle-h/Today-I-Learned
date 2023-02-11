@@ -7,3 +7,9 @@
 ## 修改配置导致 docker 无法启动
 
 docker for mac 的配置在 `~/Library/Group\ Containers/group.com.docker/settings.json`，修复配置即可。
+
+## 在 ARM 架构的 Docker for mac 里运行 AMD 架构的镜像，ctrl-c 失效
+
+等待解决 https://github.com/docker/for-mac/issues/6082
+
+解决方法：在别的窗口使用 `docker stop` 命令来关闭容器。或者到 Docker Desktop 里关闭容器。
