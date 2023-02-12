@@ -48,61 +48,51 @@ Read the [NOTICE][] file distributed with this work for additional information r
 ## TOC
 
 <!-- toc -->
-<details>
-  <summary>目录</summary>
+<details close>
+<summary>点击展开/折叠目录</summary>
 
-  <ul>
-    <li><a href="#%E7%AE%97%E6%B3%95">算法</a></li>
-    <li><a href="#android">Android</a></li>
-    <li><a href="#%E8%AE%A1%E7%AE%97%E6%9C%BA">计算机</a></li>
-    <li><a href="#%E8%AE%BE%E8%AE%A1">设计</a></li>
-    <li><a href="#docker">Docker</a></li>
-    <li><a href="#elixir">Elixir</a></li>
-    <li><a href="#%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B">函数式编程</a></li>
-    <li>
-      <a href="#%E5%89%8D%E7%AB%AF">前端</a>
-      <ul>
-        <li><a href="#react">React</a></li>
-      </ul>
-    </li>
-    <li><a href="#git">Git</a></li>
-    <li><a href="#go">Go</a></li>
-    <li><a href="#%E7%A1%AC%E4%BB%B6">硬件</a></li>
-    <li><a href="#javascript">Javascript</a></li>
-    <li><a href="#k8s">K8S</a></li>
-    <li><a href="#%E8%AF%AD%E8%A8%80%E8%AE%BE%E8%AE%A1">语言设计</a></li>
-    <li><a href="#linux">Linux</a></li>
-    <li><a href="#language%20server%20protocol%20(lsp)">Language Server Protocol (LSP)</a></li>
-    <li><a href="#lua">Lua</a></li>
-    <li><a href="#mac">Mac</a></li>
-    <li><a href="#%E6%95%B0%E5%AD%A6">数学</a></li>
-    <li><a href="#%E7%BD%91%E7%BB%9C">网络</a></li>
-    <li><a href="#nodejs">Nodejs</a></li>
-    <li><a href="#%E8%BF%90%E7%BB%B4">运维</a></li>
-    <li><a href="#%E5%85%B6%E4%BB%96">其他</a></li>
-    <li><a href="#%E5%93%B2%E5%AD%A6">哲学</a></li>
-    <li><a href="#%E7%AE%B4%E8%A8%80%E5%BD%95">箴言录</a></li>
-    <li><a href="#python">Python</a></li>
-    <li><a href="#racket">Racket</a></li>
-    <li><a href="#redis">Redis</a></li>
-    <li><a href="#ruby">Ruby</a></li>
-    <li><a href="#%E5%AE%89%E5%85%A8%E6%94%BB%E9%98%B2">安全攻防</a></li>
-    <li><a href="#shell">Shell</a></li>
-    <li><a href="#startup">Startup</a></li>
-    <li>
-      <a href="#%E5%AD%98%E5%82%A8">存储</a>
-      <ul>
-        <li><a href="#etcd">Etcd</a></li>
-        <li><a href="#mongo">Mongo</a></li>
-        <li><a href="#mysql">Mysql</a></li>
-      </ul>
-    </li>
-    <li><a href="#%E6%80%9D%E8%80%83">思考</a></li>
-    <li><a href="#typescript">Typescript</a></li>
-    <li><a href="#vim">Vim</a></li>
-    <li><a href="#%E8%99%9A%E6%8B%9F%E6%9C%BA">虚拟机</a></li>
-    <li><a href="#web">Web</a></li>
-  </ul>
+- [算法](#算法)
+- [Android](#android)
+- [计算机](#计算机)
+- [设计](#设计)
+- [Docker](#docker)
+- [Elixir](#elixir)
+- [函数式编程](#函数式编程)
+- [前端](#前端)
+  - [React](#react)
+- [Git](#git)
+- [Go](#go)
+- [硬件](#硬件)
+- [Javascript](#javascript)
+- [K8S](#k8s)
+- [语言设计](#语言设计)
+- [Linux](#linux)
+- [Language Server Protocol (LSP)](#language-server-protocol-(lsp))
+- [Lua](#lua)
+- [Mac](#mac)
+- [数学](#数学)
+- [网络](#网络)
+- [Nodejs](#nodejs)
+- [运维](#运维)
+- [其他](#其他)
+- [哲学](#哲学)
+- [箴言录](#箴言录)
+- [Python](#python)
+- [Racket](#racket)
+- [Redis](#redis)
+- [Ruby](#ruby)
+- [安全攻防](#安全攻防)
+- [Shell](#shell)
+- [Startup](#startup)
+- [存储](#存储)
+  - [Etcd](#etcd)
+  - [Mongo](#mongo)
+  - [Mysql](#mysql)
+- [思考](#思考)
+- [Typescript](#typescript)
+- [Vim](#vim)
+- [虚拟机](#虚拟机)
+- [Web](#web)
 
 </details>
 <!-- tocstop -->
@@ -496,6 +486,7 @@ Read the [NOTICE][] file distributed with this work for additional information r
 - [Mac 自启动配置 plist](mac/plist.md)
 - [Finder 显示隐藏文件](mac/show-hidden-files-in-finder.md)
 - [Tab 键不能切换弹出框的选中焦点](mac/tab-not-always-work.md)
+- [关闭 Mac 的 Gatekeeper](mac/turn-off-gatekeeper.md)
 - [xcode 重新安装](mac/xcode.md)
 
 ## 数学

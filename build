@@ -113,18 +113,14 @@ ${parentSpaces}</li>`;
             headers.push(header);
         });
 
-        tocStr = `<div>
-
-${headers.join('\n')}
-
-</div>`;
+        tocStr = headers.join('\n');
     }
 
     return `## TOC
 
 <!-- toc -->
-<details>
-  <summary>目录</summary>
+<details close>
+<summary>点击展开/折叠目录</summary>
 
 ${tocStr}
 
@@ -226,7 +222,7 @@ async function build() {
         {md: absPath('_docs/intro.md')},
         {md: absPath('_docs/issue.md')},
         {md: absPath('_docs/license.md')},
-        {toc: {contents: toc, type: 'html'}},
+        {toc: {contents: toc, type: 'markdown'}},
     ];
 
     debug('categories=%O', categories);
