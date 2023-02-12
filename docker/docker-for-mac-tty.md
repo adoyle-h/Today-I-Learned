@@ -4,7 +4,13 @@
 
 `docker run -it --rm --privileged --pid=host justincormack/nsenter1`
 
-### 使用 screen 来进入 tty
+### 使用 debug-shell.sock
+
+`nc -U ~/Library/Containers/com.docker.docker/Data/debug-shell.sock`
+
+但终端一直会打印 `^[[40;5R` 字符。
+
+### （已失效）使用 screen 来进入 tty
 
 `screen ~/Library/Containers/com.docker.docker/Data/vms/0/tty`
 
