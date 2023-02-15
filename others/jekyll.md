@@ -1,5 +1,16 @@
 # Jekyll
 
+不要靠近 Jekyll，否则会变得不幸。
+
+## 缺点
+
+1. Jekyll 的 markdown 解析器是 [kramdown](https://github.com/gettalong/kramdown)。
+  - GFM parser 不支持现在 Github 的 markdown 语法。比如 Automatic URL Linking（见下文），以及内嵌在 `<details>` 标签里的 markdown 语法。
+  - kramdown 默认使用 [GFM parser](https://github.com/kramdown/parser-gfm)，但最后维护时间是 2021 年。kramdown 的维护也不活跃。
+2. Jekyll 可以通过 `markdown: GFM` 来切换 markdown 解析器，但是这个解析器也有问题。当 heading 包含中文，生成的 `<a>` 标签里的锚点不是中文。
+3. `markdown: CommonMarkGhPages` 跟 `markdown: GFM` 效果基本一样，问题相同。
+3. Github Page 目前使用的 Jekyll 3。而 Jekyll 最新都出到 4 了。而且 [Github Page 维护者说不会升级](https://github.com/github/pages-gem/issues/651#issuecomment-1208290235)。
+
 ## 如何改变 url path 格式
 
 这跟 `_config.yml` 的 [permalink](https://jekyllrb.com/docs/permalinks/) 选项相关。

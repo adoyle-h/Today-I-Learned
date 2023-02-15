@@ -10,7 +10,11 @@ assessments enabled
 
 > spctl --status
 assessments disabled
+```
 
+恢复 Gatekeeper。
+
+```sh
 > sudo spctl --master-enable
 
 > spctl --status

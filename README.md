@@ -51,6 +51,8 @@ Read the [NOTICE][] file distributed with this work for additional information r
 <details close>
 <summary>点击展开/折叠目录</summary>
 
+（在网页端，中文跳转和搜索都有 BUG）
+
 - [算法](#算法)
 - [Android](#android)
 - [计算机](#计算机)
