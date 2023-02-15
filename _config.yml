@@ -11,10 +11,13 @@ plugins:
 include: []
 
 exclude:
+  - _docs
+  - node_modules
   - README.md
   - .github
+  - .git
 
-markdown: GFM
+# markdown: GFM
 permalink: none
 remote_theme: just-the-docs/just-the-docs
 

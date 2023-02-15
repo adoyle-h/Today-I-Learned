@@ -119,12 +119,12 @@ ${parentSpaces}</li>`;
     return `## TOC
 
 <!-- toc -->
-<details close>
-<summary>点击展开/折叠目录</summary>
+<!-- <details close> -->
+<!-- <summary>点击展开/折叠目录</summary> -->
 
 ${tocStr}
 
-</details>
+<!-- </details> -->
 <!-- tocstop -->`;
 };
 

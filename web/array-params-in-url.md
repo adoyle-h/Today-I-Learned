@@ -11,6 +11,6 @@
 
 构造请求 3 种，解析请求 3 种，一共 9 种组合。做平台对接相关的工作，就很麻烦了。
 
-![The Query String](../_images/URI.js-About_URIs_2019-01-29_11-28-47.png)
+![The Query String](https://media.githubusercontent.com/media/adoyle-h/_imgs/master/github/Today-I-Learned/the-query-string.png)
 
 参考自 http://medialize.github.io/URI.js/about-uris.html

@@ -11,6 +11,11 @@ nav_order: 1
 ADoyle 的碎片化知识笔记。
 https://adoyle.me/Today-I-Learned/
 
+## 提醒
+
+在网页端，搜索英文建议用最上方的搜索框，体验比较好。
+搜索框不支持中文，搜中文信息建议用浏览器自带的搜索功能。
+
 ## 内容约定
 
 所有文件一旦创建就不会改变路径，以保证永久链接。
@@ -48,10 +53,8 @@ Read the [NOTICE][] file distributed with this work for additional information r
 ## TOC
 
 <!-- toc -->
-<details close>
-<summary>点击展开/折叠目录</summary>
-
-（在网页端，中文跳转和搜索都有 BUG）
+<!-- <details close> -->
+<!-- <summary>点击展开/折叠目录</summary> -->
 
 - [算法](#算法)
 - [Android](#android)
@@ -96,7 +99,7 @@ Read the [NOTICE][] file distributed with this work for additional information r
 - [虚拟机](#虚拟机)
 - [Web](#web)
 
-</details>
+<!-- </details> -->
 <!-- tocstop -->
 
 ## 算法
@@ -128,7 +131,12 @@ Read the [NOTICE][] file distributed with this work for additional information r
 记录平面设计的相关知识
 
 - [8 点栅格](design/8-point-grid.md)
+- [Illuminant D65](design/D65.md)
+- [CIE 色彩空间](design/cie-color-space.md)
+- [色域](design/color-gamut.md)
+- [色彩模式](design/color-mode.md)
 - [色彩空间](design/color-space.md)
+- [色彩理论](design/color-theory.md)
 - [UI 的加载状态](design/loading-status-of-ui.md)
 - [OpenType](design/opentype.md)
 - [使用 sketchtool 操作 sketch 文档：diff 以及其他功能](design/sketchtool-for-diff.md)
