@@ -9,7 +9,7 @@ nav_order: 1
 > 博观而约取，厚积而薄发。
 
 ADoyle 的碎片化知识笔记。
-https://adoyle.me/Today-I-Learned/
+https://til.adoyle.me
 
 ## 提醒
 
@@ -106,10 +106,14 @@ Read the [NOTICE][] file distributed with this work for additional information r
 
 - [Raft 算法](algorithm/raft.md)
 
+[`⬆ 返回目录`](#toc)
+
 ## Android
 
 - [Android Root](android/root.md)
 - [Termux](android/termux.md)
+
+[`⬆ 返回目录`](#toc)
 
 ## 计算机
 
@@ -125,6 +129,8 @@ Read the [NOTICE][] file distributed with this work for additional information r
 - [内存屏障](computer/memory-barrier.md)
 - [我的硬盘分区规划](computer/my-disk-partitions.md)
 - [随机存取存储器 (RAM)](computer/ram.md)
+
+[`⬆ 返回目录`](#toc)
 
 ## 设计
 
@@ -142,6 +148,8 @@ Read the [NOTICE][] file distributed with this work for additional information r
 - [使用 sketchtool 操作 sketch 文档：diff 以及其他功能](design/sketchtool-for-diff.md)
 - [Sketch 的文本样式与颜色](design/text-style-with-colors-in-sketch.md)
 - [排版](design/topography.md)
+
+[`⬆ 返回目录`](#toc)
 
 ## Docker
 
@@ -178,10 +186,14 @@ Read the [NOTICE][] file distributed with this work for additional information r
 - [Docker 安全](docker/security.md)
 - [volume](docker/volume.md)
 
+[`⬆ 返回目录`](#toc)
+
 ## Elixir
 
 - [tuple 与 list 的选择](elixir/choosing-between-tuple-and-list.md)
 - [尾递归优化](elixir/tail-call-optimization.md)
+
+[`⬆ 返回目录`](#toc)
 
 ## 函数式编程
 
@@ -189,6 +201,8 @@ Read the [NOTICE][] file distributed with this work for additional information r
 - [chrome 开发者工具观察响应 Failed to load response data](fp/chrome-dev-tool-failed-to-inspect-response.md)
 - [重定向 window.location 是异步的](fp/redirect-location-is-async.md)
 - [什么是 Monad](fp/what-is-monad.md)
+
+[`⬆ 返回目录`](#toc)
 
 ## 前端
 
@@ -231,6 +245,8 @@ Read the [NOTICE][] file distributed with this work for additional information r
 - [富文本编辑器选型](front-end/wysiwyg-editor.md)
 - [z-index](front-end/z-index.md)
 
+[`⬆ 返回目录`](#toc)
+
 ### React
 
 - [使用 jquery 改变 React 的 input DOM](front-end/react/change-react-input-dom-via-jquery.md)
@@ -238,6 +254,8 @@ Read the [NOTICE][] file distributed with this work for additional information r
 - [Compound Components](front-end/react/compound-components.md)
 - [不要在 render 里直接定义 ref callback](front-end/react/dont-define-ref-callback-in-render.md)
 - [ref callback 何时触发？](front-end/react/when-ref-callback-get-invoked.md)
+
+[`⬆ 返回目录`](#toc)
 
 ## Git
 
@@ -254,6 +272,8 @@ Read the [NOTICE][] file distributed with this work for additional information r
 - [git proxy](git/proxy.md)
 - [Git sign-off](git/sign-off.md)
 
+[`⬆ 返回目录`](#toc)
+
 ## Go
 
 - [go build](go/go-build.md)
@@ -265,6 +285,8 @@ Read the [NOTICE][] file distributed with this work for additional information r
 - [在 MacOS 上使用 gvm install](go/gvm-install-in-macos.md)
 - [interface 与 nil](go/interface-vs-nil.md)
 
+[`⬆ 返回目录`](#toc)
+
 ## 硬件
 
 - [微处理器 MCU](hardware/MCU.md)
@@ -274,6 +296,8 @@ Read the [NOTICE][] file distributed with this work for additional information r
 - [网络交换机](hardware/network-switch.md)
 - [无线电波 (Radio Waves)](hardware/radio-waves.md)
 - [USB](hardware/usb.md)
+
+[`⬆ 返回目录`](#toc)
 
 ## Javascript
 
@@ -288,6 +312,8 @@ Read the [NOTICE][] file distributed with this work for additional information r
 - [Promise 的坑](javascript/trap-of-promise.md)
 - [使用 Promise 的技巧](javascript/trick-of-promise.md)
 - [JS 编程技巧](javascript/tricks-of-js.md)
+
+[`⬆ 返回目录`](#toc)
 
 ## K8S
 
@@ -311,6 +337,8 @@ Read the [NOTICE][] file distributed with this work for additional information r
 - [configmap 和 secret 的滚动更新](k8s/rolling-update-of-configmap-and-secret.md)
 - [多个 Pod 不重复部署在同一个节点上](k8s/two-pods-not-in-same-node.md)
 
+[`⬆ 返回目录`](#toc)
+
 ## 语言设计
 
 记录编程语言的内部设计与思想
@@ -322,6 +350,8 @@ Read the [NOTICE][] file distributed with this work for additional information r
 - [CSP 并发模型](language/csp.md)
 - [Debuger](language/debuger.md)
 - [栈帧](language/stack-frame.md)
+
+[`⬆ 返回目录`](#toc)
 
 ## Linux
 
@@ -473,6 +503,8 @@ Read the [NOTICE][] file distributed with this work for additional information r
 - [ZFS](linux/zfs.md)
 - [Zsh 的坑](linux/zsh-pitfalls.md)
 
+[`⬆ 返回目录`](#toc)
+
 ## Language Server Protocol (LSP)
 
 - https://microsoft.github.io/language-server-protocol/
@@ -480,10 +512,14 @@ Read the [NOTICE][] file distributed with this work for additional information r
 
 - [YAML Language Server](lsp/yaml-language-server.md)
 
+[`⬆ 返回目录`](#toc)
+
 ## Lua
 
 - [lua 没有 continue 关键字](lua/continue.md)
 - [lua 错误处理](lua/error.md)
+
+[`⬆ 返回目录`](#toc)
 
 ## Mac
 
@@ -499,12 +535,16 @@ Read the [NOTICE][] file distributed with this work for additional information r
 - [关闭 Mac 的 Gatekeeper](mac/turn-off-gatekeeper.md)
 - [xcode 重新安装](mac/xcode.md)
 
+[`⬆ 返回目录`](#toc)
+
 ## 数学
 
 数学，不仅仅是算法
 
 - [豪斯多夫维数](math/hausdorff-besicovitch-dimension.md)
 - [空间填充曲线 (Space-Filling Curve)](math/space-filling-curve.md)
+
+[`⬆ 返回目录`](#toc)
 
 ## 网络
 
@@ -525,6 +565,8 @@ Read the [NOTICE][] file distributed with this work for additional information r
 - [SDN](network/sdn.md)
 - [TCP Buffer 大小](network/tcp-buffer-size.md)
 - [vxlan](network/vxlan.md)
+
+[`⬆ 返回目录`](#toc)
 
 ## Nodejs
 
@@ -551,6 +593,8 @@ Read the [NOTICE][] file distributed with this work for additional information r
 - [winston 日志库](nodejs/winston.md)
 - [Yarn 用法](nodejs/yarn-usage.md)
 
+[`⬆ 返回目录`](#toc)
+
 ## 运维
 
 - [Ansible Role](ops/ansible-role.md)
@@ -566,6 +610,8 @@ Read the [NOTICE][] file distributed with this work for additional information r
 - [RPM 创建仓库](ops/rpm-create-repo.md)
 - [RPM 制作和安装离线包](ops/rpm-offline-package-and-install.md)
 - [YUM](ops/yum.md)
+
+[`⬆ 返回目录`](#toc)
 
 ## 其他
 
@@ -628,9 +674,13 @@ Read the [NOTICE][] file distributed with this work for additional information r
 - [为什么 Unicode U+F8FF 是苹果 Logo？](others/why-unicode-f8ff-is-apple-logo.md)
 - [zookeeper 健康检查](others/zookeeper-health-check.md)
 
+[`⬆ 返回目录`](#toc)
+
 ## 哲学
 
 - [Toulmin Model](philosophy/toulmin-model.md)
+
+[`⬆ 返回目录`](#toc)
 
 ## 箴言录
 
@@ -639,6 +689,8 @@ Read the [NOTICE][] file distributed with this work for additional information r
 - [箴言录 - 编程](proverbs/programming.md)
 - [箴言录 - 学习](proverbs/study.md)
 
+[`⬆ 返回目录`](#toc)
+
 ## Python
 
 - [python 环境配置](python/environment.md)
@@ -646,25 +698,35 @@ Read the [NOTICE][] file distributed with this work for additional information r
 - [Python Dockerfile](python/python-dockerfile.md)
 - [Python Virtualenv](python/virtualenv.md)
 
+[`⬆ 返回目录`](#toc)
+
 ## Racket
 
 - [学习 Racket](racket/racket-learning.md)
+
+[`⬆ 返回目录`](#toc)
 
 ## Redis
 
 - [Redis Cluster](redis/cluster.md)
 - [拷贝一个 Sorted Set 到新的 key](redis/copy-a-sorted-set.md)
 
+[`⬆ 返回目录`](#toc)
+
 ## Ruby
 
 - [Ruby 代理镜像](ruby/proxy.md)
 - [使用 scientist 科学重构代码](ruby/using-scientist-for-refactoring.md)
+
+[`⬆ 返回目录`](#toc)
 
 ## 安全攻防
 
 - [不要在生产环境绑定 0.0.0.0](security/do-not-bind-0.0.0.0.md)
 - [Kali Linux](security/kali.md)
 - [Reverse Shell](security/reverse-shell.md)
+
+[`⬆ 返回目录`](#toc)
 
 ## Shell
 
@@ -683,9 +745,13 @@ Read the [NOTICE][] file distributed with this work for additional information r
 - [Bash 的 subshell 与子进程](shell/subshell-and-child-process.md)
 - [Bash xtrace](shell/xtrace.md)
 
+[`⬆ 返回目录`](#toc)
+
 ## Startup
 
 - [商标注册](startup/trademark-registration.md)
+
+[`⬆ 返回目录`](#toc)
 
 ## 存储
 
@@ -694,14 +760,20 @@ Read the [NOTICE][] file distributed with this work for additional information r
 - [物理删除与逻辑删除](storage/soft-delete.md)
 - [存储](storage/storage.md)
 
+[`⬆ 返回目录`](#toc)
+
 ### Etcd
 
 - [etcdctl](storage/etcd/etcdctl.md)
 - [ETCD 报错 request ignored (cluster ID mismatch)](storage/etcd/request-ignored-cluster-id-mismatch.md)
 
+[`⬆ 返回目录`](#toc)
+
 ### Mongo
 
 - [MongoDB 的丢数据问题](storage/mongo/data-lost.md)
+
+[`⬆ 返回目录`](#toc)
 
 ### Mysql
 
@@ -709,6 +781,8 @@ Read the [NOTICE][] file distributed with this work for additional information r
 - [mysqldump](storage/mysql/mysqldump.md)
 - [Date/Datetime/Timestamp 比较](storage/mysql/timestamp-vs-datetime.md)
 - [Transaction 与 autocommit](storage/mysql/transaction-and-autocommit.md)
+
+[`⬆ 返回目录`](#toc)
 
 ## 思考
 
@@ -722,11 +796,15 @@ Read the [NOTICE][] file distributed with this work for additional information r
 - [提问的智慧](thinking/smartquestion.md)
 - [讲故事](thinking/story-telling.md)
 
+[`⬆ 返回目录`](#toc)
+
 ## Typescript
 
 - [export default 的类型注明](typescript/type-annotations-for-export-default.md)
 - [Typescript 与 Rollup](typescript/typescript-and-rollup.md)
 - [typescript 的缺点](typescript/typescript-cons.md)
+
+[`⬆ 返回目录`](#toc)
 
 ## Vim
 
@@ -741,6 +819,8 @@ Read the [NOTICE][] file distributed with this work for additional information r
 - [学习 Vim](vim/vim-learning.md)
 - [VIM 搜索和替换技巧](vim/vim-search-and-replace-tips.md)
 
+[`⬆ 返回目录`](#toc)
+
 ## 虚拟机
 
 - [KVM (Kernel-based Virtual Machine)](vm/kvm.md)
@@ -749,6 +829,8 @@ Read the [NOTICE][] file distributed with this work for additional information r
 - [virsh shutdown 命令无效](vm/virsh-shutdown-not-work.md)
 - [virt-install Couldn't find kernel for install tree](vm/virt-install-cannot-find-kernel.md)
 - [Virtualbox](vm/virtualbox.md)
+
+[`⬆ 返回目录`](#toc)
 
 ## Web
 
@@ -762,5 +844,4 @@ Read the [NOTICE][] file distributed with this work for additional information r
 - [下划线在 HTTP Header 里是非法字符串](web/underscore-is-invalid-in-header.md)
 - [URI 转义](web/uri-encode.md)
 
-
-**[⬆ 返回目录](#toc)**
+[`⬆ 返回目录`](#toc)

@@ -1,5 +1,5 @@
 ADoyle 的碎片化知识笔记。
-https://adoyle.me/Today-I-Learned/
+https://til.adoyle.me
 
 ## 提醒
 

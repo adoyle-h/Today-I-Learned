@@ -30,6 +30,10 @@ const writeFile = util.promisify(FS.writeFile);
 const categories = {};
 const toc = [];
 
+json2md.converters.text = async (text) => {
+    return text;
+}
+
 json2md.converters.ul = async (array) => {
     return `- ${array.join('\n- ')}`;
 };
@@ -190,6 +194,7 @@ function handleCategories(categories, levelStd, structure) {
             structure.push({[`h${level}`]: cateName});
             if (intro) structure.push(intro.trim() + '\n');
             structure.push({ul: list});
+            structure.push({text: '[`⬆ 返回目录`](#toc)'});
 
             handleCategories(childCates, levelStd + 1, structure);
         })
@@ -227,8 +232,6 @@ async function build() {
 
     debug('categories=%O', categories);
     handleCategories(rootCategories, 2, structure);
-
-    structure.push({p: '**[⬆ 返回目录](#toc)**'});
 
     const content = await json2md.async(structure);
 
