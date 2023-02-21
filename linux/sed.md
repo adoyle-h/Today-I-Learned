@@ -22,6 +22,33 @@ sed -i'' 's/1/2/' abc  # ok
 sed -i 's/1/2/' abc    # ok
 ```
 
+### 解决方案
+
+只有一种方法同时支持 BSD sed 和 GNU sed，那就是
+
+```sh
+sed -i.bak 's/1/2/' abc
+rm abc.bak
+```
+
+或者提前判断 sed 命令是不是 GNU 的。
+
+```sh
+# 此方法来自于 https://github.com/adoyle-h/lobash/blob/develop/src/internals/is_gnu_sed.bash
+is_gnu_sed() {
+  local out
+  out=$(${1:-sed} --version 2>/dev/null)
+  [ $out =~ 'GNU sed' ]
+}
+
+# if is_gnu_sed gsed; then
+if is_gnu_sed; then
+  echo "is GNU sed"
+else
+  echo "is BSD sed"
+fi
+```
+
 ## 替换换行符无效
 
 [官方文档](https://www.pement.org/sed/sedfaq5.html#s5.10)有说明。
@@ -33,3 +60,22 @@ sed -i 's/1/2/' abc    # ok
 
 - GNU sed: `sed ':a;N;$!ba;s/\n//g' file`
 - BSD sed: `sed -e ':a' -e 'N' -e '$!ba' -e 's/\n/ /g' file`
+
+## 颜色字符在 sed 替换中失效
+
+无效写法
+
+- `<<<"red green" sed -E 's/(.+) (.+)/\033[31m\1\033[32m \2\033[0m/'`
+- `<<<"red green" sed -E 's/(.+) (.+)/\\033[31m\1\\033[32m \2\\033[0m/'`
+- `<<<"red green" sed -E 's/(.+) (.+)/\e[31m\1\e[32m \2\e[0m/'`
+
+颜色字符是通过 [ASCII Escape 字符](../others/ascii.md) 来控制终端的字符颜色显示的。
+
+`\033` 是八进制的，`\e` 是一个转义序列的前缀，用于表示 ASCII Escape 字符。
+而这些前缀不是所有编程语言和环境中都支持的转义序列，在使用时需要查看相关的文档或资料。
+
+sed 就不识别 `\033` 和 `\e`，但是 sed 自 [GNU sed v3.02.80 起](https://stackoverflow.com/a/7760752/4622308)就支持十六进制，因此可以用十六进制的 `\x1b` 来表示八进制的 `\033`。
+
+所以有效写法是 `<<<"red green" sed -E 's/(.+) (.+)/\x1b[31m\1\x1b[32m \2\x1b[0m/'`
+
+另外比如 `\0` (expect NUL) 在 sed 里也不支持，需要用十六进制的 `\x0` 或 `\x00` 表示。

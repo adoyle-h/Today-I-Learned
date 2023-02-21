@@ -6,9 +6,10 @@
 
 ## 设置补全
 
-- `complete -b manbash`
-- `complete -A builtin bashman`。`-b` 等同于 `-A builtin`。
-- `complete -`
+- `complete -b cmd`
+- `complete -A builtin cmd` = `-A builtin`。
+- `complete -A file cmd` = `complete -f cmd`
+- `complete -A directory cmd` = `complete -d cmd`
 
 ## 补全函数的相关变量
 
