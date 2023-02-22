@@ -739,6 +739,7 @@ Read the [NOTICE][] file distributed with this work for additional information r
 - [学习 Bash](shell/bash-learning.md)
 - [Bash 的坑](shell/bash-pitfalls.md)
 - [Bash 小技巧](shell/bash-tricks.md)
+- [当存在与命令同名的别名，如何调用原命令](shell/command-alias-in-same-names.md)
 - [`printf '%s\n' $@` 为何可以打印多行？](shell/printf-array.md)
 - [Readline](shell/readline.md)
 - [学习 Shell](shell/shell-learning.md)
