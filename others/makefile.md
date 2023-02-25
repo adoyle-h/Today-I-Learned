@@ -5,6 +5,7 @@
 
 <!-- MarkdownTOC GFM -->
 
+- [参考资料](#参考资料)
 - [命令回显](#命令回显)
 - [变量赋值](#变量赋值)
 - [target 作用域的变量定义](#target-作用域的变量定义)
@@ -16,8 +17,15 @@
 - [$shell 变量为何是空？](#shell-变量为何是空)
 - [在 target 内部使用条件判断](#在-target-内部使用条件判断)
 - [在 target 内部赋值变量](#在-target-内部赋值变量)
+- [注意 &&](#注意-)
 
 <!-- /MarkdownTOC -->
+
+## 参考资料
+
+- https://www.cnblogs.com/peterYong/p/15030385.html
+- https://makefiletutorial.com/
+- [陈皓 - 跟我一起写Makefile](https://seisman.github.io/how-to-write-makefile/)
 
 ## 命令回显
 
@@ -191,3 +199,32 @@ endif
 
 **但这种方法存在问题！**，不要使用 `$(eval)` **在 target 内部**赋值变量！你应该使用 shell 语法来操作变量。
 原因见[珍爱生命，远离 ifeq](#珍爱生命远离-ifeq)。
+
+
+## 注意 &&
+
+```make
+.PHONY: a
+a:
+	@[[ -n '' ]] && echo 1
+```
+
+`make a` 会报错。因为 `[[ -n '' ]]` 的退出码是非 0 的，于是 `[[ -n '' ]] && echo 1` 整行的退出码也是非 0 的。即报错。
+
+解决方案：
+
+要么这么写
+
+```make
+.PHONY: a
+a:
+	@[[ -n '' ]] && echo 1 || true
+```
+
+要么这么写
+
+```make
+.PHONY: a
+a:
+	@if [[ -n '' ]]; then echo 1; fi
+```

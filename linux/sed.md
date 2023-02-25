@@ -1,6 +1,6 @@
 # sed
 
-BSD sed 和 GNU sed 的异同，参考 https://riptutorial.com/sed/topic/9436/bsd-macos-sed-vs--gnu-sed-vs--the-posix-sed-specification
+BSD sed 和 GNU sed 的异同，参考 [BSD/macOS Sed vs. GNU Sed vs. the POSIX Sed specification](https://riptutorial.com/sed/topic/9436/bsd-macos-sed-vs--gnu-sed-vs--the-posix-sed-specification) ([链接备份](https://web.archive.org/web/20221013094813/https://riptutorial.com/sed/topic/9436/bsd-macos-sed-vs--gnu-sed-vs--the-posix-sed-specification))
 
 ## -i 参数不一致
 
@@ -69,13 +69,12 @@ fi
 - `<<<"red green" sed -E 's/(.+) (.+)/\\033[31m\1\\033[32m \2\\033[0m/'`
 - `<<<"red green" sed -E 's/(.+) (.+)/\e[31m\1\e[32m \2\e[0m/'`
 
-颜色字符是通过 [ASCII Escape 字符](../others/ascii.md) 来控制终端的字符颜色显示的。
+颜色字符是通过 [ASCII 转义序列](../others/ascii-and-ansi.md) 来控制终端的字符颜色显示的。
 
-`\033` 是八进制的，`\e` 是一个转义序列的前缀，用于表示 ASCII Escape 字符。
-而这些前缀不是所有编程语言和环境中都支持的转义序列，在使用时需要查看相关的文档或资料。
+转义序列是由 `ESC` + `[` + 其他字符组成的序列。其中 `ESC` 的表示方法有很多，详见[这篇文章](../others/ascii-and-ansi.md#ascii-escape-字符)。
+进制表示法和转换见[这篇文章](../math/positional-notation.md)。
 
-sed 就不识别 `\033` 和 `\e`，但是 sed 自 [GNU sed v3.02.80 起](https://stackoverflow.com/a/7760752/4622308)就支持十六进制，因此可以用十六进制的 `\x1b` 来表示八进制的 `\033`。
-
+sed 就不识别 `\033` 和 `\e`。但是 sed 自 [GNU sed v3.02.80 起](https://stackoverflow.com/a/7760752/4622308)就支持十六进制，因此可以用十六进制的 `\x1b`。
 所以有效写法是 `<<<"red green" sed -E 's/(.+) (.+)/\x1b[31m\1\x1b[32m \2\x1b[0m/'`
 
 另外比如 `\0` (expect NUL) 在 sed 里也不支持，需要用十六进制的 `\x0` 或 `\x00` 表示。

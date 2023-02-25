@@ -1,33 +1,43 @@
-## 永久链接
+# 永久链接
 
-互联网没有永久存在的资源，终有一天你会发现原来的资源内容改变，甚至消失。
-最可以信赖的只有 archived 服务。这类服务在自身存活的时间内，永久保存网页当时的内容快照。
+互联网没有永久存在的资源，终有一天你会发现原来的域名过期了，网页内容布局修改了，资源搬迁甚至直接消失。
 
-### 使用场景
+相对可以信赖的只有 archived 服务。这类服务在自身存活的时间内，永久保存网页当时的内容快照。
+
+## 使用场景
 
 1. 当你打开某网络资源，发现它已经失效了。可以到 archived 服务查看是否有备份。
 2. 当你引用某网络资源，担心有一天它会失效。可以备份到 archived 服务，从而引用备份链接。
 
-### 推荐服务
+网络资源包括网页、图像、声音、电子书等一切数字资源。
 
-#### https://archive.org/
+## 推荐服务
 
-保存的页面来自用户提交的和自动抓取的。
+## Internet Archive
+
+https://archive.org/
 
 优点：
 
 1. 资金稳定，所以该服务的存活时间最稳定
+2. 支持自动抓取。
+3. 支持保存网页的同时备份页面截图。
 
 缺点：
 
 1. 生成的链接长度很长
 2. 阅读体验不够好
 
-#### https://archive.today/
+推荐使用浏览器插件，查询和保存都很方便。
+
+- [Chrome](https://chrome.google.com/webstore/detail/wayback-machine/fpnmgdkabkmnadcjpehmlllkndpkmiak)
+- [Firefox](https://addons.mozilla.org/en-US/firefox/addon/wayback-machine_new/)
+- [Safari](https://apps.apple.com/us/app/wayback-machine/id1472432422)
+- [Edge](https://microsoftedge.microsoft.com/addons/detail/wayback-machine/kjmickeoogghaimmomagaghnogelpcpn)
+
+## Archive Today
 
 曾经的 [archive.is](https://www.wikiwand.com/zh/Archive.is)，现在的 Archive.today。
-
-保存的页面只来自用户提交的，不自动抓取。
 
 优点：
 
@@ -38,7 +48,10 @@
 
 缺点：
 
-1. 私人资助，服务器在法国，因此可能不稳定
+1. 私人资助，服务器在法国，因此可能不稳定。
+2. 域名会动态变。
+3. 每次使用都要验证校验码，很麻烦。
+4. 保存的页面只来自用户提交的，不自动抓取。
 
 它还有其他几个域名，都指向同一个服务。
 
@@ -46,11 +59,7 @@
 - https://archive.is/
 - https://archive.md/
 
-#### https://perma.cc/
-
-一个比较新的 archived 服务。界面很友好。只是不知道稳不稳定
-
-### 快捷使用
+### 浏览器书签
 
 不需要安装浏览器插件，只需要创建浏览器书签。
 
@@ -66,7 +75,11 @@
 
 点击书签即可将当前页面保存到 Archive.today。
 
-### 参考文章
+## https://perma.cc/
+
+一个比较新的 archived 服务。界面很友好。只是不知道稳不稳定
+
+## 参考文章
 
 - [留下证据：如何存档开源材料？](https://archive.ph/yuVm7)
-- [个人博客存入互联网博物馆Archive.org](https://archive.ph/9fgTy)
+- [个人博客存入互联网博物馆 Archive.org](https://archive.ph/9fgTy)

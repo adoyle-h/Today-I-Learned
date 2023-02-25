@@ -209,3 +209,4 @@ Sketch 不支持 CMYK，所以不能用于设计印刷品。
 ## 参考文章
 
 - [色彩空间基础](https://zhuanlan.zhihu.com/p/24214731)
+- [JIMMY CHEUNG - 色彩管理](https://www.zhangxiaochun.com/color-space-3/)：这篇文章记录了如何选择合适的色彩空间
