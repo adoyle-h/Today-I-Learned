@@ -4,7 +4,7 @@
 
 > A total function is setup to handle all possible input values, not just those parameter values that are expected when the software functions normally.[^1]
 
-[^1]: http://lars-lab.jpl.nasa.gov/JPL_Coding_Standard_C.pdf
+[^1]: https://web.archive.org/web/20190219232204/https://lars-lab.jpl.nasa.gov/JPL_Coding_Standard_C.pdf
 
 
 然而我们编写的程序函数都是不完整的。原因在于输入参数，我们大多只针对期望的值进行编码。
@@ -43,4 +43,4 @@
 
 ### 参考
 
-- http://stackoverflow.com/questions/19647180/what-is-the-total-function
+- https://stackoverflow.com/q/19647180/4622308

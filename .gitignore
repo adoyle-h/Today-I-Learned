@@ -1,3 +1,6 @@
+/makefile-utils/*
+!/makefile-utils/*.mk
+
 ### Jekyll
 _site/
 .sass-cache/

@@ -7,4 +7,4 @@
 参考
 
 - https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/435661/
-- https://askubuntu.com/questions/432809/why-is-kswapd0-running-on-a-computer-with-no-swap
+- [Why is kswapd0 running on a computer with no swap?](https://askubuntu.com/q/432809/1675926)

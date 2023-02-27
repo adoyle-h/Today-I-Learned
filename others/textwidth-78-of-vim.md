@@ -28,7 +28,7 @@
 >  information to be lost). Again, even though this limitation is put on
 >  messages, it is encumbant upon implementations which display messages
 
-https://www.ietf.org/rfc/rfc2822.txt
+https://www.rfc-editor.org/rfc/rfc2822
 
 其实无卵用。
 

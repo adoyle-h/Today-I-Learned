@@ -311,4 +311,4 @@ quay.azk8s.cn/coreos/flannel-cni                                       v0.3.0   
 
 kubespray 默认给 nodelocaldns 设置的 ip 是 `169.254.25.10`。这可能有坑。
 因为 `169.254.0.0/16` 一般是设备从 DHCP 分配 IP 失败或者没有 DHCP 服务器时，就会随机在这个 B 类地址段获取一个地址。
-详见 [RFC3927](https://tools.ietf.org/html/rfc3927)。
+详见 [RFC3927](https://www.rfc-editor.org/rfc/rfc3927)。

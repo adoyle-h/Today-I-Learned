@@ -3,6 +3,7 @@
 ### 参数解释
 
 https://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/strace.html
+([链接备份](https://web.archive.org/web/20221202220111/https://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/strace.html))
 
 ```
 -c 统计每一系统调用的所执行的时间,次数和出错的次数等.
@@ -66,7 +67,7 @@ qualifier只能是 trace,abbrev,verbose,raw,signal,read,write其中之一.value�
 
 ### 常用用法
 
-- [五种利用strace查故障的简单方法](http://www.voidcn.com/article/p-athjwmck-bhy.html)，[原文链接](http://www.hokstad.com/5-simple-ways-to-troubleshoot-using-strace.html)已失效，因此放一个译文。
+- [5 simple ways to troubleshoot using Strace](http://hokstad.com/5-simple-ways-to-troubleshoot-using-strace) ([链接备份](https://web.archive.org/web/20230115014718/http://hokstad.com/5-simple-ways-to-troubleshoot-using-strace))
 
 ## strace 无法 detach
 

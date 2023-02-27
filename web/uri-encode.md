@@ -40,7 +40,7 @@ function fixedEncodeURIComponent(str) {
 ```
 
 又比如 JAVA 标准库里的 [java.net.URLEncoder][]。
-又比如 [PHP 的 urlencode](PHP)。
+又比如 [PHP 的 urlencode][PHP]。
 
 ### 区别
 
@@ -119,11 +119,11 @@ RFC3986 的描述
 
 > The space character "   " is converted into a plus sign "+".
 
-JAVA 标准库的 [java.net.URLEncoder][]，PHP 标准库的 [urlencode](PHP) 都这样。
+JAVA 标准库的 [java.net.URLEncoder][]，PHP 标准库的 [urlencode][PHP] 都这样。
 
 
 [PHP]: https://www.php.net/manual/en/function.urlencode.php
 [java.net.URLEncoder]: https://docs.oracle.com/en/java/javase/12/docs/api/java.base/java/net/URLEncoder.html
-[RFC1738]: https://tools.ietf.org/html/rfc1738
-[RFC2396]: https://tools.ietf.org/html/rfc2396
-[RFC3986]: https://tools.ietf.org/html/rfc3986
+[RFC1738]: https://www.rfc-editor.org/rfc/rfc1738
+[RFC2396]: https://www.rfc-editor.org/rfc/rfc2396
+[RFC3986]: https://www.rfc-editor.org/rfc/rfc3986

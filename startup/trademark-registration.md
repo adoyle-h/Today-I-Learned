@@ -4,5 +4,5 @@
 
 可以在[国家知识产权局商标局][1]里查询重名商标。
 
-[0]: http://tm.bctmo.com/
-[1]: http://wsjs.saic.gov.cn/txnT01.do
+[0]: https://web.archive.org/web/20220326053942/http://tm.bctmo.com/
+[1]: http://wcjs.sbj.cnipa.gov.cn/home

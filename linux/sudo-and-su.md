@@ -36,7 +36,7 @@
 
 `echo myPassword | sudo -S ls /tmp`
 
-https://stackoverflow.com/a/4327123
+https://stackoverflow.com/a/4327123/4622308
 
 ### sudo, gksudo, kdesudo
 
@@ -52,4 +52,4 @@ https://stackoverflow.com/a/4327123
 >> owned by Root. (AFAICT, this is all that's special about the environment of the started
 >> process with gksudo vs. sudo).
 
-Reference from https://askubuntu.com/a/425644
+Reference from https://askubuntu.com/a/425644/1675926

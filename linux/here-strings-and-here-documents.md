@@ -48,4 +48,4 @@ $PATH
 EOF
 ```
 
-参考 Here Documents 的文档，或者 https://stackoverflow.com/a/22698106
+参考 Here Documents 的文档，或者 https://stackoverflow.com/a/22698106/4622308

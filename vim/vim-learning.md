@@ -36,13 +36,13 @@
 
 ### Cheatsheets
 
-![](http://people.csail.mit.edu/vgod/vim/vim-cheat-sheet-en.png)
+![vim-cheat-sheet-en.png](http://people.csail.mit.edu/vgod/vim/vim-cheat-sheet-en.png)
 翻译版：
-![](http://blog.vgod.tw.s3.amazonaws.com/wp-content/uploads/2009/12/vim-cheat-sheet-full.png)
+![vim-cheat-sheet-full.png](http://blog.vgod.tw.s3.amazonaws.com/wp-content/uploads/2009/12/vim-cheat-sheet-full.png)
 
-![](https://cdn.shopify.com/s/files/1/0165/4168/files/preview.png)
+![preview.png](https://cdn.shopify.com/s/files/1/0165/4168/files/preview.png)
 
-![](http://michael.peopleofhonoronly.com/vim/vim_cheat_sheet_for_programmers_print.png)
+![vim_cheat_sheet_for_programmers_print.png](http://michael.peopleofhonoronly.com/vim/vim_cheat_sheet_for_programmers_print.png)
 
 > which from http://michael.peopleofhonoronly.com/vim/
 
@@ -98,10 +98,10 @@ vim documentation 有两个章节：[object-motions][] 和 [object-select][]。�
 
 ### 在 vim 里直接打开连接
 
-鼠标移到链接上，按键 `gx` 即可。  
+鼠标移到链接上，按键 `gx` 即可。
 `:h gx` 查看帮助
 
-但是 gx 无法打开完整的链接，比如 https://www.youtube.com/watch?v=wlR5gYd6um0  
+但是 gx 无法打开完整的链接，比如 https://www.youtube.com/watch?v=wlR5gYd6um0
 [open-browser.vim](https://github.com/tyru/open-browser.vim) 可以解决这个问题
 
 `netrw_filehandler` 可以用来扩展 gx 的解析。
@@ -131,7 +131,7 @@ vim documentation 有两个章节：[object-motions][] 和 [object-select][]。�
 
 这样设置，可以只在 Insert 状态下起作用。
 
-参考自 https://superuser.com/a/604180
+参考自 https://superuser.com/a/604180/1776434
 
 
 ### 一次打开多个文件

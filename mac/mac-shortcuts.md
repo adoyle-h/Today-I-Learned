@@ -10,7 +10,8 @@
 参考 https://apple.stackexchange.com/a/342740
 
 如果以上不管用（通常是你的应用的全局快捷键覆盖了系统快捷键造成的），可以试试 `shift+command+[` 和 `shift+command+[` 来切换，这貌似也是默认设置。但是，原本能单手操作的，这就需要双手操作了...
-参考 https://superuser.com/a/1125599
+
+参考 https://superuser.com/a/1125599/1776434
 
 ### 切换应用访问历史的上一页和下一页
 

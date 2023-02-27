@@ -2,7 +2,7 @@
 
 DNS over TLS (DoT) 和 DNS over HTTPS (DoH) 比传统的 DNS 解析更安全。
 
-详见 https://developers.google.com/speed/public-dns/docs/secure-transports
+详见 [Google Public DNS 指南 - DNS 安全传输](https://developers.google.com/speed/public-dns/docs/secure-transports) ([链接备份](https://web.archive.org/web/20230226194833/https://developers.google.com/speed/public-dns/docs/secure-transports?hl=zh-cn))
 
 ### DoH 在线服务
 

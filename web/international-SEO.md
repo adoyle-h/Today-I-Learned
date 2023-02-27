@@ -6,6 +6,6 @@
 
 参考:
 
-- [International SEO：多语言多区域网站SEO的快速入门指南](https://juejin.im/post/5b86d5fb518825278e272ff8)
-- [Best practice for URLs of multi-language websites](https://stackoverflow.com/questions/21985164/best-practice-for-urls-of-multi-language-websites)
-- [Hreflang Tag](https://moz.com/learn/seo/hreflang-tag)
+- [International SEO：多语言多区域网站SEO的快速入门指南](https://segmentfault.com/a/1190000016201684) ([链接备份](https://web.archive.org/web/20230225194413/https://segmentfault.com/a/1190000016201684))
+- [Best practice for URLs of multi-language websites](https://stackoverflow.com/q/21985164/4622308)
+- [Hreflang Tag](https://moz.com/learn/seo/hreflang-tag) ([链接备份](https://web.archive.org/web/20221122023101/https://moz.com/learn/seo/hreflang-tag))

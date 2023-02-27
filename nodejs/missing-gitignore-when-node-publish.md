@@ -14,8 +14,8 @@
 
 目前只能靠脚手架工具本身提供支持。比如将模板里名为 `gitignore` 的文件，执行构建时自动转成 `.gitignore` 文件。
 
-比如 [egg-init][] 就提供了这类[转换](https://github.com/eggjs/egg-init/blob/master/lib/init_command.js#L29)。  
-[facebookincubator/create-react-app](https://github.com/facebookincubator/create-react-app/pull/79) 也做了特殊处理。
+比如 [egg-init][] 就提供了这类[转换](https://github.com/eggjs/egg-init/blob/db54e1ed39dd4266fcf11af137ec29cca9e868e4/lib/init_command.js#L32)。
+[facebook/create-react-app](https://github.com/facebook/create-react-app/pull/79) 也做了特殊处理。
 
 反倒是最家喻户晓的 yo generator 居然[没有这类功能](https://github.com/yeoman/generator/issues/812)。So pathetic.
 

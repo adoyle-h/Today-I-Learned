@@ -136,7 +136,7 @@ Q: 如果有相同变量名的 map 或者 list 分散在不同的 vars 文件会
 
 A: Ansible 默认行为是同名就全部覆盖。可以用 `hash_behavior=merge` 改变这个行为，但是不要这么做，很可能会导致现有 playbook 出问题。Ansible 2.0 支持了 [combine filter](https://docs.ansible.com/ansible/2.9/user_guide/playbooks_filters.html#combining-hashes-dictionaries)。
 
-https://stackoverflow.com/questions/35554415/in-ansible-how-to-combine-variables-from-separate-files-into-one-array
+https://stackoverflow.com/q/35554415/4622308
 
 #### group_vars 目录结构
 

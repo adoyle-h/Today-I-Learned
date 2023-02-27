@@ -14,8 +14,8 @@
 
 加上 `--batch` 参数就解决了，据说是 gpg2 的 bug。
 
-- https://superuser.com/questions/1325862/gnupg2-suddenly-throwing-error-building-skey-array-no-such-file-or-directory
-- https://superuser.com/questions/1135812/gpg2-asking-for-passphrase-when-importing-secret-keys
+- [GNUPG2 suddenly throwing "Error building skey array: No such file or directory"](https://superuser.com/q/1325862/1776434)
+- [gpg2 asking for passphrase when importing secret keys](https://superuser.com/q/1135812/1776434)
 - https://dev.gnupg.org/T2313
 
 ## gpg-agent

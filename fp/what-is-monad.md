@@ -74,5 +74,5 @@ Haskell 对于 Maybe 的定义是 `data Maybe a = Nothing | Just a`。
 
 - http://cnhaskell.com/
 - http://learnyouahaskell.com/
-- http://fleurer-lee.com/lyah/   learnyouahaskell 的部分中文翻译
+  - [中文翻译](https://learnyouahaskell.mno2.org/zh-cn) [源码](https://github.com/MnO2/learnyouahaskell-zh)
 - https://gist.github.com/weidagang/348024dac954d80e724e

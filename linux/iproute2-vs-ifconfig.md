@@ -13,7 +13,8 @@ iproute2 提供的命令：
 
 从 ifconfig 和 route 到 iproute2 的对比：
 
-![Nettools-vs-Iproute2.png](https://linoxide.com/wp-content/uploads/2014/05/Linux-Nettools-vs-Iproute2.png)
+![Nettools-vs-Iproute2.png](https://img.linux.net.cn/data/attachment/album/201406/04/003404uy9l1t5zayzllylm.png)
+([链接备份](https://web.archive.org/web/20200905191251/https://linoxide.com/wp-content/uploads/2014/05/Linux-Nettools-vs-Iproute2.png))
 
 ```
 ip [ OPTIONS ] OBJECT [ COMMAND [ ARGUMENTS ]]
@@ -39,8 +40,8 @@ Mac 系统通过 `brew install iproute2mac` 来安装，[源码](https://github.
 ### 参考资料
 
 - [Linux Advanced Routing & Traffic Control HOWTO](https://lartc.org/howto/)
-- [IPROUTE2 Utility Suite Howto](http://www.policyrouting.org/iproute2.doc.html)
-- [LinOxide - How to use IP Command in Linux with Examples](https://linoxide.com/linux-command/use-ip-command-linux/)
+- [IPROUTE2 Utility Suite Howto](http://www.policyrouting.org/iproute2.doc.html) ([链接备份](https://web.archive.org/web/20220807073512/http://www.policyrouting.org/iproute2.doc.html))
+- [Linux IP Command – Examples + Options](https://linuxopsys.com/topics/linux-ip-command) ([链接备份](https://web.archive.org/web/20221229145109/https://linuxopsys.com/topics/linux-ip-command))
 
 ### 重启机器，路由失效
 

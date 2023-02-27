@@ -1,0 +1,10 @@
+# Example: https://github.com/lycheeverse/lychee/blob/master/lychee.example.toml
+
+timeout = 3
+max_retries = 3
+output = "links_report.log"
+insecure = true
+exclude_all_private = true
+exclude_path = [
+  '\..*', '.*\.log', "_site", "node_modules", "makefile-utils"
+]

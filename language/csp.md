@@ -18,7 +18,6 @@ CSP (Communicating Sequential Processe) 中文名为通信顺序进程。
 ### 参考资料
 
 - [Wikipedia - 交谈循序程式](https://www.wikiwand.com/zh-hans/%E4%BA%A4%E8%AB%87%E5%BE%AA%E5%BA%8F%E7%A8%8B%E5%BC%8F)
-- [Golang中国 - Go语言的CSP模型](https://www.qfgolang.com/?p=2214)
-- [JaguarJack - 深度解密 Go 语言之 channel](https://learnku.com/articles/32142)
+- [JaguarJack - 深度解密 Go 语言之 channel](https://learnku.com/articles/32142) ([链接备份](https://web.archive.org/web/20230225204145/https://learnku.com/articles/32142))
 
 [^1]: https://learnku.com/articles/32142

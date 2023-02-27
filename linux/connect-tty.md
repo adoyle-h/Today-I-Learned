@@ -4,7 +4,7 @@
 
 按 `CTRL+A CTRL+\` 退出当前 screen。
 
-另外也可以使用 [tio](tio.github.io)。
+另外也可以使用 [tio](https://github.com/tio/tio)。
 
 另外，可以使用 `tty` 命令查看当前 tty。
 

@@ -4,7 +4,7 @@
 
 - https://github.com/systemd/systemd
 - https://www.freedesktop.org/wiki/Software/systemd/
-- [阮一峰 - Systemd 入门教程：命令篇](http://www.ruanyifeng.com/blog/2016/03/systemd-tutorial-commands.html)
+- [阮一峰 - Systemd 入门教程：命令篇](https://web.archive.org/web/20230216005229/https://www.ruanyifeng.com/blog/2016/03/systemd-tutorial-commands.html)
 - https://wiki.archlinux.org/index.php/Systemd_(简体中文)
 
 ### systemdctl
@@ -61,7 +61,7 @@ adoyle    926414  926413  0 15:08 ?        00:00:00 (sd-pam)
 
 > journalctl 用来查询 systemd-journald 服务收集到的日志。systemd-journald 服务是 systemd init 系统提供的收集系统日志的服务。
 
-- https://www.cnblogs.com/sparkdev/p/8795141.html
+- https://www.cnblogs.com/sparkdev/p/8795141.html ([链接备份](https://web.archive.org/web/20221005002121/https://www.cnblogs.com/sparkdev/p/8795141.html))
 
 ### systemd-analyze
 

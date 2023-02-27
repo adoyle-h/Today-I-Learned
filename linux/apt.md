@@ -37,7 +37,7 @@ echo 'APT::Default-Release "bullseye";' > /etc/apt/apt.conf.d/00local
 
 参考
 
-- https://unix.stackexchange.com/a/647205
+- https://unix.stackexchange.com/a/647205/373303
 - [Debian 的版本号及 distributions](https://archive.ph/i4N0T)
 
 

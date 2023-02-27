@@ -1,4 +1,4 @@
 ## z-index
 
-- http://stackoverflow.com/questions/7490146/z-index-relative-or-absolute/7490187#7490187
+- https://stackoverflow.com/a/7490187/4622308
 - https://philipwalton.com/articles/what-no-one-told-you-about-z-index/

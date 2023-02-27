@@ -13,7 +13,7 @@
   - [CNI plugins](https://github.com/containernetworking/plugins): for using `nerdctl run`.
   - [CNI isolation plugin](https://github.com/AkihiroSuda/cni-isolation): for isolating bridge networks (`nerdctl network create`)
 - 其他
-  - [RootlessKit](https://github.com/rootless-containers/rootlesskit) and [slirp4netns](https://github.com/rootless-containers/slirp4netns): for [Rootless mode](./docs/rootless.md)
+  - [RootlessKit](https://github.com/rootless-containers/rootlesskit) and [slirp4netns](https://github.com/rootless-containers/slirp4netns): for [Rootless mode](https://docs.docker.com/engine/security/rootless/)
 
 ### data_root
 

@@ -31,4 +31,4 @@ export {default as X} from '...';
 
 当别的库使用这个 `X` 会丢失类型，别的库识别到的是名为 default 的类型。应该是个 Bug。
 
-其他理由: https://basarat.gitbooks.io/typescript/docs/tips/defaultIsBad.html
+其他理由: https://basarat.gitbook.io/typescript/main-1/defaultisbad ([链接备份](https://web.archive.org/web/20230127095336/https://basarat.gitbook.io/typescript/main-1/defaultisbad))

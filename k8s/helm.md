@@ -7,11 +7,11 @@
 
 ### Chart
 
-[官方最佳实践](https://github.com/helm/helm/tree/master/docs/chart_best_practices)
+[官方最佳实践](https://helm.sh/docs/chart_best_practices/conventions/)
 
 ### Chart 依赖
 
-[requirements.yaml](https://github.com/helm/helm/blob/master/docs/helm/helm_dependency.md)
+[requirements.yaml](https://helm.sh/docs/chart_best_practices/dependencies/)
 
 支持本地文件的引用
 
@@ -28,7 +28,7 @@ dependencies:
 
 ### helm upgrade
 
-- [helm upgrade --reset-values 与 --reuse-values 的区别](https://medium.com/@kcatstack/understand-helm-upgrade-flags-reset-values-reuse-values-6e58ac8f127e)
+- [helm upgrade --reset-values 与 --reuse-values 的区别](https://medium.com/@kcatstack/understand-helm-upgrade-flags-reset-values-reuse-values-6e58ac8f127e) ([链接备份](https://web.archive.org/web/20220707025448/https://medium.com/@kcatstack/understand-helm-upgrade-flags-reset-values-reuse-values-6e58ac8f127e))
 
 
 ### helm --set 包含逗号
@@ -50,7 +50,7 @@ helm 3: `helm template <chart_name> -s templates/deployment.yaml -f ./values.yam
 CRD 应该怎么管理？helm 在 v3 也没定好完整方案
 
 - https://github.com/helm/helm/issues/5871
-- https://joejulian.name/post/helm-v2-crd-management/
+- https://joejulian.name/post/helm-v2-crd-management/ ([链接备份](https://web.archive.org/web/20221116170150/https://joejulian.name/post/helm-v2-crd-management/))
 
 
 helm upgrade 升级时 helm 报错 crd 已存在，但 crd 没包含上一次更新的版本里，造成了冲突，具体报错如：

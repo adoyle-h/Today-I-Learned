@@ -32,4 +32,4 @@ HDD 做数据盘
 └───────────┴──────────────┴────────────────┘
 ```
 
-- https://superuser.com/questions/45342/when-should-i-use-dev-shm-and-when-should-i-use-tmp
+- https://superuser.com/q/45342/1776434

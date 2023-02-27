@@ -11,5 +11,5 @@
 
 详解：
 
-- http://stackoverflow.com/a/26820817
+- https://stackoverflow.com/a/26820817/4622308
 - https://github.com/creationix/nvm/issues/540

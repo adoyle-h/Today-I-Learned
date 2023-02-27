@@ -11,7 +11,7 @@
 > new B() instanceof A
 > B.prototype instanceof A || B === A
 
-源自 http://stackoverflow.com/a/18939541
+源自 https://stackoverflow.com/a/18939541/4622308
 
 ### 异步函数不应该通过 throw error 来传递错误
 

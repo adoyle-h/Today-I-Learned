@@ -1,7 +1,7 @@
 # 协程 (Coroutine)
 
 - [Wikipedia - 协程](https://www.wikiwand.com/zh-hans/%E5%8D%8F%E7%A8%8B)
-- [Golang和Erlang的并发调度浅析](https://studygolang.com/articles/18968)
+- [Golang和Erlang的并发调度浅析](https://studygolang.com/articles/18968) ([链接备份](https://web.archive.org/web/20230225182702/https://studygolang.com/articles/18968))
 
 
 ## 协程与纤程 (Fiber) 的区别

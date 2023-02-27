@@ -12,7 +12,7 @@
 1. `go env` 确认 Go 环境变量
 1. 安装 shell 补全工具，https://github.com/posener/complete/tree/master
 1. 重启 shell
-1. 安装 [gopls](https://github.com/golang/tools/blob/master/gopls/doc/user.md#installation)
+1. 安装 [gopls](https://github.com/golang/tools/tree/master/gopls#installation)
 1. 安装 [gotags](https://github.com/jstemmer/gotags)
 1. 配置你的编辑器
 

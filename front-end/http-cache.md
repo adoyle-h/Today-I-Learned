@@ -11,5 +11,5 @@ Cache-Control 不光可以设置在响应的 HEADER。还可以设置为请求�
 
 使用 HTML Meta 标签设置缓存处理。
 
-- http://www.cnblogs.com/wonyun/p/5524617.html
-- http://coderlt.coding.me/2016/11/21/web-cache/
+- [http协商缓存VS强缓存](http://www.cnblogs.com/wonyun/p/5524617.html) ([链接备份](https://web.archive.org/web/20221207135206/https://www.cnblogs.com/wonyun/p/5524617.html))
+- [浏览器的缓存机制](https://web.archive.org/web/20191228165837/http://coderlt.coding.me/2016/11/21/web-cache/)

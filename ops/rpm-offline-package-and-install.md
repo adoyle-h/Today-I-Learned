@@ -41,7 +41,7 @@ yum 将会下载所有的依赖包。
 
 #### 开启 yum 缓存
 
-详见[这篇文档](./yun.md#yum-缓存)。
+详见[这篇文档](./yum.md#yum-缓存)。
 
 ### 在离线环境安装 RPM 包
 
@@ -53,4 +53,4 @@ yum 将会下载所有的依赖包。
 >
 > In RHEL 6 and later, yum install accepts both package names and local filenames, so localinstall is no longer necesary, but it's included for backward compatibility.
 
-https://serverfault.com/a/940803
+https://serverfault.com/a/940803/1006817

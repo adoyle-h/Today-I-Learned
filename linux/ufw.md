@@ -24,7 +24,7 @@ Docker 提供 `DOCKER-USER` 链用于自定义规则，且 `DOCKER-USER` 通常�
 
 是因为每个规则都必须要有一条注释。如果注释格式不对，这条规则就会被 ufw 删除。
 
-参考 https://askubuntu.com/a/1167580
+参考 https://askubuntu.com/a/1167580/1675926
 
 详见 `/usr/lib/python3/dist-packages/ufw/backend_iptables.py`
 

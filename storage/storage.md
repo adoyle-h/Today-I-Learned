@@ -2,7 +2,7 @@
 
 ### 概念
 
-![](https://www.thomas-krenn.com/de/wikiDE/images/e/e0/Linux-storage-stack-diagram_v4.10.png)
+![Linux-storage-stack-diagram_v4.10.png](https://www.thomas-krenn.com/de/wikiDE/images/e/e0/Linux-storage-stack-diagram_v4.10.png) ([链接备份](https://web.archive.org/web/20230103013337/https://www.thomas-krenn.com/de/wikiDE/images/e/e0/Linux-storage-stack-diagram_v4.10.png))
 
 根据存储内容分类：
 

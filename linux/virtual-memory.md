@@ -2,8 +2,8 @@
 
 ### 为什么会有虚拟内存
 
-1. 解决进程间的内存隔离问题
-2. 「待补充」
+1. 解决进程间的内存隔离问题。
+2. 解决内存不够用的问题。
 
 ### 概念
 
@@ -13,4 +13,4 @@
 
 ### 逻辑地址如何映射到物理地址
 
-[Linux内存地址映射](http://ilinuxkernel.com/?p=1276)
+[Linux内存地址映射](http://ilinuxkernel.com/?p=1276) ([备份链接](https://web.archive.org/web/20201128080735/http://ilinuxkernel.com/?p=1276))

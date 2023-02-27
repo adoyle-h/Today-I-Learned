@@ -17,7 +17,7 @@
 >
 > 避免这个错误的方法就是不要使用老集群的地址。
 
-详见 https://bingohuang.com/etcd-operation-5/
+详见 https://web.archive.org/web/20190504110907/https://bingohuang.com/etcd-operation-5/
 
 
 ### 解决方案

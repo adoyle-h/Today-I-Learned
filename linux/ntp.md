@@ -15,7 +15,7 @@
   - 查看你的 Mac 里的文件 `/etc/ntp.conf` 获知该地址
 - 国际民用: https://www.ntppool.org/zh/use.html
 - 国家授时中心: ntp.ntsc.ac.cn
-  - [出处](http://www.ntsc.ac.cn/shye/tzgg/201809/t20180921_5086032.html)，然而据说国家授时中心的 NTP 很不靠谱
+  - [出处](http://www.ntsc.ac.cn/shye/tzgg/201809/t20180921_5086032.html)，然而据说国家授时中心的 NTP 很不靠谱。（应该是真的不靠谱，2018 年的这个链接都被特意删除了）
 - 其他: https://dns.icoa.cn/ntp/
 
 ### Mac 无法使用 ntpq

@@ -25,6 +25,6 @@ https://github.com/moby/moby/issues/27381#issuecomment-372394900
 
 ### 参考文章
 
-- http://blog.kissingwolf.com/2017/09/09/Docker-%E6%95%85%E9%9A%9C%EF%BC%88device-or-resource-busy%EF%BC%89/
-- http://niusmallnan.com/2016/12/27/docker-device-resource-busy/
-- https://qiita.com/domino-jiang/items/d1cac56e68fba67893e3
+- [Kissingwolf's Blog - Docker 故障（device or resource busy）](https://web.archive.org/web/20200927142257/http://blog.kissingwolf.com/2017/09/09/Docker-%E6%95%85%E9%9A%9C%EF%BC%88device-or-resource-busy%EF%BC%89/)
+- [Docker中的device or resource busy问题分析](http://niusmallnan.com/2016/12/27/docker-device-resource-busy/) ([链接备份](https://web.archive.org/web/20220625011735/http://niusmallnan.com/2016/12/27/docker-device-resource-busy/))
+- [解决docker删除container出现device or resource busy](https://qiita.com/domino-jiang/items/d1cac56e68fba67893e3) ([链接备份](https://web.archive.org/web/20211104042234/https://qiita.com/domino-jiang/items/d1cac56e68fba67893e3))

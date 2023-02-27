@@ -20,7 +20,7 @@
 
 ## 终端快捷键
 
-实质是 Readline 的功能。详见[这里](./readline.md)。
+实质是 Readline 的功能。详见[这里](../shell/readline.md)。
 
 ## kill %jobspec
 
@@ -185,8 +185,8 @@ https://wiki.archlinux.org/index.php/Bash/Prompt_customization_(%E7%AE%80%E4%BD%
 
 ## 使用 bind 改变键盘字符的触发效果
 
-https://blog.libthomas.org/calendar/2015/01/19/22.html
-https://www.computerhope.com/unix/bash/bind.htm
+- https://web.archive.org/web/20210927121456/https://blog.libthomas.org/calendar/2015/01/19/22.html
+- https://www.computerhope.com/unix/bash/bind.htm ([链接备份](https://web.archive.org/web/20230204212101/https://www.computerhope.com/unix/bash/bind.htm))
 
 用 bind 感觉可以做很有趣的事。
 
@@ -195,14 +195,12 @@ https://www.computerhope.com/unix/bash/bind.htm
 改变 Shell 文字样式，本质上就是用 ANSI Escape Code 来改变终端模拟器的行为，可以做到很多事，比如改变文字颜色，文字闪烁，改变鼠标位置，清屏等等。比如执行 echo -e '\e[2J' 来清屏，或者 echo -e '\e[2J\e[u' 清屏并重置鼠标位置（跟 ctrl-l 同样效果）。这也跟 tput 命令是异曲同工的。
 
 - [Wikipedia - ANSI escape code](https://www.wikiwand.com/en/ANSI_escape_code)
-- [Stackoverflow - List of ANSI color escape sequences](https://stackoverflow.com/questions/4842424/list-of-ansi-color-escape-sequences)
-- [FLOZz' MISC ? bash:tip_colors_and_formatting](https://misc.flogisoft.com/bash/tip_colors_and_formatting)
-- [ASCII Table - ANSI Escape sequences](http://ascii-table.com/ansi-escape-sequences.php)
-- [ansi codes](https://bluesock.org/~willkg/dev/ansi.html#sequences)
-- [vt100.net - ANSI Control Functions Summary](https://vt100.net/docs/vt510-rm/chapter4.html)
-- [JAFROG'S DEV BLOG - Colors In Terminal](http://jafrog.com/2013/11/23/colors-in-terminal.html)
-
-https://www.v2ex.com/t/573838
+- [Stackoverflow - List of ANSI color escape sequences](https://stackoverflow.com/q/4842424/4622308)
+- [FLOZz' MISC ? bash:tip_colors_and_formatting](https://misc.flogisoft.com/bash/tip_colors_and_formatting) ([链接备份](https://web.archive.org/web/20230214042614/https://misc.flogisoft.com/bash/tip_colors_and_formatting))
+- [ASCII Table - ANSI Escape sequences](https://web.archive.org/web/20210226122732/http://ascii-table.com/ansi-escape-sequences.php)
+- [vt100.net - ANSI Control Functions Summary](https://vt100.net/docs/vt510-rm/chapter4.html) ([链接备份](https://web.archive.org/web/20221226222419/https://vt100.net/docs/vt510-rm/chapter4.html))
+- [JAFROG'S DEV BLOG - Colors In Terminal](http://jafrog.com/2013/11/23/colors-in-terminal.html) ([链接备份](https://web.archive.org/web/20230118035024/http://jafrog.com/2013/11/23/colors-in-terminal.html))
+- [V2EX - 用 ANSI Escape Code 改变 Shell 文字样式](https://www.v2ex.com/t/573838) ([链接备份](https://web.archive.org/web/20230225214720/https://www.v2ex.com/t/573838))
 
 
 ## 判断当前程序是否由管道传参
@@ -269,7 +267,7 @@ bind -r "\C-u"
 ```
 
 结果这些都没有，绑定还是在。
-看了[这个答案](https://unix.stackexchange.com/questions/423375/how-do-i-share-the-mouse-paste-buffer-not-the-clipboard-between-bash-and-x11?rq=1)才发现，原来是 `stty` 搞的鬼
+看了[这个答案](https://unix.stackexchange.com/q/423375/373303)才发现，原来是 `stty` 搞的鬼。
 
 只要把 `stty kill ''`，把 kill 关键字绑定到空字符串上就相当于重置为空了。
 可以通过 `stty -a` 看到 stty 已绑定的快捷键。
@@ -283,7 +281,7 @@ bind -r "\C-u"
 
 这个叫 variable indirection。
 Bash Reference Manual 里只有一段很不起眼的描述，容易漏掉。
-参考答案: https://stackoverflow.com/a/8515492
+参考答案: https://stackoverflow.com/a/8515492/4622308
 
 ## 查看一个变量是否是 export 的
 
@@ -308,7 +306,7 @@ https://stackoverflow.com/a/67044674/4622308
 2. 清空文件 `:> file.log`，相当于 `true > file.log`。
 3. 创建空函数 `f() { :; }`，相当于 `f() { true; }`。
 
-https://stackoverflow.com/questions/3224878/what-is-the-purpose-of-the-colon-gnu-bash-builtin
+[What is the purpose of the : (colon) GNU Bash builtin?](https://stackoverflow.com/q/3224878/4622308)
 
 ## bash -c 选项
 
@@ -339,7 +337,7 @@ k=(1 2 3)
 echo "${k[@]}"             # print 1 2 3
 ```
 
-https://superuser.com/a/1348950
+https://superuser.com/a/1348950/1776434
 
 `cmd2 < <(cmd)` 中 `cmd` 也不能修改当前进程的变量。但是 `cmd2` 是运行在当前进程的，可以修改。
 

@@ -28,5 +28,5 @@ http://stackoverflow.com/questions/5725296/difference-between-sh-and-bash
 ## 工具
 
 - https://github.com/adoyle-h/lobash
-- [我的开发工具箱 - Shell Script Development](http://adoyle.me/my-development-tools/shell-script/)。
+- [我的开发工具箱 - Shell Script Development](https://adoyle.me/my-development-tools/shell-script/)。
 - https://github.com/adoyle-h/my-development-tools#shell

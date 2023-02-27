@@ -9,13 +9,13 @@ $ cat /sys/class/net/veth97e84578/ifindex
 94
 ```
 
-[/sys/class/net/<iface>/iflink 的定义](https://github.com/torvalds/linux/blob/v5.16-rc4/Documentation/ABI/testing/sysfs-class-net#L199)
+[`/sys/class/net/<iface>/iflink` 的定义](https://github.com/torvalds/linux/blob/v5.16-rc4/Documentation/ABI/testing/sysfs-class-net#L199)
 
 > Indicates the system-wide interface unique index identifier a interface is linked to.
 > Format is decimal. This attribute is used to resolve interfaces chaining, linking and stacking.
 > Physical interfaces have the same 'ifindex' and 'iflink' values.
 
-[/sys/class/net/<iface>/ifindex 的定义](https://github.com/torvalds/linux/blob/v5.16-rc4/Documentation/ABI/testing/sysfs-class-net#L188)
+[`/sys/class/net/<iface>/ifindex` 的定义](https://github.com/torvalds/linux/blob/v5.16-rc4/Documentation/ABI/testing/sysfs-class-net#L188)
 
 > Indicates the system-wide interface unique index identifier as a decimal number.
 > This attribute is used for mapping an interface identifier to an interface name.
@@ -47,4 +47,4 @@ $ nsenter -t 803924 -n ip l
 
 ### 参考
 
-- https://unix.stackexchange.com/questions/444892/what-does-if1if2-mean-in-interface-name-in-output-of-ip-address-command-on
+- https://unix.stackexchange.com/q/444892/373303

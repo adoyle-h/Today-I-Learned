@@ -1,0 +1,5 @@
+# Example: https://github.com/lycheeverse/lychee/blob/master/fixtures/ignore/.lycheeignore
+
+https://dev.mysql.com/.*
+.*://archive\..*
+https://web.archive.org/.*

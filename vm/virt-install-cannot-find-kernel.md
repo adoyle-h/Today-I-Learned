@@ -37,4 +37,4 @@ virt-install \
   --location $iso,initrd=install/initrd.gz,kernel=install/vmlinuz \
 ```
 
-这些[回答](https://askubuntu.com/questions/789358/virt-install-using-location-with-iso-image-no-longer-working)很有参考价值。
+这些[回答](https://askubuntu.com/q/789358/1675926)很有参考价值。

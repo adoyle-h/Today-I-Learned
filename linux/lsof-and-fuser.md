@@ -2,7 +2,7 @@
 
 ### lsof
 
-lsof 是 list open files 的缩写，即它能够列出任何文件信息 (Unix/Linux 一切皆文件)。[这篇文章](http://www.danielmiessler.com/study/lsof/)介绍了很多 lsof 的用法。
+lsof 是 list open files 的缩写，即它能够列出任何文件信息 (Unix/Linux 一切皆文件)。[这篇文章](http://www.danielmiessler.com/study/lsof/)介绍了很多 lsof 的用法。([链接备份](https://web.archive.org/web/20221206182002/https://danielmiessler.com/study/lsof/))
 
 ls 能按条件查找，比如查看用户相关的、或端口相关的、或进程相关的所有文件信息
 
@@ -19,7 +19,7 @@ user    0m0.215s
 sys     1m50.129s
 ```
 
-[Why is lsof on OS X so ridiculously slow?](https://apple.stackexchange.com/questions/81140/why-is-lsof-on-os-x-so-ridiculously-slow/243269?noredirect=1)
+[Why is lsof on OS X so ridiculously slow?](https://apple.stackexchange.com/q/81140/488359)
 
 实测，答案里的这堆参数都加了也没有用。
 

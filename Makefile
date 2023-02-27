@@ -1,9 +1,7 @@
-GH_PAGE_IMAGE=adoyle/gh-pages:v228
+include ./makefile-utils/*.mk
+.DEFAULT_GOAL := help
 
-.PHONY: check-links
-check-links:
-	# https://github.com/tcort/markdown-link-check
-	ag --md -l | xargs -n1 markdown-link-check
+GH_PAGE_IMAGE=adoyle/gh-pages:v228
 
 .PHONY: serve
 serve:

@@ -25,7 +25,7 @@
 ### eBPF 生态工具
 
 - bpftool: 查询 BPF programs 的工具
-  - 很好的教程 https://qmonnet.github.io/whirl-offload/2021/09/23/bpftool-features-thread/
+  - [很好的教程](https://qmonnet.github.io/whirl-offload/2021/09/23/bpftool-features-thread/) ([链接备份](https://web.archive.org/web/20221217204319/https://qmonnet.github.io/whirl-offload/2021/09/23/bpftool-features-thread/))
 - bps: 列出所有 BPF programs 与 map。program 与 map 之间的关系很直观易懂，[举例](https://github.com/iovisor/bcc/blob/master/introspection/bps_example.txt)
   - Debian 系统可以安装这个包 bpfcc-introspection
   - 里面的 BID 即 prog_id，即 BPF 的 program ID
@@ -45,8 +45,8 @@ BPF 代码运行时编译，不仅需要 kernel header，而且需携带 llvm/cl
 
 - [libbpf][]
 - [libbpf-tools](https://github.com/iovisor/bcc/tree/master/libbpf-tools)
-- [HOWTO: BCC to libbpf conversion](https://facebookmicrosites.github.io/bpf/blog/2020/02/20/bcc-to-libbpf-howto-guide.html)
-- [BPF Portability and CO-RE](https://facebookmicrosites.github.io/bpf/blog/2020/02/19/bpf-portability-and-co-re.html)
+- [HOWTO: BCC to libbpf conversion](https://facebookmicrosites.github.io/bpf/blog/2020/02/20/bcc-to-libbpf-howto-guide.html) ([链接备份](https://web.archive.org/web/20221130165544/https://facebookmicrosites.github.io/bpf/blog/2020/02/20/bcc-to-libbpf-howto-guide.html))
+- [BPF Portability and CO-RE](https://facebookmicrosites.github.io/bpf/blog/2020/02/19/bpf-portability-and-co-re.html) ([链接备份](https://web.archive.org/web/20230120022211/https://facebookmicrosites.github.io/bpf/blog/2020/02/19/bpf-portability-and-co-re.html))
 
 ### XDP 模式
 

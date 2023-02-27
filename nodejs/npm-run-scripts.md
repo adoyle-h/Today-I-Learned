@@ -1,6 +1,6 @@
 ## npm run scripts
 
-主要参考[阮一峰的教程](http://javascript.ruanyifeng.com/nodejs/npm.html#toc12)
+主要参考[阮一峰的教程](https://web.archive.org/web/20220718034249/http://javascript.ruanyifeng.com/nodejs/npm.html#toc12)。
 
 ### 环境变量
 
