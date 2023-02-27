@@ -1,5 +1,5 @@
-exports.hideCategories = [
-    'database',
+exports.ignoreDirs = [
+    'database', 'node_modules', 'makefile-utils',
 ];
 
 exports.categoryNameMap = {

@@ -11,7 +11,7 @@ const json2md = require('json2md');
 const pkg = require('./package.json');
 const util = require('util');
 const _ = require('lodash');
-const {hideCategories, categoryNameMap} = require('./build.config.js');
+const {ignoreDirs, categoryNameMap} = require('./build.config.js');
 
 const debug = require('debug')('build');
 
@@ -201,24 +201,28 @@ function handleCategories(categories, levelStd, structure) {
         .value();
 }
 
-async function build() {
+async function getDirNames() {
     const filenames = await readdir(__dirname);
+
     let dirNames = filenames.filter((name) =>
         !name.startsWith('_') && !name.startsWith('.')
-        && (!['node_modules'].includes(name)));
+        && (!ignoreDirs.includes(name)));
 
     dirNames = await Promise.map(dirNames, async (dirName) => {
-        if (hideCategories.includes(dirName)) return null;
-
         const stats = await getStat(absPath(dirName));
         return stats.isDirectory() ? dirName : null;
     }).filter((name) => name);
+
+    return dirNames
+}
+
+async function build() {
+    const dirNames = await getDirNames()
 
     const rootCategories = await Promise.map(
         dirNames,
         (filename) => enterDir(filename, __dirname, null, 2)
     );
-
 
     const structure = [
         {md: absPath('_docs/meta.md')},

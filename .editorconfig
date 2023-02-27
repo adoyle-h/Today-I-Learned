@@ -1,0 +1,21 @@
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+charset = utf-8
+end_of_line = lf
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[{build,*.js}]
+indent_size = 4
+; this option just works with prettier, not implemented with editorconfig
+max_line_length = 100
+indent_style = space
+
+[*.{diff,md}]
+trim_trailing_whitespace = false
+
+[{Makefile,*.mk}]
+indent_style = tab
