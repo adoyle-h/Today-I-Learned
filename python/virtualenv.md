@@ -1,6 +1,6 @@
 ## Python Virtualenv
 
-https://zhuanlan.zhihu.com/p/81568689
+[要不我们还是用回 virtualenv/venv 和 pip 吧](https://zhuanlan.zhihu.com/p/81568689) ([链接备份](https://archive.md/tQXuk))
 
 如果你使用 Python 2，那就只能选择 [virtualenv][]，你需要额外安装它。
 
@@ -181,3 +181,10 @@ main "$@"
 ```
 
 注意不要把 .pyc 文件修改了，会导致某些包失效。
+
+
+<!-- links -->
+
+[pyenv]: https://github.com/pyenv/pyenv
+[virtualenv]: https://virtualenv.pypa.io/en/latest/
+[venv]: https://docs.python.org/3/library/venv.html

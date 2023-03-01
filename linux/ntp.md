@@ -28,6 +28,6 @@ MacOS 使用自己的 timed 程序和 DAS 系统来代替 NTP 实现时间同步
 
 ### 参考资料
 
-- [比较 ntpd、ntpdate、Chrony](https://zhuanlan.zhihu.com/p/44022718)
-- [如何在 Linux 下确认 NTP 是否同步？](https://linux.cn/article-10951-1.html)
-- [ntpd 与 ntpdate](https://escapelife.github.io/posts/969a8066.html)
+- [linux时间同步](https://zhuanlan.zhihu.com/p/44022718) ([链接备份](https://archive.md/E69uK))
+- [如何在 Linux 下确认 NTP 是否同步？](https://linux.cn/article-10951-1.html) ([链接备份](https://archive.md/ooNQy))
+- [NTP时间同步服务](https://www.escapelife.site/posts/969a8066.html) ([链接备份](https://web.archive.org/web/20230301082825/https://www.escapelife.site/posts/969a8066.html))

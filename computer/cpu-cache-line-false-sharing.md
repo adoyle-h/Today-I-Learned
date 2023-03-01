@@ -15,8 +15,8 @@ Go 提供了 [`CacheLinePad`](https://pkg.go.dev/golang.org/x/sys/cpu#CacheLineP
 
 ### 参考资料
 
-- [杂谈 什么是伪共享（false sharing）？](https://zhuanlan.zhihu.com/p/65394173)
-- [Cache False Sharing Debug][1]
+- [杂谈 什么是伪共享（false sharing）？](https://zhuanlan.zhihu.com/p/65394173) ([链接备份](https://web.archive.org/web/20210814041728/https://zhuanlan.zhihu.com/p/65394173))
+- [Cache False Sharing Debug][1] ([链接备份](https://web.archive.org/web/20220605234229/http://oliveryang.net/2018/01/cache-false-sharing-debug/))
 
 
 [1]: http://oliveryang.net/2018/01/cache-false-sharing-debug/

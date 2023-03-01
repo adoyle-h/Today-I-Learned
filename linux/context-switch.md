@@ -43,5 +43,5 @@
 
 ### 相关资料
 
-- [Context Switch Definition](http://www.linfo.org/context_switch.html)
-- [进程/线程上下文切换会用掉你多少CPU？](https://zhuanlan.zhihu.com/p/79772089)
+- [Context Switch Definition](http://www.linfo.org/context_switch.html) ([链接备份](https://web.archive.org/web/20230115003331/http://www.linfo.org/context_switch.html))
+- [进程/线程上下文切换会用掉你多少CPU？](https://zhuanlan.zhihu.com/p/79772089) ([链接备份](https://archive.md/uGxnO))

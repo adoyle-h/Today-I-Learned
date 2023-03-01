@@ -92,17 +92,19 @@
 
 ## 色彩空间转换
 
-「[色彩空间表示与转换](https://zhuanlan.zhihu.com/p/24281841)」（如果链接挂了，这有[永久链接](https://archive.md/JqdJQ)）这篇文章介绍了相同色彩模式下的不同色彩空间，是如何进行坐标转换的。
+「[色彩空间表示与转换](https://zhuanlan.zhihu.com/p/24281841)」([链接备份](https://archive.md/JqdJQ)) 这篇文章介绍了相同色彩模式下的不同色彩空间，是如何进行坐标转换的。
 
 不同色彩模式下的不同色彩空间，也可以通过转到 `CIE L*a*b*` 再转成其他色彩空间坐标来转换。
 
 ![icc-workflow](https://image.benq.com/is/image/benqco/icc-workflow-2)
+([链接备份](https://web.archive.org/web/20230301084526/https://image.benq.com/is/image/benqco/icc-workflow-2))
 
 ## 色彩管理
 
 如何让不同的显示设备（如扫描仪、数码相机、显示器、打印机等）能保持相对统一的色彩表现效果。要点在于色彩管理。
 
 ![色彩管理流程](https://docs.krita.org/zh_CN/_images/Krita-colormanaged-workflow_webcomic.svg)
+([链接备份](https://web.archive.org/web/20200717172532/https://docs.krita.org/zh_CN/_images/Krita-colormanaged-workflow_webcomic.svg))
 
 分两个层面：硬件和软件。
 
@@ -132,7 +134,7 @@ ICC 色彩特性文件 (ICC Profile) 是一组用来描述色彩输入、输出�
 
 [测试浏览器是否支持 ICC 色彩管理](https://www.colortell.com/344.html)。
 
-[Why use ICC v4 profiles?](https://www.color.org/whyusev4.xalter)
+[Why use ICC v4 profiles?](https://www.color.org/whyusev4.xalter) ([链接备份](https://web.archive.org/web/20221022085649/https://color.org/whyusev4.xalter))
 
 ## 各类文件如何存储色彩空间
 
@@ -208,5 +210,5 @@ Sketch 不支持 CMYK，所以不能用于设计印刷品。
 
 ## 参考文章
 
-- [色彩空间基础](https://zhuanlan.zhihu.com/p/24214731)
-- [JIMMY CHEUNG - 色彩管理](https://www.zhangxiaochun.com/color-space-3/)：这篇文章记录了如何选择合适的色彩空间
+- [色彩空间基础](https://zhuanlan.zhihu.com/p/24214731) ([链接备份](https://archive.md/lzuhw))
+- [JIMMY CHEUNG - 色彩管理](https://www.zhangxiaochun.com/color-space-3/) ([链接备份](https://web.archive.org/web/20220927133331/https://www.zhangxiaochun.com/color-space-3/))：这篇文章记录了如何选择合适的色彩空间

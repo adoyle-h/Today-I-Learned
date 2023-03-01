@@ -27,6 +27,7 @@ https://archive.org/
 
 1. 生成的链接长度很长
 2. 阅读体验不够好
+3. 无法抓取知乎回答、Nature 的页面，会被重定向。
 
 推荐使用浏览器插件，查询和保存都很方便。
 
@@ -39,12 +40,19 @@ https://archive.org/
 
 曾经的 [archive.is](https://www.wikiwand.com/zh/Archive.is)，现在的 Archive.today。
 
+它有很多备用域名，都指向同一个服务。
+
+- https://archive.ph/
+- https://archive.is/
+- https://archive.md/
+
 优点：
 
 1. 生成短链接
 2. 阅读体验不错
 3. 支持通配符来批量保存页面
 4. hash tag 支持滚动百分比以及任意位置的引用
+5. 可以抓取知乎回答、Nature 的页面
 
 缺点：
 
@@ -52,12 +60,6 @@ https://archive.org/
 2. 域名会动态变。
 3. 每次使用都要验证校验码，很麻烦。
 4. 保存的页面只来自用户提交的，不自动抓取。
-
-它还有其他几个域名，都指向同一个服务。
-
-- https://archive.ph/
-- https://archive.is/
-- https://archive.md/
 
 ### 浏览器书签
 

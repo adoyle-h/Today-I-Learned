@@ -60,7 +60,7 @@ UT2 系统是 UT1 的平滑处理版本，在UT1基础上加入了地球自转�
 国际单位制将一秒定义为不受外场干扰的铯-133的原子基态的两个超精细结构能阶间跃迁所对应的辐射的9,192,631,770个周期的持续时间。
 目前最先进的铯原子钟的精度超过了 10^-15，这意味著从6600万年前恐龙灭绝的时代起其误差仅为2秒钟，被认为是“人类目前所达到的最精确的单位实现”。
 
-https://www.timeanddate.com/time/international-atomic-time.html
+https://www.timeanddate.com/time/international-atomic-time.html ([链接备份](https://web.archive.org/web/20230215225600/https://www.timeanddate.com/time/international-atomic-time.html))
 
 ## 处理方案
 
@@ -76,14 +76,14 @@ Go 的 [time 标准库](https://pkg.go.dev/time#hdr-Monotonic_Clocks)对于时�
 
 ntp 通过调整滴答频率来同步时差，如果时差超过 128 毫秒（默认值，开启 `-x` 选项会延长到 600 秒），ntp 会通过跳变时间来同步时差。
 
-详见 [NTPD - 6.1. How NTP Operates](https://docs.ntpsec.org/latest/ntpd.html)
+详见 [NTPD - 6.1. How NTP Operates](https://docs.ntpsec.org/latest/ntpd.html) ([链接备份](https://web.archive.org/web/20230221140704/https://docs.ntpsec.org/latest/ntpd.html))
 
 ## 闰秒机制将于 2035 年取消
 
 国际计量大会计划将于 2035 年取消闰秒。可能会延迟到 2040 执行。
 
-https://zhuanlan.zhihu.com/p/585992530
-https://www.nature.com/articles/d41586-022-03783-5
+- [闰秒正式宣布取消，网友：没什么能让Linus本人同谷歌微软达成一致，除了它](https://www.qbitai.com/2022/11/39762.html) ([链接备份](https://web.archive.org/web/20221208063146/https://www.qbitai.com/2022/11/39762.html))
+- [Nature - The leap second’s time is up: world votes to stop pausing clocks](https://www.nature.com/articles/d41586-022-03783-5) ([链接备份](https://archive.md/eHDGf))
 
 
 [国际单位制]: https://www.wikiwand.com/zh-hans/%E5%9C%8B%E9%9A%9B%E5%96%AE%E4%BD%8D%E5%88%B6

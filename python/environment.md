@@ -1,6 +1,7 @@
 ## python 环境配置
 
-![](https://opensource.com/sites/default/files/uploads/python_environment_xkcd.png)
+![.png](https://opensource.com/sites/default/files/uploads/python_environment_xkcd.png)
+([链接备份](https://web.archive.org/web/20230228130550/https://opensource.com/sites/default/files/uploads/python_environment_xkcd.png))
 
 python 路径注意：
 
@@ -55,7 +56,7 @@ pip 路径注意：
 
 ### 参考文章
 
-- [The right and wrong way to set Python 3 as default on a Mac](https://opensource.com/article/19/5/python-3-default-mac)
+- [The right and wrong way to set Python 3 as default on a Mac](https://opensource.com/article/19/5/python-3-default-mac) ([链接备份](https://web.archive.org/web/20201201230647/https://opensource.com/article/19/5/python-3-default-mac))
 
 <!-- links -->
 

@@ -92,7 +92,7 @@ MESI 协议：
 - 独占（Exclusive）缓存段，和 S 状态一样，也是和主内存内容保持一致的一份拷贝。区别在于，如果一个处理器持有了某个 E 状态的缓存段，那其他处理器就不能同时持有它，所以叫“独占”。这意味着，如果其他处理器原本也持有同一缓存段，那么它会马上变成“失效”状态。
 - 已修改（Modified）缓存段，属于脏段，它们已经被所属的处理器修改了。如果一个段处于已修改状态，那么它在其他处理器缓存中的拷贝马上会变成失效状态，这个规律和 E 状态一样。此外，已修改缓存段如果被丢弃或标记为失效，那么先要把它的内容回写到内存中——这和回写模式下常规的脏段处理方式一样。
 
-- [cache之多核一致性(一) - 总线上没有秘密](https://zhuanlan.zhihu.com/p/94811032)
+- [cache之多核一致性(一) - 总线上没有秘密](https://zhuanlan.zhihu.com/p/94811032) ([链接备份](https://web.archive.org/web/20210926113028/https://zhuanlan.zhihu.com/p/94811032))
 
 #### Cache Line False Sharing
 
@@ -101,5 +101,5 @@ Cache Coherence 还会引起 [Cache Line False Sharing 问题](./cpu-cache-line-
 ### 参考资料
 
 - [Wikipedia - CPU缓存](https://www.wikiwand.com/zh-hans/CPU%E7%BC%93%E5%AD%98)
-- [Cache是怎么组织和工作的？](https://zhuanlan.zhihu.com/p/31859105)
+- [Cache 是怎么组织和工作的？](https://zhuanlan.zhihu.com/p/31859105) ([链接备份](https://web.archive.org/web/20200921100404/https://zhuanlan.zhihu.com/p/31859105))
 - [Wikipedia - Cache inclusion policy](https://www.wikiwand.com/en/Cache_inclusion_policy)

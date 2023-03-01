@@ -58,6 +58,6 @@
 
 ### 参考
 
-- [CODING HORROR - Of Spaces, Underscores and Dashes](https://blog.codinghorror.com/of-spaces-underscores-and-dashes/)
-- [dashes-versus_underscores; The Definitive Guide](https://x-equals.com/dashes-versus-underscores/)
+- [CODING HORROR - Of Spaces, Underscores and Dashes](https://blog.codinghorror.com/of-spaces-underscores-and-dashes/) ([链接备份](https://web.archive.org/web/20230118115432/https://blog.codinghorror.com/of-spaces-underscores-and-dashes/))
+- [dashes-versus_underscores; The Definitive Guide](https://x-equals.com/dashes-versus-underscores/) ([链接备份](https://web.archive.org/web/20221209071335/https://x-equals.com/dashes-versus-underscores/))
 - [知乎 - 在命名文件或者变量时，你会使用下划线还是连字符，为什么](https://www.zhihu.com/question/50471847)

@@ -11,4 +11,6 @@ xxx 已被录入哈希表 (/usr/local/bin/xxx)
 那么当你再次执行 `xxx` 会找不到对应程序，因为 hash 缓存的路径还是在 `/usr/local/bin/xxx`。
 你需要清空缓存，执行 `hash -d xxx` 即可。
 
-参考: https://www.zhihu.com/question/34609277/answer/59455055
+参考:
+
+- [Linux上的各种命令本质上都是小程序吗？](https://www.zhihu.com/question/34609277/answer/59455055) ([链接备份](https://archive.md/3inuw))

@@ -18,10 +18,10 @@ Daemon 进程不应该受到终端和会话的影响。
 具体参考这几篇文章：
 
 - https://stackoverflow.com/a/16655124/4622308
-- https://zhuanlan.zhihu.com/p/44874925
-- https://www.win.tue.nl/~aeb/linux/lk/lk-10.html ([链接备份](https://web.archive.org/web/20220815032909/https://www.win.tue.nl/~aeb/linux/lk/lk-10.html))
+- [Daemonize 一个进程为什么需要 fork 两次](https://zhuanlan.zhihu.com/p/44874925) ([链接备份](https://archive.md/BIcRp))
+- [Linux Kernel: Processes](https://www.win.tue.nl/~aeb/linux/lk/lk-10.html) ([链接备份](https://web.archive.org/web/20220815032909/https://www.win.tue.nl/~aeb/linux/lk/lk-10.html))
 - https://stackoverflow.com/a/5386753/4622308
-- https://my.oschina.net/hosee/blog/507098 ([链接备份](https://web.archive.org/web/20171102155811/https://my.oschina.net/hosee/blog/507098))
+- [Linux进程组和会话](https://web.archive.org/web/20171102155811/https://my.oschina.net/hosee/blog/507098)
 
 
 [setsid]: https://man7.org/linux/man-pages/man2/setsid.2.html

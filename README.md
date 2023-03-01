@@ -3,6 +3,7 @@ title: Home
 nav_order: 1
 ---
 
+
 # 今天我学了什么 (Today I Learned)
 
 > 博观而约取，厚积而薄发。
@@ -30,11 +31,12 @@ https://til.adoyle.me
 - 指向 Github Issue/Disussion/PR/Code 的都用原链接。
 - RFC 文档都使用 https://www.rfc-editor.org 的链接。
 
+
 ## 反馈问题或建议
 
 本项目不接受 Pull Request。如果你有什么好的想法，或者改进的建议，请使用 [Discussions](https://github.com/adoyle-h/Today-I-Learned/discussions) 与我探讨。
 
-**建议 Watch 且 Star 本项目。但不要 Fork，这没有意义。**
+**建议 Star 本项目。不要 Fork，这没有意义。Watch 似乎没用，基本不会触发通知。**
 
 
 ## 版权声明
@@ -45,6 +47,7 @@ The project is licensed under the **BSD 3-clause License**.
 Read the [LICENSE](./LICENSE) file for the specific language governing permissions and limitations under the License.
 
 Read the [NOTICE](./NOTICE) file distributed with this work for additional information regarding copyright ownership.
+
 
 ## TOC
 
@@ -538,6 +541,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 数学，不仅仅是算法
 
 - [豪斯多夫维数](math/hausdorff-besicovitch-dimension.md)
+- [进制表示法](math/positional-notation.md)
 - [空间填充曲线 (Space-Filling Curve)](math/space-filling-curve.md)
 
 [`⬆ 返回目录`](#toc)
@@ -618,6 +622,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [Alfred Workflow debug 技巧](others/alfred-workflow-debug.md)
 - [Github Markdown 中的锚点引用](others/anchor-in-github-markdown.md)
 - [永久链接](others/archive-webpage.md)
+- [ASCII 与 ANSI](others/ascii-and-ansi.md)
 - [脱字符 (caret)](others/caret.md)
 - [Chrome 小技巧](others/chrome-tricks.md)
 - [复制粘贴好过手写](others/copy-paste-better-than-handwriting.md)
@@ -640,6 +645,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [Language Server Protocol](others/language-server-protocol.md)
 - [Makefile](others/makefile.md)
 - [箴言](others/maxim.md)
+- [修改进程的内存数据](others/memory-cheat.md)
 - [元语法 （Metasyntax)](others/metasyntax.md)
 - [乱码问题](others/mojibake.md)
 - [终端邮件客户端 Mutt](others/mutt.md)
@@ -650,7 +656,6 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [如何打开超大文件](others/open-huge-file-with-editor.md)
 - [Protocol Buffers](others/protocal-buffers.md)
 - [正则表达式的小技巧](others/regexp-tricks.md)
-- [在中国注册 Google 账号](others/register-google-account-in-china.md)
 - [在 Github Markdown 中如何填写图片的链接](others/relative-link-in-github-markdown.md)
 - [Markdown 里写反引号](others/reverse-quote-in-markdown.md)
 - [rsync](others/rsync.md)

@@ -1,17 +1,15 @@
-## JS 的 fiber 技术
-
-- [知乎 - 如何评价node-fibers?](https://www.zhihu.com/question/59441623)
+# JS 的 fiber 技术
 
 可以看看贺师俊和响马的评价，很有启发。
 
-- [Why coroutines won’t work on the web](http://calculist.org/blog/2011/12/14/why-coroutines-wont-work-on-the-web/)
+- [如何评价node-fibers? 贺师俊的回答](https://www.zhihu.com/question/59441623/answer/168675034) ([链接备份](https://archive.is/WikMU))
+- [如何评价node-fibers? 响马的回答](https://www.zhihu.com/question/59441623/answer/175420027) ([链接备份](https://archive.md/NlAyE))
 
-这篇文章讲述了为什么 Coroutines 入不了 JS 标准。
+- [Why coroutines won’t work on the web](http://calculist.org/blog/2011/12/14/why-coroutines-wont-work-on-the-web/): 这篇文章讲述了为什么 Coroutines 入不了 JS 标准。 ([链接备份](https://web.archive.org/web/20221215105323/http://calculist.org/blog/2011/12/14/why-coroutines-wont-work-on-the-web/))
 
+## 我的观点
 
-### 我的观点
-
-#### 修改调用链
+### 修改调用链
 
 > 比如一段代码，其中一个底层实现，现在是同步的，于是中间某层某个逻辑没有加锁，有一天这个底层实现改成 await 了，一路改上来就不说了，鬼才记得中间哪一层在猴年马月苦思冥想后决定不加锁了。
 

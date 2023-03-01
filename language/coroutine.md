@@ -24,7 +24,7 @@
 随着时间，技术的概念可能产生了变化。协程与纤程的区别可能不需要详细区分，还得看主流的实现是怎样的。
 
 - https://stackoverflow.com/a/44563119/4622308
-- https://www.zhihu.com/question/23955356/answer/732629313
+- [协程和纤程的区别是什么？tearshark 的回答](https://www.zhihu.com/question/23955356/answer/732629313) ([链接备份](https://archive.md/hqFi9))
 
 ## 有栈协程与无栈协程
 
