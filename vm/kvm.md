@@ -2,7 +2,9 @@
 
 ### KVM 与 QEMU 与 Libvirt 的关系
 
-https://archive.ph/TwVct
+![.jpg](https://user-images.githubusercontent.com/1998490/223427418-84015b3d-b6ef-4da9-bf46-049e9bf86699.png)
+
+- [KVM-Qemu-Libvirt三者之间的关系](https://blog.51cto.com/changfei/1672147) ([链接备份](https://archive.ph/TwVct))
 
 ### 硬件虚拟化
 
