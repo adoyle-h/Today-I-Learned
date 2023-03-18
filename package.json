@@ -6,7 +6,7 @@
   "scripts": {
     "build": "node build.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "snyk-protect": "snyk protect",
+    "snyk-protect": "snyk-protect",
     "prepare": "npm run snyk-protect"
   },
   "repository": {
@@ -23,8 +23,8 @@
     "bluebird": "^3.5.4",
     "debug": "^4.1.1",
     "json2md": "^1.6.3",
-    "lodash": "^4.17.13",
-    "snyk": "^1.230.5"
+    "lodash": "^4.17.21",
+    "@snyk/protect": "latest"
   },
   "snyk": true
 }
