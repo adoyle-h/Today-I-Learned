@@ -97,6 +97,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [Vim](#vim)
 - [虚拟机](#虚拟机)
 - [Web](#web)
+- [Windows](#windows)
 
 <!-- </details> -->
 <!-- tocstop -->
@@ -118,6 +119,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 
 记录与计算机硬件相关的知识。
 
+- [内存管理单元 MMU](computer/MMU.md)
 - [RDMA](computer/RDMA.md)
 - [单指令流多数据流 (SIMD)](computer/SIMD.md)
 - [TLB](computer/TLB.md)
@@ -275,6 +277,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 
 ## Go
 
+- [GO 汇编](go/go-assembler.md)
 - [go build](go/go-build.md)
 - [go doc](go/go-doc.md)
 - [go generate](go/go-generate.md)
@@ -283,6 +286,8 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [Gorutine](go/gorutine.md)
 - [在 MacOS 上使用 gvm install](go/gvm-install-in-macos.md)
 - [interface 与 nil](go/interface-vs-nil.md)
+- [//go:linkname](go/linkname.md)
+- [Go 语言的几大坑](go/pitfalls.md)
 
 [`⬆ 返回目录`](#toc)
 
@@ -396,6 +401,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [diff 与 patch](linux/diff-and-patch.md)
 - [shutdown, poweroff, halt 的不同](linux/differences-between-shutdown-poweroff-halt.md)
 - [硬盘分区](linux/disk-partition.md)
+- [dmesg](linux/dmesg.md)
 - [dnsmasq](linux/dnsmasq.md)
 - [du](linux/du.md)
 - [eBPF 与 XDP](linux/ebpf-and-xdp.md)
@@ -411,6 +417,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [file 命令](linux/file-command.md)
 - [CentOS 与 Debian 文件上的差异](linux/file-differences-between-centos-and-debian.md)
 - [Linux 文件系统](linux/file-system.md)
+- [文件名大小写问题](linux/filename-case-problem.md)
 - [文件路径](linux/files.md)
 - [find -print0 的坑](linux/find-print0-pitfall.md)
 - [ftrace](linux/ftrace.md)
@@ -436,6 +443,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [Linux 内核](linux/kernel.md)
 - [kswapd0](linux/kswapd0.md)
 - [libc](linux/libc.md)
+- [修改 Linux 系统语言 (locale)](linux/locale.md)
 - [Linux 日志文件](linux/log-files.md)
 - [lsof 与 fuser](linux/lsof-and-fuser.md)
 - [LVM (Logical Volume Manager)](linux/lvm.md)
@@ -607,6 +615,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [运维小技巧 - 硬件](ops/ops-tricks-hardwares.md)
 - [运维小技巧 - 网络](ops/ops-tricks-networks.md)
 - [运维小技巧](ops/ops-tricks.md)
+- [PCI](ops/pci.md)
 - [RPM 创建仓库](ops/rpm-create-repo.md)
 - [RPM 制作和安装离线包](ops/rpm-offline-package-and-install.md)
 - [YUM](ops/yum.md)
@@ -619,6 +628,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 
 - [0.30000000000000004](others/0.30000000000000004.md)
 - [Today I learned (TIL) 资源列表](others/TIL.md)
+- [使用 acme.sh 生成证书](others/acme-cert.md)
 - [Alfred Workflow debug 技巧](others/alfred-workflow-debug.md)
 - [Github Markdown 中的锚点引用](others/anchor-in-github-markdown.md)
 - [永久链接](others/archive-webpage.md)
@@ -635,6 +645,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [Github Template (模板)](others/github-template.md)
 - [gRPC](others/grpc.md)
 - [通过 Hash 密码到 url 来验证密码](others/hashed-password-to-url.md)
+- [如何学习一门编程语言](others/how-to-learn-a-program-language.md)
 - [如何阅读标准](others/how-to-read-spec.md)
 - [如何审核代码](others/how-to-review-code.md)
 - [如何在 github 项目里搜索代码](others/how-to-use-github-to-browse-codes.md)
@@ -731,6 +742,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 
 ## Shell
 
+- [给命令的每一行输出加前缀的方法](shell/add-prefix-to-each-output-line.md)
 - [多行字符串赋值给变量](shell/assign-multi-lines-string-to-variable.md)
 - [bash completion](shell/bash-completion.md)
 - [Bash 镜像有 bug](shell/bash-docker-image-has-bug.md)
@@ -741,10 +753,12 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [Bash 的坑](shell/bash-pitfalls.md)
 - [Bash 小技巧](shell/bash-tricks.md)
 - [当存在与命令同名的别名，如何调用原命令](shell/command-alias-in-same-names.md)
+- [Shell 操作文件描述符](shell/file-descriptor.md)
 - [`printf '%s\n' $@` 为何可以打印多行？](shell/printf-array.md)
 - [Readline](shell/readline.md)
 - [学习 Shell](shell/shell-learning.md)
 - [Bash 的 subshell 与子进程](shell/subshell-and-child-process.md)
+- [set 命令](shell/the-set-command.md)
 - [Bash xtrace](shell/xtrace.md)
 
 [`⬆ 返回目录`](#toc)
@@ -845,5 +859,11 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [socket](web/socket.md)
 - [下划线在 HTTP Header 里是非法字符串](web/underscore-is-invalid-in-header.md)
 - [URI 转义](web/uri-encode.md)
+
+[`⬆ 返回目录`](#toc)
+
+## Windows
+
+- [PE 系统](windows/pe-system.md)
 
 [`⬆ 返回目录`](#toc)

@@ -5,6 +5,8 @@
 <!-- MarkdownTOC GFM -->
 
 - [关机/重启](#关机重启)
+- [查看内核消息](#查看内核消息)
+- [查看 PCI 设备信息](#查看-pci-设备信息)
 - [生成硬件信息拓扑图](#生成硬件信息拓扑图)
 - [dmidecode](#dmidecode)
 - [CPU](#cpu)
@@ -40,6 +42,16 @@
 - 不断电关机 `halt`
 - 重启 `reboot`
 
+## 查看内核消息
+
+`dmesg -H`
+
+详见 [linux/dmesg.md](../linux/dmesg.md)。
+
+## 查看 PCI 设备信息
+
+`lspci -tv`。`-t` 是树形结构查看，`-v` 是详细信息，可以是 `-vv` 或 `-vvv`。
+
 ## 生成硬件信息拓扑图
 
 终端用户安装 `hwloc-nox` 包，桌面用户安装 `hwloc` 包。
@@ -48,7 +60,7 @@
 
 ## dmidecode
 
-dmidecode 的作用是将DMI数据库中的信息解码，以可读的文本方式显示。
+dmidecode 的作用是将 DMI 数据库中的信息解码，以可读的文本方式显示。
 
 - 查看主板上的 PCI 插槽: `dmidecode | grep --color "PCI"`
 - 查看所有硬件信息: `dmidecode`
@@ -57,7 +69,7 @@ dmidecode 的作用是将DMI数据库中的信息解码，以可读的文本方�
 
 ## CPU
 
-查看 CPU 信息 `cat /proc/cpuinfo`，或者 `lscpu`
+查看 CPU 信息 `cat /proc/cpuinfo`，或者 `lscpu`。
 
 ```
 Architecture:        x86_64

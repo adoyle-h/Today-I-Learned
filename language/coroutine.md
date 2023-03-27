@@ -1,8 +1,6 @@
 # 协程 (Coroutine)
 
 - [Wikipedia - 协程](https://www.wikiwand.com/zh-hans/%E5%8D%8F%E7%A8%8B)
-- [Golang和Erlang的并发调度浅析](https://studygolang.com/articles/18968) ([链接备份](https://web.archive.org/web/20230225182702/https://studygolang.com/articles/18968))
-
 
 ## 协程与纤程 (Fiber) 的区别
 
@@ -32,6 +30,8 @@
 
 ### 无栈协程 (Stackless Coroutine)
 
+无栈协程的本质就是一个状态机
+
 ## 对称协程与非对称协程
 
 ### 对称协程 (Symmetric Coroutine)
@@ -43,3 +43,9 @@
 协程出让调度权的目标只能是它的调用者，即协程之间存在调用和被调用关系。
 
 [^1]: https://www.wikiwand.com/zh-cn/%E5%8D%8F%E7%A8%8B
+
+
+## 参考文章
+
+- [有栈协程与无栈协程](https://mthli.xyz/stackful-stackless/) ([链接备份](https://web.archive.org/web/20220819050900/https://mthli.xyz/stackful-stackless/))
+- [Golang和Erlang的并发调度浅析](https://studygolang.com/articles/18968) ([链接备份](https://web.archive.org/web/20230225182702/https://studygolang.com/articles/18968))
