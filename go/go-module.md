@@ -12,4 +12,9 @@ Golang 管理模块有两种模式：
 - `GO111MODULE=auto` 或不设置 `GO111MODULE` 变量: Golang 自己检测是不是使用 Module-Aware Mode。
 
 
+## 缓存机制
+
+https://golang.org/ref/mod#module-cache
+
+
 [1]: https://golang.org/cmd/go/#hdr-Vendor_Directories

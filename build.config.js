@@ -22,4 +22,5 @@ exports.categoryNameMap = {
     vm: '虚拟机',
     proverbs: '箴言录',
     hardware: '硬件',
+    ml: '机器学习',
 };

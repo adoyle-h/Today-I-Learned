@@ -23,6 +23,8 @@
 3. https://tour.go-zh.org/
 4. [Draveness - Go 语言设计与实现](https://draveness.me/golang)
 5. https://github.com/a8m/golang-cheat-sheet
+6. https://go.dev/ref/spec
+7. [Go 语言圣经](http://shouce.jb51.net/gopl-zh)
 
 ### 命令
 

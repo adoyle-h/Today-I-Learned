@@ -1,13 +1,13 @@
-## iptables 与 nftables
+# iptables 与 nftables
 
 iptables 基于 [netfilter](./netfilter.md)。主要用于网络防火墙的场景。
 
-### 从内核详解 iptables 原理
+## 从内核详解 iptables 原理
 
 - http://www.zsythink.net/archives/1199 : 这个系列写得很棒，图文并茂简单易懂。([链接备份](https://web.archive.org/web/20200813052902/http://www.zsythink.net/archives/1199/))
 - [深入理解 iptables 和 netfilter 架构](https://arthurchiao.github.io/blog/deep-dive-into-iptables-and-netfilter-arch-zh/) ([链接备份](https://web.archive.org/web/20221116015223/https://arthurchiao.art/blog/deep-dive-into-iptables-and-netfilter-arch-zh/))
 
-### firewalld
+## firewalld
 
 https://firewalld.org/
 
@@ -17,7 +17,7 @@ https://firewalld.org/
 
 [firewalld 与 iptables](https://www.jianshu.com/p/70f7efe3a227) ([链接备份](https://web.archive.org/web/20200806020422/https://www.jianshu.com/p/70f7efe3a227))
 
-### nftables
+## nftables
 
 > nftables 是新式的数据包过滤框架，旨在替代现用的 iptables 框架。nftables 诞生于 2008 年，2013 年底合并到 Linux 内核，从 Linux 内核 3.13 版本开始可用。
 
@@ -30,13 +30,58 @@ https://firewalld.org/
 - [从实现上对比 iptables 和 nftables](https://blog.csdn.net/dog250/article/details/41526421) ([链接备份](https://web.archive.org/web/20200216024821/https://blog.csdn.net/dog250/article/details/41526421))
 - https://wiki.nftables.org/wiki-nftables/index.php/Netfilter_hooks
 
-### UFW
+## UFW
 
 [UFW - Uncomplicated Firewall](https://help.ubuntu.com/community/UFW)
 
 > The default firewall configuration tool for Ubuntu is ufw. Developed to ease iptables firewall configuration, ufw provides a user friendly way to create an IPv4 or IPv6 host-based firewall.
 
-### 其他
+## iptables-save/iptables-restore
+
+- 将 iptables 规则保存到文件: `iptables-save > /etc/iptables/rules.v4`
+- 系统加载 iptables 规则: `iptables-restore /etc/iptables/rules.v4`
+
+Linux 系统启动默认不会加载 iptables 规则，需要在 systemd service 里使用 iptables-restore 来加载规则。
+
+```
+[Unit]
+Description=Packet Filtering Framework
+
+[Service]
+ExecStart=/sbin/iptables-restore /etc/iptables/rules.v4
+ExecReload=/sbin/iptables-restore /etc/iptables/rules.v4
+Type=oneshot
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+```
+
+## nft -f /etc/nftables.conf
+
+nft 不使用 `iptables-save` 和 `iptables-restore`。
+
+- 将 nftables 规则保存到文件: `nft list ruleset > /etc/nftables.conf`
+- 系统加载 nftables 规则: `nft -f /etc/nftables.conf`
+
+Linux 系统启动默认不会加载 /etc/nftables.conf 文件，需要在 systemd service 里使用 `nft -f` 来加载规则。
+
+```
+[Unit]
+Description=NFT ruleset
+After=network.target
+
+[Service]
+ExecStart=/usr/sbin/nft -f /etc/nftables.conf
+ExecReload=/usr/sbin/nft -f /etc/nftables.conf
+Type=oneshot
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+```
+
+## 其他
 
 iptables 的可读性和操作效率不如 nftables，强烈推荐 nftables。
 

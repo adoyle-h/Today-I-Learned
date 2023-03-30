@@ -1,5 +1,11 @@
 ## eBPF 与 XDP
 
+https://ebpf.io/
+
+eBPF (extended Berkeley Packet Filter) 起源于 BPF，它提供了内核的数据包过滤机制。
+
+XDP 详见[这里](./xdp.md)。
+
 ### 基本概念
 
 - BPF Map
@@ -47,20 +53,6 @@ BPF 代码运行时编译，不仅需要 kernel header，而且需携带 llvm/cl
 - [libbpf-tools](https://github.com/iovisor/bcc/tree/master/libbpf-tools)
 - [HOWTO: BCC to libbpf conversion](https://facebookmicrosites.github.io/bpf/blog/2020/02/20/bcc-to-libbpf-howto-guide.html) ([链接备份](https://web.archive.org/web/20221130165544/https://facebookmicrosites.github.io/bpf/blog/2020/02/20/bcc-to-libbpf-howto-guide.html))
 - [BPF Portability and CO-RE](https://facebookmicrosites.github.io/bpf/blog/2020/02/19/bpf-portability-and-co-re.html) ([链接备份](https://web.archive.org/web/20230120022211/https://facebookmicrosites.github.io/bpf/blog/2020/02/19/bpf-portability-and-co-re.html))
-
-### XDP 模式
-
-XDP 支持三种模式，默认使用 `native` 模式。
-
-- Native (XDP_FLAGS_DRV_MODE)：XDP BPF 程序运行在网络接口控制器 (NIC) 的早期接收路径（RX 队列）上。
-- Offloaded (XDP_FLAGS_HW_MODE)：XDP BPF 程序直接在 NIC 中处理报文，而不会使用主机的 CPU。因此，处理报文的成本非常低，性能要远远高于 Native 模式。该模式通常由智能网卡实现，包含多线程，多核流量处理器（以及一个内核的 JIT 编译器，将 BPF 转变为该处理器可以执行的指令）。支持 Offloaded 的驱动通常也支持 Native（某些 BPF 辅助函数通常仅支持native 模式）。
-- Generic (XDP_FLAGS_SKB_MODE)：对于没有实现 Native 或 Offloaded 模式的 XDP，内核提供了一种处理 XDP 的通用方案。该模式运行在网络栈中，不需要对驱动进行修改。该模式主要用于给开发者测试使用 XDP API 编写的程序，其性能要远低于 Native 或 Offloaded 模式。在生产环境中，建议使用 Native 或 Offloaded模式。
-
-
-#### 支持 Native 的网卡驱动列表
-
-- https://github.com/xdp-project/xdp-project/blob/master/areas/drivers/README.org
-- https://github.com/iovisor/bcc/blob/master/docs/kernel-versions.md#xdp
 
 ### BPF Map 文件
 
