@@ -56,3 +56,50 @@ CMD ["/home/user/bin/xxx"]
   - `RUN apt update && apt install -y --no-install-recommends CMD && rm -rf /var/lib/apt/lists/*`
 - alpine 镜像
   - `RUN apk update && apk add --no-cache CMD`
+
+### dockerfile 支持 heredoc
+
+```dockerfile
+RUN <<EOF
+echo "Hello" >> /hello
+echo "World!" >> /hello
+EOF
+
+RUN <<EOF
+apt-get update
+apt-get upgrade -y
+apt-get install -y ...
+EOF
+
+RUN <<EOF
+#!/usr/bin/env python3
+with open("/hello", "w") as f:
+    print("Hello", file=f)
+    print("World", file=f)
+EOF
+
+RUN python3 <<EOF
+with open("/hello", "w") as f:
+    print("Hello", file=f)
+    print("World", file=f)
+EOF
+
+RUN python3 <<EOF > /hello
+print("Hello")
+print("World")
+EOF
+```
+
+```dockerfile
+COPY <<EOF /usr/share/nginx/html/index.html
+(your index page goes here)
+EOF
+
+COPY <<robots.txt <<humans.txt /usr/share/nginx/html/
+(robots content)
+robots.txt
+(humans content)
+humans.txt
+```
+
+详见 https://www.docker.com/blog/introduction-to-heredocs-in-dockerfiles/
