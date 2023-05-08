@@ -44,3 +44,7 @@ podman   3042657       1  0 18:46 pts/5    00:00:00 /usr/bin/slirp4netns --disab
     inet6 fe80::c805:68ff:fe9e:e44a/64 scope link
        valid_lft forever preferred_lft forever
 ```
+
+## 获取不到真实 ip
+
+详见 [在 rootless podman 获取不到真实远端 ip](./wrong-remote-ip-in-rootless-podman.md)
