@@ -67,6 +67,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [Git](#git)
 - [Go](#go)
 - [硬件](#硬件)
+- [Java](#java)
 - [Javascript](#javascript)
 - [K8S](#k8s)
 - [语言设计](#语言设计)
@@ -75,6 +76,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [Lua](#lua)
 - [Mac](#mac)
 - [数学](#数学)
+- [机器学习](#机器学习)
 - [网络](#网络)
 - [Nodejs](#nodejs)
 - [运维](#运维)
@@ -181,11 +183,13 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [nerdctl 网络](docker/nerdctl-network.md)
 - [nerdctl](docker/nerdctl.md)
 - [ping: Operation not permitted](docker/ping-operation-not-permmitted.md)
+- [Podman netns](docker/podman-netns.md)
 - [Podman](docker/podman.md)
 - [在后台运行 docker 容器且不会自动退出](docker/run-docker-in-background.md)
 - [docker security_opt](docker/security-opt.md)
 - [Docker 安全](docker/security.md)
 - [volume](docker/volume.md)
+- [在 rootless podman 获取不到真实远端 ip](docker/wrong-remote-ip-in-rootless-podman.md)
 
 [`⬆ 返回目录`](#toc)
 
@@ -277,11 +281,13 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 
 ## Go
 
+- [Golang GC](go/gc.md)
 - [GO 汇编](go/go-assembler.md)
 - [go build](go/go-build.md)
 - [go doc](go/go-doc.md)
 - [go generate](go/go-generate.md)
 - [Go Module](go/go-module.md)
+- [go tool](go/go-tool.md)
 - [Golang 学习](go/golang-learning.md)
 - [Gorutine](go/gorutine.md)
 - [在 MacOS 上使用 gvm install](go/gvm-install-in-macos.md)
@@ -300,6 +306,12 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [网络交换机](hardware/network-switch.md)
 - [无线电波 (Radio Waves)](hardware/radio-waves.md)
 - [USB](hardware/usb.md)
+
+[`⬆ 返回目录`](#toc)
+
+## Java
+
+- [Java GC](java/gc.md)
 
 [`⬆ 返回目录`](#toc)
 
@@ -353,6 +365,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [协程 (Coroutine)](language/coroutine.md)
 - [CSP 并发模型](language/csp.md)
 - [Debuger](language/debuger.md)
+- [垃圾回收 Garbage Collection (GC)](language/gc.md)
 - [栈帧](language/stack-frame.md)
 
 [`⬆ 返回目录`](#toc)
@@ -458,6 +471,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [netns](linux/netns.md)
 - [netstat 与 ss](linux/netstat-and-ss.md)
 - [网络接口配置 (ifcfg)](linux/network-interface-configuration.md)
+- [网络配置工具](linux/network-manage-tools.md)
 - [硬盘空间占满问题](linux/no-space-left-on-device.md)
 - [nsenter](linux/nsenter.md)
 - [NTP 时间同步](linux/ntp.md)
@@ -470,6 +484,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [PostmarketOS](linux/postmarketos.md)
 - [进程中断](linux/proc-interrupts.md)
 - [进程内存](linux/process-memory.md)
+- [进程亲和性 (Processor Affinity)](linux/processor-affinity.md)
 - [命令行中提示用户 Yes/No](linux/read-prompt.md)
 - [rm 命令](linux/rm.md)
 - [rsync 与 scp](linux/rsync-and-scp.md)
@@ -500,6 +515,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [UFW](linux/ufw.md)
 - [UNIX Domain Socket](linux/unix-domain-socket.md)
 - [unlink 是删除任何文件](linux/unlink.md)
+- [unshare 命令](linux/unshare.md)
 - [/usr/bin/env](linux/usr-bin-env.md)
 - [虚拟文件系统 (VFS, Virtual File System)](linux/virtual-file-system.md)
 - [虚拟内存](linux/virtual-memory.md)
@@ -555,6 +571,12 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 
 [`⬆ 返回目录`](#toc)
 
+## 机器学习
+
+- [Stable Diffusion](ml/stable-diffusion.md)
+
+[`⬆ 返回目录`](#toc)
+
 ## 网络
 
 记录网络相关知识
@@ -564,8 +586,10 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [组播地址](network/boardcast-ip.md)
 - [网桥 (Bridge)](network/bridge.md)
 - [DHCP](network/dhcp.md)
+- [DNS](network/dns.md)
 - [DNS SRV](network/dns_srv.md)
 - [DoH 与 DoT](network/doh-and-dot.md)
+- [Envoy](network/envoy.md)
 - [网关 gateway](network/gateway.md)
 - [HTTP Request/Response 网络包](network/http-request-and-response-package.md)
 - [NAT](network/nat.md)
@@ -575,6 +599,8 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [SDN](network/sdn.md)
 - [TCP Buffer 大小](network/tcp-buffer-size.md)
 - [TUN/TAP](network/tun-tap.md)
+- [虚拟网络设备](network/virtual-interface.md)
+- [虚拟 IP](network/virtual-ip.md)
 - [虚拟网络设备](network/virtual-network-devices.md)
 - [vlan](network/vlan.md)
 - [vxlan](network/vxlan.md)
@@ -589,6 +615,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [EJS 渲染引擎的空白问题](nodejs/ejs-blanks.md)
 - [Error.captureStackTrace 的 stack 缺少 message 问题](nodejs/error-captureStackTrace.md)
 - [fs 函数抛出的异常没有堆栈信息](nodejs/fs-error-has-no-stack.md)
+- [NodeJS GC](nodejs/gc.md)
 - [node 中发 ICMP 包](nodejs/icmp-in-node.md)
 - [Jest](nodejs/jest.md)
 - [npm publish 不会包含 .gitignore 文件](nodejs/missing-gitignore-when-node-publish.md)
@@ -690,6 +717,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [为何 Protobuf 3 移除了 required 和 optional](others/why-protobuf-3-remove-required-and-optional.md)
 - [为什么 Unicode U+F8FF 是苹果 Logo？](others/why-unicode-f8ff-is-apple-logo.md)
 - [zookeeper 健康检查](others/zookeeper-health-check.md)
+- [零宽字符加密](others/zwj-encode.md)
 
 [`⬆ 返回目录`](#toc)
 
@@ -847,6 +875,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [KVM (Kernel-based Virtual Machine)](vm/kvm.md)
 - [Libvirt 网络](vm/libvirt-network.md)
 - [Libvirt](vm/libvirt.md)
+- [虚拟 CPU](vm/vCPU.md)
 - [virsh shutdown 命令无效](vm/virsh-shutdown-not-work.md)
 - [virt-install Couldn't find kernel for install tree](vm/virt-install-cannot-find-kernel.md)
 - [Virtualbox](vm/virtualbox.md)
@@ -864,6 +893,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [socket](web/socket.md)
 - [下划线在 HTTP Header 里是非法字符串](web/underscore-is-invalid-in-header.md)
 - [URI 转义](web/uri-encode.md)
+- [Websocket](web/websocket.md)
 
 [`⬆ 返回目录`](#toc)
 
