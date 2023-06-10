@@ -1,6 +1,6 @@
-## apt
+# apt
 
-### /etc/apt/sources.list
+## /etc/apt/sources.list
 
 使用镜像源加快下载速度。
 
@@ -25,7 +25,7 @@ deb http://mirrors.huaweicloud.com/debian-security/ testing-security main contri
 
 要注意打开 `https://mirrors.huaweicloud.com/debian/dists/` 看有没有对应的目录。没有的话则代表这个镜像源里没有镜像该源的资源。
 
-### apt 默认源
+## apt 默认源
 
 如果 /etc/apt/sources.list 设置了多个源，apt 会安装更高版本的包的源，那 testing 源默认就会被选中。这会带来混乱。
 如果想把 stable 为默认源。可以这么设置，
@@ -40,22 +40,25 @@ echo 'APT::Default-Release "bullseye";' > /etc/apt/apt.conf.d/00local
 - https://unix.stackexchange.com/a/647205/373303
 - [Debian 的版本号及 distributions](https://archive.ph/i4N0T)
 
+## 搜索包
 
-### 重新配置包
+`apt search --names-only name`。`--names-only` 只会匹配包名，如果没有则会匹配包括包描述的所有信息。
+
+## 重新配置包
 
 执行 `dpkp-reconfigure $pkg`
 
-### 下载包内容
+## 下载包内容
 
 `apt download $pkg`
 
-### 查看包的文件内容
+## 查看包的文件内容
 
 `dpkg -L $pkg`。或者安装 `apt-file`，调用 `apt-file list`。
 
 参考 https://cheat.readthedocs.io/en/latest/debian.html
 
-### 根据文件路径查对应的包
+## 根据文件路径查对应的包
 
 ```sh
 $ dpkg -S /bin/ls

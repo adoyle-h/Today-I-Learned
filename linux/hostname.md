@@ -1,13 +1,27 @@
-## Hostname in Linux
+# Hostname in Linux
 
-修改 /etc/sysconfig/network 和 /etc/hostname。需要重启系统。
+`hostnamectl status` 可查看当前主机信息。
 
-参考文章
+## 修改 hostname
 
-- https://kerneltalks.com/linux/all-you-need-to-know-about-hostname-in-linux/
+- 临时修改：`hostname new-name`
+- 永久修改: `hostnamectl set-hostname new-name` 或者修改 /etc/hostname 文件。
+
+hostname 定义在以下这些文件
+
+- `/etc/hosts` for networking
+- `/etc/hostname` : This will be read by boot scripts on boot time and set its value.
+- `/proc/sys/kernel/hostname` : Current hostname.
+- `/etc/sysconfig/network` : Networking (HOSTNAME=”server1″ parameter)
+
+修改文件后需要重启系统。
+
+### 参考文章
+
+- https://kerneltalks.com/linux/all-you-need-to-know-about-hostname-in-linux/ ([链接备份](https://web.archive.org/web/20230602152904/https://kerneltalks.com/linux/all-you-need-to-know-about-hostname-in-linux/))
 - https://jaminzhang.github.io/linux/deep-understanding-of-linux-hostname/
 
-### 关于 FQDN
+## 关于 FQDN
 
 FQDN 定义: https://www.wikiwand.com/en/Fully_qualified_domain_name
 

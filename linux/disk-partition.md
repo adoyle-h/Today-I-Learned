@@ -1,8 +1,8 @@
-## 硬盘分区
+# 硬盘分区
 
-### 概念
+## 概念
 
-#### 分区格式
+### 分区格式
 
 - MBR (Master Boot Record)
   - MBR 数据存储在硬盘的第一个扇区 (512 字节)。数据结构：启动代码 (Bootstrap Code Area, 446 字节) + 分区表 (Partition Table, 64 字节) + 结束标志 (Boot Signature, 2 字节，值为 `0x55AA`)。
@@ -20,26 +20,51 @@
     - 硬盘头部：保护 MBR + GPT Partition Header + 分区表
     - 硬盘尾部是备份区：分区表 + GPT Partition Header
 
-### 命令
+## 命令
+
+- 查看硬盘信息: `fdisk -l`
+- 查看分区信息: `lsblk`
+
+## MBR 分区
 
 ```sh
-# 查看硬盘信息
-fdisk -l
-
-# 查看分区信息
-lsblk
-
-# 对硬盘进行分区
+# 对硬盘 /dev/sda 进行 MBR 分区
 fdisk /dev/sda
 ```
 
-### 4K 对齐
+## GPT 分区
 
-因为 block 是文件系统读写硬盘的基本单位。block 的大小通常是 4KB，即由连续八个扇区 (sector) 组成。
+```sh
+# 对硬盘 /dev/sda 进行 GPT 分区
+parted /dev/sda
+# 磁盘标签格式设为 gpt
+(parted) mklabel gpt
+# 查分区
+(parted) print
+(parted) mkpart
+# 分别回答: p1 回车 0% 1GiB
+(parted) mkpart
+# 分别回答: p2 回车 1GiB 100%
+```
+
+GPT 扇区要兼容 MBR 扇区，当分区设置 `0%` 会预留空间，START 位置会偏移 2048 扇区。
+
+```
+Device         Start        End   Sectors   Size Type
+/dev/sdb1       2048  859834367 859832320   410G Linux filesystem
+```
+
+对于大多数磁盘而言，留给元数据和文件系统结构的空间通常是 2048 个扇区，每个扇区大小为 512 字节，即 1MiB 左右。因此，在使用 parted 命令进行分区时，即使指定了起始位置为 0%，实际上操作系统也会将该分区的起始位置设置为第 2048 个扇区（或者更靠后的某个扇区），以避免影响磁盘的元数据和文件系统结构。
+
+EFI 分区格式化成 Fat32 文件系统 `mkfs.fat -F 32 /dev/<partition>`。
+
+## 4K 对齐
+
+因为 block 是文件系统读写硬盘的基本单位。block 的大小通常是 4KiB，即由连续八个扇区 (sector) 组成。
 
 当 4K 对齐时，磁盘读写时不需要操作额外的扇区，可以充分发挥磁盘的读写性能。而不对齐就会造成磁盘读写性能的下降。
 
-### MBR 备份与恢复
+## MBR 备份与恢复
 
 先使用 `fdisk -l` 确定 MBR 位置。
 
@@ -69,9 +94,9 @@ sfdisk -d /dev/sda > /root/backup-sda.sfdisk
 sfdisk /dev/sda < /root/backup-sda.sfdisk
 ```
 
-### GPT 备份与恢复
+## GPT 备份与恢复
 
-### 调整保留空间 (reserved blocks)
+## 调整保留空间 (reserved blocks)
 
 保留空间的意义是万一磁盘满了，可以为 root 用户修复问题保留一定的硬盘空间。系统盘建议设置保留空间，数据盘建议不保留。
 
@@ -97,10 +122,10 @@ tune2fs -m 1 /dev/sde1
 tune2fs -l /dev/sda1 | grep 'Reserved'
 ```
 
-### /boot 分区支持的文件系统有限
+## /boot 分区支持的文件系统有限
 
 不支持 btrfs 和 lvm。建议用 ext4。
 
-### MBR 与 GPT
+## MBR 与 GPT
 
 MBR 最多只有 4 个分区。分区大小不能超过 2 TB。GPT 没有这些限制。

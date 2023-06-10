@@ -19,3 +19,8 @@ LANGUAGE="en_US:en"
 LANG="zh_CN.UTF-8"
 LANGUAGE="zh_CN:zh"
 ```
+
+## locale-gen
+
+编辑 /etc/locale.gen 文件，取消注释 `en_US.UTF-8 UTF-8`。然后执行 `locale-gen` 命令。
+`echo "LANG=en_US.UTF-8" > /etc/locale.conf`
