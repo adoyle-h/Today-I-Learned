@@ -126,6 +126,8 @@ adoyle    926414  926413  0 15:08 ?        00:00:00 (sd-pam)
 
 查看启动顺序和时间 `systemd-analyze plot --order > systemd-startup.svg`
 
+检查配置是否有问题 `systemd-analyze verify default.target`
+
 ## 常用的 systemd unit
 
 - [systemd-timesyncd](./systemd-timesyncd.md)

@@ -44,6 +44,11 @@ echo 'APT::Default-Release "bullseye";' > /etc/apt/apt.conf.d/00local
 
 `apt search --names-only name`。`--names-only` 只会匹配包名，如果没有则会匹配包括包描述的所有信息。
 
+## 升级包
+
+`apt upgrade` 会升级所有安装包。即使你写 `apt upgrade <package>` 也依然会升级所有。
+如果你要升级指定的包，可以用 `apt --only-upgrade install <package>`。
+
 ## 重新配置包
 
 执行 `dpkp-reconfigure $pkg`
