@@ -1,10 +1,12 @@
-## Containerd
+# Containerd
 
 <!-- MarkdownTOC GFM -->
 
 - [基本概念](#基本概念)
 - [进程结构](#进程结构)
 - [config.toml](#configtoml)
+    - [镜像加速](#镜像加速)
+- [rootless containerd](#rootless-containerd)
 - [crictl](#crictl)
 - [ctr](#ctr)
     - [ctr 命名空间](#ctr-命名空间)
@@ -14,7 +16,7 @@
 
 <!-- /MarkdownTOC -->
 
-### 基本概念
+## 基本概念
 
 - [namespace](#ctr-命名空间)
 - image
@@ -27,7 +29,7 @@
 
 https://containerd.io/scope/#scope 可以看到 containerd 的功能规划。
 
-### 进程结构
+## 进程结构
 
 - containerd 创建子进程 containerd-shim-runc-v2
   - 注意 containerd-shim-runc-v2 的父进程是 PID 1，这是为了防止 containerd 崩溃时，不影响容器。
@@ -35,21 +37,63 @@ https://containerd.io/scope/#scope 可以看到 containerd 的功能规划。
 - containerd-shim-runc-v2 创建子进程 runc
 - runc 创建子进程：容器进程。容器进程运行后，runc 进程退出，容器进程由 containerd-shim-runc-v2 接管。
 
-### config.toml
+## config.toml
 
-containerd 的配置文件路径默认是 `/etc/containerd/config.toml`
+containerd 的配置文件路径默认是 `/etc/containerd/config.toml`。
+如果这个文件没有，可以自己创建。`containerd config default | sudo tee /etc/containerd/config.toml`
 
 目录结构和配置具体见 https://github.com/containerd/containerd/blob/main/docs/ops.md
 
-### crictl
+### 镜像加速
+
+修改 config.toml 配置文件。
+
+下面这种写法已废弃。
+
+```
+[plugins."io.containerd.grpc.v1.cri".registry.mirrors]
+  [plugins."io.containerd.grpc.v1.cri".registry.mirrors."docker.io"]
+    endpoint = ["http://local-registry-mirror"]
+```
+
+（顺便吐槽 TOML 语法，在深度嵌套的情况下，冗余字段太多了）
+
+应当使用这种写法：
+
+首先创建文件，比如如果要加速 docker.io 下的镜像，就得创建目录：
+
+```
+/etc/containerd/certs.d
+└── docker.io
+    └── hosts.toml
+```
+
+```sh
+cat <<EOF > /etc/containerd/certs.d/docker.io/hosts.toml
+server = "https://docker.io"
+
+[host."https://dockerproxy.com"]
+  capabilities = ["pull", "resolve"]
+EOF
+```
+
+具体配置详见 https://github.com/containerd/containerd/blob/main/docs/cri/config.md#registry-configuration
+
+镜像站详见 https://tools.adoyle.me/docker/#%E9%95%9C%E5%83%8F%E5%8A%A0%E9%80%9F
+
+然后重启 containerd 使之生效。
+
+## [rootless containerd](./rootless-containerd.md)
+
+## crictl
 
 [crictl](https://github.com/kubernetes-sigs/cri-tools/blob/master/docs/crictl.md) 是遵循 CRI 接口规范的 kubelet 专用 CLI 工具。用来检查和管理 kubelet 节点上的容器运行时和镜像。
 
-### ctr
+## ctr
 
 ctr 是 containerd 的客户端 CLI，类似简单版的 docker 客户端。
 
-#### ctr 命名空间
+### ctr 命名空间
 
 ```sh
 # ctr 用 namespace 分离数据，一般来说 docker 对应 `moby`，k8s 对应 `k8s.io`，buildkit 对应 `buildkit`。
@@ -66,7 +110,7 @@ moby
 
 https://github.com/containerd/containerd/blob/main/docs/namespaces.md#inspecting-namespaces
 
-#### ctr 基本操作
+### ctr 基本操作
 
 ```sh
 # 等价于 docker ps
@@ -101,7 +145,7 @@ sha256:d73ca8aeb30461ac010b03e9759b98e86bda9898ca5f6ec9a14bc3193de1a2c4 1.862kB 
 sha256:e7d88de73db3d3fd9b2d63aa7f447a10fd0220b7cbf39803c803f2af9ba256b3 528B    7 days          -
 ```
 
-### 用 ctr 停止容器
+## 用 ctr 停止容器
 
 `ctr container` 只有 `rm` 命令，没有 `stop` 命令。
 
@@ -133,6 +177,6 @@ $ ctr -n k8s.io task ls -q | xargs -n 1 ctr -n k8s.io task kill --signal SIGKILL
 $ ctr -n k8s.io c ls -q | xargs -n 1 ctr -n k8s.io c rm
 ```
 
-### ctr shell 自动补全
+## ctr shell 自动补全
 
 见 https://github.com/containerd/containerd/tree/main/contrib/autocomplete

@@ -103,3 +103,14 @@ humans.txt
 ```
 
 详见 https://www.docker.com/blog/introduction-to-heredocs-in-dockerfiles/
+
+注意：在 heredoc 里，前一行命令失败会继续执行下一行。建议每个 heredoc 都加上 `set -o errexit -o nounset -o pipefail`。
+
+```dockerfile
+RUN <<EOF
+set -o errexit -o nounset -o pipefail
+echo 1
+non-existed-command
+echo 2
+EOF
+```

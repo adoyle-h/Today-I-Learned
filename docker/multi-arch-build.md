@@ -42,21 +42,19 @@ docker buildx commands:
 
 ## builder
 
-当前的构建器实例 (builder) 由 `docker-container` 驱动支持时，您可以同时指定多个架构。
+当前的构建器实例 (builder) 的 driver 是 `docker-container` 或者 `kubernetes` 时，可以构建多架构镜像。
+默认的 default builder 是 `docker` driver，而不是 `docker-container` driver。
 
-默认不是 `docker-container` 驱动，所以你要用 `docker buildx create` 创建自己的构建器。
+所以你要用 `docker buildx create` 创建自己的构建器实例。`--driver docker-container` 是默认参数，会创建一个基于 `moby/buildkit` 镜像的容器。在这个容器中构建多架构镜像。
 
-```sh
-docker buildx create --name $BUILDER --driver docker-container --bootstrap
-docker buildx use $BUILDER
-```
-
+- `docker buildx create --name $BUILDER --bootstrap --use` 创建 builder 实例，并使用这个实例。
 - `docker buildx ls` 列出所有 builder 实例。
+- `docker buildx use` 切换 builder 实例。
 - `docker buildx inspect` 查看当前 builder 实例信息。
 
 ## docker buildx build
 
-使用 `docker buildx build --platform linux/amd64,linux/arm64 --push .` 来构建多架构镜像。
+`docker buildx build --platform linux/amd64,linux/arm64 --push .`
 
 在这种情况下，它会建立一个清单 (manifest)，其中包含所有指定架构的镜像。
 当你在 docker run 或 docker service 中使用这个镜像时，Docker 会根据节点的平台来挑选正确的镜像。
@@ -64,3 +62,5 @@ docker buildx use $BUILDER
 **注意**，不能分开使用 `--platform`，比如先执行 `docker buildx build --platform linux/amd64`，后执行 `docker buildx build --platform linux/arm64`。后面构建的镜像会覆盖之前的镜像，最终只会产生单架构的镜像。
 
 **注意**，用户必须加上 `--push` 参数，它会自动 push 构建好的镜像到 docker hub。由于 docker buildx build 构建的多架构的镜像只会保留最后一份架构的镜像在本机，用户没法用 `docker push` 来提交多架构镜像。
+
+详见 https://github.com/docker/buildx/blob/master/docs/reference/buildx_build.md

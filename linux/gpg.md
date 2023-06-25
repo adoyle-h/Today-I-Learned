@@ -10,6 +10,10 @@
 
 `gpg -vvv` 用 `-v` 参数输出更多 debug 信息。
 
+### 导入公钥
+
+`sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys <pubkey>`
+
 ### gpg 导入私钥失败: No such file or directory
 
 加上 `--batch` 参数就解决了，据说是 gpg2 的 bug。
