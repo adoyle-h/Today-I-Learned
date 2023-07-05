@@ -1,77 +1,94 @@
-# gpg 与 gpg-agent
+# gpg
 
-## gpg
+<!-- MarkdownTOC GFM -->
 
-`gpg.conf` 是 gpg 的配置文件。
+- [概念](#概念)
+- [gpg debug](#gpg-debug)
+- [创建主密钥](#创建主密钥)
+- [创建子密钥](#创建子密钥)
+- [撤销子密钥](#撤销子密钥)
+- [删除密钥](#删除密钥)
+- [导入公钥](#导入公钥)
+    - [gpg 导入私钥失败](#gpg-导入私钥失败)
+- [发布公钥](#发布公钥)
+- [撤销公钥](#撤销公钥)
+- [签名](#签名)
+- [加密](#加密)
+- [解密](#解密)
 
-基本命令见 `c gpg` 或 `cheat gpg` 或 `tldr gpg`。
+<!-- /MarkdownTOC -->
 
-### gpg debug
+## 概念
+
+- gpg: 生成和操作 GPG Key 的命令。
+- [gpg-agent](./gpg-agent.md): 在后台运行并缓存用户的私钥密码，以便在需要时自动提供给相关应用程序。
+- gpg.conf: gpg 的配置文件。
+- gpg-agent.conf: gpg-agent 的配置文件。
+- Key Server: 专门用于存放 Public Key 的服务器。
+- Key Fingerprint: Public Key 的散列值，40 字符长度，便于展示身份。
+- Key ID: Key Fingerprint 的末尾 16 个字符。便于展示身份。
+- UserID: 格式 `username (comment) <email>`
+- `[S]`
+
+## gpg debug
 
 `gpg -vvv` 用 `-v` 参数输出更多 debug 信息。
 
-### 导入公钥
+## 创建主密钥
 
-`sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys <pubkey>`
+1. `gpg --full-gen-key`
+2. 选 ECC 加密，默认椭圆曲线。
+3. 输入 Passphrase，记住 Passphrase 以后会用到。
 
-### gpg 导入私钥失败: No such file or directory
+## 创建子密钥
 
-加上 `--batch` 参数就解决了，据说是 gpg2 的 bug。
+1. `gpg --edit-key <keyid>` 选择主密钥。
+2. `addkey`
+3. 分别创建 sign 和 encrypt 子钥。
+4. `save` 退出前一定要 save, 否则更改不会生效。
+
+## 撤销子密钥
+
+1. `gpg --edit-key <keyid>` 选择主密钥。
+2. `list` 列出所有的子密钥。
+3. `key <n>` 选择要销毁的子密钥的序号。
+4. `revkey`
+5. `save` 退出前一定要 save, 否则更改不会生效。
+
+## 删除密钥
+
+`gpg --delete-secret-and-public-keys <keyid>`
+
+## 导入公钥
+
+从 key server 导入：`sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys <pubkey>`
+
+或者，从本地文件导入：`gpg --import <file>`
+
+### gpg 导入私钥失败
+
+如果错误消息是 `No such file or directory` 或者要求输入 passphrase。
+据说是 gpg2 的 bug。加上 `--batch` 参数就解决了，`gpg --batch --import <file>`。
 
 - [GNUPG2 suddenly throwing "Error building skey array: No such file or directory"](https://superuser.com/q/1325862/1776434)
 - [gpg2 asking for passphrase when importing secret keys](https://superuser.com/q/1135812/1776434)
 - https://dev.gnupg.org/T2313
 
-## gpg-agent
+## 发布公钥
 
-`gpg-agent.conf` 是 gpg-agent 的配置文件。
+## 撤销公钥
 
-`gpgconf --kill gpg-agent` 重启 gpg-agent。
-修改 `gpg-agent.conf` 如果没生效，试试 `gpg-connect-agent reloadagent /bye`。
+## 签名
 
-### 修改 pinentry-program
+- 签名（原文本分开） `gpg -ab input.txt -u <keyid>`
+  - 生成二进制签名文件（原文件包含在生成文件里） `gpg -s input.txt -u <keyid>`
+  - 生成 ASCII 格式签名 `gpg -b input.txt -u <keyid>`
+- 验证签名 `gpg --verify demo.txt.asc demo.txt -u <keyid>`
 
-pinentry 是用来让用户输入密码的，跟 gpg 交互。
+## 加密
 
-```
-# gpg-agent.conf
+`gpg -se -o encrypt.txt -r <recipient-keyid> input.txt`
 
-# pinentry-program 的值必须是完整路径，不能是文件名。通常你可以选下面两个程序之一
-# - pinentry-tty 普通的文本交互
-# - pinentry-curses 弹窗交互
-pinentry-program /usr/local/bin/pinentry-tty
-```
+## 解密
 
-### gpg-agent 密码缓存
-
-可以修改每次密码输入的间隔时间。
-
-```
-# gpg-agent.conf
-
-default-cache-ttl 43200
-max-cache-ttl 43200
-```
-
-## gpgconf
-
-`gpgconf --help` 查看帮助
-
-## pinentry
-
-pinentry 的启动依赖 `export GPG_TTY` 变量，找不到 tty，它会报错导致 gpg 签名或者加密失败。
-
-## KeyServer
-
-推荐的服务
-
-- [hkps://keys.openpgp.org](https://keys.openpgp.org)
-- https://keyserver.ubuntu.com/
-- https://keys.mailvelope.com/
-
-已废弃的服务
-
-- https://sks-keyservers.net
-- https://keys.gnupg.net
-
-在 ~/.gnupg/gpg.conf 配置 KeyServer。
+`gpg -d encrypt.txt`

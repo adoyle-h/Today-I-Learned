@@ -12,6 +12,14 @@
 
 `mtr -r <host or ip>`
 
+如果遇到下面的报错，说明需要加上 `sudo` 执行命令。
+
+```
+mtr-packet: Failure to open IPv4 sockets
+mtr-packet: Failure to open IPv6 sockets
+mtr: Failure to start mtr-packet: Invalid argument
+```
+
 ### 检测 TCP 端口连通
 
 方案任选其一：

@@ -1,4 +1,4 @@
-## 网络接口名称的 @
+# 网络接口名称的 @
 
 比如网络接口名称为 `veth97e84578@if3`
 
@@ -26,7 +26,7 @@ $ cat /sys/class/net/veth97e84578/ifindex
 - if iflink is itself (iflink == ifindex) It will not display any @. That's what should happen with real interfaces (eth0 ...) but can also be a bug (see later).
 - if iflink has a matching ifindex, it will display this index' name.
 
-### 查找另一个 veth 网络接口
+## 查找另一个 veth 网络接口
 
 当出现 `@`，说明另一个 veth 网络接口在别的网络命名空间里。
 
@@ -45,6 +45,6 @@ $ nsenter -t 803924 -n ip l
     link/ether 7e:32:cc:da:dd:6c brd ff:ff:ff:ff:ff:ff link-netnsid 0
 ```
 
-### 参考
+## 参考
 
 - https://unix.stackexchange.com/q/444892/373303
