@@ -7,17 +7,17 @@
 3. 创建 hosts 文件
 4. 创建 hostname 文件
 5. 触发 [oci createRuntime hook](https://github.com/opencontainers/runtime-spec/blob/main/runtime.md)
-  1. 调用 nerdctl internal oci-hook createRuntime
-    1. 创建 hostsstore
-    2. 加载 CNI 插件配置。设置 CNI 插件的可执行文件目录
-    2. 调用 [cni.New](https://pkg.go.dev/github.com/containerd/go-cni#New) 设置 CNI 配置，遵循 [CNI 配置标准](https://www.cni.dev/docs/spec/#section-1-network-configuration-format)
-    3. 调用 [cni.Setup](https://pkg.go.dev/github.com/containerd/go-cni#CNI.Setup)。遵循 [CNI 的执行标准](https://www.cni.dev/docs/spec/#section-3-execution-of-network-configurations)
-      1. 直接在 `/proc/<容器 pid>/ns/net` 路径创建 network namespace
-      2. 执行 attachNetworks，根据 CNI 配置调用 CNI 插件
-        1. [ipam - host-local 插件](https://www.cni.dev/plugins/current/ipam/host-local/) 会分配动态 IP 给容器网络
-      3. 把 CNI 插件的返回 JSON 格式重新整理，返回给上层
-    4. 调用 hostsstore.Acquire，把新创建的容器网络配置信息（即 cni.Setup 的返回值）写入到 meta.json
-    5. 调用 hostsstore 读取 meta.json 的内容配置，更新到 hosts 文件
+	- 调用 nerdctl internal oci-hook createRuntime
+		1. 创建 hostsstore
+		2. 加载 CNI 插件配置。设置 CNI 插件的可执行文件目录
+		3. 调用 [cni.New](https://pkg.go.dev/github.com/containerd/go-cni#New) 设置 CNI 配置，遵循 [CNI 配置标准](https://www.cni.dev/docs/spec/#section-1-network-configuration-format)
+		4. 调用 [cni.Setup](https://pkg.go.dev/github.com/containerd/go-cni#CNI.Setup)。遵循 [CNI 的执行标准](https://www.cni.dev/docs/spec/#section-3-execution-of-network-configurations)
+			1. 直接在 `/proc/<容器 pid>/ns/net` 路径创建 network namespace
+			2. 执行 attachNetworks，根据 CNI 配置调用 CNI 插件
+				1. [ipam - host-local 插件](https://www.cni.dev/plugins/current/ipam/host-local/) 会分配动态 IP 给容器网络
+			3. 把 CNI 插件的返回 JSON 格式重新整理，返回给上层
+		5. 调用 hostsstore.Acquire，把新创建的容器网络配置信息（即 cni.Setup 的返回值）写入到 meta.json
+		6. 调用 hostsstore 读取 meta.json 的内容配置，更新到 hosts 文件
 6. 容器网络创建完成
 
 

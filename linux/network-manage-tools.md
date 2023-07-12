@@ -8,3 +8,11 @@
 - [net-tools](https://github.com/ecki/net-tools): 包含 ifconfig, route, netstat, arp 这些命令。不用研究，已经被 iproute2 取代了。
 - [iproute2](https://wiki.linuxfoundation.org/networking/iproute2): 包含 ip, ss 等命令。
 - [netplan](https://netplan.io/): netplan 是基于 `/etc/netplan/*.yaml` 配置文件以及 `NetworkManager` 或 `systemd-networkd` 来管理网络设备和配置的工具。
+
+## NetworkManager
+
+### 配置路径
+
+NetworkManager 配置: `/etc/NetworkManager/NetworkManager.conf`
+
+连接配置信息: `/etc/NetworkManager/system-connections/*.nmconnection`。如果手动修改 .nmconnectio 文件，需要执行 `nmcli connection reload` 来生效。
