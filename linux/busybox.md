@@ -16,3 +16,12 @@ BusyBox 考虑到了尺寸优化和有限的资源。它非常模块化，所以
 于是可以很容易地定制你的嵌入式系统。只需在 /dev 中添加一些设备节点，在 /etc 中添加一些配置文件，再加入一个 Linux 内核。
 
 注意： **BusyBox 使用 GPL v2 协议开源**。如果不想开源，可以使用 [toybox](https://landley.net/toybox/)，MIT 协议。
+
+## shell
+
+```
+/busybox/sh -> busybox
+/busybox/ash -> busybox
+```
+
+ash 支持登录后自动按顺序执行 /etc/profile 和 ~/.profile 文件里的内容。

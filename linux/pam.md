@@ -1,4 +1,4 @@
-## PAM
+# PAM
 
 插入式验证模块 (PAM, Pluggable Authentication Module) 是 Linux 系统级用户认证框架。
 
@@ -6,9 +6,9 @@
 
 `/etc/security` 包含了对认证方法参数的系统级配置。
 
-passwd、SSH 等程序都会用到 PAM。
+passwd、SSH、FTP 等程序都会用到 PAM。
 
-### PAM 模块
+## PAM 模块
 
 - pam_unix.so
 - pam_wheel.so      限制用户登录

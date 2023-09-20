@@ -1,4 +1,4 @@
-# rootless docker
+# rootless docker 网络
 
 <!-- MarkdownTOC GFM -->
 
@@ -7,6 +7,7 @@
 - [rootlesskit --net=vpnkit](#rootlesskit---netvpnkit)
     - [源码分析](#源码分析)
 - [rootlesskit --net=slirp4netns](#rootlesskit---netslirp4netns)
+- [CNI](#cni)
 
 <!-- /MarkdownTOC -->
 
@@ -151,3 +152,8 @@ nameserver 10.0.2.3
 
 这里的网关 10.0.2.2 指向的是什么？其实它是宿主机的 IP。[slirp4netns 的 vhost 默认配置](https://github.com/rootless-containers/slirp4netns/blob/462be177a5282a7dc76b2308a55b745ef9d50d2d/slirp4netns.1.md#description)。
 子命名空间通过这个 IP 将网络包发给宿主机。
+
+## CNI
+
+rootless 模式，CNI conflist 存储在 `~/.config/cni/net.d/*.conflist`。
+root 模式，CNI conflist 存储在 `/etc/cni/net.d/*.conflist`。

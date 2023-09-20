@@ -16,3 +16,39 @@
 NetworkManager 配置: `/etc/NetworkManager/NetworkManager.conf`
 
 连接配置信息: `/etc/NetworkManager/system-connections/*.nmconnection`。如果手动修改 .nmconnectio 文件，需要执行 `nmcli connection reload` 来生效。
+
+### 连接 wifi
+
+- `nmcli d wifi list` 搜索 wifi 信号
+- `nmcli -a d wifi connect $SSID` 连接 wifi。`-a` 参数指示询问密码。
+- `nmcli c` 查看当前已保存的链接信息。
+
+### 创建 connection
+
+```sh
+# 创建以太网 connection，监听 eth0 网卡。connection 名字为 Wired。
+# 配置默认会保存到文件 /etc/NetworkManager/system-connections/Wired.nmconnection
+sudo nmcli c add type ethernet ifname eth0 con-name Wired
+# 设置静态 IP
+sudo nmcli c mod Wired ipv4.method manual ipv4.addresses 192.168.139.130/24 ipv4.gateway 192.168.139.2 ipv4.dns 192.168.139.2
+```
+
+### 监听状态
+
+`nmcli monitor` 相当于 `nmcli d monitor` + `nmcli c monitor`
+
+### 如果有多个 connection 监听同一个网卡设备
+
+假设你有两个连接 eth0-home 和 eth0-office 监听同一个网卡 eth0。可以通过 `connection.autoconnect-priority` 设置它们的优先级。
+数字越大，优先级越高。
+
+```sh
+# 设置 'eth0-home' 的优先级为10
+sudo nmcli c mod eth0-home connection.autoconnect-priority 10
+# 设置 'eth0-office' 的优先级为1
+sudo nmcli c mod eth0-office connection.autoconnect-priority 1
+```
+
+查看 autoconnect-priority 的值：`sudo nmcli con show $connection | grep autoconnect-priority`
+
+connection 有重试机制，设置 `sudo nmcli c mod eth0-home connection.autoconnect-retries 1` 取消重试，如果失败则直接尝试下一个 connection。如果 `connection.autoconnect-retries=1`，则会永远重试下去。

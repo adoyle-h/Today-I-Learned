@@ -66,10 +66,17 @@ touch: ./abc/d: Permission denied
 在目标容器启动之前，先用其他镜像挂载 volume，把文件放进去，用 `chown` 修改文件权限。然后把这个 volume 挂到目标容器里。
 具体执行代码参考下面。
 
-```
+```sh
 # docker 可以换成 nerdctl, podman
 docker volume create vol
-docker run --rm -v vol:/data alpine:3 sh -c 'mkdir /data/abc && chown 1000:1000 /data/abc'
+docker run --rm -v vol:/data alpine sh -c 'mkdir /data/abc && chown 1000:1000 /data/abc'
+```
+
+或者，可以复制宿主机的文件到容器的 volume 里。
+
+```sh
+docker run --name temp --rm -d -v vol:/data alpine sleep 30
+docker cp ./config.yaml temp:/data/
 ```
 
 可以进到容器看看 volume 里的文件，`docker run --rm -it -v vol:/data alpine:3`。

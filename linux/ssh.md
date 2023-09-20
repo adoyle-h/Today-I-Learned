@@ -94,3 +94,20 @@ ctl_cmd 取值：
 - `cancel` cancel forwardings
 - `exit` request the master to exit
 - `stop` request the master to stop accepting further multiplexing requests
+
+## ssh 失败: Too many authentication failures
+
+解决方法：`ssh -o IdentitiesOnly=yes $host`
+
+`-o IdentitiesOnly=yes` 的作用是在尝试进行身份验证时，只使用在配置文件中指明的私钥。也就是说，ssh 客户端将不会尝试使用例如 ssh-agent 或者默认私钥这样的其他可能合法的公钥身份。
+
+为什么要这么做？因为 ssh 客户端默认会用所有可用的私钥尝试登录，直到用完所有的私钥或者成功登录为止。
+而如果 ssh 服务端设置了最大重试次数，那么当你有很多私钥，ssh 服务端可能会在你找到正确的私钥之前因为太多失败的尝试而阻止你的 IP 地址。
+因此，通过使用 `-o IdentitiesOnly=yes` 选项，并在你的 SSH 命令或配置文件中指定一个密钥文件，你可以确保 SSH 只使用一个特定的私钥来尝试身份验证。
+
+另外，推荐在 ~/.ssh/config 配置加上这个当作默认选项。
+
+```
+Host *
+IdentitiesOnly=yes
+```

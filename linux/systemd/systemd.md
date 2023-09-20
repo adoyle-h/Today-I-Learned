@@ -58,7 +58,11 @@ systemctl 命令操作 systemd 来管理服务，取代了 systemV 的service、
 
 ## 编辑 unit 配置
 
-`systemctl edit <unit>` 会创建 `<unit>.service.d/override.conf` 文件。并不会修改原本的 `<unit>.service` 文件。
+通过包管理器安装的服务，不建议直接修改包中的文件。因为当用包管理器更新服务版本。有可能会覆盖 unit 配置。
+
+正确的做法是使用 `systemctl edit <unit>` 命令。它会创建 `<unit>.service.d/override.conf` 文件。并不会修改原本的 `<unit>.service` 文件。用户在 override.conf 填入的配置，会和 `<unit>.service` 的配置合并。
+
+如果执行 `sudo systemctl edit` 使用了 nano 编辑器。可以 `sudo EDITOR=vim systemctl edit` 来切换成 vim 编辑器。
 
 当修改 unit 配置，尤其是修改了依赖关系。必须执行 `systemctl daemon-reload` 来更新。
 
