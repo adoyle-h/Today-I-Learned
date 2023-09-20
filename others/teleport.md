@@ -62,6 +62,7 @@ ExecStart=/usr/local/bin/teleport start --insecure --pid-file=/run/teleport.pid
 ## 安卓无法使用 tsh
 
 目前 termux 的包是很古老的 11.0.3 版本。而官方 teleport 的都出到 13 了。两者不兼容。
+（等这个 [PR](https://github.com/termux/termux-packages/pull/17852/files) 合并后应该就没问题了）
 
 因此需要自己源码编译 tsh。如果在非安卓的平台编译，首先要[安装 NDK](../go/cgo-build-for-android.md)。
 
