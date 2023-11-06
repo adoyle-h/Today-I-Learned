@@ -71,6 +71,30 @@ ${node?.parent.parent ? `grand_parent: ${node.parent.parent.title}` : ''}
     })
 }
 
+async function updateREADME() {
+    const fh = await FSP.open(absPath('README.md'), 'r+');  // why readfile with "w+" return empty?
+
+    const ymlFront = `---
+title: Home
+nav_order: 1
+---
+
+`;
+
+    try {
+      const buffer = await fh.readFile();
+      const stream = fh.createWriteStream({start: 0});
+      await new Promise((resolve) => {
+          stream.write(ymlFront, 'utf8', resolve);
+      })
+      await new Promise((resolve) => {
+          stream.write(buffer, 'utf8', resolve);
+      })
+    } finally {
+      await fh.close();
+    }
+}
+
 run(async () => {
     const dirNames = await getDirNames(projectDir)
 		const nodeMap = {};
@@ -84,6 +108,7 @@ run(async () => {
     debug('rootNodes=%O', rootNodes);
 
     await handle(rootNodes);
+    await updateREADME();
 
     console.log('Metadata Updated');
 });

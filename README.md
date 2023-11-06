@@ -1,9 +1,3 @@
----
-title: Home
-nav_order: 1
----
-
-
 # 今天我学了什么 (Today I Learned)
 
 > 博观而约取，厚积而薄发。
