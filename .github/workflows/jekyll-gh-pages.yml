@@ -30,6 +30,23 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v3
 
+      - name: Cache node modules
+        id: cache-node-modules
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-modules
+
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - if: steps.cache-node-modules.outputs.cache-hit != 'true'
+        run: npm i --production
+
+      - run: make update-meta
+
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:

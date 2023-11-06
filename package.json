@@ -20,11 +20,10 @@
   },
   "homepage": "https://github.com/adoyle-h/Today-I-Learned#readme",
   "dependencies": {
-    "bluebird": "^3.5.4",
-    "debug": "^4.1.1",
+    "@snyk/protect": "latest",
+    "debug": "^4.3.4",
     "json2md": "^1.6.3",
-    "lodash": "^4.17.21",
-    "@snyk/protect": "latest"
+    "p-map": "^6.0.0"
   },
   "snyk": true
 }

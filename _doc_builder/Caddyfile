@@ -1,0 +1,11 @@
+:80 {
+	handle_path /Today-I-Learned/* {
+		root * /usr/share/caddy/
+		file_server
+	}
+
+	handle {
+		root * /usr/share/caddy
+		file_server
+	}
+}
