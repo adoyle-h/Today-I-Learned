@@ -127,3 +127,27 @@ PATH=/opt/sbin:/opt/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:
 ## logger
 
 logger 是系统程序 `/usr/bin/logger`。日志文件在 `/tmp/syslog.log` 和 `/jffs/syslog.log`。
+
+## nvram
+
+nvram 全名是 Non-Volatile RAM。在 OpenWrt 里是用了 Flash ROM 最后的 64K 区块，用來存储一些环境参数。OpenWrt 通过这些参数来配置网络。
+
+- `nvram show` 展示键值对
+- `nvram set key=value` 设置键值对
+- `nvram unset` 删除键值对
+- `nvram commit` 持久化保存。如果没有 commit，重启设备后，之前的设置会重置。
+
+## 更新 dhcp hosts
+
+除了 WebUI 上更新，还可以使用命令行更新，登录到路由器后使用 `nvram` 命令。
+
+```sh
+# 查看你当前的配置并做相应的修改。
+nvram show dhcp_staticlist
+
+# 每个地址的格式 `<mac_address>ip>>host_name`
+nvram set 'dhcp_staticlist=<1A:3B:4C:5D:6E:7F>192.168.1.10>>A01<2A:3B:4C:5D:6E:7F>192.168.1.10>>A02'
+
+# 持久化保存修改
+nvram commit
+```

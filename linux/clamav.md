@@ -37,3 +37,7 @@ curl -O https://secure.eicar.org/eicar.com \
 ```
 
 然后尝试扫描病毒 `clamdscan ./*`，显示出 `Win.Test.EICAR_HDB-1 FOUND` 就说明扫出病毒。扫完后尝试 `cat eicar.com`。
+
+## clamdscan 扫不出病毒，但 clamscan 可以
+
+用 `clamdscan -v --fdpass $path` 看看那个病毒文件是不是 excluded 的。当前 clamav 有个 [bug](https://github.com/Cisco-Talos/clamav/issues/940) 会把 excluded 的文件也输出 OK。

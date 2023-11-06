@@ -22,7 +22,7 @@
 
 实际上是由 [fsck](https://wiki.archlinux.org/index.php/Fsck) 服务来重新挂载的，`/etc/fstab` 是 fsck 读取的配置文件。
 
-具体内容格式详见 [Arch Linux - fstab](https://wiki.archlinux.org/index.php/Fstab_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87))
+具体内容格式详见 [Arch Linux - fstab](https://wiki.archlinux.org/index.php/Fstab_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
 
 重启电脑或者执行 `mount -a` 来使 /etc/fstab 的内容生效。
 

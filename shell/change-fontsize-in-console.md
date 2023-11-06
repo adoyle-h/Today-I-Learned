@@ -11,8 +11,17 @@ consolefont 是 bitmap font。字体文件全部存放在 consolefonts 目录下
 比如 Arch Linux 就是 [`/usr/share/kbd/consolefonts/`](https://wiki.archlinux.org/title/Linux_console#Fonts)；
 而在 Debian 就是 `/usr/share/consolefonts`，字体文件由 [console-data 包](https://packages.debian.org/bullseye/all/console-data/filelist)提供。
 
+目前不存在中文 bitmap font，所以终端打印中文时会显示乱码。建议 locale 改成英文环境。
+
+## terminus-font
+
 [terminus-font](https://terminus-font.sourceforge.net/shots.html) 包提供了更多好用的控制台字体，也都存放 consolefonts 目录。
-terminus-font 字体都以 `ter-` 开头，比如 `ter-v32n`，32 代表字体大小，v 代表包含所有字符集，其他字母含义见下表。
+
+有些系统不默认自带，需要手动安装。不同管理器的包名不一样。
+
+### pacman -S terminus-font
+
+通过 pacman 安装的 terminus-font 字体文件名都以 `ter-` 开头，比如 `ter-v32n`，32 代表字体大小，v 代表包含所有字符集，其他字母含义见下表。
 
 ```
 names   mappings              covered codepage(s)
@@ -43,6 +52,10 @@ ter-*f  framebuffer-bold
 上面的列表出自[链接](https://files.ax86.net/terminus-ttf/README.Terminus.txt) ([链接备份](https://web.archive.org/web/20230330210110/https://files.ax86.net/terminus-ttf/README.Terminus.txt))。
 
 这里还有一份各个 [consolefont 的预览图](https://adeverteuil.github.io/linux-console-fonts-screenshots/)（[源码](https://github.com/adeverteuil/linux-console-fonts-screenshots)）。是用 `showconsolefonts` 输出的各个字体内容。
+
+### apt install fonts-terminus
+
+通过 apt 安装的 terminus-font 字体文件跟 pacman 安装的不一样。但用法差不多。我推荐 `setfont Uni3-Fixed16`。
 
 ## 持久化修改字体
 

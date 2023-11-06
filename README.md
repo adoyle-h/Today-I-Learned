@@ -61,6 +61,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [设计](#设计)
 - [Docker](#docker)
 - [Elixir](#elixir)
+- [嵌入式](#嵌入式)
 - [函数式编程](#函数式编程)
 - [前端](#前端)
   - [React](#react)
@@ -80,6 +81,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [数学](#数学)
 - [机器学习](#机器学习)
 - [网络](#网络)
+- [Nix](#nix)
 - [Nodejs](#nodejs)
 - [运维](#运维)
 - [其他](#其他)
@@ -159,7 +161,6 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 
 ## Docker
 
-- [Alpine Linux](docker/alpine.md)
 - [ContainerD OverlayFS](docker/containerd-overlayfs.md)
 - [Containerd](docker/containerd.md)
 - [容器里的 Core Dump](docker/core-dump-in-container.md)
@@ -206,6 +207,12 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 
 - [tuple 与 list 的选择](elixir/choosing-between-tuple-and-list.md)
 - [尾递归优化](elixir/tail-call-optimization.md)
+
+[`⬆ 返回目录`](#toc)
+
+## 嵌入式
+
+- [zephyr与 esp32](embedded/zephyr-esp32.md)
 
 [`⬆ 返回目录`](#toc)
 
@@ -413,18 +420,12 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [anon_inode](linux/anon_inode.md)
 - [ansible 部署到 centos7 时，不能找到 service](linux/ansible-deploy-fault-with-centos7-and-service.md)
 - [apt](linux/apt.md)
+- [arch linux](linux/arch-linux.md)
 - [Armbian 关闭 swap](linux/armbian-turn-swap-off.md)
 - [Armbian](linux/armbian.md)
-- [bash error exit](linux/bash-error-exit.md)
-- [bash history](linux/bash-history.md)
-- [bash 开启 vi 模式](linux/bash-in-vi-mode.md)
-- [学习 Bash](linux/bash-learning.md)
-- [Bash 的坑](linux/bash-pitfalls.md)
-- [Bash 小技巧](linux/bash-tricks.md)
 - [BIOS](linux/bios.md)
 - [Block Layer](linux/block-layer.md)
 - [BootLoader](linux/boot-loader.md)
-- [eBPF 与 XDP](linux/bpf-xdp.md)
 - [btrfs](linux/btrfs.md)
 - [内存的 buffer 和 cache](linux/buffer-and-cache-in-memory.md)
 - [在容器中构建 Package](linux/build-package-in-container.md)
@@ -436,6 +437,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [命令格式标准](linux/command-arguments-syntax-standard.md)
 - [linux 命令被 hash 缓存](linux/command-be-hashed.md)
 - [compgen](linux/compgen.md)
+- [configfs](linux/configfs.md)
 - [连接 tty](linux/connect-tty.md)
 - [conntrack](linux/conntrack.md)
 - [上下文切换](linux/context-switch.md)
@@ -453,6 +455,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [ELF 文件](linux/elf.md)
 - [终端开启真彩色 (true color)](linux/enable-true-color-in-terminal.md)
 - [用环境变量替换文本内容 envsubst](linux/envsubst.md)
+- [exfat](linux/exfat.md)
 - [ExtFS (Extended File System)](linux/ext-fs.md)
 - [快速删除文件](linux/fast-delete-files.md)
 - [快速创建大文件](linux/fast-generate-large-file.md)
@@ -498,6 +501,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [man 命令](linux/man.md)
 - [mdadm](linux/mdadm.md)
 - [命令行中的乱码](linux/messy-codes-in-console.md)
+- [mkisofs](linux/mkisofs.md)
 - [创建临时文件的命令](linux/mktemp.md)
 - [mount](linux/mount.md)
 - [musl libc](linux/musl-libc.md)
@@ -506,7 +510,6 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [netstat 与 ss](linux/netstat-and-ss.md)
 - [网络接口配置 (ifcfg)](linux/network-interface-configuration.md)
 - [网络配置工具](linux/network-manage-tools.md)
-- [networking.service](linux/networking-service.md)
 - [硬盘空间占满问题](linux/no-space-left-on-device.md)
 - [nsenter](linux/nsenter.md)
 - [NTP 时间同步](linux/ntp.md)
@@ -541,9 +544,6 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [sudoer](linux/sudoer.md)
 - [syslinux](linux/syslinux.md)
 - [Linux 系统调用](linux/system-call.md)
-- [systemd-resolved](linux/systemd-resolved.md)
-- [systemd-timesyncd](linux/systemd-timesyncd.md)
-- [systemd](linux/systemd.md)
 - [tailf](linux/tailf.md)
 - [tar](linux/tar.md)
 - [基于内存的虚拟文件系统 tmpfs/ramfs/RamDisk](linux/temporary-fs-in-memory.md)
@@ -601,6 +601,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [多网卡在 Mac 系统的问题](mac/double-network-card-problems-in-mac.md)
 - [Mac 下按住键盘不能输出重复的字符](mac/hold-down-key-cannot-keep-print-character.md)
 - [Homebrew](mac/homebrew.md)
+- [MacOS log](mac/log.md)
 - [Mac 快捷键](mac/mac-shortcuts.md)
 - [用命令触发系统通知](mac/notification-with-command.md)
 - [Mac 自启动配置 plist](mac/plist.md)
@@ -664,6 +665,15 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 
 [`⬆ 返回目录`](#toc)
 
+## Nix
+
+- [nix flake](nix/flake.md)
+- [学习 Nix](nix/learning.md)
+- [nixos installer](nix/nixos-installer.md)
+- [nixpkgs](nix/nixpkgs.md)
+
+[`⬆ 返回目录`](#toc)
+
 ## Nodejs
 
 - [MaxListenersExceededWarning](nodejs/MaxListenersExceededWarning.md)
@@ -720,8 +730,8 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [使用 acme.sh 生成证书](others/acme-cert.md)
 - [在梅林固件路由器里安装 AdGuard Home](others/adguardhome-in-asuswrt-merlin-device.md)
 - [Alfred Workflow debug 技巧](others/alfred-workflow-debug.md)
-- [Github Markdown 中的锚点引用](others/anchor-in-github-markdown.md)
 - [永久链接](others/archive-webpage.md)
+- [aria2](others/aria2.md)
 - [ASCII 与 ANSI](others/ascii-and-ansi.md)
 - [梅林固件 asuswrt-merlin](others/asuswrt-merlin.md)
 - [脱字符 (caret)](others/caret.md)
@@ -731,17 +741,15 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [YAML 中的 Date 类型陷阱](others/date-trap-in-yaml.md)
 - [MacOS 彻底删除搜狗输入法](others/delete-sogou-input-in-macos.md)
 - [dropbear](others/dropbear.md)
+- [Duplicati](others/duplicati.md)
 - [文件命名，下划线还是中划线？](others/file-naming-with-underscores-and-dashes.md)
-- [github 中 markdown 折叠文本](others/fold-text-in-github.md)
 - [fzf](others/fzf.md)
 - [从微信公众号提取原图](others/get-raw-image-from-weixin.md)
-- [Github Template (模板)](others/github-template.md)
 - [gRPC](others/grpc.md)
 - [通过 Hash 密码到 url 来验证密码](others/hashed-password-to-url.md)
 - [如何学习一门编程语言](others/how-to-learn-a-program-language.md)
 - [如何阅读标准](others/how-to-read-spec.md)
 - [如何审核代码](others/how-to-review-code.md)
-- [如何在 github 项目里搜索代码](others/how-to-use-github-to-browse-codes.md)
 - [Hyper.js 中文问题](others/hyper-js-chinese-problems.md)
 - [无法在 Tmux 显示图片](others/imgcat-not-work-in-tmux.md)
 - [Jekyll](others/jekyll.md)
@@ -760,7 +768,6 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [如何打开超大文件](others/open-huge-file-with-editor.md)
 - [Protocol Buffers](others/protocal-buffers.md)
 - [正则表达式的小技巧](others/regexp-tricks.md)
-- [在 Github Markdown 中如何填写图片的链接](others/relative-link-in-github-markdown.md)
 - [Markdown 里写反引号](others/reverse-quote-in-markdown.md)
 - [rsync](others/rsync.md)
 - [Semver](others/semver.md)
@@ -772,11 +779,13 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [vim textwidth=78 的约定](others/textwidth-78-of-vim.md)
 - [KB 与 KiB 的不同](others/the-difference-between-kb-and-kib.md)
 - [时间回跳问题](others/time-backward-issue.md)
+- [tmux 环境变量](others/tmux-environment-variable.md)
 - [UTF-8 vs UTF-16](others/utf-8-vs-utf-16.md)
 - [Vagrant DNS](others/vagrant-dns.md)
 - [vagrant-vbguest](others/vagrant-vbguest.md)
 - [查看 Chrome 通知历史列表](others/view-chrome-notification-history.md)
 - [Virtualbox VBoxManage](others/virtualbox-VBoxManage.md)
+- [vsftpd](others/vsftpd.md)
 - [水快速加热](others/water-heating-in-seconds.md)
 - [为何 Protobuf 3 移除了 required 和 optional](others/why-protobuf-3-remove-required-and-optional.md)
 - [为什么 Unicode U+F8FF 是苹果 Logo？](others/why-unicode-f8ff-is-apple-logo.md)
@@ -968,7 +977,10 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 
 ## Windows
 
+- [在虚拟机里安装 Windows 10](windows/install-win10-in-vm.md)
 - [在虚拟机里安装 Windows 11](windows/install-win11-in-vm.md)
+- [legend bios 无损转 uefi](windows/legend-bios-to-uefi.md)
 - [PE 系统](windows/pe-system.md)
+- [Windows WSL](windows/wsl.md)
 
 [`⬆ 返回目录`](#toc)

@@ -6,4 +6,4 @@ PE 系统指的是 Windows PE (Windows Preinstallation Environment)。专门用�
 
 好用的 PE 系统有：
 
-- [微 PE](https://www.wepe.com.cn/)
+- [微 PE](https://www.wepe.com.cn/): 简单干净，集成了很多功能强大的维修工具。
