@@ -25,6 +25,7 @@ function handle(nodes, levelStd, structure) {
           if (node.isDir) {
             dirNodes.push(node);
           } else {
+            if (node.isSymbolicLink) { return; }
             fileNodes.push(node);
           }
         });
@@ -49,7 +50,6 @@ run(async () => {
     );
 
     const structure = [
-        {md: absPath('_docs/meta.md')},
         {h1: '今天我学了什么 (Today I Learned)'},
         {blockquote: PKG.description},
         {md: absPath('_docs/intro.md')},

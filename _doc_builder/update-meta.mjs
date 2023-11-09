@@ -31,7 +31,56 @@ ${content}`)
   console.log(`Writed: ${indexFilepath}`)
 }
 
-const debugHandle = _debug('update:meta:handle')
+const debugHandle = _debug('update:meta:handle');
+
+const symlinkMap = {};
+
+async function handleSymlinks(nodes) {
+    await pMap(nodes, async (node) => {
+        if (node.isDir) {
+          return handleSymlinks(node.children);
+        }
+        if (!node.isSymbolicLink) { return ; }
+
+        symlinkMap[node.path] = true;
+
+        // https://just-the-docs.com/docs/navigation-structure/
+        const ymlFrontRaw = [
+          '---',
+          'layout: default',
+          'nav_exclude: true',  // symlink document should hide in nav_bar
+        ]
+
+        if (node.parent) {
+          ymlFrontRaw.push(`parent: ${node.parent.title}`);
+          if (node.parent.parent) {
+            ymlFrontRaw.push(`grand_parent: ${node.parent.parent.title}`);
+          }
+        }
+
+        ymlFrontRaw.push('---', '', '');
+
+        let fh = await FSP.open(node.path, 'r+');  // why readfile with "w+" return empty?
+        const buffer = await fh.readFile();
+        await fh.close()
+        await FSP.unlink(node.path);
+        fh = await FSP.open(node.path, 'w+');
+
+        try {
+          const stream = fh.createWriteStream({start: 0});
+          await new Promise((resolve) => {
+              stream.write(ymlFrontRaw.join('\n'), 'utf8', resolve);
+          })
+          await new Promise((resolve) => {
+              stream.write(buffer, 'utf8', resolve);
+          })
+        } finally {
+          await fh.close();
+        }
+
+        console.log(`Added YAML front: ${node.path}`)
+    })
+}
 
 async function handle(nodes) {
     debugHandle('nodes=%O', nodes)
@@ -39,35 +88,42 @@ async function handle(nodes) {
     await pMap(nodes, async (node) => {
         if (node.isDir) {
           await createIndexFileForJTD(node)
-        } else {
-            const fh = await FSP.open(node.path, 'r+');  // why readfile with "w+" return empty?
-
-            // https://just-the-docs.com/docs/navigation-structure/
-            const ymlFront = `---
-layout: default
-${node.parent ? `parent: ${node.parent.title}` : ''}
-${node?.parent.parent ? `grand_parent: ${node.parent.parent.title}` : ''}
----
-
-`;
-
-            try {
-              const buffer = await fh.readFile();
-              const stream = fh.createWriteStream({start: 0});
-              await new Promise((resolve) => {
-                  stream.write(ymlFront, 'utf8', resolve);
-              })
-              await new Promise((resolve) => {
-                  stream.write(buffer, 'utf8', resolve);
-              })
-            } finally {
-              await fh.close();
-            }
-
-            console.log(`Added YAML front: ${node.path}`)
+          return handle(node.children);
         }
 
-        return handle(node.children);
+        if (symlinkMap[node.path]) { return ; }
+
+        // https://just-the-docs.com/docs/navigation-structure/
+        const ymlFrontRaw = [
+          '---',
+          'layout: default',
+        ]
+
+        if (node.parent) {
+          ymlFrontRaw.push(`parent: ${node.parent.title}`);
+          if (node.parent.parent) {
+            ymlFrontRaw.push(`grand_parent: ${node.parent.parent.title}`);
+          }
+        }
+
+        ymlFrontRaw.push('---', '', '');
+
+        const fh = await FSP.open(node.path, 'r+');  // why readfile with "w+" return empty?
+
+        try {
+          const buffer = await fh.readFile();
+          const stream = fh.createWriteStream({start: 0});
+          await new Promise((resolve) => {
+              stream.write(ymlFrontRaw.join('\n'), 'utf8', resolve);
+          })
+          await new Promise((resolve) => {
+              stream.write(buffer, 'utf8', resolve);
+          })
+        } finally {
+          await fh.close();
+        }
+
+        console.log(`Added YAML front: ${node.path}`)
     })
 }
 
@@ -107,6 +163,7 @@ run(async () => {
     debug('nodeMap=%O', nodeMap);
     debug('rootNodes=%O', rootNodes);
 
+    await handleSymlinks(rootNodes);
     await handle(rootNodes);
     await updateREADME();
 

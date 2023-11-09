@@ -53,6 +53,17 @@ export async function scanDir(dirName, nodeMap, parentPath, _parent, level = 3) 
         const stats = await getStat(curPath)
 
         if (stats.isSymbolicLink()) {
+          children[index] = {
+            name: dirName,
+            path: curPath,
+            title: '',
+            isDir: false,
+            isSymbolicLink: true,
+            intro: undefined,
+            level,
+            children: [],
+            parent: curNode,
+          };
           return;
         }
 
