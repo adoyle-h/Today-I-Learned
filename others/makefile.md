@@ -6,6 +6,7 @@
 <!-- MarkdownTOC GFM -->
 
 - [参考资料](#参考资料)
+- [默认 target](#默认-target)
 - [命令回显](#命令回显)
 - [变量赋值](#变量赋值)
 - [target 作用域的变量定义](#target-作用域的变量定义)
@@ -26,6 +27,23 @@
 - https://www.cnblogs.com/peterYong/p/15030385.html
 - https://makefiletutorial.com/
 - [陈皓 - 跟我一起写Makefile](https://seisman.github.io/how-to-write-makefile/)
+
+## 默认 target
+
+如果 makefile 里有设置 `.DEFAULT_GOAL`，比如 `.DEFAULT_GOAL = build`，则 `make` 等同于 `make build`。
+
+如果 makefile 里没有设置 `.DEFAULT_GOAL`，`make` 会执行 makefile 里第一个 target。比如下面的例子，`make` 等同于 `make all`。
+
+```make
+# 默认目标
+all: build
+
+# 实际任务
+build:
+	@echo "Building..."
+
+# 其他规则和依赖关系...
+```
 
 ## 命令回显
 

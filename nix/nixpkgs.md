@@ -2,10 +2,11 @@
 
 ## 查找包名
 
-两种方法。
+几种方法。
 
-1. https://search.nixos.org/packages
-2. 在 nixpkgs 源码 [`pkgs/top-level/all-packages.nix`](https://github.com/NixOS/nixpkgs/blob/master/pkgs/top-level/all-packages.nix)，可以看到所有包名。
+1. 官方: https://search.nixos.org/packages
+2. 非官方: https://history.nix-packages.com/
+3. 在 nixpkgs 源码 [`pkgs/top-level/all-packages.nix`](https://github.com/NixOS/nixpkgs/blob/master/pkgs/top-level/all-packages.nix)，可以看到所有包名。
 
 ## 查找某个包的历史版本
 

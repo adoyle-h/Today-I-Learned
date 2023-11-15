@@ -68,6 +68,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [K8S](#k8s)
 - [语言设计](#语言设计)
 - [Linux](#linux)
+  - [Debian](#debian)
   - [Systemd](#systemd)
 - [Language Server Protocol (LSP)](#language-server-protocol-(lsp))
 - [Lua](#lua)
@@ -443,6 +444,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [硬盘分区](linux/disk-partition.md)
 - [dmesg](linux/dmesg.md)
 - [dnsmasq](linux/dnsmasq.md)
+- [dpkg](linux/dpkg.md)
 - [du](linux/du.md)
 - [eBPF 与 XDP](linux/ebpf-and-xdp.md)
 - [编辑二进制文件](linux/edit-binary-file.md)
@@ -560,6 +562,12 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [XDP](linux/xdp.md)
 - [ZFS](linux/zfs.md)
 - [Zsh 的坑](linux/zsh-pitfalls.md)
+
+[`⬆ 返回目录`](#toc)
+
+### Debian
+
+- [升级 debian 系统](linux/debian/upgrade-system.md)
 
 [`⬆ 返回目录`](#toc)
 
@@ -737,6 +745,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [dropbear](others/dropbear.md)
 - [Duplicati](others/duplicati.md)
 - [文件命名，下划线还是中划线？](others/file-naming-with-underscores-and-dashes.md)
+- [fonts.googleapis.com 不可访问](others/fonts.googleapis.com-is-inaccessible.md)
 - [fzf](others/fzf.md)
 - [从微信公众号提取原图](others/get-raw-image-from-weixin.md)
 - [gRPC](others/grpc.md)

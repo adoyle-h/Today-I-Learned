@@ -35,10 +35,16 @@ deb http://mirrors.huaweicloud.com/debian-security/ testing-security main contri
 echo 'APT::Default-Release "bullseye";' > /etc/apt/apt.conf.d/00local
 ```
 
+（以后升级系统时记得修改对应的版本号）
+
 参考
 
 - https://unix.stackexchange.com/a/647205/373303
 - [Debian 的版本号及 distributions](https://archive.ph/i4N0T)
+
+## 给 apt 设置 http 代理
+
+除了更换源，还可以设置 http 代理来加速。具体看这篇文章「[如何为 APT 命令设置代理](https://linux.cn/article-15815-1.html)」 ([链接备份](https://archive.md/HBhB4))。
 
 ## 搜索包
 
