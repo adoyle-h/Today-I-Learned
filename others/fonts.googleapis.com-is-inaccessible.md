@@ -1,5 +1,7 @@
 # fonts.googleapis.com 不可访问
 
+测试[这个链接](https://fonts.googleapis.com/css?family=Roboto:300,400,500%7CMaterial+Icons+Outlined)能否打开。
+
 其实 fonts.googleapis.com 在国内是可以访问的。但是可能因为你的 DNS 设置以及翻墙软件的设置，导致它不可访问。
 
 ```
@@ -19,6 +21,18 @@ nslookup fonts.googleapis.com 223.5.5.5
 
 于是我想到一个问题，fonts.googleadapis.com 的国内 IP，究竟是 google 原厂提供的服务，还是我国的代理服务？
 
-我用 https://www.chaipip.com/ 查询 ip 归属地（我这查出来是 IP 是 180.163.150.33），发现位置锁定在上海市政府。（IP 经纬度可能有偏移，所以定位不一定准确，自己判断）
+根据 [felixonmars/dnsmasq-china-list/google.china.conf](https://github.com/felixonmars/dnsmasq-china-list/blob/master/google.china.conf) 的列表。我用 https://www.chaipip.com/ 查询 IP 高精度归属地。
+
+|--------------------------------|--------------------|--------------------------------------|
+| 域名                           | 223.5.5.5 解析地址 | 地址                                 |
+|--------------------------------|--------------------|--------------------------------------|
+| fonts.googleadapis.com         | 180.163.150.33     | 上海市政府                           |
+| dl.google.com                  | 220.181.174.225    | 北京正义路，公安部旁边的一幢不明建筑 |
+| download.tensorflow.google.com | 180.163.151.162    | 上海市政府                           |
+| accounts.googlers.com          | 58.63.233.125      | 广州市珠江附近                       |
+| goto.google.com                | 58.63.233.125      | 广州市珠江附近                       |
+|--------------------------------|--------------------|--------------------------------------|
+
+IP 经纬度可能有偏移，所以定位不一定准确，自己判断。
 
 写到这里，就不展开了。

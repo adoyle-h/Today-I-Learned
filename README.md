@@ -112,6 +112,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 ## Android
 
 - [ADB](android/adb.md)
+- [boot.img](android/bootimg.md)
 - [Android Root](android/root.md)
 - [Termux](android/termux.md)
 
@@ -226,6 +227,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [关于 webpack 2](front-end/all-about-webpack-2.md)
 - [`<script async>` 与 `<script defer>`](front-end/async-defer-script-dom.md)
 - [圆角的玩法](front-end/border-radius-tricks.md)
+- [Chrome 浏览器 DNS 解析](front-end/chrome-dns-resolver.md)
 - [Safari 浏览器的类继承 Bug](front-end/class-extend-bug-in-safari.md)
 - [代码分离](front-end/code-split.md)
 - [颜色对比度](front-end/color-contrast.md)
@@ -710,6 +712,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [Ansible 技巧](ops/ansible-tricks.md)
 - [Ansible 变量](ops/ansible-vars.md)
 - [Ansible](ops/ansible.md)
+- [dig 命令](ops/dig.md)
 - [DNF](ops/dnf.md)
 - [以太网](ops/ethernet.md)
 - [IPMI 与 BMC](ops/ipmi-and-bmc.md)
@@ -730,6 +733,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [0.30000000000000004](others/0.30000000000000004.md)
 - [Today I learned (TIL) 资源列表](others/TIL.md)
 - [使用 acme.sh 生成证书](others/acme-cert.md)
+- [adguard home](others/adguard-home.md)
 - [在梅林固件路由器里安装 AdGuard Home](others/adguardhome-in-asuswrt-merlin-device.md)
 - [Alfred Workflow debug 技巧](others/alfred-workflow-debug.md)
 - [永久链接](others/archive-webpage.md)
@@ -783,9 +787,11 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [KB 与 KiB 的不同](others/the-difference-between-kb-and-kib.md)
 - [时间回跳问题](others/time-backward-issue.md)
 - [tmux 环境变量](others/tmux-environment-variable.md)
+- [usbipd 与 Windows WSL](others/usbipd-windows-wsl.md)
 - [UTF-8 vs UTF-16](others/utf-8-vs-utf-16.md)
 - [Vagrant DNS](others/vagrant-dns.md)
 - [vagrant-vbguest](others/vagrant-vbguest.md)
+- [不用 lsblk 查看块设备](others/view-block-devices-without-lsblk.md)
 - [查看 Chrome 通知历史列表](others/view-chrome-notification-history.md)
 - [Virtualbox VBoxManage](others/virtualbox-VBoxManage.md)
 - [vsftpd](others/vsftpd.md)
@@ -984,6 +990,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [在虚拟机里安装 Windows 11](windows/install-win11-in-vm.md)
 - [legend bios 无损转 uefi](windows/legend-bios-to-uefi.md)
 - [PE 系统](windows/pe-system.md)
+- [winget](windows/winget.md)
 - [Windows WSL](windows/wsl.md)
 
 [`⬆ 返回目录`](#toc)

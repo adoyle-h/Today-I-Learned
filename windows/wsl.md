@@ -20,3 +20,7 @@ C 盘: `cd /mnt/c/`， D 盘: `cd /mnt/d/`，以此类推。
 
 1. 在 power shell 里执行 `wsl -l -v` 看看当前 linux 系统是 wsl 1 还是 2 的。
   - 如果是 wsl 1，执行 `wsl --set-version $name 2` 把 wsl 1 转换成 2。再试试 mount。
+
+## 修改 WSL 的 DNS 设置
+
+详见[文章](https://blog.niekun.net/archives/1801.html) ([链接备份](https://web.archive.org/web/20231116102956/https://blog.niekun.net/archives/1801.html))。
