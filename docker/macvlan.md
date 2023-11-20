@@ -31,3 +31,19 @@ mac_address 的地址似乎可以随意填。不必与物理网卡的 mac 地址
 这是因为 kernel 中有关 macvlan 的安全策略会完全过滤来自 host 访问。
 
 解决方案参考[这篇文章](https://www.cnblogs.com/azureology/p/16750154.html) ([链接备份](https://web.archive.org/web/20231103173715/https://www.cnblogs.com/azureology/p/16750154.html))。
+
+如果你使用 network-manager，可以按以下方法持久化。
+
+```sh
+# 10.0.1.254 跟容器同网段，但不冲突的 IP。
+nmcli c add con-name my-macvlan type macvlan ifname my-macvlan18 ipv4.addresses 10.0.1.254/32 dev eth0 mode bridge
+# 不自动分配 IP
+nmcli c modify my-macvlan ipv4.method manual
+# 10.0.1.100 是容器的 IP。192.168.1.20 是宿主机的 IP。填你的实际值。
+nmcli c modify my-macvlan ipv4.routes "10.0.1.100/32 src 192.168.1.20"
+# docker 会给容器创建路由，默认 metric 100。我设置的规则必须得优先于它。
+nmcli c modify my-macvlan ipv4.route-metric 70
+nmcli c up my-macvlan
+```
+
+参考[这篇文章](https://www.networkshinobi.com/docker-host-cant-access-containers-running-on-macvlan/) ([链接备份](https://web.archive.org/web/20230402090230/https://www.networkshinobi.com/docker-host-cant-access-containers-running-on-macvlan/))
