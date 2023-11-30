@@ -54,7 +54,7 @@ docker buildx commands:
 
 ## docker buildx build
 
-`docker buildx build --platform linux/amd64,linux/arm64 --push .`
+`docker buildx build --platform linux/amd64,linux/arm64,linux/386,linux/arm/v7,linux/arm/v6 --push --tag owner/image:version .`
 
 在这种情况下，它会建立一个清单 (manifest)，其中包含所有指定架构的镜像。
 当你在 docker run 或 docker service 中使用这个镜像时，Docker 会根据节点的平台来挑选正确的镜像。

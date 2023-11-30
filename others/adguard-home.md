@@ -10,6 +10,8 @@
 
 具体设置步骤详见 https://github.com/AdguardTeam/AdGuardHome/wiki/Encryption
 
+开启后通过 https://your-ip/dns-query 来访问 DoH，或者 tls://your-ip:853 来访问 DoT。
+
 如果不开启 DoH，记得把浏览器的「使用安全 DNS」选项关闭，否则浏览器不会请求 adguard home，详见「[Chrome 浏览器 DNS 解析](../front-end/chrome-dns-resolver.md)」。
 
 ## 设置 dns 过滤规则
