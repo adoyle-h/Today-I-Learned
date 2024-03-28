@@ -9,36 +9,62 @@
 - [阮一峰 - Systemd 入门教程：命令篇](https://web.archive.org/web/20230216005229/https://www.ruanyifeng.com/blog/2016/03/systemd-tutorial-commands.html)
 - https://wiki.archlinux.org/index.php/Systemd_(简体中文)
 
+## 常用命令
+
+- `systemd-escape` 转义与还原字符串。[转义规则](https://www.jinbuguo.com/systemd/systemd.unit.html#%E5%8D%95%E5%85%83%E5%90%8D%E7%A7%B0%E4%B8%AD%E7%9A%84%E5%AD%97%E7%AC%A6%E8%BD%AC%E4%B9%89)。
+
 ## systemdctl
 
 systemctl 命令操作 systemd 来管理服务，取代了 systemV 的service、chkconfig、setup、init 等指令。
 
-- `systemctl` 或 `systemctl list-units` 列出已知的服务
-- `systemctl list-dependencies` 查某个服务依赖的服务，也可以用 `systemctl list-dependencies --reverse` 查某个服务被谁依赖。
+- `systemctl` 或 `systemctl list-units` 列出所有启动的 unit。它不按启动顺序排序。
+- `systemctl list-units --failed` 列出启动失败的 unit。
+- `systemctl list-unit-files` 列出所有 unit。
+- `systemctl list-dependencies` 查某个 unit 依赖的 unit，也可以用 `systemctl list-dependencies --reverse` 查某个 unit 被谁依赖。
 - `systemctl list-sockets` 查看服务监听的 socket 文件。
 
 懒得列举，具体查 man 手册。
 
 ## systemd unit 配置搜索路径
 
-可以通过 `systemctl show --property=UnitPath` 看到每个 unit 的配置搜索路径。
+`man systemd.unit`
 
-一般是这样（优先级从高到低）：
+优先级从高到低：
 
-- /etc/systemd/system.control
-- /run/systemd/system.control
-- /run/systemd/transient
-- /run/systemd/generator.early
-- /etc/systemd/system               系统管理员设置的 unit 配置
-- /etc/systemd/system.attached
-- /run/systemd/system
-- /run/systemd/system.attached
-- /run/systemd/generator
-- /usr/local/lib/systemd/system
-- /lib/systemd/system               软件安装包设置的 unit 配置
-- /usr/lib/systemd/system           软件安装包设置的 unit 配置
-- /run/systemd/generator.late
+- System Unit 搜索路径
 
+  - /etc/systemd/system.control/*
+  - /run/systemd/system.control/*
+  - /run/systemd/transient/*
+  - /run/systemd/generator.early/*
+  - /etc/systemd/system/*                     系统管理员设置的 unit 配置
+  - /etc/systemd/system.attached/*
+  - /run/systemd/system/*
+  - /run/systemd/system.attached/*
+  - /run/systemd/generator/*
+  - ...
+  - /usr/lib/systemd/system/*                 软件安装包设置的 unit 配置
+  - /run/systemd/generator.late/*
+
+- User Unit 搜索路径
+
+  - ~/.config/systemd/user.control/*
+  - $XDG_RUNTIME_DIR/systemd/user.control/*
+  - $XDG_RUNTIME_DIR/systemd/transient/*
+  - $XDG_RUNTIME_DIR/systemd/generator.early/*
+  - ~/.config/systemd/user/*                  用户级 unit 配置
+  - $XDG_CONFIG_DIRS/systemd/user/*
+  - /etc/systemd/user/*
+  - $XDG_RUNTIME_DIR/systemd/user/*
+  - /run/systemd/user/*
+  - $XDG_RUNTIME_DIR/systemd/generator/*
+  - $XDG_DATA_HOME/systemd/user/*
+  - $XDG_DATA_DIRS/systemd/user/*
+  - ...
+  - /usr/lib/systemd/user/*
+  - $XDG_RUNTIME_DIR/systemd/generator.late/*
+
+可以通过 `systemctl show -p UnitPath` 看到每个 unit 的配置搜索路径。
 
 对于 `foo-bar-baz.service` unit，配置搜索路径依次是:
 
@@ -52,6 +78,11 @@ systemctl 命令操作 systemd 来管理服务，取代了 systemV 的service、
 `foo-`, `foo-bar-`, `foo-bar-baz` 机制可以方便的为一组相关单元 (单元名称的前缀都相同) 定义共同的单元配置片段。特别适合应用于 mount, automount, slice 类型的单元，因为这些单元的命名规则就是基于连字符构建的。
 注意，在前缀层次结构的下层目录中的单元配置片段，会覆盖上层目录中的同名文件，也就是 `foo-bar-.service.d/override.conf` 会覆盖 (取代) `foo-.service.d/override.conf` 文件。
 
+### 自定义 unit
+
+针对所有用户的 unit 文件放在 `/etc/systemd/system`。
+针对当前用户的 unit 文件放在 `~/.config/systemd/user`。
+
 ## 显示 unit 配置
 
 `systemctl cat <unit>` 会展示合并后的最终配置。
@@ -61,6 +92,8 @@ systemctl 命令操作 systemd 来管理服务，取代了 systemV 的service、
 通过包管理器安装的服务，不建议直接修改包中的文件。因为当用包管理器更新服务版本。有可能会覆盖 unit 配置。
 
 正确的做法是使用 `systemctl edit <unit>` 命令。它会创建 `<unit>.service.d/override.conf` 文件。并不会修改原本的 `<unit>.service` 文件。用户在 override.conf 填入的配置，会和 `<unit>.service` 的配置合并。
+
+如果是编辑用户自己写的 unit。可以使用 `systemctl edit --full <unit>`。`--full` 参数会直接编辑配置文件，而不是以 override 方式编辑。
 
 如果执行 `sudo systemctl edit` 使用了 nano 编辑器。可以 `sudo EDITOR=vim systemctl edit` 来切换成 vim 编辑器。
 
@@ -125,6 +158,11 @@ adoyle    926414  926413  0 15:08 ?        00:00:00 (sd-pam)
 
 - https://www.cnblogs.com/sparkdev/p/8795141.html ([链接备份](https://web.archive.org/web/20221005002121/https://www.cnblogs.com/sparkdev/p/8795141.html))
 
+### 不加 sudo 使用 journalctl
+
+1. 执行 `sudo usermod -aG systemd-journal $USER`。
+2. 重新登录终端会话。
+
 ## systemd-analyze
 
 查看最耗时的 unit `systemd-analyze blame` 或 `systemd-analyze critical-chain [unit]`
@@ -136,3 +174,16 @@ adoyle    926414  926413  0 15:08 ?        00:00:00 (sd-pam)
 ## 常用的 systemd unit
 
 - [systemd-timesyncd](./systemd-timesyncd.md)
+
+## systemd-run
+
+
+## ExecStartEx=
+
+用 `systemctl show` 会看到有行 `ExecStartEx=` 配置。在 man 手册和官方文档里都找不到 `ExecStartEx` 的解释。只有 [systemd 源码](https://github.com/systemd/systemd/blob/4e17de7feed093ddaebd4fe2cd8a2ad8f0e03d76/src/run/run.c#L1063)中有这样的注释:
+
+> /* We disable environment expansion on the server side via ExecStartEx=:.
+>  * ExecStartEx was added relatively recently (v243), and some bugs were fixed only later.
+>  * So use that feature only if required. It will fail with older systemds. */
+
+所以 `ExecStartEx` 与 `ExecStart` 的区别是前者禁止环境变量展开。而且这配置是在 systemd v243 版本（2019 年 9 月 3 日）上线的。

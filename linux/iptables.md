@@ -30,6 +30,69 @@ https://firewalld.org/
 - [从实现上对比 iptables 和 nftables](https://blog.csdn.net/dog250/article/details/41526421) ([链接备份](https://web.archive.org/web/20200216024821/https://blog.csdn.net/dog250/article/details/41526421))
 - https://wiki.nftables.org/wiki-nftables/index.php/Netfilter_hooks
 
+### nft list ruleset 输出空白
+
+这是因为 nftables 和 iptables 不共享规则数据。如果 `nft list ruleset` 输出了 iptables 里的规则，那是因为你用的 nft 命令其实是 iptables-nft。
+
+详见下面两篇文章
+
+- [Redhat Developers - iptables: The two variants and their relationship with nftables](https://developers.redhat.com/blog/2020/08/18/iptables-the-two-variants-and-their-relationship-with-nftables)([链接备份](https://web.archive.org/web/20240130101206/https://developers.redhat.com/blog/2020/08/18/iptables-the-two-variants-and-their-relationship-with-nftables#the_iptables_rules_appear_in_the_nftables_rule_listing))
+- [RED HAT BLOG - Using iptables-nft: a hybrid Linux firewall](https://www.redhat.com/en/blog/using-iptables-nft-hybrid-linux-firewall) ([链接备份](https://web.archive.org/web/20230910012341/https://www.redhat.com/en/blog/using-iptables-nft-hybrid-linux-firewall))
+
+
+
+### iptables 版本
+
+`iptables -V` 如果显示 `iptables vX.Y.Z (legacy)`，说明用的是原生的 iptables。
+如果是 `iptables vX.Y.Z (nf_tables)`，则用的是 iptables-nft。
+
+也可以从软链接看出，
+
+```sh
+ls -al $(which iptables)
+
+/usr/bin/iptables -> xtables-legacy-multi  # legacy iptables
+/usr/bin/iptables-nft -> xtables-nft-multi # nft iptables
+```
+
+```
++--------------+     +--------------+     +--------------+
+|   iptables   |     |   iptables   |     |     nft      |   USER
+|    legacy    |     |     nft      |     |  (nftables)  |   SPACE
++--------------+     +--------------+     +--------------+
+       |                          |         |
+====== | ===== KERNEL API ======= | ======= | =====================
+       |                          |         |
++--------------+               +--------------+
+|   iptables   |               |   nftables   |              KERNEL
+|      API     |               |     API      |              SPACE
++--------------+               +--------------+
+             |                    |         |
+             |                    |         |
+          +--------------+        |         |     +--------------+
+          |   xtables    |--------+         +-----|   nftables   |
+          |    match     |                        |    match     |
+          +--------------+                        +--------------+
+```
+
+### iptables-nft
+
+iptables-nft 只是 iptables 过渡到 nftables 的中间产物，让用户用 iptables 的命令行交互操作 nftables api。
+然而 iptables-nft 并不完全等价于 nftables。
+
+### 把 iptables 转换成 nftables 规则
+
+```sh
+# 先导出 iptables 规则
+sudo iptables-save > iptables.dump
+sudo ip6tables-save > ip6tables.dump
+# 转换成 nftasbles 规则，并写入 nftables 启动配置
+iptables-restore-translate -f iptables.dump > /etc/nftables/ruleset-from-iptables.nft
+ip6tables-restore-translate -f ip6tables.dump > /etc/nftables/ruleset-from-ip6tables.nft
+```
+
+详见 https://wiki.nftables.org/wiki-nftables/index.php/Moving_from_iptables_to_nftables
+
 ## UFW
 
 [UFW - Uncomplicated Firewall](https://help.ubuntu.com/community/UFW)
@@ -83,7 +146,7 @@ WantedBy=multi-user.target
 
 ## 其他
 
-iptables 的可读性和操作效率不如 nftables，强烈推荐 nftables。
+iptables 的可读性和执行效率不如 nftables，强烈推荐 nftables。
 
 ip6tables 是 IPv6 版本的 iptables。
 

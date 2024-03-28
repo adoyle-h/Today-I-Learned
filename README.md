@@ -7,8 +7,8 @@ https://til.adoyle.me
 
 ## 提醒
 
-在网页端，搜索英文建议用最上方的搜索框，体验比较好。
-搜索框不支持中文，搜中文信息建议用浏览器自带的搜索功能。
+1. 在网页端，建议搜索英文用最上方的搜索框，体验比较好。搜索框不支持中文。建议搜中文用浏览器自带的搜索功能。
+2. 文章不保证正确，请自己判断对错。如果你有不同意见，欢迎到 [Discussions](https://github.com/adoyle-h/Today-I-Learned/discussions) 提出意见。
 
 ## 内容约定
 
@@ -177,6 +177,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [查找 Overlay ID 与哪个容器相关](docker/find-which-container-includes-overlay.md)
 - [修正 alpine 镜像的时区问题](docker/fix-timezone-in-alpine-image.md)
 - [修正 Docker for mac 时区问题](docker/fix-timezone-in-docker-for-mac.md)
+- [host.docker.internal](docker/host-docker-internal.md)
 - [Docker for Mac 中磁盘文件占用过大](docker/large-disk-space-usage-in-docker-for-mac.md)
 - [docker macvlan](docker/macvlan.md)
 - [构建多架构镜像](docker/multi-arch-build.md)
@@ -289,6 +290,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [忽略 Git submodule](git/ignore-git-submodule.md)
 - [--ours vs --theirs](git/ours-vs-theirs.md)
 - [git proxy](git/proxy.md)
+- [指定分支与另一个远端仓库绑定](git/push-branch-for-another-remote.md)
 - [git shallow clone](git/shallow-clone.md)
 - [Git sign-off](git/sign-off.md)
 
@@ -333,6 +335,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [EMMC](hardware/emmc.md)
 - [固件 (Firmware)](hardware/firmware.md)
 - [Home Assistant](hardware/home-assistant.md)
+- [ET X08 鼠标](hardware/mouse-et-x08.md)
 - [网件 R6900 刷梅林固件](hardware/netgear-R6900-asuswrt-merlin.md)
 - [网络交换机](hardware/network-switch.md)
 - [无线电波 (Radio Waves)](hardware/radio-waves.md)
@@ -411,6 +414,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [用户线程，内核线程，CPU 超线程技术](linux/about-multi-thread.md)
 - [用户增加用户组](linux/add-group-to-user.md)
 - [adduser 与 useradd](linux/adduser-and-useradd.md)
+- [硬盘电源管理](linux/advanced-power-management.md)
 - [ag 和 rg](linux/ag-and-rg.md)
 - [Alfred 找不到文件](linux/alfred-cannot-find-files.md)
 - [alpine 的 /sbin/init](linux/alpine-sbin-init.md)
@@ -525,6 +529,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [进程亲和性 (Processor Affinity)](linux/processor-affinity.md)
 - [命令行中提示用户 Yes/No](linux/read-prompt.md)
 - [rm 命令](linux/rm.md)
+- [旋转终端屏幕](linux/rotate-console-screen.md)
 - [rsync 与 scp](linux/rsync-and-scp.md)
 - [rsyslog](linux/rsyslog.md)
 - [用别的用户运行命令](linux/run-command-with-different-user.md)
@@ -541,6 +546,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [strace](linux/strace.md)
 - [sudo and su](linux/sudo-and-su.md)
 - [sudoer](linux/sudoer.md)
+- [sysctl](linux/sysctl.md)
 - [syslinux](linux/syslinux.md)
 - [Linux 系统调用](linux/system-call.md)
 - [tailf](linux/tailf.md)
@@ -576,8 +582,10 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 
 ### Systemd
 
-- [systemd 网络启动流程](linux/systemd/network.md)
+- [systemd-mount](linux/systemd/mount.md)
+- [systemd-network](linux/systemd/network.md)
 - [networking.service](linux/systemd/networking-service.md)
+- [systemd-path](linux/systemd/path.md)
 - [systemd-resolved](linux/systemd/resolved.md)
 - [systemd](linux/systemd/systemd.md)
 - [systemd-timesyncd](linux/systemd/timesyncd.md)
@@ -602,6 +610,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 
 ## Mac
 
+- [MacOS 通过命令行修改 IP 地址](mac/change-ip-address-via-cmd.md)
 - [Mac 的 DNS 问题](mac/dns-troubles-in-mac.md)
 - [多网卡在 Mac 系统的问题](mac/double-network-card-problems-in-mac.md)
 - [Mac 下按住键盘不能输出重复的字符](mac/hold-down-key-cannot-keep-print-character.md)
@@ -746,6 +755,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [Chrome 小技巧](others/chrome-tricks.md)
 - [复制粘贴好过手写](others/copy-paste-better-than-handwriting.md)
 - [Mac 文件系统的剪切快捷键](others/cut-in-mac-file-system.md)
+- [数据恢复工具](others/data-recovery-tool.md)
 - [YAML 中的 Date 类型陷阱](others/date-trap-in-yaml.md)
 - [MacOS 彻底删除搜狗输入法](others/delete-sogou-input-in-macos.md)
 - [dropbear](others/dropbear.md)
@@ -762,6 +772,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [Hyper.js 中文问题](others/hyper-js-chinese-problems.md)
 - [无法在 Tmux 显示图片](others/imgcat-not-work-in-tmux.md)
 - [Jekyll](others/jekyll.md)
+- [jellyfin 中文字体](others/jellyfin-chinese-font.md)
 - [Jinja2](others/jinja2.md)
 - [Language Server Protocol](others/language-server-protocol.md)
 - [Makefile](others/makefile.md)
@@ -780,6 +791,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [Markdown 里写反引号](others/reverse-quote-in-markdown.md)
 - [rsync](others/rsync.md)
 - [Semver](others/semver.md)
+- [SSL 证书校验失败](others/ssl-cert-verify-failed.md)
 - [SSL 证书](others/ssl-cert.md)
 - [停止词 (Stop Words)](others/stop-words.md)
 - [mac 里的 tmux 内无法用 sublime 打开文件](others/subl-in-tmux-on-mac.md)

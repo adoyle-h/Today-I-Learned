@@ -5,6 +5,11 @@ tags: [init]
 
 https://github.com/OpenRC/openrc
 
+## 常用命令
+
+- `rc-service $name start|stop|status|restart`
+- `rc-status`: 查看 service 状态
+
 ## Service
 
 https://github.com/OpenRC/openrc/blob/master/service-script-guide.md
@@ -35,3 +40,7 @@ depend() {
 ```
 
 定义了 `provide net`，就可以用 `need net` 引用了。
+
+## creashed service
+
+creashed service 还是 running 状态。rc-service start 没用。rc-service restart。
