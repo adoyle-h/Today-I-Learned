@@ -51,6 +51,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 
 - [算法](#算法)
 - [Android](#android)
+- [C](#c)
 - [计算机](#计算机)
 - [设计](#设计)
 - [Docker](#docker)
@@ -115,6 +116,12 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [boot.img](android/bootimg.md)
 - [Android Root](android/root.md)
 - [Termux](android/termux.md)
+
+[`⬆ 返回目录`](#toc)
+
+## C
+
+- [在 MacOS 中找不到 C 程序的标准头文件](c/std-library-not-found-in-macos.md)
 
 [`⬆ 返回目录`](#toc)
 
