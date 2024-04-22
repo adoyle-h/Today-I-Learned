@@ -34,3 +34,13 @@ apt、dpkg 和 Debian 的一模一样，尽量少做修改，只用来查询。
 根据[官方 WIKI](https://github.com/termux/termux-app/wiki/Termux-on-android-5-or-6) 可知，它在 [Github Workfloww](https://github.com/termux/termux-app/actions/workflows/debug_build.yml?query=branch%3Amaster+event%3Apush) 里编译了支持 Android 5/6 的 Termux App。
 
 点进任意成功的 build。在 Artifacts 有列出所有的构建结果文件。选择文件名包含 `android-5` 的文件，支持 Android 5 或 Android 6。
+
+## 修改 DNS 设置
+
+截止 2024/04/18，我使用的 v0.118.0 版本的 Termux，默认 DNS 是 8.8.8.8，并非当前系统所设置的 DNS。
+并且也不存在 /etc/resolv.conf 文件。
+
+解决方法：
+
+1. `pkg install resolv-conf` 确保已安装 resolv-conf 包。
+2. Termux 使用的 resolv.conf 路径在 `/data/data/com.termux/files/usr/etc/resolv.conf`，直接修改内容即可，不需要 root 权限。

@@ -164,6 +164,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 
 ## Docker
 
+- [苹果芯片的 Mac 电脑构建 x86 镜像](docker/build-x86-image-with-apple-silicon.md)
 - [ContainerD OverlayFS](docker/containerd-overlayfs.md)
 - [Containerd](docker/containerd.md)
 - [容器里的 Core Dump](docker/core-dump-in-container.md)
@@ -307,6 +308,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 
 - [Github Markdown 中的锚点引用](github/anchor-in-github-markdown.md)
 - [构建 github page](github/build-page.md)
+- [Github 下载最新 release 文件](github/download-latest-release-file.md)
 - [github 中 markdown 折叠文本](github/fold-text-in-github.md)
 - [如何在 github 项目里搜索代码](github/how-to-use-github-to-browse-codes.md)
 - [在 Github Markdown 中如何填写图片的链接](github/relative-link-in-github-markdown.md)
@@ -767,6 +769,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [MacOS 彻底删除搜狗输入法](others/delete-sogou-input-in-macos.md)
 - [dropbear](others/dropbear.md)
 - [Duplicati](others/duplicati.md)
+- [在浏览器里启动 DoH](others/enable-doh-in-browser.md)
 - [文件命名，下划线还是中划线？](others/file-naming-with-underscores-and-dashes.md)
 - [fonts.googleapis.com 不可访问](others/fonts.googleapis.com-is-inaccessible.md)
 - [fzf](others/fzf.md)

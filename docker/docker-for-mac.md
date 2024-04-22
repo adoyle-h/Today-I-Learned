@@ -13,3 +13,18 @@ docker for mac 的配置在 `~/Library/Group\ Containers/group.com.docker/settin
 等待解决 https://github.com/docker/for-mac/issues/6082
 
 解决方法：在别的窗口使用 `docker stop` 命令来关闭容器。或者到 Docker Desktop 里关闭容器。
+
+
+## OrbStack
+
+如果使用 Mac，推荐安装 OrbStack 代替 Docker Desktop。它更轻量级，可以创建虚拟机以及 Docker。
+
+### OrbStack Linux
+
+可以在终端使用 `orb` 命令进入虚拟机。
+
+### OrbStack Docker
+
+`orb config docker` 可以配置 docker。
+或者编辑 ~/.orbstack/config/docker.json 文件。
+修改后需要重启 docker。`orb restart docker`。

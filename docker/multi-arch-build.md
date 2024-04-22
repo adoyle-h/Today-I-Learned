@@ -64,3 +64,16 @@ docker buildx commands:
 **注意**，用户必须加上 `--push` 参数，它会自动 push 构建好的镜像到 docker hub。由于 docker buildx build 构建的多架构的镜像只会保留最后一份架构的镜像在本机，用户没法用 `docker push` 来提交多架构镜像。
 
 详见 https://github.com/docker/buildx/blob/master/docs/reference/buildx_build.md
+
+## TARGETPLATFORM 变量
+
+`--platform` 传递的参数会自动注入到 TARGETPLATFORM 环境变量里。
+方便在 [RUN heredoc](./dockerfile.md#dockerfile-支持-heredoc) 里使用条件判断。
+
+```dockerfile
+FROM alpine
+ARG TARGETPLATFORM
+RUN echo "I'm building for $TARGETPLATFORM"
+```
+
+详见 https://docs.docker.com/reference/dockerfile/#automatic-platform-args-in-the-global-scope
