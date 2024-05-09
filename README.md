@@ -344,6 +344,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [EMMC](hardware/emmc.md)
 - [固件 (Firmware)](hardware/firmware.md)
 - [Home Assistant](hardware/home-assistant.md)
+- [红外测温仪](hardware/ir-thermometer.md)
 - [ET X08 鼠标](hardware/mouse-et-x08.md)
 - [网件 R6900 刷梅林固件](hardware/netgear-R6900-asuswrt-merlin.md)
 - [网络交换机](hardware/network-switch.md)
@@ -469,6 +470,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [用环境变量替换文本内容 envsubst](linux/envsubst.md)
 - [exfat](linux/exfat.md)
 - [ExtFS (Extended File System)](linux/ext-fs.md)
+- [fakeroot](linux/fakeroot.md)
 - [快速删除文件](linux/fast-delete-files.md)
 - [快速创建大文件](linux/fast-generate-large-file.md)
 - [快速删文件](linux/fast-remove-files.md)
@@ -614,6 +616,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 
 - [lua 没有 continue 关键字](lua/continue.md)
 - [lua 错误处理](lua/error.md)
+- [lua 正则](lua/regex.md)
 
 [`⬆ 返回目录`](#toc)
 
@@ -797,6 +800,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [堆外内存](others/off-heap-memory.md)
 - [原码, 反码, 补码](others/one_complement-and-two_complement.md)
 - [如何打开超大文件](others/open-huge-file-with-editor.md)
+- [Ubnt EdgeRouter X (er-x) 刷 OpenWRT](others/openwrt-with-ubnt-edgerouter-x.md)
 - [Protocol Buffers](others/protocal-buffers.md)
 - [正则表达式的小技巧](others/regexp-tricks.md)
 - [Markdown 里写反引号](others/reverse-quote-in-markdown.md)
