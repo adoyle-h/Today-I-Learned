@@ -19,6 +19,8 @@
 - [在 target 内部使用条件判断](#在-target-内部使用条件判断)
 - [在 target 内部赋值变量](#在-target-内部赋值变量)
 - [注意 &&](#注意-)
+- [GNU make 与 BSD make 的区别](#gnu-make-与-bsd-make-的区别)
+    - [GNU make 会自动打印目录路径](#gnu-make-会自动打印目录路径)
 
 <!-- /MarkdownTOC -->
 
@@ -246,3 +248,32 @@ a:
 a:
 	@if [[ -n '' ]]; then echo 1; fi
 ```
+
+
+## GNU make 与 BSD make 的区别
+
+### GNU make 会自动打印目录路径
+
+```makefile
+b:
+	@echo 1
+
+a:
+	@echo "$(shell $(MAKE) b)"
+```
+
+用 GNU make 执行 `make a` 就会打印 `make[1]: Entering directory '...' 1 make[1]: Leaving directory '...'`。
+用 BSD make 执行 `make a` 就只有 `1`。
+
+由于 GNU make 会默认开启 [--print-directory](https://www.gnu.org/software/make/manual/html_node/_002dw-Option.html) 选项。它在执行嵌套的 make 命令时，会自动打印 `make: Entering directory '...'. `，`make: Leaving directory '...'.`，这可能会造成问题。
+
+解决方法是加上 -s 参数。
+
+```makefile
+b:
+	@echo 1
+
+a:
+	@echo "$(shell $(MAKE) -s b)"
+```
+
