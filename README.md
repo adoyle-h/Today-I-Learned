@@ -976,6 +976,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 ## Vim
 
 - [<C-I> 在 nvim 里等同于 <Tab>](vim/ctrl-i-in-neovim.md)
+- [用于调试的最小 neovim 配置](vim/minimal-nvim-config-for-reproduce.md)
 - [学习 Neovim](vim/neovim-learning.md)
 - [在 vim 中执行 shell 命令，同时将结果输出到 buffer](vim/pipe-shell-output-to-buffer.md)
 - [vim 插件教程](vim/plugins-tutorial.md)

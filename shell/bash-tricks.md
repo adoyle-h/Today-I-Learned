@@ -349,3 +349,7 @@ https://superuser.com/a/1348950/1776434
 `cmd2 < <(cmd)` 中 `cmd` 也不能修改当前进程的变量。但是 `cmd2` 是运行在当前进程的，可以修改。
 
 [subshell]: ./subshell-and-child-process.md
+
+## [ ] 与 [[ ]] 的区别
+
+https://stackoverflow.com/a/3427931/4622308
