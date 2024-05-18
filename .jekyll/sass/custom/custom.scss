@@ -34,6 +34,7 @@
 }
 
 .nav-list .nav-list-item {
+
   .nav-list-link:hover,
   .nav-list-link.active {
     color: #3d89ff !important;
@@ -46,36 +47,50 @@
 }
 
 .main-content {
-  h1,h2,h3,h4,h5,h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     margin-top: 1.5em;
     margin-bottom: 0.5em;
   }
 }
 
-.main-content {
-  .anchor-heading,
-  h2 > .anchor-heading,
-  h3 > .anchor-heading,
-  h4 > .anchor-heading,
-  h5 > .anchor-heading,
-  h6 > .anchor-heading {
-    svg {
-      visibility: visible;
+@media screen and (max-width: 641px) {
+  .main-content {
+
+    .anchor-heading,
+    h2>.anchor-heading,
+    h3>.anchor-heading,
+    h4>.anchor-heading,
+    h5>.anchor-heading,
+    h6>.anchor-heading {
+      svg {
+        visibility: visible;
+      }
     }
   }
+
 }
 
-h1, .text-alpha {
-  font-size: 1.8rem !important;
+h1,
+.text-alpha {
+  font-size: 2.25rem !important;
   font-weight: 500;
 }
 
-h2, .text-beta, #toctitle {
+h2,
+.text-beta,
+#toctitle {
   font-size: 1.5rem !important;
   font-weight: 500;
 }
 
-h3, .text-gamma {
+h3,
+.text-gamma {
   font-size: 1.2rem !important;
   font-weight: 500;
 }
@@ -96,7 +111,7 @@ h4 {
 }
 
 .site-nav::-webkit-scrollbar-track {
-    background-color: #2c2c2c;
+  background-color: #2c2c2c;
 }
 
 .site-nav {
