@@ -1,7 +1,7 @@
 include ./makefile-utils/*.mk
 .DEFAULT_GOAL := help
 
-GH_PAGE_IMAGE=adoyle/gh-pages:v228
+GH_PAGE_IMAGE=adoyle/gh-pages:v231.1
 
 # 本地编辑与浏览（不用先执行 make build，会自动构建，支持热更新）
 .PHONY: serve

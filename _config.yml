@@ -7,6 +7,7 @@ plugins:
   - jekyll-include-cache
   - jekyll-sitemap
   - jekyll-feed
+  - jekyll-last-modified-at
 
 include: []
 
@@ -21,6 +22,9 @@ exclude:
 permalink: none
 remote_theme: just-the-docs/just-the-docs
 
+autolinks:
+  link_attr: target="_blank"
+
 # Default config: https://github.com/just-the-docs/just-the-docs/blob/main/_config.yml
 url: https://adoyle.me
 baseurl: /Today-I-Learned/
@@ -29,13 +33,14 @@ description: 博观而约取，厚积而薄发。ADoyle 的碎片化知识笔记
 logo: https://media.githubusercontent.com/media/adoyle-h/_imgs/master/assets/logo.png
 favicon_ico: ./.jekyll/assets/favicon.ico
 footer_content:
-  Copyright 2016-2023 ADoyle (adoyle.h@gmail.com). Some Rights Reserved.<br>
+  Copyright 2016-2024 ADoyle (adoyle.h@gmail.com). Some Rights Reserved.<br>
   The project is licensed under <b>BSD 3-clause License</b>.
 aux_links_new_tab: true # Makes Aux links open in a new tab. Default is false
 aux_links:
   "Give Me a Github Star":
     - https://github.com/adoyle-h/Today-I-Learned
 last_edit_timestamp: true
+last_edit_time_format: "%Y-%m-%d %H:%M:%S %z"
 color_scheme: dark
 back_to_top: true
 back_to_top_text: ⬆ 返回顶部

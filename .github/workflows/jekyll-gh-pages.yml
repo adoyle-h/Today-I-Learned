@@ -48,7 +48,7 @@ jobs:
       - run: make update-meta
 
       - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
+        uses: adoyle-h/jekyll-build-pages@v1.0.7-ad-5
         with:
           source: ./
           destination: ./_site
