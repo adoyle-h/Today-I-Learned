@@ -28,6 +28,9 @@ build-gh:
 	docker run -it --rm -v "${PWD}:/src/site" --entrypoint github-pages ${GH_PAGE_IMAGE} \
 		build --verbose
 
+sh:
+	docker run -it --rm -p 4000:4000 --entrypoint sh -v "${PWD}:/src/site" ${GH_PAGE_IMAGE}
+
 # 本地浏览（要先执行 make build）
 .PHONY: http
 http:
