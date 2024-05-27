@@ -1,5 +1,9 @@
-ADoyle 的碎片化知识笔记。
-https://til.adoyle.me
+ADoyle 的碎片化知识笔记。https://til.adoyle.me
+
+## 订阅
+
+推荐订阅 [Weekly Report](https://github.com/adoyle-h/Today-I-Learned/discussions/categories/weekly-report)。每周一获取每周总结。
+订阅方法：点击 [Github](https://github.com/adoyle-h/Today-I-Learned) 右上角的 watch 按钮。
 
 ## 提醒
 

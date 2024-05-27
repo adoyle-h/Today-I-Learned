@@ -2,8 +2,12 @@
 
 > 博观而约取，厚积而薄发。
 
-ADoyle 的碎片化知识笔记。
-https://til.adoyle.me
+ADoyle 的碎片化知识笔记。https://til.adoyle.me
+
+## 订阅
+
+推荐订阅 [Weekly Report](https://github.com/adoyle-h/Today-I-Learned/discussions/categories/weekly-report)。每周一获取每周总结。
+订阅方法：点击 [Github](https://github.com/adoyle-h/Today-I-Learned) 右上角的 watch 按钮。
 
 ## 提醒
 
@@ -30,7 +34,7 @@ https://til.adoyle.me
 
 本项目不接受 Pull Request。如果你有什么好的想法，或者改进的建议，请使用 [Discussions](https://github.com/adoyle-h/Today-I-Learned/discussions) 与我探讨。
 
-**建议 Star 本项目。不要 Fork，这没有意义。Watch 似乎没用，基本不会触发通知。**
+**建议 Star 本项目。不要 Fork，这没有意义。**
 
 
 ## 版权声明
