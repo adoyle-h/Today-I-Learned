@@ -28,3 +28,9 @@ docker for mac 的配置在 `~/Library/Group\ Containers/group.com.docker/settin
 `orb config docker` 可以配置 docker。
 或者编辑 ~/.orbstack/config/docker.json 文件。
 修改后需要重启 docker。`orb restart docker`。
+
+### docker pull image 使用代理
+
+比如宿主机的代理程序暴露端口 7890，设置 `orb config set network_proxy http://localhost:7890`
+
+详见 https://docs.orbstack.dev/machines/network#proxies

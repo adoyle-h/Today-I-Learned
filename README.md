@@ -507,6 +507,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [IO、select、epoll](linux/io-select-epoll.md)
 - [iproute2 与 ifconfig 命令](linux/iproute2-vs-ifconfig.md)
 - [iptables 与 nftables](linux/iptables.md)
+- [在 arch linux 中升级 curl 碰到的问题](linux/issue-with-upgrade-curl-on-arch-linux.md)
 - [kconfig](linux/kconfig.md)
 - [Linux 内核模块](linux/kernel-module.md)
 - [Linux 内核](linux/kernel.md)
