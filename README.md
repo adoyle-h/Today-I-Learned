@@ -98,6 +98,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
   - [Etcd](#etcd)
   - [Mongo](#mongo)
   - [Mysql](#mysql)
+  - [Postgres](#postgres)
 - [思考](#思考)
 - [Typescript](#typescript)
 - [Vim](#vim)
@@ -956,6 +957,12 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [mysqldump](storage/mysql/mysqldump.md)
 - [Date/Datetime/Timestamp 比较](storage/mysql/timestamp-vs-datetime.md)
 - [Transaction 与 autocommit](storage/mysql/transaction-and-autocommit.md)
+
+[`⬆ 返回目录`](#toc)
+
+### Postgres
+
+- [permission denied for schema public](storage/postgres/permission-denied-for-schema-public.md)
 
 [`⬆ 返回目录`](#toc)
 
