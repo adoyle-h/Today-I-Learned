@@ -9,12 +9,12 @@ serve:
 	echo "You should press 'ctrl-c' when \"Auto-regeneration: enabled for '/src/site'\" appeared."
 	docker run -it --rm -p 4000:4000 -v "${PWD}:/src/site" ${GH_PAGE_IMAGE}
 
-.PHONY: update-readme
-update-readme:
+.PHONY: readme-update
+readme-update:
 	@node ./_doc_builder/update-readme.mjs
 
-.PHONY: update-meta
-update-meta:
+.PHONY: meta-update
+meta-update:
 	@node ./_doc_builder/update-meta.mjs
 
 # 本地构建

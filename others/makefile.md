@@ -21,6 +21,7 @@
 - [注意 &&](#注意-)
 - [GNU make 与 BSD make 的区别](#gnu-make-与-bsd-make-的区别)
     - [GNU make 会自动打印目录路径](#gnu-make-会自动打印目录路径)
+- [$() 会提前执行](#-会提前执行)
 
 <!-- /MarkdownTOC -->
 
@@ -277,3 +278,27 @@ a:
 	@echo "$(shell $(MAKE) -s b)"
 ```
 
+## $() 会提前执行
+
+```makefile
+.PHONY: a
+a:
+	@echo 1 > VERSION
+	@echo "VERSION=$(shell cat VERSION)"
+```
+
+当先用 `echo 2 > VERSION`，在执行 `make a`，会发现它输出的是 `VERSION=2`，并不是 `VERSION=1`。
+这说明 `$(shell cat VERSION)` 并不是等到执行 `@echo "VERSION=$(shell cat VERSION)"` 时执行的，而是提早执行计算好了结果。
+
+如果想推迟 `$(shell cat VERSION)`，可以这么改：
+
+```makefile
+.PHONY: a
+a:
+	@echo 1 > VERSION
+	@$(MAKE) -s b
+
+.PHONY: b
+b:
+	@echo "VERSION=$(shell cat VERSION)"
+```

@@ -44,3 +44,12 @@ apt、dpkg 和 Debian 的一模一样，尽量少做修改，只用来查询。
 
 1. `pkg install resolv-conf` 确保已安装 resolv-conf 包。
 2. Termux 使用的 resolv.conf 路径在 `/data/data/com.termux/files/usr/etc/resolv.conf`，直接修改内容即可，不需要 root 权限。
+
+## chmod +x 无用
+
+有时候 `chmod +x` 让文件可执行，虽然命令没报错，但是脚本依然还是不可执行的。
+
+这是正常的。当文件存储在安卓系统的外部存储中，即 /storage/emulated/0。无法赋予可执行权限。
+
+因为 /storage/emulated 是用 fuse 文件系统挂载的。在 termux 中执行 `mount | grep storage` 可以看到，它的挂载参数有 noexec。这代表着外部存储文件没有可执行权限。
+如果不 root 手机，则无法修改挂载选项。

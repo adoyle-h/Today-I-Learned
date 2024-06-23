@@ -184,6 +184,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [学习 Docker](docker/docker-learning.md)
 - [Docker OverlayFS](docker/docker-overlayfs.md)
 - [Docker 的坑](docker/docker-pitfalls.md)
+- [docker 代理](docker/docker-proxy.md)
 - [Docker Run With Namespace](docker/docker-run-with-namespace.md)
 - [Docker Tag/Id/Digest](docker/docker-tag-id-digests.md)
 - [docker 小技巧](docker/docker-tricks.md)
@@ -792,6 +793,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [如何审核代码](others/how-to-review-code.md)
 - [httrack](others/httrack.md)
 - [Hyper.js 中文问题](others/hyper-js-chinese-problems.md)
+- [图床](others/image-board.md)
 - [无法在 Tmux 显示图片](others/imgcat-not-work-in-tmux.md)
 - [Jekyll](others/jekyll.md)
 - [jellyfin 中文字体](others/jellyfin-chinese-font.md)
@@ -990,7 +992,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 
 ## Vim
 
-- [<C-I> 在 nvim 里等同于 <Tab>](vim/ctrl-i-in-neovim.md)
+- [`<C-I>` 在 nvim 里等同于 `<Tab>`](vim/ctrl-i-in-neovim.md)
 - [用于调试的最小 neovim 配置](vim/minimal-nvim-config-for-reproduce.md)
 - [学习 Neovim](vim/neovim-learning.md)
 - [在 vim 中执行 shell 命令，同时将结果输出到 buffer](vim/pipe-shell-output-to-buffer.md)

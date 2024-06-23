@@ -1,6 +1,8 @@
 ## 查找 Overlay ID 与哪个容器相关
 
+<!-- {% raw %} -->
 `docker inspect -f $'{{.Name}}\t{{.GraphDriver.Data.MergedDir}}' $(docker ps -aq) | grep -i <overlay-id>`
+<!-- {% endraw %} -->
 
 ### 案例
 

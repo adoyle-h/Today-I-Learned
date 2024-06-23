@@ -80,7 +80,7 @@
 
 [色度图 (Chromaticity Diagram)](https://www.wikiwand.com/zh-hans/%E8%89%B2%E5%BA%A6_(%E7%89%A9%E7%90%86%E5%AD%B8))
 
-![色彩空间对比图](https://www.viewsonic.com/library/wp-content/uploads/2019/04/LB0055-2-compressed.jpg)
+![色彩空间对比图](https://media.githubusercontent.com/media/adoyle-h/_imgs/master/picgo/%E8%89%B2%E5%BD%A9%E7%A9%BA%E9%97%B4%E5%AF%B9%E6%AF%94%E5%9B%BE.jpg)
 
 ## [色域](./color-gamut.md)
 

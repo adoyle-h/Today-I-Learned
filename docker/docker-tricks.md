@@ -17,7 +17,9 @@ ENTRYPOINT ["tail", "-f", "/dev/null"]
 
 这在缺失 Dockerfile 的情况下有一定帮助。
 
+<!-- {% raw %} -->
 `docker history --no-trunc --format '{{.CreatedBy}}' <image>`
+<!-- {% endraw %} -->
 
 因为 docker history 默认会裁减输出，所以要加上 `--no-trunc` 参数。
 
@@ -34,7 +36,9 @@ Perhaps iptables or your kernel needs to be upgraded.
 ### docker format 的工具函数
 
 比如查看可以输出哪些字段，用 `json`，例如
+<!-- {% raw %} -->
 `docker container ls --format='{{json .}}'`
+<!-- {% endraw %} -->
 
 https://docs.docker.com/config/formatting/
 

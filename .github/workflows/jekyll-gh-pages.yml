@@ -45,10 +45,10 @@ jobs:
       - if: steps.cache-node-modules.outputs.cache-hit != 'true'
         run: npm i --production
 
-      - run: make update-meta
+      - run: make meta-update
 
       - name: Build with Jekyll
-        uses: adoyle-h/jekyll-build-pages@v1.0.7-ad-6
+        uses: adoyle-h/jekyll-build-pages@v1.0.7-ad-7
         with:
           source: ./
           destination: ./_site
