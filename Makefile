@@ -1,7 +1,7 @@
 include ./makefile-utils/*.mk
 .DEFAULT_GOAL := help
 
-GH_PAGE_IMAGE=adoyle/gh-pages:v231.1
+GH_PAGE_IMAGE=ghcr.io/adoyle-h/jekyll-build-pages:v1.0.7-ad-7
 
 # 本地编辑与浏览（不用先执行 make build，会自动构建，支持热更新）
 .PHONY: serve
@@ -41,7 +41,7 @@ http:
 .PHONY: debug-gh-pages
 debug-gh-pages:
 	docker run -it --rm -p 4000:4000 -v "${PWD}:/src/site" \
-		--entrypoint ash \
+		--entrypoint bash -w /src/site \
 		${GH_PAGE_IMAGE}
 
 .PHONY: clean-index-md
