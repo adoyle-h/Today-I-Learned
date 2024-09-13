@@ -140,3 +140,114 @@ echo "${COMPREPLY[@]}"
 或者使用 `shopt -s lastpipe` 开启 lastpipe，可以让管道中最后一个命令运行在当前 shell 环境。（这个方法可能没用）
 
 相关链接 https://stackoverflow.com/questions/36340599/how-does-shopt-s-lastpipe-affect-bash-script-behavior
+
+## set -o errexit -o pipefail 对于条件判断以及输入重定向无效
+
+举个例子
+
+```bash
+#!/usr/bin/env bash
+
+set -o errexit -o nounset -o pipefail -o errtrace
+(shopt -p inherit_errexit &>/dev/null) && shopt -s inherit_errexit
+
+fail() {
+  return 1
+}
+
+foo() {
+  # 这里输出重定向到 &2 是为了在 Case 5 可以看到结果
+  echo 1 >&2
+  fail
+  echo 2 >&2
+}
+
+# echo "Case 1:"
+# foo
+
+# echo "Case 2:"
+# foo || true
+
+# echo "Case 3:"
+# while read -r var; do
+#   foo || true
+# done < <(printf -- 'a\nb\n')
+
+# echo "Case 4:"
+# if foo; then
+#   echo 3
+# fi
+
+# echo "Case 5:"
+# if [[ $(foo) == 'abc' ]]; then
+#   echo 3
+# fi
+```
+
+取消对应的注释，查看输出。
+
+```
+Case 1:
+1
+```
+
+```
+Case 2:
+1
+2
+```
+
+
+```
+Case 3:
+1
+2
+1
+2
+```
+
+```
+Case 4:
+1
+2
+3
+```
+
+```
+Case 5:
+1
+2
+```
+
+在 Case 2、3、4 中，fail 报错了，但程序依然运行下去。
+即使使用 `trap` 也无法捕获 ERR。
+
+这个 BUG (Feature?) 可能会导致严重的问题。在 https://mywiki.wooledge.org/BashPitfalls#errexit 有提到一个例子：
+
+```sh
+# WRONG
+cleanup() {
+  cd "$1"
+  rm -f ./*
+}
+
+cleanup /no/longer/there || {
+  printf >&2 'Cleanup failed\n'
+  exit 1
+}
+```
+
+当 cd 要切换的目录不存在会报错，但是由于上层调用用了 `||` 导致 `rm -f ./*` 会继续执行。
+正确的处理方式是这么写：
+
+```sh
+# Right
+cleanup() {
+  cd "$1" || return
+  rm -f ./*
+}
+```
+
+但是这只能解决这一种情况。当 `func-a || func-b` 这种格式下，func-a 内所有执行的函数都有可能报错，那要给每个执行都加上 `|| return` 吗？这显然不合理。
+
+`func-a || func-b` 这种格式其实会经常用到，`func-b` 是一个容错处理函数。但是 bash 的语法机制又会导致这种错误。目前似乎无解！
