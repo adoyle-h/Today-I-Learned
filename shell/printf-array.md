@@ -1,4 +1,6 @@
-# `printf '%s\n' $@` 为何可以打印多行？
+# printf 打印多行
+
+## `printf '%s\n' $@` 为何可以打印多行？
 
 比如 `f() { printf '%s\n' $@; }`，当执行 `f 1 2 3` 时会分行打印 1 2 3。
 
@@ -12,3 +14,9 @@
 
 - https://pubs.opengroup.org/onlinepubs/9699919799/utilities/printf.html
 - https://stackoverflow.com/a/39690101/4622308
+
+## printf -- '\n' 打印多行
+
+`printf 'a\nb\nc\n'` 可以打印多行。但当字符串以 `-` 开头，比如 `printf '-a\n-b\n--c\n'`，就会报错“无效的选项”。
+
+应当写 `printf -- '-a\n-b\n--c\n'`。
