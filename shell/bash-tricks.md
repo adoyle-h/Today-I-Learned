@@ -362,3 +362,12 @@ https://stackoverflow.com/a/3427931/4622308
 - **`${var:+x}`** 只有当 `var` 被设置且不为空时，才会返回 `x`；否则返回空。
 
 两者主要用于不同的场景：`${var+x}` 用于检测变量是否被设置，而 `${var:+x}` 用于检测变量是否既被设置又有值。
+
+## 定位函数在哪个文件定义的
+
+在函数定义之前执行 `shopt -s extdebug`。或者启动 bash 时加参数 `--debugger`: `bash --debugger`。
+然后使用 `deflare -F function_name` 就能打印文件位置。
+
+详见 https://unix.stackexchange.com/a/322887
+
+变量没法这样用。

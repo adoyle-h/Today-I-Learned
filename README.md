@@ -39,7 +39,7 @@ ADoyle 的碎片化知识笔记。https://til.adoyle.me
 
 ## 版权声明
 
-Copyright 2016-2024 ADoyle (adoyle.h@gmail.com). Some Rights Reserved.
+Copyright 2016-2025 ADoyle (adoyle.h@gmail.com). Some Rights Reserved.
 The project is licensed under the **BSD 3-clause License**.
 
 Read the [LICENSE](./LICENSE) file for the specific language governing permissions and limitations under the License.
@@ -245,6 +245,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [`<script async>` 与 `<script defer>`](front-end/async-defer-script-dom.md)
 - [圆角的玩法](front-end/border-radius-tricks.md)
 - [Chrome 浏览器 DNS 解析](front-end/chrome-dns-resolver.md)
+- [Chrome Stalled 请求](front-end/chrome-stalled-requests.md)
 - [Safari 浏览器的类继承 Bug](front-end/class-extend-bug-in-safari.md)
 - [代码分离](front-end/code-split.md)
 - [颜色对比度](front-end/color-contrast.md)
@@ -295,6 +296,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 ## Git
 
 - [用 shell 脚本查询 git commit hash](git/a-shell-script-to-get-current-commit-hash.md)
+- [Connection closed by UNKNOWN port 65535](git/connection-closed-by-unknown-port-65535.md)
 - [Git Diff](git/diff.md)
 - [Git 学习资料](git/git-books.md)
 - [git ssh 代理](git/git-ssh-proxy.md)
@@ -555,6 +557,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [用别的用户运行命令](linux/run-command-with-different-user.md)
 - [runit](linux/runit.md)
 - [SATA 热拔插](linux/sata-hotplug.md)
+- [scp: Connection closed](linux/scp-failure.md)
 - [程序的退出码 (Exit Code)](linux/script-exit-code.md)
 - [sed](linux/sed.md)
 - [在 alpine 中找不到 setup-apkcache 等 setup-* 命令](linux/setup-scripts-in-alpine.md)
@@ -767,6 +770,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [adguard home](others/adguard-home.md)
 - [在梅林固件路由器里安装 AdGuard Home](others/adguardhome-in-asuswrt-merlin-device.md)
 - [Alfred Workflow debug 技巧](others/alfred-workflow-debug.md)
+- [aliyun cli](others/aliyun-cli.md)
 - [永久链接](others/archive-webpage.md)
 - [在 Alpine docker 容器里启动 aria2](others/aria2-in-alpine-docker.md)
 - [aria2](others/aria2.md)
@@ -774,13 +778,19 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [梅林固件 asuswrt-merlin](others/asuswrt-merlin.md)
 - [脱字符 (caret)](others/caret.md)
 - [Chrome 小技巧](others/chrome-tricks.md)
+- [cloudflare 缓存](others/cloudflare-cache.md)
+- [托管域名到 Cloudflare](others/cloudflare-hosting.md)
+- [cloudflare proxy](others/cloudflare-proxy.md)
+- [一个复杂的小 bug: cd 补全问题](others/complex-and-small-bug-with-cd.md)
 - [复制粘贴好过手写](others/copy-paste-better-than-handwriting.md)
+- [curl 快速失败](others/curl-fail-fast.md)
 - [Mac 文件系统的剪切快捷键](others/cut-in-mac-file-system.md)
 - [数据恢复工具](others/data-recovery-tool.md)
 - [YAML 中的 Date 类型陷阱](others/date-trap-in-yaml.md)
 - [MacOS 彻底删除搜狗输入法](others/delete-sogou-input-in-macos.md)
 - [dropbear](others/dropbear.md)
 - [Duplicati](others/duplicati.md)
+- [editorconfig](others/editorconfig.md)
 - [在浏览器里启动 DoH](others/enable-doh-in-browser.md)
 - [文件命名，下划线还是中划线？](others/file-naming-with-underscores-and-dashes.md)
 - [fonts.googleapis.com 不可访问](others/fonts.googleapis.com-is-inaccessible.md)
@@ -811,6 +821,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [原码, 反码, 补码](others/one_complement-and-two_complement.md)
 - [如何打开超大文件](others/open-huge-file-with-editor.md)
 - [Ubnt EdgeRouter X (er-x) 刷 OpenWRT](others/openwrt-with-ubnt-edgerouter-x.md)
+- [POST /cdn-cgi/rum](others/post-request-cdn-cgi-rum.md)
 - [Protocol Buffers](others/protocal-buffers.md)
 - [在美区 app store 充值](others/recharge-app-store-in-US.md)
 - [正则表达式的小技巧](others/regexp-tricks.md)
@@ -828,6 +839,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [时间回跳问题](others/time-backward-issue.md)
 - [Dockerfile 里使用 tini](others/tini-in-dockerfile.md)
 - [tmux 环境变量](others/tmux-environment-variable.md)
+- [umami.is 网站被反广告规则屏蔽](others/umami-is-blocked.md)
 - [usbipd 与 Windows WSL](others/usbipd-windows-wsl.md)
 - [UTF-8 vs UTF-16](others/utf-8-vs-utf-16.md)
 - [Vagrant DNS](others/vagrant-dns.md)
@@ -892,6 +904,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 ## 安全攻防
 
 - [不要在生产环境绑定 0.0.0.0](security/do-not-bind-0.0.0.0.md)
+- [hashcat](security/hashcat.md)
 - [Kali Linux](security/kali.md)
 - [Reverse Shell](security/reverse-shell.md)
 
@@ -915,7 +928,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [Shell 操作文件描述符](shell/file-descriptor.md)
 - [刷新命令的路径缓存](shell/flush-cache-of-command-path.md)
 - [在 console 里滚屏翻页](shell/page-up-down-in-console.md)
-- [`printf '%s\n' $@` 为何可以打印多行？](shell/printf-array.md)
+- [printf 打印多行](shell/printf-array.md)
 - [Readline](shell/readline.md)
 - [学习 Shell](shell/shell-learning.md)
 - [Bash 的 subshell 与子进程](shell/subshell-and-child-process.md)
