@@ -1,15 +1,19 @@
 # docker 代理
 
-加速 docker pull 的几种方法
+因为中国已屏蔽 docker hub。需要翻墙才能访问。
 
-1. 通过 registry-mirror 镜像服务器来加速
-2. 通过代理服务来加速
+解决方法：
 
-## docker for mac
+1. 通过 registry-mirror 镜像服务器
+2. 通过 http 代理服务
+
+## 不同客户端的配置位置
+
+### docker for mac
 
 对于 dokcer for mac 用户，打开设置 - Docker Engine，设置 registry-mirror 配置。
 
-## orbstack
+### orbstack
 
 对于 [orbstack](https://orbstack.dev/) 用户，
 通过 `orb config docker` 或者在 app 界面的「设置-Docker-Advanced engine config」设置 registry-mirror 配置。
@@ -17,7 +21,7 @@
 
 ## registry-mirror
 
-因为国内用 docker pull 会非常慢。建议使用 docker 镜像加速。
+docker [registry-mirror](https://docs.docker.com/docker-hub/image-library/mirror/) 只对 pull 镜像有效。
 
 ```json
 {
@@ -59,3 +63,7 @@
  }
 }
 ```
+
+## docker push, docker login 失败
+
+需要通过设置[代理服务](#代理服务)来解决问题。
