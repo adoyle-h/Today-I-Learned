@@ -889,6 +889,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 
 ## Redis
 
+- [Redis ACL](redis/acl.md)
 - [Redis Cluster](redis/cluster.md)
 - [拷贝一个 Sorted Set 到新的 key](redis/copy-a-sorted-set.md)
 
