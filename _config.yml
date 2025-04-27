@@ -30,7 +30,7 @@ url: https://adoyle.me
 baseurl: /Today-I-Learned/
 title: 今天我学了什么
 description: 博观而约取，厚积而薄发。ADoyle 的碎片化知识笔记。
-logo: https://media.githubusercontent.com/media/adoyle-h/_imgs/master/assets/logo.png
+logo: https://pub-cf.adoyle.me/logo.avif
 favicon_ico: ./.jekyll/assets/favicon.ico
 footer_content:
   Copyright 2016-2025 ADoyle (adoyle.h@gmail.com). Some Rights Reserved.<br>

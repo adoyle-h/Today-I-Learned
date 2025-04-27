@@ -780,6 +780,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [Chrome 小技巧](others/chrome-tricks.md)
 - [cloudflare 缓存](others/cloudflare-cache.md)
 - [托管域名到 Cloudflare](others/cloudflare-hosting.md)
+- [Cloudflare Page](others/cloudflare-page.md)
 - [cloudflare proxy](others/cloudflare-proxy.md)
 - [一个复杂的小 bug: cd 补全问题](others/complex-and-small-bug-with-cd.md)
 - [复制粘贴好过手写](others/copy-paste-better-than-handwriting.md)
