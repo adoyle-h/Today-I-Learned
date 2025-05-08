@@ -7,6 +7,7 @@
 - [rootlesskit --net=vpnkit](#rootlesskit---netvpnkit)
     - [源码分析](#源码分析)
 - [rootlesskit --net=slirp4netns](#rootlesskit---netslirp4netns)
+    - [10.0.2.3](#10023)
 - [CNI](#cni)
 
 <!-- /MarkdownTOC -->
@@ -124,6 +125,9 @@ adoyle     19377   19367  0 00:51 ?        00:00:00 /proc/self/exe --net=slirp4n
 adoyle     19394   19367  0 00:51 ?        00:00:00 slirp4netns --mtu 65520 -r 3 --disable-host-loopback --enable-sandbox --enable-seccomp 19377 tap0
 ```
 
+`slirp4netns ... 19377 tap0` 这里的 `19377` 是 pid。slirp4netns 会在 19377 进程所在的 namespace 下创建 tap0。
+因此在宿主机执行 `ip a` 是看不到 tap0 虚拟设备的。需要执行 `sudo nsenter -n -t 19377 bash` 进入到它的 namespace，或者执行 `sudo nsenter -n -t 19377 ip a` 才能看到 tap0。
+
 ```sh
 $ ip a
 4: tap0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 65520 qdisc fq state UP group default qlen 1000
@@ -152,6 +156,10 @@ nameserver 10.0.2.3
 
 这里的网关 10.0.2.2 指向的是什么？其实它是宿主机的 IP。[slirp4netns 的 vhost 默认配置](https://github.com/rootless-containers/slirp4netns/blob/462be177a5282a7dc76b2308a55b745ef9d50d2d/slirp4netns.1.md#description)。
 子命名空间通过这个 IP 将网络包发给宿主机。
+
+### 10.0.2.3
+
+10.0.2.3 是 slirp4netns 自带的 DNS 服务，监听 53 端口。
 
 ## CNI
 
