@@ -4,6 +4,13 @@
 
 ADoyle 的碎片化知识笔记。https://til.adoyle.me
 
+## 问 AI 就好了，干嘛要写文档？
+
+1. 文档是结构性的知识体系，而 AI 是片段式的应答。AI 擅长回答“怎么做”，但“这样做背后的取舍和历史”、“整个系统的设计理念”等复杂的结构性内容，通常它不会主动告知你。取决于你的提问。
+2. AI 给你的答案，是针对你提问上下文的局部解，但不一定是团队、领域、行业的全局最优解。有经验的提问者才能触发高质量的答案。
+3. AI 的知识有限于它接收到的内容。有些冷门知识以及踩坑经验，只存在于个人博客，而非产品手册和技术文档。
+4. 写文档不是为了今天找答案，而是为了把当时的历史、判断、决策、经验记录下来以供未来快速理解。还原当时我为什么决定这么做。
+
 ## 订阅
 
 推荐订阅 [Weekly Report](https://github.com/adoyle-h/Today-I-Learned/discussions/categories/weekly-report)。每周一获取每周总结。
@@ -142,9 +149,11 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [CPU 缓存](computer/cpu-cache.md)
 - [CPU](computer/cpu.md)
 - [风扇](computer/fan.md)
+- [使用 U 盘安装系统](computer/install-system-with-usb-flash-disk.md)
 - [内存屏障](computer/memory-barrier.md)
 - [我的硬盘分区规划](computer/my-disk-partitions.md)
 - [随机存取存储器 (RAM)](computer/ram.md)
+- [UEFI](computer/uefi.md)
 
 [`⬆ 返回目录`](#toc)
 
@@ -194,6 +203,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [修正 Docker for mac 时区问题](docker/fix-timezone-in-docker-for-mac.md)
 - [host.docker.internal](docker/host-docker-internal.md)
 - [Docker for Mac 中磁盘文件占用过大](docker/large-disk-space-usage-in-docker-for-mac.md)
+- [linuxserver 镜像与 rootless docker](docker/linuxserver-image-and-rootless-docker.md)
 - [docker macvlan](docker/macvlan.md)
 - [构建多架构镜像](docker/multi-arch-build.md)
 - [docker 多阶段构建 (Multi-Stage Build)](docker/multi-stage-build.md)
@@ -547,6 +557,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [PostmarketOS](linux/postmarketos.md)
 - [打印环境变量](linux/printenv.md)
 - [进程中断](linux/proc-interrupts.md)
+- [进程管理器](linux/process-manager.md)
 - [进程内存](linux/process-memory.md)
 - [进程亲和性 (Processor Affinity)](linux/processor-affinity.md)
 - [命令行中提示用户 Yes/No](linux/read-prompt.md)
@@ -606,7 +617,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 ### Systemd
 
 - [systemd-mount](linux/systemd/mount.md)
-- [systemd-network](linux/systemd/network.md)
+- [systemd-networkd](linux/systemd/network.md)
 - [networking.service](linux/systemd/networking-service.md)
 - [systemd-path](linux/systemd/path.md)
 - [systemd-resolved](linux/systemd/resolved.md)
@@ -840,6 +851,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [时间回跳问题](others/time-backward-issue.md)
 - [Dockerfile 里使用 tini](others/tini-in-dockerfile.md)
 - [tmux 环境变量](others/tmux-environment-variable.md)
+- [Ubnt EdgeRouter-X DDNS 功能](others/ubnt-edgerouter-x-ddns.md)
 - [umami.is 网站被反广告规则屏蔽](others/umami-is-blocked.md)
 - [usbipd 与 Windows WSL](others/usbipd-windows-wsl.md)
 - [UTF-8 vs UTF-16](others/utf-8-vs-utf-16.md)
