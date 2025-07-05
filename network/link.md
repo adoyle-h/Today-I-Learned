@@ -31,3 +31,4 @@ networkctl 是 systemd-networkd 提供的命令行。
 - `networkctl up <device>` 启动接口
 - `networkctl down <device>` 关闭接口
 - `networkctl lldp` 查看链路层邻居
+- `networkctl renew <device>` 强制更新 DHCP 租约，从 DHCP 服务器获取新的 IP、路由、DNS 等配置。（但有时候好像没作用）

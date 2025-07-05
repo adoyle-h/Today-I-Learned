@@ -67,3 +67,5 @@ docker [registry-mirror](https://docs.docker.com/docker-hub/image-library/mirror
 ## docker push, docker login 失败
 
 需要通过设置[代理服务](#代理服务)来解决问题。
+
+执行 docker login 时需要设置 HTTP_PROXY 等环境变量 `HTTP_PROXY=http://... HTTPS_PROXY=http://... docker login`。否则必定登录失败。

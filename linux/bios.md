@@ -10,6 +10,7 @@
 - [POST](#post)
 - [查看 BIOS 信息](#查看-bios-信息)
 - [BIOS 唤醒](#bios-唤醒)
+- [来电唤醒](#来电唤醒)
 
 <!-- /MarkdownTOC -->
 
@@ -52,3 +53,7 @@ POST 之后会有峰鸣声表示检查结果。一声简短的 beep 声表示系
 - RTC 唤醒 (时钟唤醒)
 - 来电唤醒
 - 网络唤醒 (WOL, Wake On LAN)
+
+### 来电唤醒
+
+以 Beelink EQ14 的 BIOS 为例，进入 Chipset - PCH-IO Configuration - State After G3。选 `S0 State` 为开启，`S5 State` 为关闭。
