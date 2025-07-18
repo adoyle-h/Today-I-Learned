@@ -17,3 +17,8 @@
 
 但是 `yours.ip-ddns.com` 这个域名无法创建 CNAME 记录，只能创建 A/AAAA 记录。并且 SOA 记录始终在 CloudNS，没法改到 Cloudflare。
 所以只能在 CloudNS 管理 `yours.ip-ddns.com` 的地址，无法托管到 Cloudflare。
+
+## 每 3 个月重新验证 TXT 记录
+
+因为当前每 3 个月 SSL 证书就过期，Cloudflare 会要求你创建新的 TXT 记录来验证续期。这样很麻烦。
+一劳永逸的方法：在 CloudNS 里删掉 TXT 记录，然后创建 **NS 记录**，把 `_acme-challenge.yours.ip-ddns.com` 指向 Cloudflare 提供的 2 个 NS 地址。无须在 Cloudflare 里创建 TXT 记录。Cloudflare 会自动更新 SSL 证书的。
