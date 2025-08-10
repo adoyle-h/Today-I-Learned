@@ -708,6 +708,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [vlan](network/vlan.md)
 - [vxlan](network/vxlan.md)
 - [Wake On Lan (WOL)](network/wake-on-lan.md)
+- [WiFi 隐私警告 (Wi-Fi Privacy Warning)](network/wifi-privacy-warning.md)
 - [zigbee](network/zigbee.md)
 
 [`⬆ 返回目录`](#toc)
@@ -850,6 +851,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [Dockerfile 里使用 tini](others/tini-in-dockerfile.md)
 - [tmux 环境变量](others/tmux-environment-variable.md)
 - [Ubnt EdgeRouter-X DDNS 功能](others/ubnt-edgerouter-x-ddns.md)
+- [Ubnt EdgeRouter-X](others/ubnt-edgerouter-x.md)
 - [umami.is 网站被反广告规则屏蔽](others/umami-is-blocked.md)
 - [usbipd 与 Windows WSL](others/usbipd-windows-wsl.md)
 - [UTF-8 vs UTF-16](others/utf-8-vs-utf-16.md)
