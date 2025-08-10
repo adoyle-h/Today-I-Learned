@@ -650,6 +650,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [Homebrew](mac/homebrew.md)
 - [MacOS log](mac/log.md)
 - [Mac 快捷键](mac/mac-shortcuts.md)
+- [mac 电脑无法 ping 或 ssh 内网设备](mac/macos-failed-to-ping-or-ssh-on-local-network.md)
 - [用命令触发系统通知](mac/notification-with-command.md)
 - [Mac 自启动配置 plist](mac/plist.md)
 - [Mac 删除允许在后台运行的设置](mac/remove-allow-in-background.md)
