@@ -17,6 +17,10 @@ readme-update:
 meta-update:
 	@node ./_doc_builder/update-meta.mjs
 
+.PHONY: index-update
+index-update:
+	@node ./_doc_builder/update-index-md.mjs
+
 # 本地构建
 .PHONY: build
 build:

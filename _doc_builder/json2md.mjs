@@ -1,5 +1,5 @@
 import json2md from 'json2md';
-import {readFile} from 'node:fs/promises';
+import { readFile } from 'node:fs/promises';
 
 json2md.converters.text = async (text) => {
     return text;
@@ -10,10 +10,19 @@ json2md.converters.ul = async (array) => {
 };
 
 json2md.converters.md = async (filepath) => {
-    return await readFile(filepath, {encoding: 'utf8'});
+    return await readFile(filepath, { encoding: 'utf8' });
 };
 
-json2md.converters.toc = ({contents, type}) => {
+json2md.converters.frontmatter = async (map) => {
+    const a = ['---'];
+    for (let prop in map) {
+        a.push(`${prop}: ${map[prop]}`)
+    }
+    a.push('---')
+    return a.join('\n')
+};
+
+json2md.converters.toc = ({ contents, type }) => {
     let tocStr;
 
     if (type === 'html') {
@@ -24,7 +33,7 @@ json2md.converters.toc = ({contents, type}) => {
         const makeUI = () => ({
             children: [],
             toString(parentSpaces = '') {
-                const {children} = this;
+                const { children } = this;
                 const spaces = parentSpaces.repeat(2);
                 const childStr = children.map((n) => n.toString(spaces)).join('\n');
                 return `${parentSpaces}<ul>
@@ -33,11 +42,11 @@ ${parentSpaces}</ul>`;
             },
         });
 
-        const makeLI = ({name, level}) => ({
+        const makeLI = ({ name, level }) => ({
             name, level,
             children: [],
             toString(parentSpaces = '') {
-                const {name, children} = this;
+                const { name, children } = this;
                 const spaces = parentSpaces.repeat(2);
 
                 if (children.length === 0) {
@@ -56,7 +65,7 @@ ${parentSpaces}</li>`;
 
         const ui = makeUI();
         contents.forEach((c) => {
-            const {level} = c;
+            const { level } = c;
             const li = makeLI(c);
 
             if (lastParent[level - 1]) {
@@ -75,7 +84,7 @@ ${parentSpaces}</li>`;
         const space = ' '.repeat(indent);
         const usedHeaders = {};
         contents.forEach((c) => {
-            const {name, level} = c;
+            const { name, level } = c;
             let anchor = name.trim().toLowerCase().replace(/\s+/g, '-').replace(/-+$/, '');
             const usedHeader = usedHeaders[anchor];
             if (usedHeader) {

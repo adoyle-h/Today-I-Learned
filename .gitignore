@@ -1,3 +1,5 @@
+/.public
+/index.md
 /makefile-utils/*
 !/makefile-utils/*.mk
 

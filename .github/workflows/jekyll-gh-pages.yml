@@ -30,6 +30,9 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      - name: Set up Docker Compose
+        uses: docker/setup-compose-action@v1
+
       - name: Cache node modules
         id: cache-node-modules
         uses: actions/cache@v4
@@ -37,15 +40,16 @@ jobs:
           path: node_modules
           key: ${{ runner.os }}-node-modules
 
-
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 23
 
       - if: steps.cache-node-modules.outputs.cache-hit != 'true'
         run: npm i --production
 
       - run: make meta-update
+
+      - run: rm README.md
 
       - name: Build with Jekyll
         uses: adoyle-h/jekyll-build-pages@v1.0.7-ad-7

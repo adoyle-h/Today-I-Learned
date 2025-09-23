@@ -1,7 +1,7 @@
 {
   "name": "today-i-learned",
   "version": "1.0.0",
-  "description": "博观而约取，厚积而薄发。",
+  "description": "博观而约取，厚积而薄发。\nADoyle 的碎片化知识笔记。访问网站 https://til.adoyle.me",
   "main": "index.js",
   "scripts": {
     "build": "node build.js",
@@ -22,7 +22,7 @@
   "dependencies": {
     "@snyk/protect": "latest",
     "debug": "^4.3.4",
-    "json2md": "^1.6.3",
+    "json2md": "^2.0.3",
     "p-map": "^6.0.0"
   },
   "snyk": true

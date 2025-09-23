@@ -1,8 +1,7 @@
 # 今天我学了什么 (Today I Learned)
 
 > 博观而约取，厚积而薄发。
-
-ADoyle 的碎片化知识笔记。https://til.adoyle.me
+> ADoyle 的碎片化知识笔记。访问网站 https://til.adoyle.me
 
 ## 问 AI 就好了，干嘛要写文档？
 
@@ -73,6 +72,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
   - [React](#react)
 - [Git](#git)
 - [Github](#github)
+- [Gnu](#gnu)
 - [Go](#go)
 - [硬件](#硬件)
 - [Java](#java)
@@ -336,6 +336,12 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 
 [`⬆ 返回目录`](#toc)
 
+## Gnu
+
+- [GUIX](gnu/guix.md)
+
+[`⬆ 返回目录`](#toc)
+
 ## Go
 
 - [go 交叉编译安卓程序](go/cgo-build-for-android.md)
@@ -494,6 +500,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [快速创建大文件](linux/fast-generate-large-file.md)
 - [快速删文件](linux/fast-remove-files.md)
 - [文件描述符，open file table 与 inode](linux/fd-oft-inode.md)
+- [文件的创建日期](linux/file-birthtime.md)
 - [file 命令](linux/file-command.md)
 - [CentOS 与 Debian 文件上的差异](linux/file-differences-between-centos-and-debian.md)
 - [Linux 文件系统](linux/file-system.md)
@@ -544,6 +551,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [netstat 与 ss](linux/netstat-and-ss.md)
 - [网络接口配置 (ifcfg)](linux/network-interface-configuration.md)
 - [网络配置工具](linux/network-manage-tools.md)
+- [nftables](linux/nftables.md)
 - [硬盘空间占满问题](linux/no-space-left-on-device.md)
 - [nsenter](linux/nsenter.md)
 - [NTP 时间同步](linux/ntp.md)
@@ -718,6 +726,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 
 - [nix flake](nix/flake.md)
 - [学习 Nix](nix/learning.md)
+- [Nix](nix/nix.md)
 - [nixos installer](nix/nixos-installer.md)
 - [nixpkgs](nix/nixpkgs.md)
 
@@ -790,6 +799,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [脱字符 (caret)](others/caret.md)
 - [Chrome 小技巧](others/chrome-tricks.md)
 - [cloudflare 缓存](others/cloudflare-cache.md)
+- [Cloudflare /cdn-cgi 路由](others/cloudflare-cdn-cgi-endpoint.md)
 - [托管域名到 Cloudflare](others/cloudflare-hosting.md)
 - [Cloudflare Page](others/cloudflare-page.md)
 - [cloudflare proxy](others/cloudflare-proxy.md)

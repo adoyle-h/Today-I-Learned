@@ -9,7 +9,7 @@ import json2md from './json2md.mjs'
 import { run, scanDir, absPath, relativePath, projectDir, PKG, getDirNames } from './lib.mjs';
 
 import _debug from 'debug';
-const debug = _debug('update:readme')
+const debug = _debug('update:index-md')
 
 const toc = [];
 
@@ -34,7 +34,6 @@ function handle(nodes, levelStd, structure) {
         structure.push({ [`h${level}`]: node.title });
         if (intro) structure.push(intro.trim() + '\n');
         structure.push({ ul: fileNodes.map((n) => `[${n.title}](${relativePath(n.path)})`) });
-        structure.push({ text: '[`⬆ 返回目录`](#toc)' });
 
         return handle(dirNodes, levelStd + 1, structure);
     })
@@ -50,12 +49,16 @@ run(async () => {
     );
 
     const structure = [
-        { h1: '今天我学了什么 (Today I Learned)' },
-        { blockquote: PKG.description },
+        {
+            frontmatter: {
+                title: '今天我学了什么 (Today I Learned)',
+                description: '博观而约取，厚积而薄发',
+            }
+        },
         { md: absPath('_docs/intro.md') },
         { md: absPath('_docs/issue.md') },
-        { md: absPath('_docs/license.md') },
-        { toc: { contents: toc, type: 'markdown' } },
+        { hr: '' },
+        { h1: '目录' },
     ];
 
     debug('nodeMap=%O', nodeMap);
@@ -64,7 +67,7 @@ run(async () => {
 
     const content = await json2md.async(structure);
 
-    const file = absPath('README.md');
+    const file = absPath('index.md');
     await writeFile(file, content);
     console.log('File Updated: %s', file);
 });
