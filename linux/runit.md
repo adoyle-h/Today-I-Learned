@@ -1,7 +1,7 @@
 ---
+title: runit
 tags: [init]
 ---
-## runit
 
 [runit](http://smarden.org/runit/) 是一个 init 服务管理工具。类似于 systemd 的简单版。
 它可运行在 Linux、Mac OS X、BSD 和 Solaris 等类 UNIX 操作系统上。
@@ -27,7 +27,10 @@ tags: [init]
 #### 创建一个 sshd service
 
 ```sh
-# 创建 sshd service 进程
+---
+title: 创建 sshd service 进程
+---
+
 $ mkdir -p /usr/var/service/sshd
 $ cat <<EOF > /usr/var/service/sshd/run
 #!/usr/bin/sh

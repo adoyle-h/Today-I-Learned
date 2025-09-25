@@ -1,6 +1,9 @@
-## Ansible 变量
+---
+title: Ansible 变量
+---
 
-### 特殊变量
+
+## 特殊变量
 
 centos 系统的 gather fact，ansible_os_family=RedHat，ansible_distribution=CentOS
 

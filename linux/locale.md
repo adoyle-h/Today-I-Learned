@@ -1,4 +1,7 @@
-# 修改 Linux 系统语言 (locale)
+---
+title: 修改 Linux 系统语言 (locale)
+---
+
 
 ## Debian 系统
 

@@ -1,4 +1,7 @@
-## docker-compose 启动容器顺序
+---
+title: docker-compose 启动容器顺序
+---
+
 
 发现 docker-compose 的容器启动顺序并不“严格“，容器只是启动了但没有真正提供服务，compose 也算作启动了。
 比如先启动 mysql，后启动依赖 mysql 的 web 服务，其实有可能 mysql 还没初始化完成，web 服务就启动了。

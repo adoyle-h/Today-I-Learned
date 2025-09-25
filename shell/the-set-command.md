@@ -1,4 +1,7 @@
-# set 命令
+---
+title: set 命令
+---
+
 
 ## set -o option
 

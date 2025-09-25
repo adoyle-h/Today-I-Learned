@@ -1,4 +1,7 @@
-# sed
+---
+title: sed
+---
+
 
 BSD sed 和 GNU sed 的异同，参考 [BSD/macOS Sed vs. GNU Sed vs. the POSIX Sed specification](https://riptutorial.com/sed/topic/9436/bsd-macos-sed-vs--gnu-sed-vs--the-posix-sed-specification) ([链接备份](https://web.archive.org/web/20221013094813/https://riptutorial.com/sed/topic/9436/bsd-macos-sed-vs--gnu-sed-vs--the-posix-sed-specification))
 

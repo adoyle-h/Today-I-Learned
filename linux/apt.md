@@ -1,4 +1,7 @@
-# apt
+---
+title: apt
+---
+
 
 ## /etc/apt/sources.list
 

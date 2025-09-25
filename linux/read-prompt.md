@@ -1,4 +1,7 @@
-## 命令行中提示用户 Yes/No
+---
+title: 命令行中提示用户 Yes/No
+---
+
 
 ```sh
 #!/usr/bin/env bash

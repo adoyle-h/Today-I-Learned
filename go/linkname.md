@@ -1,4 +1,7 @@
-# //go:linkname
+---
+title: //go:linkname
+---
+
 
 用法：`//go:linkname localname` 或 `//go:linkname localname importpath.name`
 

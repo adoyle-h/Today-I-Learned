@@ -1,4 +1,7 @@
-# Hostname in Linux
+---
+title: Hostname in Linux
+---
+
 
 `hostnamectl status` 可查看当前主机信息。
 

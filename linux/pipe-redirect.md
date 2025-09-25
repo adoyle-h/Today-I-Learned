@@ -1,6 +1,9 @@
-## 管道重定向
+---
+title: 管道重定向
+---
 
-### 重定向输出
+
+## 重定向输出
 
 > 可通过两种方式将输出重定向到文件：
 > n>
@@ -11,7 +14,7 @@
 > 摘录自 https://web.archive.org/web/20170506093023/https://www.ibm.com/developerworks/cn/linux/l-lpic1-103-4/index.html
 
 
-### 输入重定向
+## 输入重定向
 
 > Command < filename	Command 命令以 filename 文件作为标准输入
 
@@ -25,7 +28,7 @@
 HereDoc 详见 [./here-strings-and-here-documents.md](./here-strings-and-here-documents.md)
 
 
-#### UUOC
+### UUOC
 
 `cat <file> | grep <pattern>` 不如 `< <file> grep <pattern>`
 
@@ -33,7 +36,7 @@ HereDoc 详见 [./here-strings-and-here-documents.md](./here-strings-and-here-do
 
 [Useless Use Of Cat (UUOC)](https://www.wikiwand.com/en/Cat_\(Unix\)#Useless_use_of_cat)
 
-### 绑定重定向
+## 绑定重定向
 
 > Command  >&m	把标准输出重定向到文件描述符 m 中，如 ls >&1
 > Command m>&n	把往文件描述符 m 的输出重定向到文件描述符 n 上，2>71。再如上面的完整写法是 1>&m
@@ -44,11 +47,11 @@ HereDoc 详见 [./here-strings-and-here-documents.md](./here-strings-and-here-do
 
 使用 tee 命令拆分输出
 
-### 管道重定向
+## 管道重定向
 
 `|&` 把上一个命令的 stderr 输出到 stdout。
 
-### 只传递 stderr
+## 只传递 stderr
 
 `(time sleep 1) 3>&1 1>&2 2>&3 | grep real`
 

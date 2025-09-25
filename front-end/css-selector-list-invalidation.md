@@ -1,4 +1,7 @@
-## CSS Selector list invalidation
+---
+title: CSS Selector list invalidation
+---
+
 
 MDN 里有[这么一段](https://developer.mozilla.org/en-US/docs/Web/CSS/Selector_list):
 
@@ -18,7 +21,7 @@ MDN 里有[这么一段](https://developer.mozilla.org/en-US/docs/Web/CSS/Select
 
 这在 W3C 里也有定义，见 [4.1. Selector Lists](https://www.w3.org/TR/selectors-4/#grouping)
 
-### 解决方案
+## 解决方案
 
 MDN 也提出一个变通办法，用 `:is()`。
 

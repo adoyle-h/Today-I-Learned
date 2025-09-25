@@ -1,4 +1,7 @@
-# dpkg
+---
+title: dpkg
+---
+
 
 - 显示包内容：`dpkg -L $pkg`
 - 显示本地已安装的包：`dpkg -l`

@@ -1,4 +1,7 @@
-# dmesg
+---
+title: dmesg
+---
+
 
 dmesg 用来显示或控制内核环缓冲区（kernel-ring buffer）的内容。
 

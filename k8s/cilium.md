@@ -1,6 +1,9 @@
-## Cilium
+---
+title: Cilium
+---
 
-### 安装 Cilium
+
+## 安装 Cilium
 
 目前只有通过 helm 来安装这一种方式。默认选项是基于 iptables 的不是基于 eBPF。得改设置。
 
@@ -8,7 +11,7 @@ https://arthurchiao.art/blog/cilium-life-of-a-packet-pod-to-service/
 
 安装后记得 `kubectl logs` 检查 cilium-agent 的日志。
 
-### 两个 cilium
+## 两个 cilium
 
 存在两个同名的 cilium 可执行程序。
 
@@ -18,23 +21,26 @@ https://arthurchiao.art/blog/cilium-life-of-a-packet-pod-to-service/
 
 官方解释见[这个 issue](https://github.com/cilium/cilium/issues/17098#issuecomment-895049182)。
 
-### Cilium 网络拓扑
+## Cilium 网络拓扑
 
 参考资料
 
 - [Life of a Packet in Cilium: Discovering the Pod-to-Service Traffic Path and BPF Processing Logics](https://archive.ph/55Aou)
 
-### 检查网络链路
+## 检查网络链路
 
-#### 举个例子
+### 举个例子
 
 当 cilium 出现问题，导致 K8S 的 coredns 连不上外部的 DNS 服务。
 假设外部的 DNS 服务是 `192.168.1.100:53`。宿主机 IP 是 `192.168.1.3`。
 
-#### 复现问题
+### 复现问题
 
 ```sh
-# 查询得到 POD ID
+---
+title: 查询得到 POD ID
+---
+
 $ sudo crictl ps --name coredns
 CONTAINER           IMAGE               CREATED             STATE               NAME                ATTEMPT             POD ID
 5a9e848f25468       8d147537fb7d1       3 hours ago         Running             coredns             0                   f7c44073c6765
@@ -54,7 +60,7 @@ $ sudo nsenter -t 1888931 -n ping 192.168.1.100
 $ sudo nsenter -t 1888931 -n nc -vz 192.168.1.100 53
 ```
 
-#### 检查 POD 至 HOST 的网络链路
+### 检查 POD 至 HOST 的网络链路
 
 ```sh
 # 容器的 netns 默认只有 lo 和 eth0 接口
@@ -123,4 +129,4 @@ $ sudo nsenter -t 1888931 -n ip neigh
 以上都是正常情况的结果，便于和异常情况做对比。
 
 
-### Cilium 的 Flow 数据存哪里？
+## Cilium 的 Flow 数据存哪里？

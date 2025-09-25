@@ -1,4 +1,7 @@
-## CLD 图
+---
+title: CLD 图
+---
+
 
 [CLD (Causal Loop Diagram)][CLD] 是一种以有向图的方式可视化地展示一个系统里变量间的关系。
 
@@ -23,9 +26,9 @@ CLD 图虽然呈现了变量间的关系，但没有表现关系的相关程度�
 （注意：以上都是我的个人意见，不具有权威性）
 
 
-### 参考
+## 参考
 
 - [CAUSAL LOOP CONSTRUCTION: THE BASICS](https://thesystemsthinker.com/causal-loop-construction-the-basics/)
-- [](https://yilv.github.io/LargeScaleProductDevelopmentOrganization/Chapter2/SystemsThinking.html)
+- [大规模产品开发组织系统动态 - 第二章 系统思考](https://yilv.github.io/LargeScaleProductDevelopmentOrganization/Chapter2/SystemsThinking.html)
 
 [CLD]: https://www.wikiwand.com/en/Causal_loop_diagram

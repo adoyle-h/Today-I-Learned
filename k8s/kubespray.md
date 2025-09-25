@@ -1,41 +1,19 @@
-## Kubespray
+---
+title: Kubespray
+---
+
 
 https://github.com/kubernetes-sigs/kubespray
 
-### TOC
 
-<!-- MarkdownTOC GFM -->
-
-- [链接](#链接)
-- [Kubespray with Vagrant](#kubespray-with-vagrant)
-    - [变量](#变量)
-    - [失败重试](#失败重试)
-    - [Vagrant 单节点部署](#vagrant-单节点部署)
-- [Ansible 打印格式](#ansible-打印格式)
-- [与之前版本不同的变动](#与之前版本不同的变动)
-    - [移除了 hyperkube 镜像](#移除了-hyperkube-镜像)
-    - [移除了 dockerproject_ 变量](#移除了-dockerproject_-变量)
-- [准备镜像与文件](#准备镜像与文件)
-    - [系统 RPM 包](#系统-rpm-包)
-    - [Docker RPM](#docker-rpm)
-    - [Docker 镜像](#docker-镜像)
-- [在离线环境部署](#在离线环境部署)
-- [部署结果](#部署结果)
-    - [K8S 组件](#k8s-组件)
-    - [镜像](#镜像)
-- [nodelocaldns](#nodelocaldns)
-
-<!-- /MarkdownTOC -->
-
-
-### 链接
+## 链接
 
 - [Ansible 变量](https://github.com/kubernetes-sigs/kubespray/blob/master/docs/vars.md)
 - [Ansible Group Vars](https://github.com/kubernetes-sigs/kubespray/blob/master/docs/ansible.md#group-vars-and-overriding-variables-precedence)
 - [Ansible Tags](https://github.com/kubernetes-sigs/kubespray/blob/master/docs/ansible.md#ansible-tags)
 - [下载二进制文件和镜像](https://github.com/kubernetes-sigs/kubespray/blob/master/docs/downloads.md)
 
-### Kubespray with Vagrant
+## Kubespray with Vagrant
 
 因为用了 Vagrant 的 Ansible Provision，它会自动生成 ansible inventory 目录，路径是 `<Vagrantfile 所在目录>/.vagrant/provisioners/ansible/inventory`。
 且根据 `ansible.host_vars` 和 `ansible.groups` 配置生成 vagrant_ansible_inventory 文件。
@@ -46,7 +24,10 @@ https://github.com/kubernetes-sigs/kubespray
 因此 Kubespray 的 Vagrantfile 做了一点处理，生成一个软连接，把 `.vagrant/provisioners/ansible/inventory` 指向到 `kubespray/inventory/test_local/`，以此来复用 kubespray 里的 inventory。（这里的 `test_local` 是我的 inventory 目录）
 
 ```ruby
-# if $inventory is not set, try to use example
+---
+title: if $inventory is not set, try to use example
+---
+
 $inventory = "inventory/sample" if ! $inventory
 $inventory = File.absolute_path($inventory, File.dirname(__FILE__))
 
@@ -79,17 +60,17 @@ end
 
 你也可以在 Vagrantfile 里设置 `ansible.inventory_path` 来修改 ansible 使用的 inventory 路径。
 
-#### 变量
+### 变量
 
 在 Vagrantfile 里有用 ansible provision 设置 host_vars。生成在 `vagrant_ansible_inventory` 文件里。
 
-#### 失败重试
+### 失败重试
 
 `ansible-playbook -vvv -i .vagrant/provisioners/ansible/inventory/vagrant_ansible_inventory cluster.yml`
 
 详见 https://github.com/kubernetes-sigs/kubespray/blob/master/docs/vagrant.md#example-use-of-vagrant
 
-#### Vagrant 单节点部署
+### Vagrant 单节点部署
 
 vagrant/config.rb 设置如下，
 
@@ -100,7 +81,7 @@ $kube_master_instances = $num_instances == 1 ? $num_instances : ($num_instances 
 $kube_node_instances = $num_instances
 ```
 
-### Ansible 打印格式
+## Ansible 打印格式
 
 修改 `ansible.cfg` 的 `stdout_callback` 参数，
 
@@ -109,23 +90,23 @@ $kube_node_instances = $num_instances
 `nocows=1` 禁止 cowsay。
 参考 [Callback Plugins](https://docs.ansible.com/ansible/latest/plugins/callback.html)。
 
-### 与之前版本不同的变动
+## 与之前版本不同的变动
 
-#### 移除了 hyperkube 镜像
+### 移除了 hyperkube 镜像
 
 因为新版本 kubeadm 不依赖 hyperkube 镜像。
 
 https://github.com/kubernetes-sigs/kubespray/pull/5378
 
-#### 移除了 dockerproject_ 变量
+### 移除了 dockerproject_ 变量
 
 例如 `dockerproject_rh_repo_base_url` 和 `dockerproject_rh_repo_gpgkey`。
 
 https://github.com/kubernetes-sigs/kubespray/pull/5662
 
-### 准备镜像与文件
+## 准备镜像与文件
 
-#### 系统 RPM 包
+### 系统 RPM 包
 
 ```
 "common_required_pkgs": [
@@ -171,9 +152,9 @@ common_required_pkgs + required_pkgs: [
 
 libselinux-python, ebtables, rsync 是 centos 系统已经安装的。
 
-#### Docker RPM
+### Docker RPM
 
-#### Docker 镜像
+### Docker 镜像
 
 Vagrant 设置 `download_cache_dir`，`vagrant up` 后 docker 文件和部分二进制文件会在这里。例如，
 
@@ -206,7 +187,7 @@ Vagrant 设置 `download_cache_dir`，`vagrant up` 后 docker 文件和部分二
 └── kubelet-v1.16.7-amd64*
 ```
 
-### 在离线环境部署
+## 在离线环境部署
 
 查看 `ip route` 会发现默认路由经过 `eth0`，这导致虚拟机可以访问宿主机，从而访问外网。
 
@@ -220,9 +201,9 @@ config.vm.provision "shell",
 
 参考 https://www.vagrantup.com/docs/networking/public_network.html#default-router
 
-### 部署结果
+## 部署结果
 
-#### K8S 组件
+### K8S 组件
 
 ```
 $ kubectl get all --all-namespaces
@@ -279,7 +260,7 @@ kube-system   replicaset.apps/kubernetes-dashboard-5d7898548b   1         1     
 kube-system   replicaset.apps/metrics-server-86df4cdc78         1         1         0       8d
 ```
 
-#### 镜像
+### 镜像
 
 ```
 $ docker images
@@ -307,7 +288,7 @@ gcr.azk8s.cn/google_containers/pause-amd64                             3.1      
 quay.azk8s.cn/coreos/flannel-cni                                       v0.3.0              221392217215        2 years ago         49.8MB
 ```
 
-### nodelocaldns
+## nodelocaldns
 
 kubespray 默认给 nodelocaldns 设置的 ip 是 `169.254.25.10`。这可能有坑。
 因为 `169.254.0.0/16` 一般是设备从 DHCP 分配 IP 失败或者没有 DHCP 服务器时，就会随机在这个 B 类地址段获取一个地址。

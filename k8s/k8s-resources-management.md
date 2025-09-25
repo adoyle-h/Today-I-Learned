@@ -1,4 +1,7 @@
-## K8S 资源规划
+---
+title: K8S 资源规划
+---
+
 
 1. [为系统守护进程预留计算资源](https://kubernetes.io/zh/docs/tasks/administer-cluster/reserve-compute-resources/)，Kubelet Flag:
   - Kube 预留值 --kube-reserved 和 --kube-reserved-cgroup

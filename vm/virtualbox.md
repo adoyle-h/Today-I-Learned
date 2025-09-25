@@ -1,10 +1,13 @@
-## Virtualbox
+---
+title: Virtualbox
+---
 
-### 开启网络访问
+
+## 开启网络访问
 
 默认虚拟机的网络配置是 NAT。如果虚拟机里访问不了外网，可能是 ifcfg 配置不对。查看 /etc/sysconfig/network-scripts/ifcfg-en 开头的文件，把 ONBOOT 的值改成 yes，然后 `service network restart` 即可。
 
-### 开启共享粘贴板
+## 开启共享粘贴板
 
 共享粘贴板只支持 GUI 环境，**不支持终端环境**。终端环境的解决方案只有虚拟机里开一个 sshd，在宿主机 ssh 进去，即在宿主机环境操作。
 
@@ -25,7 +28,10 @@ rmdir /media/cdrom1
 如果安装失败 VBoxLinuxAdditions.run，屏幕打印出 `Kernel headers not found for target kernel`，很可能是 kernel-headers 不匹配。因为 VBoxGuestAdditions 依赖 kernel-devel 和 kernel-headers，即使主机上装了，也不一定版本匹配。所以先确认版本。
 
 ```sh
-# 确认本机 kernel 版本
+---
+title: 确认本机 kernel 版本
+---
+
 uname -r
 # 确认 kernel-devel 的 rpm 包 (我用的是 CentOS，其他系统对应自己找)
 rpm -qa | grep kernel-devel

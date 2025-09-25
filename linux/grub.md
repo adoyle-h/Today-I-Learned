@@ -1,4 +1,7 @@
-# GNU GRUB
+---
+title: GNU GRUB
+---
+
 
 本文默认都是 [GNU GRUB 2](https://www.gnu.org/software/grub/)。
 

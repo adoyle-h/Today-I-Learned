@@ -1,4 +1,7 @@
-# 苹果芯片的 Mac 电脑构建 x86 镜像
+---
+title: 苹果芯片的 Mac 电脑构建 x86 镜像
+---
+
 
 当使用苹果芯片的 Mac 电脑，docker build/pull/run 默认操作的都是 arm64 架构的镜像。
 

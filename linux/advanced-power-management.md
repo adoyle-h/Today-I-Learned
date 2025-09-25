@@ -1,4 +1,7 @@
-# 硬盘电源管理
+---
+title: 硬盘电源管理
+---
+
 
 英文名 Advanced Power Management，简称 APM。
 

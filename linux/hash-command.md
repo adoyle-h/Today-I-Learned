@@ -1,4 +1,7 @@
-## hash 命令
+---
+title: hash 命令
+---
+
 
 - cksum: crc32 算法
 - shasum: sha1 算法(默认)

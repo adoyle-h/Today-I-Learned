@@ -1,4 +1,7 @@
-## 安装 Linux 系统
+---
+title: 安装 Linux 系统
+---
+
 
 - Linux To Go
 - Linux Live CD

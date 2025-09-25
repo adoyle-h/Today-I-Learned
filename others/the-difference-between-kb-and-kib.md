@@ -1,4 +1,7 @@
-## KB 与 KiB 的不同
+---
+title: KB 与 KiB 的不同
+---
+
 
 KB 和 KiB 有差别（注意大小写敏感）。1000 比率是 **Kilobyte (KB)**，1024 比率是 **Kibibyte (KiB)**。
 这是 [国际单位制 (International System of Units，简称 SI)](https://www.wikiwand.com/en/International_System_of_Units) 制定的。

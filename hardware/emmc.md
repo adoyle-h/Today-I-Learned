@@ -1,4 +1,7 @@
-# EMMC
+---
+title: EMMC
+---
+
 
 ## 检查 emmc 健康状态
 

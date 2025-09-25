@@ -1,10 +1,13 @@
-## winston 日志库
+---
+title: winston 日志库
+---
 
-### 缺点
+
+## 缺点
 
 - 进程立刻退出后，日志没写到文件里。
 
-#### process.exit() 后，日志没写到文件里
+### process.exit() 后，日志没写到文件里
 
 这个现象发生在程序刚启动，创建 logger，并且执行 `logger.log()`，然后立刻 `process.exit()`。会发现日志没落盘。
 

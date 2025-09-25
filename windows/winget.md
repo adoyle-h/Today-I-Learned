@@ -1,4 +1,7 @@
-# winget
+---
+title: winget
+---
+
 
 [winget](https://github.com/microsoft/winget-cli) 是 windows 包管理器。
 

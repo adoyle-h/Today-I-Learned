@@ -1,4 +1,7 @@
-## Docker Tag/Id/Digest
+---
+title: Docker Tag/Id/Digest
+---
+
 
 「此为草稿」
 
@@ -7,7 +10,7 @@ Docker image/layer 的 id 和 digest 设计
 - [Explaining Docker Image IDs](https://windsock.io/explaining-docker-image-ids/)
 - https://gist.github.com/aaronlehmann/b42a2eaf633fc949f93b
 
-### 各个命令的参数
+## 各个命令的参数
 
 ```
 Usage:  docker inspect  [OPTIONS] NAME|ID [NAME|ID...]
@@ -30,17 +33,17 @@ Usage:  docker tag      SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]
 
 - docker images 只能查 Tag，查不了 DIGEST。只有 docker inspect 能查 DIGEST
 
-### 无名无版本号的镜像
+## 无名无版本号的镜像
 
 docker pull DIGEST 时，导出的镜像的 name 和 tag 都是 `<none>`。
 
-### Docker Tag
-### Docker Id
-### Docker Digest
+## Docker Tag
+## Docker Id
+## Docker Digest
 
-### Docker save
+## Docker save
 
-### 实验
+## 实验
 
 「待改成 Ansible Playbook」
 
@@ -62,7 +65,10 @@ docker pull DIGEST 时，导出的镜像的 name 和 tag 都是 `<none>`。
         "Container": "0a80155a31551fcc1a36fccbbda79fcd3f0b1c7d270653d00310e6e2217c57e6",
         "ContainerConfig": {
 
-# 分别根据 SHA、Tag、Id 导出镜像
+---
+title: 分别根据 SHA、Tag、Id 导出镜像
+---
+
 > docker save alpine@sha256:72c42ed48c3a2db31b7dafe17d275b634664a708d901ec9fd57b1529280f01fb -o image-sha
 > docker save alpine:latest -o image-tag
 > docker save 961769676411 -o image-id

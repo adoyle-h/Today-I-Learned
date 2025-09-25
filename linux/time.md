@@ -1,4 +1,7 @@
-# time 命令
+---
+title: time 命令
+---
+
 <!-- editorconfig-checker-disable-file -->
 
 当在 shell 里执行 `type time` 会提示 `time is a shell keyword`。通常我们使用的 `time` 只是 shell 内置的关键字，跟 function 一样。

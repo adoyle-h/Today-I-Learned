@@ -1,4 +1,7 @@
-## compgen
+---
+title: compgen
+---
+
 
 `compgen` 命令可用来模糊搜索文件名。
 
@@ -15,7 +18,7 @@ compgen -G "./*.bash"
 sort <(compgen -G "./*.bash")
 ```
 
-### 补全文件（不包括目录）路径的例子
+## 补全文件（不包括目录）路径的例子
 
 ```sh
 result=$(compgen -f "$2")

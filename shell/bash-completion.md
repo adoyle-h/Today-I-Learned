@@ -1,4 +1,7 @@
-# bash completion
+---
+title: bash completion
+---
+
 
 ## 显示某个命令的补全规则
 

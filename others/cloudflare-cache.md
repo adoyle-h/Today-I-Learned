@@ -1,4 +1,7 @@
-# cloudflare 缓存
+---
+title: cloudflare 缓存
+---
+
 
 cloudflare 默认会缓存 JS、CSS 等请求资源。（根据请求响应头的 Cache-Control 头判断是否缓存）
 当 URL 不变时，cloudflare 会直接返回缓存内容，不请求源服务器。

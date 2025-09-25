@@ -1,4 +1,7 @@
-# git http clone
+---
+title: git http clone
+---
+
 
 ## https clone github 需要用户名和密码
 

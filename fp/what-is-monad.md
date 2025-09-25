@@ -1,6 +1,9 @@
-## 什么是 Monad
+---
+title: 什么是 Monad
+---
 
-### Monad (n.)
+
+## Monad (n.)
 
 - 用普通语言解释，Monad 是一种类型无关的符合特定行为的抽象结构。
 - 用编程语言解释，Monad 是一个类型类（元类）。
@@ -14,13 +17,13 @@
 
 Monad 是一种 Functor。
 
-### 预备知识
+## 预备知识
 
 - 范畴论
 - 函子
 - 态射
 
-### Monadic (adj.)
+## Monadic (adj.)
 
 > “Monadic” 仅仅表示 “和 Monad 相关的”。一个 monadic 类型就是一个 Monad 类型类的实例；一个 monadic 值就是一个具有 monadic 类型的值。
 >
@@ -29,18 +32,18 @@ Monad 是一种 Functor。
 [^1]: http://cnhaskell.com/chp/14.html#and-now-a-jargon-moment
 
 
-### JS 的 Promise 实际上是一种 Monad
+## JS 的 Promise 实际上是一种 Monad
 
 跟 Either Monad 有点像，要么是 Fulfilled 状态（Right 值），要么是 Rejected 状态（Left 值），只不过在这之前是 Pending 状态。
 
-### factorial(5) 与 120
+## factorial(5) 与 120
 
 有些语言不使用 return 关键字来返回函数值：因为一个函数就是一个单独的表达式（expression），而不是一组陈述（statement），求值表达式所得的结果就是函数的返回值。
 
 所以这就是函数式编程与命令式编程的区别。
 
 
-### 暗箱，隐藏细节
+## 暗箱，隐藏细节
 
 >当看见一个参数化类型（parameterized type）时，这表示代码并不在乎实际的类型是什么。另外，我们还可以给出一个更强的陈述：没有办法知道参数化类型的实际类型是什么，也不能操作这种类型的值；不能创建这种类型的值，也不能对这种类型的值进行探查（inspect）。
 >
@@ -59,7 +62,7 @@ Nothing 是对空的装箱。你不必每次自己去判断函数返回值是否
 a convenient alternative to exceptions
 
 
-### Maybe 类型
+## Maybe 类型
 
 Maybe 是一种 Monad。
 
@@ -70,7 +73,7 @@ Haskell 对于 Maybe 的定义是 `data Maybe a = Nothing | Just a`。
 以程序角度来解释，不用 `a` 而用 `Just a` 是为了配合 Functor 统一处理，要不然层次上就差了一层。
 
 
-### 参考书籍
+## 参考书籍
 
 - http://cnhaskell.com/
 - http://learnyouahaskell.com/

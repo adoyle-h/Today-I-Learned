@@ -1,4 +1,7 @@
-# CIE 色彩空间
+---
+title: CIE 色彩空间
+---
+
 
 ## CIERGB
 

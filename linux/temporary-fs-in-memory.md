@@ -1,4 +1,7 @@
-# 基于内存的虚拟文件系统 tmpfs/ramfs/RamDisk
+---
+title: 基于内存的虚拟文件系统 tmpfs/ramfs/RamDisk
+---
+
 
 ## tmpfs
 

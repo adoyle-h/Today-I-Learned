@@ -1,4 +1,7 @@
-## bash error exit
+---
+title: bash error exit
+---
+
 
 以下几种情况都会导致 `set -o errexit` 失效。
 
@@ -8,7 +11,7 @@
 4. 在 if 条件中
 5. 在 `&&` 或 `||` 或 `|` 之前
 
-### 例如
+## 例如
 
 ```sh
 #!/usr/bin/env bash
@@ -44,7 +47,7 @@ main "$@"
 after throw_error
 ```
 
-### 使用 errtrace 和 trap
+## 使用 errtrace 和 trap
 
 只能使用 `set -o errtrace` 并且 `trap ERR`，在自己的错误处理函数中及时 exit 1 才能有效中断后续执行。
 

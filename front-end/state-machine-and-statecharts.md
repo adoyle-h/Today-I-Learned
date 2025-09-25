@@ -1,4 +1,7 @@
-## 状态机与状态图
+---
+title: 状态机与状态图
+---
+
 
 - https://statecharts.github.io/
 - https://github.com/davidkpiano/xstate
@@ -11,12 +14,12 @@
 - [The state reducer pattern](https://blog.kentcdodds.com/the-state-reducer-pattern-%EF%B8%8F-b40316cfac57) ([链接备份](https://web.archive.org/web/20221004124601/https://kentcdodds.com/blog/the-state-reducer-pattern))
 - [高效設計 UI 狀態、以及無痛與工程師溝通的 FSM 表格](https://medium.com/@vinceshao/better-way-of-designing-ui-states-chinese-a5c43e46d391) ([链接备份](https://web.archive.org/web/20210430054937/https://medium.com/@vinceshao/better-way-of-designing-ui-states-chinese-a5c43e46d391))
 
-### 不要混淆状态和数据
+## 不要混淆状态和数据
 
 状态图是静置的。
 数据是动态的。
 
-### 状态图解决什么问题
+## 状态图解决什么问题
 
 显示定义 Model 的当前状态和未来状态。可预测未来状态。
 以高层视角去理解应用的内部情况。

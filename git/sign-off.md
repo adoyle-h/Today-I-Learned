@@ -1,4 +1,7 @@
-## Git sign-off
+---
+title: Git sign-off
+---
+
 
 - `git commit -s`
 - `git commit -S <key-id>`

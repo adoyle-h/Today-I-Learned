@@ -1,4 +1,7 @@
-## NodeJS GC
+---
+title: NodeJS GC
+---
+
 
 [基本概念](../language/gc.md)。
 

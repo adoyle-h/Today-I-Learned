@@ -1,4 +1,7 @@
-## Mac 自启动配置 plist
+---
+title: Mac 自启动配置 plist
+---
+
 
 信息来源：https://wild-flame.github.io/guides/docs/mac-os-x-setup-guide/preference_and_settings/launch
 

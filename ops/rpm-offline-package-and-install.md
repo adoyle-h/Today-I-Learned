@@ -1,17 +1,8 @@
-## RPM 制作和安装离线包
+---
+title: RPM 制作和安装离线包
+---
 
-<!-- MarkdownTOC GFM -->
-
-- [在有网环境制作离线包](#在有网环境制作离线包)
-    - [yum install --downloadonly](#yum-install---downloadonly)
-    - [yumdownloader](#yumdownloader)
-    - [开启 yum 缓存](#开启-yum-缓存)
-- [在离线环境安装 RPM 包](#在离线环境安装-rpm-包)
-    - [yum install vs yum localinstall](#yum-install-vs-yum-localinstall)
-
-<!-- /MarkdownTOC -->
-
-### 在有网环境制作离线包
+## 在有网环境制作离线包
 
 有以下几种方式，三选一。
 
@@ -19,7 +10,7 @@
 2. 开启 yum 缓存
 3. yumdownloader
 
-#### yum install --downloadonly
+### yum install --downloadonly
 
 `--downloadonly` 的意思是只下载，不安装。
 
@@ -33,21 +24,21 @@ yum 将会下载所有的依赖包。
 
 `yum reinstall --downloadonly --downloaddir=<path-to-cache-directory> <package-name>`
 
-#### yumdownloader
+### yumdownloader
 
 `yum install yum-utils` 安装 `yumdownloader`。
 
 `yumdownloader <package-name>`，会只下载，不安装。且不会下载依赖包。
 
-#### 开启 yum 缓存
+### 开启 yum 缓存
 
 详见[这篇文档](./yum.md#yum-缓存)。
 
-### 在离线环境安装 RPM 包
+## 在离线环境安装 RPM 包
 
 先用 `createrepo` 创建本地软件仓库。然后在 `/etc/yum.repos.d/` 配置软件源指向本地仓库，最后用 yum install 来安装。
 
-#### yum install vs yum localinstall
+### yum install vs yum localinstall
 
 > In RHEL 5 and previous versions, yum install only accepted package names from enabled repositories, and did not accept paths to local RPMs; you had to use yum localinstall to install these.
 >

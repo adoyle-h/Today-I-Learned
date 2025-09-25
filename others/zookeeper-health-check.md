@@ -1,4 +1,7 @@
-## zookeeper 健康检查
+---
+title: zookeeper 健康检查
+---
+
 
 建议使用这个脚本: `[[ $(echo ruok | nc localhost 2181) == imok ]]`。
 

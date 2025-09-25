@@ -1,3 +1,6 @@
-## 制作 deb 包
+---
+title: 制作 deb 包
+---
+
 
 https://wiki.debian.org/HowToPackageForDebian

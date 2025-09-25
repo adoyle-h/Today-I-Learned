@@ -1,4 +1,7 @@
-## 用户增加用户组
+---
+title: 用户增加用户组
+---
+
 
 `usermod -a -G $group $user`
 

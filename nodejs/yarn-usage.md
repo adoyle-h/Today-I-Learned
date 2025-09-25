@@ -1,6 +1,9 @@
-## Yarn 用法
+---
+title: Yarn 用法
+---
 
-### Yarn workspace 和 lerna
+
+## Yarn workspace 和 lerna
 
 当 yarn workspace 和 lerna 同时使用时，需要给 `lerna.json` 加上 `"useWorkspaces": true` 来使用 Yarn workspace 的配置。
 ```
@@ -11,7 +14,7 @@
 }
 ```
 
-### workspace 导致子项目的 node_modules/.bin 被提升到父项目
+## workspace 导致子项目的 node_modules/.bin 被提升到父项目
 
 这会导致问题，比如 eslint 找不到插件配置，比如子项目的依赖版本不同，都被提升到父项目，同名依赖最终的版本是不确定的。
 
@@ -24,7 +27,7 @@
 - https://yarnpkg.com/lang/en/docs/workspaces/#toc-limitations-caveats
 - https://yarnpkg.com/blog/2018/02/15/nohoist/
 
-### 目前无法 nohoist 子项目本身
+## 目前无法 nohoist 子项目本身
 
 见 issues:
 

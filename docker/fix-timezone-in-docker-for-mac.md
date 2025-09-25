@@ -1,4 +1,7 @@
-## 修正 Docker for mac 时区问题
+---
+title: 修正 Docker for mac 时区问题
+---
+
 
 在容器中修正时间没有用，因为宿主机是 Alpine moby 虚拟机，而非你的 mac。
 
@@ -15,11 +18,11 @@ apk update
 apk add tzdata
 ```
 
-### 找不到 `setup-apkcache` 命令？
+## 找不到 `setup-apkcache` 命令？
 
 执行 `apk add alpine-conf` 来安装 /sbin/setup-* 脚本。参考[这篇短文][0]
 
-### 然而
+## 然而
 
 因为 Docker for mac 是跑在虚拟机里，如果没有持久化数据，重启之后你所做的修改就都没了。然而我还不知道怎么保存数据。
 

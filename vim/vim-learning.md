@@ -1,40 +1,17 @@
-## 学习 Vim
+---
+title: 学习 Vim
+---
+
 
 先看完 [vim-galore](https://github.com/mhinz/vim-galore)
 
-### TOC
-
-<!-- MarkdownTOC depth=2 GFM -->
-
-- [概念](#概念)
-- [Cheatsheets](#cheatsheets)
-- [调试](#调试)
-- [技巧](#技巧)
-    - [改变字符大小写](#改变字符大小写)
-    - [swap 文件](#swap-文件)
-    - [`[]`,`{}`,`""`,`''` 快速操作](#-快速操作)
-- [等号，缩进对齐](#等号缩进对齐)
-- [单词边界](#单词边界)
-- [在 vim 里直接打开连接](#在-vim-里直接打开连接)
-- [CTRL-X mode](#ctrl-x-mode)
-    - [在 INSERT 模式下输入文件路径](#在-insert-模式下输入文件路径)
-- [autochdir](#autochdir)
-- [一次打开多个文件](#一次打开多个文件)
-- [用管道读取内容](#用管道读取内容)
-- [diff 多个文件](#diff-多个文件)
-- [在每行末尾添加文字](#在每行末尾添加文字)
-- [输入换行符 ^M](#输入换行符-m)
-- [查看变量在哪被修改](#查看变量在哪被修改)
-
-<!-- /MarkdownTOC -->
-
-### 概念
+## 概念
 
 - normal、insert、visual 等模式
 - window、pane、buffer
 - set、let、command
 
-### Cheatsheets
+## Cheatsheets
 
 ![vim-cheat-sheet-en.png](http://people.csail.mit.edu/vgod/vim/vim-cheat-sheet-en.png)
 翻译版：
@@ -49,7 +26,7 @@
 https://vim.rtorr.com/lang/zh_tw/
 
 
-### 调试
+## 调试
 `vim --startuptime timefile <文件名>` 调试 vim 启动各阶段所用时间。
 
 `awk '{if ($2 > 100 && NR > 6) print $2, $(NF-1), $NF, NR}' timefile | sort -r`  查看占用时间 >100ms 的步骤
@@ -65,15 +42,15 @@ https://vim.rtorr.com/lang/zh_tw/
 :noautocmd qall!
 ```
 
-### 技巧
+## 技巧
 
-#### 改变字符大小写
+### 改变字符大小写
 
 使用 `~` 或者 `vu`、`vU`
 
 [参考](http://vim.wikia.com/wiki/Switching_case_of_characters)
 
-#### swap 文件
+### swap 文件
 
 |    命令   |          描述          |
 |:---------:|:----------------------:|
@@ -81,22 +58,22 @@ https://vim.rtorr.com/lang/zh_tw/
 |  :recover |     从交换文件恢复     |
 | :swapname | 查看当前交换文件的名称 |
 
-#### `[]`,`{}`,`""`,`''` 快速操作
+### `[]`,`{}`,`""`,`''` 快速操作
 
 vim documentation 有两个章节：[object-motions][] 和 [object-select][]。非常有用。
 
 [object-motions]: http://vimdoc.sourceforge.net/htmldoc/motion.html#object-motions
 [object-select]: http://vimdoc.sourceforge.net/htmldoc/motion.html#object-select
 
-### 等号，缩进对齐
+## 等号，缩进对齐
 
-### 单词边界
+## 单词边界
 
 使用 `iskeyword` 来改变单词边界的定义。用来改变 motion。
 
 例如 `autocmd BufRead *.js set isk-=.`，针对所有 js 文件，将 `.` 排除出去
 
-### 在 vim 里直接打开连接
+## 在 vim 里直接打开连接
 
 鼠标移到链接上，按键 `gx` 即可。
 `:h gx` 查看帮助
@@ -106,11 +83,11 @@ vim documentation 有两个章节：[object-motions][] 和 [object-select][]。�
 
 `netrw_filehandler` 可以用来扩展 gx 的解析。
 
-### CTRL-X mode
+## CTRL-X mode
 
 `:h ins-completion`
 
-#### 在 INSERT 模式下输入文件路径
+### 在 INSERT 模式下输入文件路径
 
 敲击 `ctrl-x ctrl-f` 会触发相对路径。
 
@@ -120,7 +97,7 @@ vim documentation 有两个章节：[object-motions][] 和 [object-select][]。�
 
 详见 `:h compl-filename`
 
-### autochdir
+## autochdir
 
 `set autochdir` 可以让当前目录自动切换到打开的文件所在目录。这会影响到文件路径补全，有时很有用。
 
@@ -134,7 +111,7 @@ vim documentation 有两个章节：[object-motions][] 和 [object-select][]。�
 参考自 https://superuser.com/a/604180/1776434
 
 
-### 一次打开多个文件
+## 一次打开多个文件
 
 ```
 -o[N]       Open N windows stacked horizontally.  If N is omitted, open one window for each file.  If N is less than the
@@ -145,7 +122,7 @@ vim documentation 有两个章节：[object-motions][] 和 [object-select][]。�
 -p[N]       Like -o, but for tab pages.
 ```
 
-### 用管道读取内容
+## 用管道读取内容
 
 `echo hello | vim -`
 
@@ -154,20 +131,20 @@ vim documentation 有两个章节：[object-motions][] 和 [object-select][]。�
             error, which should be a terminal.
 ```
 
-### diff 多个文件
+## diff 多个文件
 
 `vim -d file1 file2 [file3 [file4]]`
 
 类似 `vimdiff [options] file1 file2 [file3 [file4]]`
 
-### 在每行末尾添加文字
+## 在每行末尾添加文字
 
 `:'<,'>norm A<文字>`。`<文字>` 为要添加的文字内容。
 
-### 输入换行符 ^M
+## 输入换行符 ^M
 
 按下组合键 `Ctrl-V` 和 `Ctrl-M`。
 
-### 查看变量在哪被修改
+## 查看变量在哪被修改
 
 `:verbose set option?`

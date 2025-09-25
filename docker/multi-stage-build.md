@@ -1,8 +1,11 @@
-## docker 多阶段构建 (Multi-Stage Build)
+---
+title: docker 多阶段构建 (Multi-Stage Build)
+---
+
 
 https://docs.docker.com/build/building/multi-stage/
 
-### ARG 在每一阶段需要重复声明
+## ARG 在每一阶段需要重复声明
 
 ```Dockerfile
 ARG BASE_IMAGE

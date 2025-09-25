@@ -1,6 +1,9 @@
-## socket
+---
+title: socket
+---
 
-### socket 状态
+
+## socket 状态
 
 - CLOSED        没有使用这个套接字[netstat 无法显示closed状态]
 - LISTEN        套接字正在监听连接[调用listen后]

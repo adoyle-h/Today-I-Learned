@@ -1,4 +1,7 @@
-## 尾递归优化
+---
+title: 尾递归优化
+---
+
 
 很棒的文章: [Tail call optimization (TCO) in Node v6](https://medium.com/@dai_shi/tail-call-optimization-tco-in-node-v6-e2492c9d5b7c)
 
@@ -14,7 +17,7 @@
 尾递归小结: http://exploringjs.com/es6/ch_tail-calls.html#_checking-whether-a-function-call-is-in-a-tail-position
 
 
-### 其他
+## 其他
 
 [尾递归在 Elixir/Erlang 里的实现](../elixir/tail-call-optimization.md)
 

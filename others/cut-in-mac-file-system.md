@@ -1,4 +1,7 @@
-## Mac 文件系统的剪切快捷键
+---
+title: Mac 文件系统的剪切快捷键
+---
+
 
 1. 复制: command+c
 2. 粘贴(剪切): command+option+v

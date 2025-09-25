@@ -1,4 +1,7 @@
-## 用环境变量替换文本内容 envsubst
+---
+title: 用环境变量替换文本内容 envsubst
+---
+
 
 `envsubst` 用于将文件中出现的 `${var}` `$var` 用环境变量替换掉。
 

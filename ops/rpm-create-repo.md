@@ -1,10 +1,13 @@
-## RPM 创建仓库
+---
+title: RPM 创建仓库
+---
+
 
 有两种方式，`createrepo` 和 `createrepo_c`。
 
 createrepo 依赖 yum，如果你没有装 yum，可以安装 createrepo_c。
 
-### createrepo
+## createrepo
 
 安装 createrepo rpm 包。
 
@@ -14,6 +17,6 @@ createrepo 依赖 yum，如果你没有装 yum，可以安装 createrepo_c。
 - http://createrepo.baseurl.org/index.html
 - https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/sec-configuring_yum_and_yum_repositories
 
-### createrepo_c
+## createrepo_c
 
 安装 createrepo_c rpm 包。用法跟 createrepo 一样，只不过命令是 `createrepo_c`。

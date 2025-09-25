@@ -1,4 +1,7 @@
-# systemd-timesyncd
+---
+title: systemd-timesyncd
+---
+
 
 systemd-timesyncd 是一个用于跨网络同步系统时钟的守护服务。类似 ntpd。
 

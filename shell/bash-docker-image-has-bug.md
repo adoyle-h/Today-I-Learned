@@ -1,4 +1,7 @@
-# Bash 镜像有 bug
+---
+title: Bash 镜像有 bug
+---
+
 
 https://hub.docker.com/_/bash
 

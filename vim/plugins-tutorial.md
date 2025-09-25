@@ -1,30 +1,19 @@
-## vim 插件教程
+---
+title: vim 插件教程
+---
 
-### TOC
+## [EasyAlign](https://github.com/junegunn/vim-easy-align)
 
-<!-- MarkdownTOC depth=2 GFM -->
-
-- [EasyAlign](#easyalign)
-    - [如何对齐 `//`](#如何对齐-)
-- [unite.vim](#unitevim)
-    - [file_rec/async 因为没有刷新缓存而找不到文件](#file_recasync-因为没有刷新缓存而找不到文件)
-- [indentLine](#indentline)
-    - [自定义符号](#自定义符号)
-
-<!-- /MarkdownTOC -->
-
-### [EasyAlign](https://github.com/junegunn/vim-easy-align)
-
-#### 如何对齐 `//`
+### 如何对齐 `//`
 
 普通方法是不行的。只有先按 `Ctrl-g`，再按两次 `/` 才可以对齐。
 
 参考 [issue](https://github.com/junegunn/vim-easy-align/issues/53)
 
 
-### [unite.vim](https://github.com/Shougo/unite.vim)
+## [unite.vim](https://github.com/Shougo/unite.vim)
 
-#### file_rec/async 因为没有刷新缓存而找不到文件
+### file_rec/async 因为没有刷新缓存而找不到文件
 
 两种解决方案：
 
@@ -34,9 +23,9 @@
 参考这个 [issue 的答案](https://github.com/Shougo/unite.vim/issues/930#issuecomment-220190238)。
 
 
-### [indentLine](https://github.com/Yggdroot/indentLine)
+## [indentLine](https://github.com/Yggdroot/indentLine)
 
-#### 自定义符号
+### 自定义符号
 
 indentLine 插件可以[自定义缩进字符][1]。
 

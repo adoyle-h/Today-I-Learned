@@ -1,4 +1,7 @@
-## node 中发 ICMP 包
+---
+title: node 中发 ICMP 包
+---
+
 
 参考 https://blog.ipsumdomus.com/node-js-plain-icmp-ping-implementation-85ac0b319bc2 （[链接备份](https://archive.md/YeH7F)）
 

@@ -1,9 +1,12 @@
-# 使用 acme.sh 生成证书
+---
+title: 使用 acme.sh 生成证书
+---
+
 
 [acme.sh](https://github.com/acmesh-official/acme.sh) 默认用的是 ZeroSSL，它需要用邮箱认证，比较麻烦。
 推荐用 letsencrypt，它不需要邮箱，而且支持泛域名。
 
-### 切换 CA
+## 切换 CA
 
 只要 acme.sh 命令加上 `--server letsencrypt` 参数即可修改 CA。
 

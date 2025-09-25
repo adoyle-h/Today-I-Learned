@@ -1,4 +1,7 @@
-## MaxListenersExceededWarning
+---
+title: MaxListenersExceededWarning
+---
+
 
 MaxListenersExceededWarning 是当 EventEmitter 实例监听的事件超过 MaxListeners 时，会在 process emit 的事件。
 但是这个事件只会触发一次。比如执行下面这段代码试试。

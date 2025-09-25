@@ -1,21 +1,24 @@
-## kustomize
+---
+title: kustomize
+---
+
 
 https://github.com/kubernetes-sigs/kustomize
 
-### kustomization.yaml
+## kustomization.yaml
 
 - [kustomization.yaml 模板](https://github.com/kubernetes-sigs/kustomize/tree/master/examples)
 - [Kustomization.yaml Reference](https://kubectl.docs.kubernetes.io/references/kustomize/kustomization/)
 
-### Overlay
+## Overlay
 
 kustomize 的原理是用渲染出不同的层，然后叠加合并所有层得到最终的 K8S YAML。
 
 所以 kustomize newTag 的作用范围只能在当前层，无法影响上一层。参考这个 [Issue](https://github.com/kubernetes-sigs/kustomize/issues/915)。这就导致开发者要写很多不必要的内容。
 
-### 目录结构
+## 目录结构
 
-#### 单项目，多环境
+### 单项目，多环境
 
 一个项目就是全部项目。
 
@@ -63,7 +66,7 @@ project/
 
 </details>
 
-#### 多项目，多环境
+### 多项目，多环境
 
 一个完整项目是由多个项目组成。
 
@@ -160,7 +163,7 @@ project/
 
 
 
-### Hash 后缀与滚动更新
+## Hash 后缀与滚动更新
 
 configMapGenerator 和 secretGenerator 生成的资源 name 会带 hash 后缀。
 
@@ -180,7 +183,7 @@ configMapGenerator 和 secretGenerator 生成的资源 name 会带 hash 后缀�
 
 相关文章[「configmap 和 secret 的滚动更新」](./rolling-update-of-configmap-and-secret.md)。
 
-### resource 通配符
+## resource 通配符
 
 ```yaml
 resources:
@@ -190,7 +193,7 @@ resources:
 以前支持，现在不支持了。https://github.com/kubernetes-sigs/kustomize/issues/119#issuecomment-400849155
 
 
-### 删除某个资源
+## 删除某个资源
 
 overlay 通常是叠加，但也可以用来删除资源。
 编辑 kustomization.yaml 文件，
@@ -218,7 +221,7 @@ patchesStrategicMerge:
 https://github.com/kubernetes-sigs/kustomize/issues/1384
 https://github.com/kubernetes-sigs/kustomize/issues/106
 
-### 组件组合
+## 组件组合
 
 [issues/1251](https://github.com/kubernetes-sigs/kustomize/issues/1251) 讨论如何实现组件在 overlay 的组合。
 

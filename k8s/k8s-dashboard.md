@@ -1,8 +1,11 @@
-## K8S Dashboard
+---
+title: K8S Dashboard
+---
+
 
 https://github.com/kubernetes/dashboard
 
-### 开启 http
+## 开启 http
 
 官方默认是 https 服务。需要修改以下几处开启 http 服务，
 参考 https://vividcode.io/disable-authentication-and-https-in-kubernetes-dashboard/
@@ -23,7 +26,7 @@ https://github.com/kubernetes/dashboard
   - 如果用 traefik ingress，可以修改 deploy 开启 `insecureSkipVerify` 选项，让 traefik 可以正常访问 https 后端服务。
 
 
-### Not Found (404) 无限重定向
+## Not Found (404) 无限重定向
 
 看前端请求记录，有一个请求返回了 404 错误，响应内容为 `the server could not find the requested resource`。然后发生重定向。
 
@@ -37,7 +40,7 @@ https://github.com/kubernetes/dashboard
 
 相关 [Issue](https://github.com/kubernetes-sigs/kubespray/issues/5347)，这个问题将在 [dashboard 2.0](https://github.com/kubernetes-sigs/kubespray/issues/5347#issuecomment-619543133) 解决。
 
-### User "system:serviceaccount:kube-system:kubernetes-dashboard" cannot list resource
+## User "system:serviceaccount:kube-system:kubernetes-dashboard" cannot list resource
 
 这是因为默认的 rolebinding kubernetes-dashboard-minimal 权限太小了。
 直接 `kubectl create clusterrolebinding kubernetes-dashboard --clusterrole=cluster-admin --serviceaccount=kube-system:kubernetes-dashboard` 授予全部权限完事。

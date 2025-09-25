@@ -1,4 +1,7 @@
-## pycache
+---
+title: pycache
+---
+
 
 ### __pycache__
 

@@ -1,4 +1,7 @@
-## anon_inode
+---
+title: anon_inode
+---
+
 
 根据 [`man proc` 文档](https://man7.org/linux/man-pages/man5/proc.5.html)
 

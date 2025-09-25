@@ -1,4 +1,7 @@
-# Stable Diffusion
+---
+title: Stable Diffusion
+---
+
 
 - Prompt: 提示词
 - Negative Prompt: 反向提示词

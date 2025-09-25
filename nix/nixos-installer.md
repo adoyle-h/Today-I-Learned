@@ -1,4 +1,7 @@
-# nixos installer
+---
+title: nixos installer
+---
+
 
 ## 安装系统卡住
 

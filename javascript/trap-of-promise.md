@@ -1,6 +1,9 @@
-## Promise 的坑
+---
+title: Promise 的坑
+---
 
-### bluebird 的 any/some 会吞 rejected promise
+
+## bluebird 的 any/some 会吞 rejected promise
 
 例如 any:
 

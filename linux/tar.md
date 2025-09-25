@@ -1,6 +1,9 @@
-## tar
+---
+title: tar
+---
 
-### --exlucde
+
+## --exlucde
 
 只能设置 `/tmp/n`。`/tmp/nn` 依然会被打包进去。恢复时不会对 `/tmp/n` 目录以及其下的文件做任何修改。
 

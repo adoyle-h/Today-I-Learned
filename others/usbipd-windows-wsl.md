@@ -1,4 +1,7 @@
-# usbipd 与 Windows WSL
+---
+title: usbipd 与 Windows WSL
+---
+
 
 usbip 是 usbip 客户端。usbipd 是 usbip 服务端。[usbipd-win](https://github.com/dorssel/usbipd-win) 是 windows 平台专用的 usbip 服务端程序。它是 C/S 架构。
 

@@ -1,12 +1,15 @@
-## Webpack Dynamic Import
+---
+title: Webpack Dynamic Import
+---
 
-### 动态变量的坑
 
-#### 现象
+## 动态变量的坑
+
+### 现象
 
 我用了 SSR，server 文件和 client 文件都在一个目录下。在某个文件写了 ``import(`../${path}`)``，启动编译时把 node_modules 下的很多服务端的库都扫描了一遍。（因为 server.js 引用了很多服务端库）
 
-#### 原因
+### 原因
 
 答案是这个 issue (Dynamic expressions for import() are broken #4292) 的[回答](https://github.com/webpack/webpack/issues/4292#issuecomment-451034292)。
 不过找到答案的过程很艰辛，直到我找到[这篇文章](https://medium.com/@oprearocks/es6-dynamic-import-and-webpack-memory-leaks-fa09f98f3243)。
@@ -25,7 +28,7 @@
 > import() accepts arbitrary strings (with runtime-determined template strings shown here), not just static string literals.
 
 
-#### 那么我想动态加载 node_modules 里的模块怎么办？
+### 那么我想动态加载 node_modules 里的模块怎么办？
 
 比如这样写 ``import(`library-${var}`)`` 或 ``import(`@my-scope/library-${var}`)``，都会导致 webpack 扫描所有 node_modules 下的文件编译。
 这会造成编译一些服务端的库导致编译失败。
@@ -33,7 +36,7 @@
 目前无解。
 
 
-### chunk name
+## chunk name
 
 在 import 函数中使用 `/* webpackChunkName: 'name' */` 注释，最后生成的 chunk 文件不会以 id 命名，而会以 name 命名。
 

@@ -1,4 +1,7 @@
-# editorconfig
+---
+title: editorconfig
+---
+
 
 ## 易错的文件匹配
 

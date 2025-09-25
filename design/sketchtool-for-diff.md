@@ -1,4 +1,7 @@
-# 使用 sketchtool 操作 sketch 文档：diff 以及其他功能
+---
+title: 使用 sketchtool 操作 sketch 文档：diff 以及其他功能
+---
+
 
 sketchtool 内置在 sketch 中，执行 `Sketch.app/Contents/Resources/sketchtool/install.sh` 来安装它。
 

@@ -1,4 +1,7 @@
-## webpack 配置为数组
+---
+title: webpack 配置为数组
+---
+
 
 [官方例子](https://github.com/webpack/webpack/tree/master/examples/multi-compiler)
 

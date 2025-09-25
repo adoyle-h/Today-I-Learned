@@ -1,4 +1,7 @@
-## 通过 Hash 密码到 url 来验证密码
+---
+title: 通过 Hash 密码到 url 来验证密码
+---
+
 
 https://celynxie.com/product/locked.html#e04b19e3b545f7b9bead22bc94df52c4c9f55ac1
 

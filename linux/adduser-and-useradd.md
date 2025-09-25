@@ -1,4 +1,7 @@
-# adduser 与 useradd
+---
+title: adduser 与 useradd
+---
+
 
 `useradd` 和 `adduser` 命令的一些关键区别：
 

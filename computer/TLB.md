@@ -1,4 +1,7 @@
-# TLB
+---
+title: TLB
+---
+
 
 TLB (Translation Lookaside Buffer) 是[内存管理单元 (MMU)](./MMU.md) 用于改进虚拟地址到物理地址转换速度的缓存。
 TLB 又称“快表”，直译为旁路快表缓冲，也可以理解为页表缓冲，地址变换高速缓存。

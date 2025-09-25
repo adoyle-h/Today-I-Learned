@@ -2,16 +2,47 @@
 
 import Path from 'node:path';
 import FS from 'node:fs';
-import { readFile, writeFile } from 'node:fs/promises';
+import { readFile, writeFile, stat } from 'node:fs/promises';
 import pMap from 'p-map';
 
 import json2md from './json2md.mjs'
 import { run, scanDir, absPath, relativePath, projectDir, PKG, getDirNames } from './lib.mjs';
+import { categoryNameMap } from '../build.config.mjs';
 
 import _debug from 'debug';
 const debug = _debug('update:index-md')
 
 const toc = [];
+
+async function createIndexForEachFolder() {
+    for (const key in categoryNameMap) {
+        const name = categoryNameMap[key];
+        try {
+            const s = await stat(absPath(key))
+            const p2 = absPath(`${key}/README.md`)
+            const s2 = await stat(p2)
+            let c2 = ''
+            if (s2.isFile()) {
+                c2 = await readFile(p2)
+            }
+
+            if (s.isDirectory()) {
+                const content = `---
+title: ${name}
+---
+
+${c2}
+`
+                const path = absPath(`${key}/index.md`)
+                await writeFile(path, content)
+                console.log(`Created file: ${path}`)
+            }
+        } catch (err) {
+            // ignore err
+            // console.log(err.stack)
+        }
+    }
+}
 
 function handle(nodes, levelStd, structure) {
     nodes.forEach((node) => {
@@ -57,17 +88,19 @@ run(async () => {
         },
         { md: absPath('_docs/intro.md') },
         { md: absPath('_docs/issue.md') },
-        { hr: '' },
-        { h1: '目录' },
+        // { hr: '' },
+        // { h1: '目录' },
     ];
 
     debug('nodeMap=%O', nodeMap);
     debug('rootNodes=%O', rootNodes);
-    handle(rootNodes, 2, structure);
+    // handle(rootNodes, 2, structure);
 
     const content = await json2md.async(structure);
 
     const file = absPath('index.md');
     await writeFile(file, content);
     console.log('File Updated: %s', file);
+
+    await createIndexForEachFolder()
 });

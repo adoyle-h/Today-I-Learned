@@ -1,4 +1,7 @@
-## 为什么 eval('{}') 返回 undefined ？
+---
+title: 为什么 eval('{}') 返回 undefined ？
+---
+
 
 `eval('1')` 返回 `1`，
 `eval('[]')` 返回 `[]`，

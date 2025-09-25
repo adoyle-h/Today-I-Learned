@@ -1,4 +1,7 @@
-# Linux 系统日志
+---
+title: Linux 系统日志
+---
+
 
 - journald
   - journalctl

@@ -1,4 +1,7 @@
-# git shallow clone
+---
+title: git shallow clone
+---
+
 
 - 只 clone 最新数据，不下载 .git 历史: `git clone --depth 1 --single-branch "$repo" "$dir"`
 - 包括 submodule: `git clone --depth 1 --single-branch --recurse-submodules --shallow-submodules "$repo" "$dir"`

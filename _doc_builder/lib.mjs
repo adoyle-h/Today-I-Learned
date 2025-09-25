@@ -1,6 +1,6 @@
 import Path from 'node:path';
 
-import {lstat as getStat, readFile, readdir, writeFile} from 'node:fs/promises';
+import { lstat as getStat, readFile, readdir, writeFile } from 'node:fs/promises';
 import pMap from 'p-map';
 
 import { fileURLToPath } from 'node:url';
@@ -8,12 +8,12 @@ const __filename = fileURLToPath(import.meta.url);
 export const projectDir = Path.resolve(__filename, '../../');
 
 // import PKG from '../package.json' with { type: 'json' };
-import {createRequire} from 'module';
+import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
-export const PKG = require('../package.json' );
+export const PKG = require('../package.json');
 
 
-import {ignoreDirs, categoryNameMap} from '../build.config.mjs';
+import { ignoreDirs, categoryNameMap } from '../build.config.mjs';
 
 export const absPath = (...paths) => Path.resolve(projectDir, ...paths);
 export const relativePath = (path) => Path.relative(projectDir, path);
@@ -23,12 +23,17 @@ export const toCamelCase = (str) => str
     .replace(/^(.)/, ($1) => $1.toUpperCase());
 
 async function getTitle(path) {
-    const content = await readFile(path, {encoding: 'utf8'});
-    const matched = content.match(/##? (.+)/);
+    const content = await readFile(path, { encoding: 'utf8' });
+    const matched = content.match(/^---\ntitle: (.+)/);
     if (!matched) return '';
 
     let title = matched[1];
-    title = title.replace(/\[(.*?)\]/g, (_m, p) => p);
+    if (title.startsWith("'") || title.startsWith('"')) {
+        title = title.slice(1);
+    }
+    if (title.endsWith("'") || title.endsWith('"')) {
+        title = title.slice(0, -1);
+    }
 
     return title;
 }
@@ -53,36 +58,40 @@ export async function scanDir(dirName, nodeMap, parentPath, _parent, level = 3) 
         const stats = await getStat(curPath)
 
         if (stats.isSymbolicLink()) {
-          children[index] = {
-            name: dirName,
-            path: curPath,
-            title: '',
-            isDir: false,
-            isSymbolicLink: true,
-            intro: undefined,
-            level,
-            children: [],
-            parent: curNode,
-          };
-          return;
+            children[index] = {
+                name: dirName,
+                path: curPath,
+                title: '',
+                isDir: false,
+                isSymbolicLink: true,
+                intro: undefined,
+                level,
+                children: [],
+                parent: curNode,
+            };
+            return;
         }
 
         if (stats.isFile()) {
+            if (filename.toLowerCase() === 'index.md') {
+                return;
+            }
+
             if (filename.toLowerCase() === 'readme.md') {
-                curNode.intro = await readFile(curPath, {encoding: 'utf8'});
+                curNode.intro = await readFile(curPath, { encoding: 'utf8' });
                 return;
             }
 
             return getTitle(curPath).then((title) => {
                 children[index] = {
-                  name: dirName,
-                  path: curPath,
-                  title,
-                  isDir: false,
-                  intro: undefined,
-                  level,
-                  children: [],
-                  parent: curNode,
+                    name: dirName,
+                    path: curPath,
+                    title,
+                    isDir: false,
+                    intro: undefined,
+                    level,
+                    children: [],
+                    parent: curNode,
                 };
             });
         } else if (stats.isDirectory()) {
@@ -118,7 +127,7 @@ export async function getDirNames(dir) {
 export async function run(func) {
     try {
         await func();
-    } catch(err) {
+    } catch (err) {
         console.error('[failed] Error stack: %s', err.stack);
         process.exit(1);
     }

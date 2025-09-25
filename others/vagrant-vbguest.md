@@ -1,4 +1,7 @@
-## vagrant-vbguest
+---
+title: vagrant-vbguest
+---
+
 
 https://github.com/dotless-de/vagrant-vbguest
 
@@ -28,7 +31,10 @@ end
 `vagrant up` 启动虚拟机后，再手动安装 VGA。
 
 ```sh
-# 进入虚拟机
+---
+title: 进入虚拟机
+---
+
 vagrant ssh
 
 # 自行确认 yum 使用的是国内镜像源

@@ -1,4 +1,7 @@
-## 无法在 Tmux 显示图片
+---
+title: 无法在 Tmux 显示图片
+---
+
 
 这会导致在 Tmux 下，Iterm2 的 imgcat 脚本，以及 ranger 的图片预览功能都无法使用。
 

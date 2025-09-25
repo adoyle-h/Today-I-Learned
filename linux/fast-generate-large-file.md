@@ -1,4 +1,7 @@
-# 快速创建大文件
+---
+title: 快速创建大文件
+---
+
 
 几种命令：`truncate`, `fallocate`, `dd`, `mkfile` (仅 MacOS)。
 

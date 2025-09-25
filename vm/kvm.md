@@ -1,6 +1,9 @@
-## KVM (Kernel-based Virtual Machine)
+---
+title: KVM (Kernel-based Virtual Machine)
+---
 
-### KVM 与 QEMU 与 Libvirt 的关系
+
+## KVM 与 QEMU 与 Libvirt 的关系
 
 ![.jpg](https://user-images.githubusercontent.com/1998490/223427418-84015b3d-b6ef-4da9-bf46-049e9bf86699.png)
 
@@ -14,14 +17,17 @@ QEMU 是运行在用户态的模拟器，它通过将客户机指令翻译为主
 
 libvirt 是目前使用最为广泛的对 KVM 虚拟机进行管理的工具和 API。Libvirtd 是一个 daemon 进程，可以被本地的 virsh 调用，也可以被远程的 virsh 调用，Libvirtd 调用 qemu-kvm 操作虚拟机。
 
-### 硬件虚拟化
+## 硬件虚拟化
 
 完全的软件虚拟化是非常慢的，所以要使用硬件辅助虚拟化技术，这需要 CPU 硬件开启这个标志位，一般在 BIOS 里面设置。
 
 查看系统是否开启硬件虚拟化。
 
 ```sh
-# 对于 Intel CPU 可用命令判断
+---
+title: 对于 Intel CPU 可用命令判断
+---
+
 grep vmx /proc/cpuinfo
 
 # 对于 AMD CPU 可用命令判断

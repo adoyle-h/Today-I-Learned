@@ -1,4 +1,7 @@
-# fzf
+---
+title: fzf
+---
+
 
 ## 当结果为空，关闭 preview 窗口
 

@@ -1,6 +1,9 @@
-## lodash 陷阱
+---
+title: lodash 陷阱
+---
 
-### 避免用 _.each _.map 等函数来遍历 object
+
+## 避免用 _.each _.map 等函数来遍历 object
 
 当 object 有名为 `length` 的 key 时候会被当成 array 来遍历，于是就出问题了。
 详见 [gist](https://gist.github.com/adoyle-h/2e13e4668c7df54c04c1a551d14d98b9)。

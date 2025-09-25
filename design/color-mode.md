@@ -1,4 +1,7 @@
-# 色彩模式
+---
+title: 色彩模式
+---
+
 
 色彩模式 (Color Mode) 又叫色彩模型 (Color Model)、色彩标准。
 

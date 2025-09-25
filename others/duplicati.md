@@ -1,4 +1,7 @@
-# Duplicati
+---
+title: Duplicati
+---
+
 
 使用了一下 [Duplicati](https://github.com/duplicati/duplicati/) 这个开源系统备份软件。做个简单小结。
 

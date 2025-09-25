@@ -1,4 +1,7 @@
-# aria2
+---
+title: aria2
+---
+
 
 aria2.conf 的路径配置不支持 `~` 或 `$HOME`，只支持 `${HOME}`。
 

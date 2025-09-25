@@ -1,7 +1,8 @@
 ---
+title: 构建多架构镜像
 tags: [docker, build, buildx]
 ---
-# 构建多架构镜像
+
 
 https://docs.docker.com/build/building/multi-platform/
 

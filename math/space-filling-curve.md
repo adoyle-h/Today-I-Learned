@@ -1,4 +1,7 @@
-## 空间填充曲线 (Space-Filling Curve)
+---
+title: 空间填充曲线 (Space-Filling Curve)
+---
+
 
 [空间填充曲线](https://www.wikiwand.com/en/Space-filling_curve)的定义：
 
@@ -18,7 +21,7 @@
 - [空间填充曲线与分形](https://www.bilibili.com/video/BV1os411B7Hw?p=2)
 
 
-### 应用
+## 应用
 
 - 一维线性空间到 N 维线性空间的映射，可用于降维或升维。
 - 空间索引算法。S2 几何学算法。

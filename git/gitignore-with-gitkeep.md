@@ -1,6 +1,9 @@
-## gitignore 与 gitkeep
+---
+title: gitignore 与 gitkeep
+---
 
-### Question
+
+## Question
 
 假设工作目录是这样的，
 
@@ -27,7 +30,7 @@
 
 我想 git 仓库内只保留 assets 的目录结构，不想保存 assets 内的其他文件。
 
-### Answer
+## Answer
 
 约定目录里放一个 `.gitkeep` 文件，这只是一个普通文件，没什么特别之处。
 
@@ -48,7 +51,7 @@ A  assets/scripts/.gitkeep
 A  assets/styles/.gitkeep
 ```
 
-### 解释
+## 解释
 
 - `assets/**`：忽略 assets/ 目录下任意深度的所有文件
 - `!assets/**/`：除了 assets/ 目录下任意深度的所有目录

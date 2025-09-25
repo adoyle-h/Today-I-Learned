@@ -1,4 +1,7 @@
-## device or resource busy
+---
+title: device or resource busy
+---
+
 
 当执行 `docker rm` 有可能遇到 device or resource busy 无法删除容器的情况。
 这是 docker 的[老毛病](https://github.com/moby/moby/issues/22260)，真实原因未探明，网上的文章看起来都不像是彻底明白问题所在，总之解决方法如下：
@@ -17,13 +20,13 @@ Error response from daemon: driver "overlay" failed to remove root filesystem fo
 
 这个方法不能解决问题的话，重启机器一定可以解决问题。
 
-### 使用 docker 17.12.1 以上版本
+## 使用 docker 17.12.1 以上版本
 
 官方 Contributor 说已在 17.12.1 版本中修复，可以尝试升级来解决该问题。
 
 https://github.com/moby/moby/issues/27381#issuecomment-372394900
 
-### 参考文章
+## 参考文章
 
 - [Kissingwolf's Blog - Docker 故障（device or resource busy）](https://web.archive.org/web/20200927142257/http://blog.kissingwolf.com/2017/09/09/Docker-%E6%95%85%E9%9A%9C%EF%BC%88device-or-resource-busy%EF%BC%89/)
 - [Docker中的device or resource busy问题分析](http://niusmallnan.com/2016/12/27/docker-device-resource-busy/) ([链接备份](https://web.archive.org/web/20220625011735/http://niusmallnan.com/2016/12/27/docker-device-resource-busy/))

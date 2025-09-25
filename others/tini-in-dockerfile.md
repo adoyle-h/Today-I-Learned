@@ -1,4 +1,7 @@
-# Dockerfile 里使用 tini
+---
+title: Dockerfile 里使用 tini
+---
+
 
 [tini](https://github.com/krallin/tini) 是专门给容器使用的 init 进程。
 

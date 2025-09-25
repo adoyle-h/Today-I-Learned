@@ -1,4 +1,7 @@
-## /usr/bin/env
+---
+title: /usr/bin/env
+---
+
 
 通常写语言脚本时，第一行会这么写：`#!/usr/bin/env node`
 

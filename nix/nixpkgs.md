@@ -1,4 +1,7 @@
-# nixpkgs
+---
+title: nixpkgs
+---
+
 
 ## 查找包名
 

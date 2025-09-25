@@ -1,4 +1,7 @@
-## lua 错误处理
+---
+title: lua 错误处理
+---
+
 
 - 使用 `error('message')` 抛出错误。
 - 如果想打印错误堆栈，使用 `local ok, err = xpcall(func, debug.traceback, arg1, arg2...)`。

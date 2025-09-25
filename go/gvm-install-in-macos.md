@@ -1,6 +1,9 @@
-## 在 MacOS 上使用 gvm install
+---
+title: 在 MacOS 上使用 gvm install
+---
 
-### 问题描述
+
+## 问题描述
 
 当系统里没有安装过 go 时，用 [gvm](https://github.com/moovweb/gvm) 来安装会报错。
 
@@ -30,7 +33,7 @@ Installing go1.4 from binary source
 ERROR: Binary Go unavailable for this platform
 ```
 
-### 解决方案
+## 解决方案
 
 ```sh
 brew install go

@@ -1,6 +1,9 @@
-## go build
+---
+title: go build
+---
 
-### 构建约束 (Build Constraints)
+
+## 构建约束 (Build Constraints)
 
 有两种方式来限制构建约束：
 
@@ -11,7 +14,7 @@
 
 具体见[文档](https://golang.org/cmd/go/#hdr-Build_constraints)
 
-### 构建约束注释
+## 构建约束注释
 
 构建约束的注释遵循以下规则:
 
@@ -25,7 +28,7 @@
 - 其他标记，在 `go build` 用 `-tags` 参数来匹配，具体见 `go help build`
   - 比如 `//+build wireinject`，wire 程序会识别这个约束
 
-#### 例子
+### 例子
 
 `// +build linux` 只在 linux 系统下构建。
 
@@ -38,11 +41,11 @@
 
 相当于 `(linux OR darwin) AND amd64`
 
-### 文件后缀
+## 文件后缀
 
 文件后缀匹配 `*_${GOOS}`, `*_${GOARCH}`, `*_${GOOS}_${GOARCH}`。
 
-#### 例子
+### 例子
 
 - `source_linux.go` 只在 Linux 系统构建。
 - `source_amd64.go` 只在 amd64 架构下构建。
@@ -52,6 +55,6 @@
 
 - `go tool dist list -json` 显示所有支持运行的平台
 
-### 参考
+## 参考
 
 - [Go 注释的魔力](https://learnku.com/go/t/34696)

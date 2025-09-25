@@ -1,29 +1,8 @@
-# Makefile
+---
+title: Makefile
+---
+
 <!-- editorconfig-checker-disable-file -->
-
-## TOC
-
-<!-- MarkdownTOC GFM -->
-
-- [参考资料](#参考资料)
-- [默认 target](#默认-target)
-- [命令回显](#命令回显)
-- [变量赋值](#变量赋值)
-- [target 作用域的变量定义](#target-作用域的变量定义)
-- [珍爱生命，远离 ifeq](#珍爱生命远离-ifeq)
-    - [ifeq 无法识别 Target-specific Variable Values](#ifeq-无法识别-target-specific-variable-values)
-    - [ifeq 无法识别在 target 内部赋值的变量](#ifeq-无法识别在-target-内部赋值的变量)
-- [$PWD 为何出错？](#pwd-为何出错)
-- [make config](#make-config)
-- [$shell 变量为何是空？](#shell-变量为何是空)
-- [在 target 内部使用条件判断](#在-target-内部使用条件判断)
-- [在 target 内部赋值变量](#在-target-内部赋值变量)
-- [注意 &&](#注意-)
-- [GNU make 与 BSD make 的区别](#gnu-make-与-bsd-make-的区别)
-    - [GNU make 会自动打印目录路径](#gnu-make-会自动打印目录路径)
-- [$() 会提前执行](#-会提前执行)
-
-<!-- /MarkdownTOC -->
 
 ## 参考资料
 

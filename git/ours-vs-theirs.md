@@ -1,4 +1,7 @@
-## --ours vs --theirs
+---
+title: --ours vs --theirs
+---
+
 
 代码冲突时批量选择某一边的修改。
 

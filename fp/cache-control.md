@@ -1,4 +1,7 @@
-## Cache-Control
+---
+title: Cache-Control
+---
+
 
 Cache-Control 不止是在 Response Header 中设置，还能在 Request Header 里设置。
 
@@ -7,7 +10,7 @@ Cache-Control 不止是在 Response Header 中设置，还能在 Request Header 
 
 https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9.2
 
-### In Request: no-cache 与 no-store 的区别
+## In Request: no-cache 与 no-store 的区别
 
 `Cache-Control: no-cache` 代表不使用强缓存，可使用协商缓存。它允许服务器先确认返回的响应是否发生了变化。
 
@@ -15,7 +18,7 @@ https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9.2
 
 参考: https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching?hl=zh-cn#cache-control
 
-### In Request: no-cache 与 max-age=0 的区别
+## In Request: no-cache 与 max-age=0 的区别
 
 `Cache-Control: max-age=0` 代表应该去重新校验数据
 

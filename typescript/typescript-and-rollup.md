@@ -1,4 +1,7 @@
-## Typescript 与 Rollup
+---
+title: Typescript 与 Rollup
+---
+
 
 rollup + typescript 就是个坑。对于 commonjs + typescript 的模块，rollup 解析有问题。详见 https://github.com/rollup/rollup/issues/670
 

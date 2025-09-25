@@ -1,4 +1,7 @@
-# jellyfin 中文字体
+---
+title: jellyfin 中文字体
+---
+
 
 默认情况下，jellyfin 渲染 ass 字幕时，中文是显示成方块的。
 

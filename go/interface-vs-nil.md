@@ -1,6 +1,9 @@
-## interface 与 nil
+---
+title: interface 与 nil
+---
 
-### nil interface 与 nil 比较的坑
+
+## nil interface 与 nil 比较的坑
 
 ```go
 package main
@@ -69,6 +72,6 @@ func main() {
 另外要注意的是，不要用 `nil` 来表示操作成功或失败，应该利用函数的多值返回和 error 对象，来让调用者知道操作成功或失败。
 
 
-### 如何判断 nil interface
+## 如何判断 nil interface
 
 参考[这个例子](https://gist.github.com/mangatmodi/06946f937cbff24788fa1d9f94b6b138)里的三个函数 `isNil`，`isNil`，`isNilBetter`。

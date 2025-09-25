@@ -1,4 +1,7 @@
-## 在 Github Markdown 中如何填写图片的链接
+---
+title: 在 Github Markdown 中如何填写图片的链接
+---
+
 
 > 在 Github 的项目，比如图片也放在仓库里，如何使用 Markdown 语法填写相对链接？
 

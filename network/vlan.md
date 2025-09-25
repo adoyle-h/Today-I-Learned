@@ -1,6 +1,9 @@
-# vlan
+---
+title: vlan
+---
 
-- [深入理解 lan、vlan、vxlan《OpenStack 网络》](https://developer.aliyun.com/article/945531) ([链接备份]())
+
+- [深入理解 lan、vlan、vxlan《OpenStack 网络》](https://developer.aliyun.com/article/945531) ([链接备份](https://web.archive.org/web/20250708000404/https://developer.aliyun.com/article/945531))
 
 ## LAN 与 VLAN 主要区别
 

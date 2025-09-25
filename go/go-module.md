@@ -1,4 +1,7 @@
-## Go Module
+---
+title: Go Module
+---
+
 
 Golang 管理模块有两种模式：
 

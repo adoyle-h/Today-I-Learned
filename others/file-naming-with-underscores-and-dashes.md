@@ -1,4 +1,7 @@
-## 文件命名，下划线还是中划线？
+---
+title: 文件命名，下划线还是中划线？
+---
+
 
 > 当文件名包含多个单词，应该用什么作分隔符？
 
@@ -6,11 +9,11 @@
 
 考虑的因素主要在于使用环境：
 
-### 文件是否需要被搜索引擎搜索
+## 文件是否需要被搜索引擎搜索
 
 通常公布到网络时文件名作为 url 的一部分。
 
-然而 Google 搜索引擎会将 `_` 连接的单词作为一个单词。比如搜索 `web_site` 实际上只会找关键词 `website`。  
+然而 Google 搜索引擎会将 `_` 连接的单词作为一个单词。比如搜索 `web_site` 实际上只会找关键词 `website`。
 只有 `web-site` 会分为 `web` 和 `site` 来查找。即：
 
 - This_is_a_single_word
@@ -18,7 +21,7 @@
 
 所以这是个 SEO 问题。如果要考虑到搜索引擎，那么就用 `-`
 
-### 文件名能否被环境解析
+## 文件名能否被环境解析
 
 比如 Java、Python、Go 语言：
 
@@ -34,7 +37,7 @@
 
 此条源自[陈硕的知乎回答](https://www.zhihu.com/question/50471847/answer/137202976)。
 
-### 英文文法
+## 英文文法
 
 如果既不需要关心搜索引擎，也不需要关心编程语言环境的问题。那么就考虑英文文法。
 连字符在英文里是有意义的，比如复合词，例如
@@ -48,15 +51,15 @@
 
 为了保留连字符在复合词的作用，那么文件命名时，就应该使用下划线来代替空格。
 
-### 结论
+## 结论
 
 不同场景结论会不一样，根据以上三个判断来决定用 `-` 还是 `_`。
 
-### 注意点
+## 注意点
 
 1. 正则表达式 `\w` 不会识别 `-`，但是会识别 `_`
 
-### 参考
+## 参考
 
 - [CODING HORROR - Of Spaces, Underscores and Dashes](https://blog.codinghorror.com/of-spaces-underscores-and-dashes/) ([链接备份](https://web.archive.org/web/20230118115432/https://blog.codinghorror.com/of-spaces-underscores-and-dashes/))
 - [dashes-versus_underscores; The Definitive Guide](https://x-equals.com/dashes-versus-underscores/) ([链接备份](https://web.archive.org/web/20221209071335/https://x-equals.com/dashes-versus-underscores/))

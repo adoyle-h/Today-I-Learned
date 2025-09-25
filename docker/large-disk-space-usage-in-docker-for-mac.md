@@ -1,4 +1,7 @@
-## Docker for Mac 中磁盘文件占用过大
+---
+title: Docker for Mac 中磁盘文件占用过大
+---
+
 
 关联 [Issue](https://github.com/docker/for-mac/issues/371)。
 [官方解释](https://docs.docker.com/docker-for-mac/faqs/#dockerraw-consumes-an-insane-amount-of-disk-space)。

@@ -1,15 +1,18 @@
-## flyway 用法
+---
+title: flyway 用法
+---
+
 
 所有 flyway cli 命令的选项都是单 `-` 开头。且遵从格式： `flyway [options] command`。
 
 
-### 输出更多信息
+## 输出更多信息
 
 > Adding -X to the argument list to also print debug output.
 
 `flyway -X migrate`
 
-### `flyway migrate` 只升级到指定版本，后面的版本不执行
+## `flyway migrate` 只升级到指定版本，后面的版本不执行
 
 `flyway -target <版本号> migrate`
 

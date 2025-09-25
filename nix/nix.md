@@ -1,4 +1,7 @@
-# Nix
+---
+title: Nix
+---
+
 ## 软件源
 ### nix-channels
 

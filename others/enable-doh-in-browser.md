@@ -1,4 +1,7 @@
-# 在浏览器里启动 DoH
+---
+title: 在浏览器里启动 DoH
+---
+
 
 Chrome、Firefox、Edge、Brave 浏览器参考[这篇文章](https://developers.cloudflare.com/1.1.1.1/encryption/dns-over-https/encrypted-dns-browsers/)。
 

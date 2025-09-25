@@ -1,6 +1,8 @@
-## mysqldump
+---
+title: mysqldump
+---
 
-### --opt
+## --opt
 
 默认开启一系列 dump 优化选项
 
@@ -11,7 +13,7 @@
                       --skip-opt.
 ```
 
-### --disable-keys / --skip-disable-keys
+## --disable-keys / --skip-disable-keys
 
 默认是 `--disable-keys`。用来避免导入数据的时候，每条记录都刷新一遍索引，在最后才重建索引。
 
@@ -22,7 +24,7 @@
                       (Defaults to on; use --skip-disable-keys to disable.)
 ```
 
-### --add-locks
+## --add-locks
 
 在每个导出的表之前增加 LOCK TABLES 且之后 UNLOCK TABLE。为了在恢复数据的时候更快地插入数据。
 

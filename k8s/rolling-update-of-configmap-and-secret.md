@@ -1,4 +1,7 @@
-## configmap 和 secret 的滚动更新
+---
+title: configmap 和 secret 的滚动更新
+---
+
 
 configmap 和 secret 作为容器的环境变量时，pod 是不会随着 configmap/secret 内容变化而自动更新的。
 
@@ -8,14 +11,14 @@ configmap 和 secret 作为容器的环境变量时，pod 是不会随着 config
 2. Pod 的 metadata.annotations 带上 hash
 3. 用 controller 监听 configmap/secret 的变化，从而触发滚动更新
 
-### configmap/secret name hash
+## configmap/secret name hash
 
 hash 根据内容计算得到。
 
-### Pod metadata.annotations hash
+## Pod metadata.annotations hash
 
 hash 根据内容计算得到。
 
-### controller watching
+## controller watching
 
 https://github.com/stakater/Reloader

@@ -1,4 +1,7 @@
-## script 和 link 标签的事件属性
+---
+title: script 和 link 标签的事件属性
+---
+
 
 onload, onerror, load, error, onreadystatechange
 

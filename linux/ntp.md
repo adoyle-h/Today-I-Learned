@@ -1,4 +1,7 @@
-# NTP 时间同步
+---
+title: NTP 时间同步
+---
+
 
 [NTP 的概念](https://www.wikiwand.com/zh/%E7%B6%B2%E8%B7%AF%E6%99%82%E9%96%93%E5%8D%94%E5%AE%9A)。
 

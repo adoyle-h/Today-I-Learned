@@ -1,4 +1,7 @@
-# go tool
+---
+title: go tool
+---
+
 
 ## go tool pprof
 

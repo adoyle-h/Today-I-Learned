@@ -1,4 +1,7 @@
-## man 命令
+---
+title: man 命令
+---
+
 
 设置环境变量 `MANPAGER` 可以更改默认 Pager（默认的是 less）。
 比如可以设置用 nvim 查看 man 手册：`export MANPAGER='nvim +Man!'`。

@@ -1,4 +1,7 @@
-# arch linux
+---
+title: arch linux
+---
+
 
 ## signature from "... <...@gmail.com>" is marginal trust
 

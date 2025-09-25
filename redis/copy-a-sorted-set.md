@@ -1,4 +1,7 @@
-## 拷贝一个 Sorted Set 到新的 key
+---
+title: 拷贝一个 Sorted Set 到新的 key
+---
+
 
 使用 zunionstore 命令
 

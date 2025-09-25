@@ -1,4 +1,7 @@
-# 在虚拟机里安装 Windows 11
+---
+title: 在虚拟机里安装 Windows 11
+---
+
 
 ## 下载 ISO 镜像
 

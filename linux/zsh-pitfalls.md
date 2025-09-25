@@ -1,6 +1,9 @@
-## Zsh 的坑
+---
+title: Zsh 的坑
+---
 
-### 修改 path 变量把 PATH 覆盖了
+
+## 修改 path 变量把 PATH 覆盖了
 
 ```zsh
 path=123
@@ -12,7 +15,7 @@ echo $PATH
 `path` 是 PATH 变量的另一种数组别名。
 http://www.zsh.org/mla/users/2015/msg00178.html
 
-### Zsh 不能 export function
+## Zsh 不能 export function
 
 也就不支持 `export` 的 `-f` 参数。
 

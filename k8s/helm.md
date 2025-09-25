@@ -1,22 +1,28 @@
-## Helm
+---
+title: Helm
+---
+
 
 **Helm 团队非常不专业，弃坑吧。**
 比如很多问题修复只在 v3 修复，不在 v2 修复。
 比如对于 CRD 的管理很难用。
 比如 v2 出紧急 bug，修复了缺不及时发布。
 
-### Chart
+## Chart
 
 [官方最佳实践](https://helm.sh/docs/chart_best_practices/conventions/)
 
-### Chart 依赖
+## Chart 依赖
 
 [requirements.yaml](https://helm.sh/docs/chart_best_practices/dependencies/)
 
 支持本地文件的引用
 
 ```yaml
-# requirements.yaml
+---
+title: requirements.yaml
+---
+
 dependencies:
 - name: nginx
   version: "1.2.3"
@@ -26,18 +32,18 @@ dependencies:
 但是打包的时候得先 `helm dep up` 把其他目录的 chart 下载到当前目录的 charts 目录，然后才能 `helm package`。否则会报错 `found in requirements.yaml, but missing in charts/ directory`。
 
 
-### helm upgrade
+## helm upgrade
 
 - [helm upgrade --reset-values 与 --reuse-values 的区别](https://medium.com/@kcatstack/understand-helm-upgrade-flags-reset-values-reuse-values-6e58ac8f127e) ([链接备份](https://web.archive.org/web/20220707025448/https://medium.com/@kcatstack/understand-helm-upgrade-flags-reset-values-reuse-values-6e58ac8f127e))
 
 
-### helm --set 包含逗号
+## helm --set 包含逗号
 
 比如 `helm install --set ids=1,2` 会报错，因为 `,` 是作为 `--set` 的分隔符的，比如 `--set a=1,b=2` 这样。
 所以正确写法是 `helm install --set ids=1\,2`。
 参考 [issue](https://github.com/helm/helm/issues/2952#issuecomment-330699580)。
 
-### helm 调试
+## helm 调试
 
 `helm <command> --debug --dry-run` 不真的执行，只是输出命令结果。
 
@@ -45,7 +51,7 @@ dependencies:
 
 helm 3: `helm template <chart_name> -s templates/deployment.yaml -f ./values.yaml`
 
-### CRD 管理
+## CRD 管理
 
 CRD 应该怎么管理？helm 在 v3 也没定好完整方案
 
@@ -68,7 +74,7 @@ helm v2 针对 CRD 的管理给了两种方案，方案一是 CRD 独立出一�
 https://v3.helm.sh/docs/topics/chart_best_practices/custom_resource_definitions/
 
 
-### 控制 container 启动顺序
+## 控制 container 启动顺序
 
 只有在 Init 容器可以指定数组用来控制启动顺序。
 

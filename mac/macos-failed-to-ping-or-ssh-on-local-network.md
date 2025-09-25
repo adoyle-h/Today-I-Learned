@@ -1,4 +1,7 @@
-# mac 电脑无法 ping 或 ssh 内网设备
+---
+title: mac 电脑无法 ping 或 ssh 内网设备
+---
+
 
 可能的原因：
 

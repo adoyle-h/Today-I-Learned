@@ -1,4 +1,7 @@
-## 物理删除与逻辑删除
+---
+title: 物理删除与逻辑删除
+---
+
 
 物理删除，叫 Physical Delete 或 Hard Delete。
 逻辑删除，叫 Logical Delete 或 Soft Delete。

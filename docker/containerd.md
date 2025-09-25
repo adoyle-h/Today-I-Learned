@@ -1,20 +1,6 @@
-# Containerd
-
-<!-- MarkdownTOC GFM -->
-
-- [基本概念](#基本概念)
-- [进程结构](#进程结构)
-- [config.toml](#configtoml)
-    - [镜像加速](#镜像加速)
-- [rootless containerd](#rootless-containerd)
-- [crictl](#crictl)
-- [ctr](#ctr)
-    - [ctr 命名空间](#ctr-命名空间)
-    - [ctr 基本操作](#ctr-基本操作)
-- [用 ctr 停止容器](#用-ctr-停止容器)
-- [ctr shell 自动补全](#ctr-shell-自动补全)
-
-<!-- /MarkdownTOC -->
+---
+title: Containerd
+---
 
 ## 基本概念
 

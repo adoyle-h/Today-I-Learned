@@ -1,28 +1,9 @@
-# Ubnt EdgeRouter X (er-x) 刷 OpenWRT
+---
+title: Ubnt EdgeRouter X (er-x) 刷 OpenWRT
+---
+
 
 https://openwrt.org/toh/ubiquiti/edgerouter_x_er-x_ka
-
-## TOC
-
-<!-- MarkdownTOC GFM -->
-
-- [编译](#编译)
-    - [在容器里编译](#在容器里编译)
-    - [编译选项](#编译选项)
-    - [libfakeroot: read: Connection reset by peer](#libfakeroot-read-connection-reset-by-peer)
-    - [编译结果](#编译结果)
-- [刷机](#刷机)
-    - [kernel.bin](#kernelbin)
-        - [刷 tar 文件](#刷-tar-文件)
-        - [刷 bin 文件](#刷-bin-文件)
-        - [TFTP](#tftp)
-    - [sysupgrade.bin](#sysupgradebin)
-    - [WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED](#warning-remote-host-identification-has-changed)
-- [刷完后的配置](#刷完后的配置)
-    - [修改网段](#修改网段)
-
-<!-- /MarkdownTOC -->
-
 
 ## 编译
 

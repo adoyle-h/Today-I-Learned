@@ -1,11 +1,14 @@
-## 为什么 Unicode U+F8FF 是苹果 Logo？
+---
+title: 为什么 Unicode U+F8FF 是苹果 Logo？
+---
 
-### 问题
+
+## 问题
 
 为什么 unicode 里面有 apple logo？
 https://unicode-table.com/en/F8FF/
 
-### 回答
+## 回答
 
 U+F8FF 是 Unicode 字符集 (Character Set) 里的值，即码位 (Code Point)。Unicode 的字符编码 (Character Encoding) 和其他机制将码位映射到可视化字形 (Glyph) 或者不可视的控制字符。这过程太复杂我还没搞清。
 

@@ -1,19 +1,11 @@
-## ExtFS (Extended File System)
+---
+title: ExtFS (Extended File System)
+---
+
 
 **本文以 ext4 文件系统为例。ext、ext2、ext3 可以此作为参考。**
 
-### TOC
-
-<!-- MarkdownTOC GFM -->
-
-- [上层概念](#上层概念)
-- [下层概念](#下层概念)
-- [调整 inode](#调整-inode)
-- [参考资料](#参考资料)
-
-<!-- /MarkdownTOC -->
-
-### 上层概念
+## 上层概念
 
 - 文件系统 (File System)
   - `tune2fs -l` 可以查询文件系统的详细配置
@@ -41,13 +33,13 @@
     - 文件块指针，标识文件数据 block 的位置
   - 注意 inode 不包含文件名。文件名存储在上级目录的 block 中。
 
-### 下层概念
+## 下层概念
 
 - 扇区 (Sector)
   - Sector 是硬盘磁头读写数据的基本单位。每个 Sector 储存 512 字节 (0.5KB)。
   - ![](https://archive.org/download/v2-dc762f4e4037b261d0134171213c94a0_1440w/v2-dc762f4e4037b261d0134171213c94a0_1440w.jpg)
 
-### 调整 inode
+## 调整 inode
 
 **调整 inode 需要格式化磁盘，注意备份数据。**
 
@@ -64,7 +56,7 @@ inode 节点的总数，在格式化时就给定，一般是每 1KB 或每 2KB �
 假定在一块1GB的硬盘中，每个inode节点的大小为128字节，每1KB就设置一个inode，那么inode table的大小就会达到128MB，占整块硬盘的12.8%。
 
 
-### 参考资料
+## 参考资料
 
 - [Ext4 Disk Layout](https://ext4.wiki.kernel.org/index.php/Ext4_Disk_Layout)
 - [了解 ext4 的历史](https://archive.ph/6JqEf)

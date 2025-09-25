@@ -1,4 +1,7 @@
-# gpg-agent
+---
+title: gpg-agent
+---
+
 
 `gpg-agent.conf` 是 gpg-agent 的配置文件。
 

@@ -1,4 +1,7 @@
-# Terminfo
+---
+title: Terminfo
+---
+
 
 [ncurses](https://invisible-island.net/ncurses/ncurses.html#download_database) 提供 terminfo 数据库，以及命令行工具 `infocmp`, `captoinfo`, `clear`, `infocmp`, `infotocap`, `ncursesw6-config`, `reset`, `tabs`, `tic`, `toe`, `tput`, `tset`。
 

@@ -1,4 +1,7 @@
-# rsyslog
+---
+title: rsyslog
+---
+
 
 https://www.rsyslog.com/
 

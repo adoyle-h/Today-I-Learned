@@ -1,4 +1,7 @@
-# 用于调试的最小 neovim 配置
+---
+title: 用于调试的最小 neovim 配置
+---
+
 
 1. 创建 repro.lua 文件，内容如下
 

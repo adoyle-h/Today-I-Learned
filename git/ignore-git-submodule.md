@@ -1,4 +1,7 @@
-## 忽略 Git submodule
+---
+title: 忽略 Git submodule
+---
+
 
 首先 `.gitmodules` 文件只是一个初始化配置。当你执行 `git submodule init` 时，git 会从 `.gitmodules` 读取信息来操作 `.git/` 目录下的文件，比如修改 `.git/config` 以及修改 `.git/modules/` 目录等操作。
 

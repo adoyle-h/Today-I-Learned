@@ -1,4 +1,7 @@
-# systemd
+---
+title: systemd
+---
+
 
 
 ![Systemd 架构图](http://www.ruanyifeng.com/blogimg/asset/2016/bg2016030703.png)

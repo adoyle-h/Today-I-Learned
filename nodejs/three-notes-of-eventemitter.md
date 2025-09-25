@@ -1,6 +1,8 @@
-## EventEmitter 需要注意的三个地方
+---
+title: EventEmitter 需要注意的三个地方
+---
 
-### eventEmitter.emit 是同步回调的！
+## eventEmitter.emit 是同步回调的！
 
 例子：
 
@@ -30,13 +32,13 @@ hello
 
 详见 https://nodejs.org/api/events.html#events_asynchronous_vs_synchronous
 
-### emit('error') 是一个特殊事件
+## emit('error') 是一个特殊事件
 
 详见 https://nodejs.org/api/events.html#events_error_events
 
 当没有设置 error 的事件监听，`emit('error')` 会抛出 (throw) 新的错误。
 
-### 当没有设置 'error' 事件监听时，`throw new Error()` 和 `throw 'a string'` 有细微的差别
+## 当没有设置 'error' 事件监听时，`throw new Error()` 和 `throw 'a string'` 有细微的差别
 
 ```js
 var EventEmitter = require('events');

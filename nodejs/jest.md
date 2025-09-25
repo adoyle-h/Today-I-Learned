@@ -1,6 +1,9 @@
-## Jest
+---
+title: Jest
+---
 
-### 优点
+
+## 优点
 
 - 支持 ts、babel，意味着前后端通用
 - 内建断言库，测试覆盖率
@@ -10,11 +13,11 @@
 - 支持 test 嵌套在 describe
 - 支持异步函数
 
-### 缺点
+## 缺点
 
 - 执行速度比较慢。Issues: [#7963](https://github.com/facebook/jest/issues/7963)
 
-### 断言
+## 断言
 
 Jest 默认使用 [expect 库](https://jestjs.io/docs/en/expect)。
 Jest 里断言叫 matcher。
@@ -23,11 +26,11 @@ Jest 里断言叫 matcher。
 扩展 expect 的库 [jest-extended](https://github.com/jest-community/jest-extended)
 
 
-### 结合 lerna 在 Monorepo 中使用 jest
+## 结合 lerna 在 Monorepo 中使用 jest
 
 把测试套件的设置放到上层，子目录专注于写自己的测试代码就好。尽可能避免在每个子目录下创建重复的文件。
 
-#### 目录结构
+### 目录结构
 
 ```
 .
@@ -46,7 +49,7 @@ Jest 里断言叫 matcher。
 └── package.json
 ```
 
-#### 每个 package 子目录的 jest.config.js
+### 每个 package 子目录的 jest.config.js
 
 ```js
 'use strict';
@@ -60,7 +63,7 @@ module.exports = {
 };
 ```
 
-#### 根目录的 jest.config.js
+### 根目录的 jest.config.js
 
 ```js
 'use strict';
@@ -75,7 +78,7 @@ module.exports = {
 };
 ```
 
-#### 根目录的 jest.config.base.js
+### 根目录的 jest.config.base.js
 
 这个文件设置通用 jest 配置。
 
@@ -129,7 +132,7 @@ module.exports = {
 ```
 
 
-#### 根目录 package.json
+### 根目录 package.json
 
 ```json
 {
@@ -148,7 +151,7 @@ module.exports = {
 }
 ```
 
-#### 子目录 package.json
+### 子目录 package.json
 
 ```json
 {

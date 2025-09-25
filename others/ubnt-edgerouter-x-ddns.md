@@ -1,4 +1,7 @@
-# Ubnt EdgeRouter-X DDNS 功能
+---
+title: Ubnt EdgeRouter-X DDNS 功能
+---
+
 
 ER-X（EdgeRouter X）默认的 EdgeOS 是基于 Vyatta 的精简版 Debian 系统。
 

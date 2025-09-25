@@ -1,4 +1,7 @@
-# 学习 Shell
+---
+title: 学习 Shell
+---
+
 
 ## find -exec 无法调用函数
 

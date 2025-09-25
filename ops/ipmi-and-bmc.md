@@ -1,4 +1,7 @@
-## IPMI 与 BMC
+---
+title: IPMI 与 BMC
+---
+
 
 - https://www.wikiwand.com/en/Intelligent_Platform_Management_Interface
 - https://www.wikiwand.com/zh-hans/IPMI
@@ -6,21 +9,21 @@
 - Facebook 的开源 [OpenBMC](https://github.com/facebook/openbmc) 设计
   - [Introducing “OpenBMC”: an open software framework for next-generation system management](https://engineering.fb.com/open-source/introducing-openbmc-an-open-software-framework-for-next-generation-system-management/)
 
-### IPMI
+## IPMI
 
 Intelligent Platform Management Interface
 
-### ipmitool
+## ipmitool
 
 https://github.com/ipmitool/ipmitool
 
 - [使用 ipmitool 实现 Linux 系统下对服务器的 ipmi 管理](https://www.ibm.com/developerworks/cn/linux/l-ipmi/?spm=ata.13261165.0.0.a10a3578QqPikR)
 
-### BMC
+## BMC
 
 Baseboard Management Controller
 
-### 频带和频带外
+## 频带和频带外
 
 IPMI实作的通常被称作 频带 管理LAN连线，这个连线应用一个介于BMC和基板NIC之间的SMBUS介面。
 

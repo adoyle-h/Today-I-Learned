@@ -1,4 +1,7 @@
-# sudoer
+---
+title: sudoer
+---
+
 
 ```sh
 chmod u+w /etc/sudoers

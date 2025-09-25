@@ -1,4 +1,7 @@
-## Samba
+---
+title: Samba
+---
+
 
 Samba 是让 UNIX/Linux 系统与 Windows 系统的资源共享的服务。
 

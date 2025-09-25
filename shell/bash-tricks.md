@@ -1,4 +1,7 @@
-# Bash 小技巧
+---
+title: Bash 小技巧
+---
+
 
 ## man bash
 
@@ -30,7 +33,7 @@ kill 命令不止能杀掉进程，还能直接关闭后台托管进程。
 
 另外，`jobs -p` 能列出对应的进程号。
 
-## <Tab> 补全文件路径开启颜色
+## `<Tab>` 补全文件路径开启颜色
 
 首先，这个特性是在 bash 4.3 版本中加入的。
 而 mac 自带的 bash 版本是 3.x。你需要通过 `brew install bash` 安装最新的 bash。
@@ -110,7 +113,10 @@ https://stackoverflow.com/a/30362832/4622308
 
 ```sh
 path=$(pwd)      # 例如 /a/b/c
-# 移除掉从末尾匹配到 `/*` 的部分
+---
+title: 移除掉从末尾匹配到 `/*` 的部分
+---
+
 echo ${path%/*}  # => /a/b
 ```
 
@@ -350,7 +356,7 @@ https://superuser.com/a/1348950/1776434
 
 [subshell]: ./subshell-and-child-process.md
 
-## [ ] 与 [[ ]] 的区别
+## `[ ]` 与 `[[ ]]` 的区别
 
 https://stackoverflow.com/a/3427931/4622308
 

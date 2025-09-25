@@ -1,4 +1,7 @@
-# 进程中断
+---
+title: 进程中断
+---
+
 
 ## /proc/interrupts
 

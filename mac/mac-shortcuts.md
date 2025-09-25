@@ -1,6 +1,9 @@
-## Mac 快捷键
+---
+title: Mac 快捷键
+---
 
-### 切换应用内的 Tab
+
+## 切换应用内的 Tab
 
 `option+command+左右方向键` 可以用来切换 Tab，支持所有 Mac 应用。
 
@@ -13,6 +16,6 @@
 
 参考 https://superuser.com/a/1125599/1776434
 
-### 切换应用访问历史的上一页和下一页
+## 切换应用访问历史的上一页和下一页
 
 `command+[` 和 `command+]` 或 `command+左方向键` 和 `command+右方向键`

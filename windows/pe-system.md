@@ -1,4 +1,7 @@
-# PE 系统
+---
+title: PE 系统
+---
+
 
 PE 系统指的是 Windows PE (Windows Preinstallation Environment)。专门用于安装或维护 windows 系统的系统。
 

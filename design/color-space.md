@@ -1,32 +1,11 @@
-# 色彩空间
+---
+title: 色彩空间
+---
+
 
 色彩空间 (Color Space) 是对色彩的组织方式。
 
 定义色彩空间时，通常使用 [CIELAB](./cie-color-space.md#cielab) 或者 [CIEXYZ](./cie-color-space.md#ciexyz) 色彩空间作为参考标准。标准色彩空间便于色彩空间之间进行坐标转换。
-
-## TOC
-
-<!-- MarkdownTOC GFM -->
-
-- [常见的色彩空间](#常见的色彩空间)
-- [CIE 色彩空间](#cie-色彩空间)
-- [Pantone 潘通色彩空间](#pantone-潘通色彩空间)
-- [CIEXY 色度图](#ciexy-色度图)
-- [色域](#色域)
-- [绝对色彩空间](#绝对色彩空间)
-- [色彩空间转换](#色彩空间转换)
-- [色彩管理](#色彩管理)
-    - [ICC Profile](#icc-profile)
-- [各类文件如何存储色彩空间](#各类文件如何存储色彩空间)
-- [查看文件的 ICC Profile](#查看文件的-icc-profile)
-- [色差](#色差)
-    - [是否内嵌 ICC profile](#是否内嵌-icc-profile)
-    - [浏览器里的色彩管理](#浏览器里的色彩管理)
-- [Sketch 的色彩管理](#sketch-的色彩管理)
-- [专业的图片编辑器](#专业的图片编辑器)
-- [参考文章](#参考文章)
-
-<!-- /MarkdownTOC -->
 
 ## 常见的色彩空间
 

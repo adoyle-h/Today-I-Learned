@@ -1,4 +1,7 @@
-## CSP 并发模型
+---
+title: CSP 并发模型
+---
+
 
 CSP (Communicating Sequential Processe) 中文名为通信顺序进程。
 
@@ -8,14 +11,14 @@ CSP (Communicating Sequential Processe) 中文名为通信顺序进程。
 > Hoare 还提出了一个 -> 命令，如果 -> 左边的语句返回 false，那它右边的语句就不会执行。
 > 通过这些输入输出命令，Hoare 证明了如果一门编程语言中把 processes 间的通信看得第一等重要，那么并发编程的问题就会变得简单。[^1]
 
-### 代表实现
+## 代表实现
 
 - [Occam](https://www.wikiwand.com/zh-hans/Occam)
 - [Limbo](https://www.wikiwand.com/zh-hans/Limbo_(%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80))
 - Go: 只用到了 CSP 的很小一部分，即理论中的 Process/Channel（对应到语言中的 Goroutine/Channel）
 - Clojure 的 core.async
 
-### 参考资料
+## 参考资料
 
 - [Wikipedia - 交谈循序程式](https://www.wikiwand.com/zh-hans/%E4%BA%A4%E8%AB%87%E5%BE%AA%E5%BA%8F%E7%A8%8B%E5%BC%8F)
 - [JaguarJack - 深度解密 Go 语言之 channel](https://learnku.com/articles/32142) ([链接备份](https://web.archive.org/web/20230225204145/https://learnku.com/articles/32142))

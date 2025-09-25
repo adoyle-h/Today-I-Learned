@@ -1,4 +1,7 @@
-# legend bios 无损转 uefi
+---
+title: legend bios 无损转 uefi
+---
+
 
 - 以前的机器启动搭配是：Legend BIOS + MBR 磁盘 + MBR 分区表 + MBR 引导模式
 - 现在的机器启动搭配是：UEFI BIOS + GPT 磁盘 + GUID 分区表 + GPT 引导（EFI 引导或者 UEFI 引导）

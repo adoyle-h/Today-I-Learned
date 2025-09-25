@@ -10,6 +10,11 @@ const SiteHeader: QuartzComponent = ({ fileData, cfg, displayClass }: QuartzComp
 
   return <div class={classNames(displayClass, "site-header")}>
     <p class={classNames(displayClass, "site-description")}>{description}</p>
+    <div class="site-links">
+      <a class="site-tags" href="/tags">Tags</a>
+      <a class="site-rss" href="/rss.xml">RSS</a>
+      <a class="my-github" href="https://github.com/adoyle-h/Today-I-Learned">Github</a>
+    </div>
   </div>
 }
 
@@ -23,6 +28,14 @@ SiteHeader.css = `
   margin: 0.3rem 0;
   white-space: pre-line;
   line-height: 1.4em;
+}
+
+.site-links {
+  display: flex ;
+  justify-content: space-between;
+  padding-right: 3rem;
+  margin-top: 1rem;
+  align-items: center;
 }
 `
 

@@ -1,4 +1,7 @@
-## CORS
+---
+title: CORS
+---
+
 
 首先，看[标准](https://www.w3.org/TR/cors)！
 
@@ -10,7 +13,7 @@
 - [CORS 跨域发送 Cookie](https://web.archive.org/web/20180326140902/http://harttle.land/2016/12/28/cors-with-cookie.html)
 - [Web 开发中跨域的几种解决方案](https://web.archive.org/web/20171226142607/http://harttle.land/2015/10/10/cross-origin.html)
 
-### 服务端如何处理不匹配的 Origin
+## 服务端如何处理不匹配的 Origin
 
 - https://github.com/koajs/cors/blob/0f3f948b9b8f00163a47de1b82e413bfef9b4a96/index.js#L89
 - https://github.com/rs/cors/blob/0c96d3850073b93c94338ed8ade7de3c8fafb1cf/cors.go#L316

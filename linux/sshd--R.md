@@ -1,4 +1,7 @@
-## sshd -R 参数
+---
+title: sshd -R 参数
+---
+
 
 踩到一个[坑](https://github.com/termux/termux-services/issues/18)。
 

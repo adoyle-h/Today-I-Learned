@@ -1,4 +1,7 @@
-# httrack
+---
+title: httrack
+---
+
 
 [httrack](https://www.httrack.com/) 是用来爬站的工具。它提供命令行和图形化界面的程序。
 

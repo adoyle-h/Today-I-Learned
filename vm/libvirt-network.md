@@ -1,8 +1,11 @@
-## Libvirt 网络
+---
+title: Libvirt 网络
+---
+
 
 网上的垃圾文字太多，先读[这个](https://wiki.libvirt.org/page/Networking)
 
-### 虚拟网络
+## 虚拟网络
 
 libvirt 会默认创建名为 `virbr0` 的网桥。创建 vm 的时候会对应创建一个 `vnetN` 设备。
 
@@ -32,7 +35,7 @@ libsh dumpxml 查看 vm 关机状态下是这样的
 </interface>
 ```
 
-### 桥接
+## 桥接
 
 ```xml
 <interface type='bridge'>

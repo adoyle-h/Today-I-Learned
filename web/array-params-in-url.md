@@ -1,4 +1,7 @@
-## URL QueryString 传数组参数
+---
+title: URL QueryString 传数组参数
+---
+
 
 关于 URL QueryString 里传数组参数，为什么没有个规范呢？
 导致每个平台都有自己的实现。目前我看到的有 3 种：

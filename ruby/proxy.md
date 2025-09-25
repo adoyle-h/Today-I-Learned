@@ -1,4 +1,7 @@
-## Ruby 代理镜像
+---
+title: Ruby 代理镜像
+---
+
 
 https://gems.ruby-china.com/
 

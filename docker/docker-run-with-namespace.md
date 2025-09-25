@@ -1,10 +1,13 @@
-## Docker Run With Namespace
+---
+title: Docker Run With Namespace
+---
 
-### 问题
+
+## 问题
 
 做了一个 top 命令的 docker 镜像，那么如何用这个镜像查看宿主机的 top 信息呢？
 
-### 答案
+## 答案
 
 `docker run` 提供 [`--pid`](https://docs.docker.com/engine/reference/run/#pid-settings---pid) 参数来复用进程 namespace。
 
@@ -15,7 +18,10 @@
 还可以指定别的容器的，
 
 ```sh
-# 启动一个 redis 容器
+---
+title: 启动一个 redis 容器
+---
+
 docker run -d --rm --name redis redis
 
 # 监控 redis 容器的 top 信息

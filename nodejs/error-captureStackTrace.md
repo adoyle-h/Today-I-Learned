@@ -1,4 +1,7 @@
-## Error.captureStackTrace 的 stack 缺少 message 问题
+---
+title: Error.captureStackTrace 的 stack 缺少 message 问题
+---
+
 
 （旧文，不一定符合现在的 nodejs。引用链接也失效了，找不回来）
 

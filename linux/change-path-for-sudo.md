@@ -1,4 +1,7 @@
-# sudo 找不到可执行文件
+---
+title: sudo 找不到可执行文件
+---
+
 
 举个例子，如果你使用 [snap](https://snapcraft.io/) 安装软件，它把可执行文件放在 `/snap/bin` 目录里。
 即使你把 `/snap/bin` 路径加到 PATH，当使用 sudo，依然找不到命令。

@@ -1,4 +1,7 @@
-# svn 设置代理加速
+---
+title: svn 设置代理加速
+---
+
 
 如果存在 `~/.subversion/servers`，先修改这个文件，如果没有，修改 `/etc/subversion/servers`。
 

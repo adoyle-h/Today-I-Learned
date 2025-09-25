@@ -1,4 +1,7 @@
-# Bash 的坑
+---
+title: Bash 的坑
+---
+
 
 ## nameref 的命名冲突
 
@@ -86,7 +89,10 @@ load ./a.sh
 ```
 chmod +x ./b.sh
 ./b.sh hello
-# 输出
+---
+title: 输出
+---
+
 # hello
 # ./a.sh
 ```

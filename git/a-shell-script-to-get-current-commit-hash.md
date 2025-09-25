@@ -1,7 +1,13 @@
-## 用 shell 脚本查询 git commit hash
+---
+title: 用 shell 脚本查询 git commit hash
+---
+
 
 ```sh
-# ROOT_DIR is the directory contains the `.git` folder
+---
+title: ROOT_DIR is the directory contains the `.git` folder
+---
+
 ROOT_DIR=.
 HEAD=$(cat "$ROOT_DIR"/.git/HEAD)
 COMMIT=$HEAD

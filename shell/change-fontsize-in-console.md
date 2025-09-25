@@ -1,4 +1,7 @@
-# 修改 console 环境的字体大小
+---
+title: 修改 console 环境的字体大小
+---
+
 
 在装机时，既没有 ssh，也没有 xrandr。我们操作的控制台 (console) 似乎无法修改字体大小。
 其实只要系统安装了 [kbd](https://github.com/legionus/kbd)，就可以改变字体以及其大小。它提供 `setfont` 命令以及许多控制台字体文件 (consolefont)。

@@ -1,10 +1,13 @@
-## virt-install Couldn't find kernel for install tree
+---
+title: virt-install Couldn't find kernel for install tree
+---
 
-### 问题描述
+
+## 问题描述
 
 当使用 `--location` 参数安装 ISO 文件时，报错 `Couldn't find kernel for install tree`。
 
-### 解决方案
+## 解决方案
 
 两种方案，一种是使用 `--cdrom`，但这导致有些参数没法使用，比如 `--extra-args`。
 

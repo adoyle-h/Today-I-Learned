@@ -1,6 +1,9 @@
-## Docker 的坑
+---
+title: Docker 的坑
+---
 
-### COPY/ADD 的目标路径不能有 ~
+
+## COPY/ADD 的目标路径不能有 ~
 
 `COPY . ~/` 或者 `COPY . ~`，构建不会报错，但是 `~/` 下没有文件。
 

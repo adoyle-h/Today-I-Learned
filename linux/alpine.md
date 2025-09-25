@@ -1,9 +1,12 @@
-## Alpine Linux
+---
+title: Alpine Linux
+---
+
 
 - https://www.alpinelinux.org/
 - [介绍](https://wiki.alpinelinux.org/wiki/Alpine_Linux:Overview)
 
-### 内部构成
+## 内部构成
 
 - [Busybox](./busybox.md): coreutils
 - [Musl libc](./musl-libc.md): 轻量级 C 标准库
@@ -11,11 +14,11 @@
 - apk: 包管理器
 - [syslinux](https://wiki.syslinux.org/wiki/index.php): bootloader
 
-### apk
+## apk
 
 - `apk add --no-cache <pkg-name>` 不留缓存安装
 
-### 常用包
+## 常用包
 
 搜索: https://pkgs.alpinelinux.org/packages
 
@@ -23,13 +26,13 @@
 
 `apk add binutils`
 
-### 根据文件查找包
+## 根据文件查找包
 
 比如缺失文件 `ld-linux-x86-64.so.2`，可以到 https://pkgs.alpinelinux.org/contents 找到对应的包。
 
 https://pkgs.alpinelinux.org/contents?file=ld-linux-x86-64.so.2
 
-### 依赖 glibc 的程序不要使用 alpine 镜像
+## 依赖 glibc 的程序不要使用 alpine 镜像
 
 当前在 alpine 镜像安装 glibc 的方案有两个，
 

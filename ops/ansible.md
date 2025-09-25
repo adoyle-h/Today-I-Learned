@@ -1,37 +1,11 @@
-## Ansible
+---
+title: Ansible
+---
+
 
 本文所用 Ansible 版本是 2.9。
 
-### TOC
-
-<!-- MarkdownTOC GFM -->
-
-- [Ansible vs 写脚本](#ansible-vs-写脚本)
-- [Ansible Ad-Hoc](#ansible-ad-hoc)
-- [Ansible Playbook](#ansible-playbook)
-    - [目录结构](#目录结构)
-    - [变量优先级顺序](#变量优先级顺序)
-    - [变量应该放什么位置](#变量应该放什么位置)
-    - [变量作用域](#变量作用域)
-    - [调试变量](#调试变量)
-    - [变量的合并规则](#变量的合并规则)
-    - [group_vars 目录结构](#group_vars-目录结构)
-    - [Ansible 执行顺序](#ansible-执行顺序)
-    - [Hosts 匹配规则](#hosts-匹配规则)
-    - [Host 找不到的情况](#host-找不到的情况)
-    - [立刻退出 play](#立刻退出-play)
-- [Ansible Modules](#ansible-modules)
-- [Ansible Plugins](#ansible-plugins)
-- [ansible.cfg](#ansiblecfg)
-    - [ansible.cfg 加载顺序](#ansiblecfg-加载顺序)
-    - [gather_fact 缓存问题](#gather_fact-缓存问题)
-- [禁止使用 include](#禁止使用-include)
-- [include_ 与 import_ 的区别](#include_-与-import_-的区别)
-- [其他相关资料](#其他相关资料)
-
-<!-- /MarkdownTOC -->
-
-### Ansible vs 写脚本
+## Ansible vs 写脚本
 
 Ansible 的优势
 
@@ -43,19 +17,19 @@ Ansible 的缺点，模块和参数比较多，学习成本相对较大。
 
 Ansible 可以直接操作 localhost，这样就可以代替写脚本。
 
-### Ansible Ad-Hoc
+## Ansible Ad-Hoc
 
 https://docs.ansible.com/ansible/latest/user_guide/intro_adhoc.html
 
-### Ansible Playbook
+## Ansible Playbook
 
 https://galaxy.ansible.com
 
-#### 目录结构
+### 目录结构
 
 https://docs.ansible.com/ansible/2.9/user_guide/playbooks_best_practices.html#directory-layout
 
-#### 变量优先级顺序
+### 变量优先级顺序
 
 优先级分类，从低到高排序
 
@@ -104,11 +78,11 @@ Footnotes
 - https://docs.ansible.com/ansible/2.9/reference_appendices/general_precedence.html
 - https://docs.ansible.com/ansible/2.9/user_guide/playbooks_variables.html?highlight=host_vars#variable-precedence-where-should-i-put-a-variable
 
-#### 变量应该放什么位置
+### 变量应该放什么位置
 
 > Basically, anything that goes into “role defaults” (the defaults folder inside the role) is the most malleable and easily overridden. Anything in the vars directory of the role overrides previous versions of that variable in namespace. The idea here to follow is that the more explicit you get in scope, the more precedence it takes with command line -e extra vars always winning. Host and/or inventory variables can win over role defaults, but not explicit includes like the vars directory or an include_vars task.
 
-#### 变量作用域
+### 变量作用域
 
 - Global: this is set by config, environment variables and the command line
 - Play: each play and contained structures, vars entries (vars; vars_files; vars_prompt), role defaults and vars.
@@ -116,7 +90,7 @@ Footnotes
 
 详见 https://docs.ansible.com/ansible/2.9/user_guide/playbooks_variables.html#scoping-variables
 
-#### 调试变量
+### 调试变量
 
 查看 Host 作用域的变量：使用 `debug` 模块打印 `{{hostvars[inventory_hostname]}}` 里的内容。例如，
 
@@ -130,7 +104,7 @@ Footnotes
 
 查看 Global 作用域的变量：
 
-#### 变量的合并规则
+### 变量的合并规则
 
 Q: 如果有相同变量名的 map 或者 list 分散在不同的 vars 文件会怎样？
 
@@ -138,7 +112,7 @@ A: Ansible 默认行为是同名就全部覆盖。可以用 `hash_behavior=merge
 
 https://stackoverflow.com/q/35554415/4622308
 
-#### group_vars 目录结构
+### group_vars 目录结构
 
 ```
 inventory/sample/group_vars/
@@ -159,7 +133,7 @@ inventory/sample/group_vars/
 
 参考 https://groups.google.com/forum/#!topic/ansible-project/c6t5lVCN0bw
 
-#### Ansible 执行顺序
+### Ansible 执行顺序
 
 > This designates the following behaviors, for each role ‘x’:
 >
@@ -181,7 +155,7 @@ inventory/sample/group_vars/
 
 [文档](https://docs.ansible.com/ansible/2.9/user_guide/playbooks_reuse_roles.html?#using-roles)
 
-#### Hosts 匹配规则
+### Hosts 匹配规则
 
 | 描述        | 模式                         |
 +-------------|------------------------------+
@@ -197,7 +171,7 @@ inventory/sample/group_vars/
 
 详见 https://docs.ansible.com/ansible/2.9/user_guide/intro_patterns.html#common-patterns
 
-#### Host 找不到的情况
+### Host 找不到的情况
 
 ```yaml
 - hosts: bastion[0]
@@ -209,7 +183,7 @@ inventory/sample/group_vars/
 
 当 inventory 里没有设置 bastion host，那么 ansible 会提示 `[WARNING]: Could not match supplied host pattern, ignoring: bastion`，并跳过这个 play，提示 `skipping: no hosts matched`。
 
-#### 立刻退出 play
+### 立刻退出 play
 
 无错误的退出用 `meta`，详见[文档](https://docs.ansible.com/ansible/2.9/modules/meta_module.html)。
 
@@ -224,17 +198,17 @@ inventory/sample/group_vars/
     msg: This failed!
 ```
 
-### Ansible Modules
+## Ansible Modules
 
 查看模块文档：`ansible-doc [-l|-F|-s] [options] [-t <plugin type> ] [plugin]`
 
 
-### Ansible Plugins
+## Ansible Plugins
 
 
-### ansible.cfg
+## ansible.cfg
 
-#### ansible.cfg 加载顺序
+### ansible.cfg 加载顺序
 
 - ANSIBLE_CONFIG (environment variable if set)
 - ansible.cfg (in the current directory)
@@ -245,7 +219,7 @@ inventory/sample/group_vars/
 
 https://docs.ansible.com/ansible/2.9/reference_appendices/config.html
 
-#### gather_fact 缓存问题
+### gather_fact 缓存问题
 
 每个 play 默认是 `gather_facts: true` 的，如果要禁止抓取机器信息需要设置 `gather_facts: false`
 
@@ -266,19 +240,19 @@ gathering 如果是 `smart` 或者 `explicit`，除了第一次会抓取 fact �
 
 `fact_caching` 的取值影响 `fact_caching_connection`。
 
-### 禁止使用 include
+## 禁止使用 include
 
 `include` 的缺点是它的行为可能想象的不一致，造成大问题。且未来会 Ansible 被弃用。
 
 可以用 `include_tasks`, `include_role`, `include_vars`, `import_role`, `import_playbook`, `import_tasks` 代替。
 
-### include_ 与 import_ 的区别
+## include_ 与 import_ 的区别
 
 - All import* statements are pre-processed at the time playbooks are parsed.
 - All include* statements are processed as they are encountered during the execution of the playbook.
 
 详见 https://docs.ansible.com/ansible/2.9/user_guide/playbooks_reuse_includes.html
 
-### 其他相关资料
+## 其他相关资料
 
 - [Jinja2](../others/jinja2.md)

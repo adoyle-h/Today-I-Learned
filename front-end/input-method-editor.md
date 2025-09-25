@@ -1,4 +1,7 @@
-## Input Method Editor (IME)
+---
+title: Input Method Editor (IME)
+---
+
 
 - [W3C - Input Method Editor API](https://www.w3.org/TR/ime-api/)
 - [W3C - UI Events - Input Method Editors](https://www.w3.org/TR/uievents/#keys-IME)

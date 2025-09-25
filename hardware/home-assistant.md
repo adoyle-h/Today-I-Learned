@@ -1,1 +1,4 @@
-# Home Assistant
+---
+title: Home Assistant
+---
+

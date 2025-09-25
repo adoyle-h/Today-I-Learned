@@ -1,10 +1,13 @@
-## rsync 与 scp
+---
+title: rsync 与 scp
+---
 
-### rsync 缺点
+
+## rsync 缺点
 
 远端机器也得安装 rsync，否则执行 rsync 会报错找不到 rsync 命令。
 
-### 区别
+## 区别
 
 > rsync只对差异文件做更新，可以做增量或全量备份；而scp只能做全量备份。简单说就是rsync只传修改了的部分，如果改动较小就不需要全部重传，所以rsync备份速度较快；默认情况下，rsync 通过比较文件的最后修改时间（mtime）和文件的大小（size）来确认哪些文件需要被同步过去。
 
@@ -14,6 +17,6 @@
 
 https://www.cnblogs.com/kevingrace/p/8529792.html
 
-### 等价写法
+## 等价写法
 
 - `scp -l 1024` vs `rsync --bwlimit 1024`

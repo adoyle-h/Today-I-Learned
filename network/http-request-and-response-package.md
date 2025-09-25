@@ -1,4 +1,7 @@
-## HTTP Request/Response 网络包
+---
+title: HTTP Request/Response 网络包
+---
+
 
 Q: 多个 http 请求可以复用同一个 tcp 连接，那么程序怎么知道它得到的 http response 包是对应它之前发出的哪个 http request 包？
 

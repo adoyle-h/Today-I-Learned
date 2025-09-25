@@ -1,4 +1,7 @@
-## eBPF 与 XDP
+---
+title: eBPF 与 XDP
+---
+
 
 https://ebpf.io/
 
@@ -6,7 +9,7 @@ eBPF (extended Berkeley Packet Filter) 起源于 BPF，它提供了内核的数�
 
 XDP 详见[这里](./xdp.md)。
 
-### 基本概念
+## 基本概念
 
 - BPF Map
 - BPF Program
@@ -16,7 +19,7 @@ XDP 详见[这里](./xdp.md)。
 
 读完 https://ebpf.io/what-is-ebpf 就能入门基本概念。
 
-#### BPF Map
+### BPF Map
 
 ![](https://ebpf.io/static/map_architecture-e7909dc59d2b139b77f901fce04f60a1.png)
 
@@ -24,11 +27,11 @@ XDP 详见[这里](./xdp.md)。
 
 [map 限制](https://docs.cilium.io/en/stable/concepts/ebpf/maps/)
 
-### 详细解读
+## 详细解读
 
 - https://docs.cilium.io/en/stable/bpf/
 
-### eBPF 生态工具
+## eBPF 生态工具
 
 - bpftool: 查询 BPF programs 的工具
   - [很好的教程](https://qmonnet.github.io/whirl-offload/2021/09/23/bpftool-features-thread/) ([链接备份](https://web.archive.org/web/20221217204319/https://qmonnet.github.io/whirl-offload/2021/09/23/bpftool-features-thread/))
@@ -43,7 +46,7 @@ XDP 详见[这里](./xdp.md)。
 
 其他工具见 https://ebpf.io/projects/
 
-### BPF 与 libbpf
+## BPF 与 libbpf
 
 BPF 代码运行时编译，不仅需要 kernel header，而且需携带 llvm/clang 相关的二进制。此外，因 kernel struct 的变更导致 memory layout 产生了变化，无法令编译生成的 eBPF 二进制运行在任意版本 Linux kernel 中，这就无法将 eBPF 二进制与用户态控制程序打包成二进制进行分发。
 
@@ -54,7 +57,7 @@ BPF 代码运行时编译，不仅需要 kernel header，而且需携带 llvm/cl
 - [HOWTO: BCC to libbpf conversion](https://facebookmicrosites.github.io/bpf/blog/2020/02/20/bcc-to-libbpf-howto-guide.html) ([链接备份](https://web.archive.org/web/20221130165544/https://facebookmicrosites.github.io/bpf/blog/2020/02/20/bcc-to-libbpf-howto-guide.html))
 - [BPF Portability and CO-RE](https://facebookmicrosites.github.io/bpf/blog/2020/02/19/bpf-portability-and-co-re.html) ([链接备份](https://web.archive.org/web/20230120022211/https://facebookmicrosites.github.io/bpf/blog/2020/02/19/bpf-portability-and-co-re.html))
 
-### BPF Map 文件
+## BPF Map 文件
 
 map 数据都放在 `/sys/fs/bpf/` 目录下。
 
@@ -86,7 +89,7 @@ drwxr-xr-x 3 root root 0 Jan  5 04:23 ..
 
 [libbpf]: https://github.com/libbpf/libbpf
 
-### 查找哪些进程连接了 bpf
+## 查找哪些进程连接了 bpf
 
 通过进程打开的文件描述符，可以找到 `anon_inode:bpf-map` 和 `anon_inode:bpf-prog`。也就可以找到对应的进程了。
 

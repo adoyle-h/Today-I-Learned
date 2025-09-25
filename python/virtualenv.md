@@ -1,4 +1,7 @@
-## Python Virtualenv
+---
+title: Python Virtualenv
+---
+
 
 [要不我们还是用回 virtualenv/venv 和 pip 吧](https://zhuanlan.zhihu.com/p/81568689) ([链接备份](https://archive.md/tQXuk))
 
@@ -10,7 +13,7 @@
 - `python -m venv --copies venv` 会创建 venv 目录，`--copies` 把全局环境的 python 全都拷贝到 venv 目录里。
 - `virtualenv -p ~/.pyenv/versions/3.8.2/bin/python --copies venv` virtualenv 可以用 `-p` 指定拷贝哪个路径下的 python。
 
-### virtualenv 没有打包动态链接库
+## virtualenv 没有打包动态链接库
 
 virtualenv 和 python 3 的 venv 都有这问题。
 
@@ -21,7 +24,7 @@ https://github.com/pypa/virtualenv/pull/1045
 
 如果目标部署机器上没有对应的动态链接库，首先要把动态链接库拷贝到部署机任意位置（通常是 `/usr/local/lib/`）。然后在 LD_LIBRARY_PATH 加入目录路径即可。例如 `export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib`。
 
-### virtualenv 没有打包 /usr/local/lib/python3.5/
+## virtualenv 没有打包 /usr/local/lib/python3.5/
 
 `--system-site-packages --copies` 即使加上这两个参数，也没有完全复制。
 
@@ -42,14 +45,14 @@ Aborted (core dumped)
 encodings 这种 python 标准库，都在 /usr/local/lib/python3.5 路径下。
 
 
-### 制作完整的 venv 离线包
+## 制作完整的 venv 离线包
 
 两种方式，
 
 1. 从官方 docker 镜像中制作 venv，安装 python 依赖包。
 2. 自己编译 python，制作 venv，安装 python 依赖包。这种情况适用于 venv 拷贝到（跟镜像同一基线的）宿主机上。
 
-#### 方案 1
+### 方案 1
 
 ```Dockerfile
 FROM python:3.8.2-slim
@@ -75,7 +78,7 @@ RUN tar -czf ./venv.tgz -C ./venv .
 CMD [ "bash" ]
 ```
 
-#### 方案 2
+### 方案 2
 
 ```Dockerfile
 FROM centos:7
@@ -84,7 +87,10 @@ WORKDIR /app
 
 SHELL ["/bin/bash", "-c"]
 
-# See https://github.com/pyenv/pyenv/wiki/Common-build-problems
+---
+title: See https://github.com/pyenv/pyenv/wiki/Common-build-problems
+---
+
 RUN yum install -y @development \
       zlib-devel bzip2 bzip2-devel readline-devel \
       sqlite sqlite-devel openssl-devel xz xz-devel libffi-devel findutils
@@ -117,7 +123,7 @@ RUN tar -czf ./venv.tgz -C ./venv .
 CMD [ "bash" ]
 ```
 
-#### docker cp 导出 venv 包
+### docker cp 导出 venv 包
 
 ```sh
 main() {
@@ -133,7 +139,7 @@ main() {
 }
 ```
 
-#### 使用包需要重新路径
+### 使用包需要重新路径
 
 ```python
 #!/usr/bin/env bash

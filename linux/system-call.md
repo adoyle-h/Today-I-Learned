@@ -1,4 +1,7 @@
-## Linux 系统调用
+---
+title: Linux 系统调用
+---
+
 
 - [Linux Programmer's Manual - syscalls](http://man7.org/linux/man-pages/man2/syscalls.2.html)
 - 源码 [linux/arch/x86/entry/syscalls/syscall_64.tbl](https://github.com/torvalds/linux/blob/master/arch/x86/entry/syscalls/syscall_64.tbl)

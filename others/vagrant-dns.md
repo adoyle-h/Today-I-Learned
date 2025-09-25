@@ -1,4 +1,7 @@
-## Vagrant DNS
+---
+title: Vagrant DNS
+---
+
 
 ### nslookup 花费 5 秒左右
 

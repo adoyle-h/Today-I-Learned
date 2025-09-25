@@ -1,4 +1,7 @@
-## go doc
+---
+title: go doc
+---
+
 
 `go doc` 与 `godoc` 是两个不同的命令。
 

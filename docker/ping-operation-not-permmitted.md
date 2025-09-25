@@ -1,6 +1,9 @@
-## ping: Operation not permitted
+---
+title: 'ping: Operation not permitted'
+---
 
-### 问题描述
+
+## 问题描述
 
 通常在 rootless 的容器里执行 ping 会报错，
 
@@ -9,7 +12,7 @@ $ ping 192.168.1.1
 bash: /bin/ping: Operation not permitted
 ```
 
-### 解决方案
+## 解决方案
 
 如果只是在 `docker exec` 容器里进行网络调试，可以加上 `--privileged` 参数获取全部权限：`docker exec --privileged -it nextcloud bash`。
 

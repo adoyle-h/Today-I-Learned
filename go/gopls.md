@@ -1,4 +1,7 @@
-# gopls
+---
+title: gopls
+---
+
 
 gopls 在跨平台开发时，会有点问题。比如当我在 MacOS 电脑进行开发，gopls 就会省略 `//go:build linux` 的文件。当我期望是能包括这些文件内容的。
 

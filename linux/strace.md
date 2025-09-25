@@ -1,6 +1,9 @@
-## strace
+---
+title: strace
+---
 
-### 参数解释
+
+## 参数解释
 
 https://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/strace.html
 ([链接备份](https://web.archive.org/web/20221202220111/https://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/strace.html))
@@ -65,7 +68,7 @@ qualifier只能是 trace,abbrev,verbose,raw,signal,read,write其中之一.value�
 以username 的UID和GID执行被跟踪的命令
 ```
 
-### 常用用法
+## 常用用法
 
 - [5 simple ways to troubleshoot using Strace](http://hokstad.com/5-simple-ways-to-troubleshoot-using-strace) ([链接备份](https://web.archive.org/web/20230115014718/http://hokstad.com/5-simple-ways-to-troubleshoot-using-strace))
 

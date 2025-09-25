@@ -1,4 +1,7 @@
-# cloudflare proxy
+---
+title: cloudflare proxy
+---
+
 
 cloudflare 的每个 DNS 记录可以开启或关闭代理功能，即反向代理。
 关闭代理，客户端解析 DNS 记录看到的是目标站点的 IP。

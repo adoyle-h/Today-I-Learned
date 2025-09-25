@@ -1,10 +1,13 @@
-## Here Strings 与 Here Documents
+---
+title: Here Strings 与 Here Documents
+---
 
-### [Here Strings](https://www.gnu.org/software/bash/manual/bashref.html#Here-Strings)
+
+## [Here Strings](https://www.gnu.org/software/bash/manual/bashref.html#Here-Strings)
 
 `[n]<<< word`
 
-### [Here Documents](https://www.gnu.org/software/bash/manual/bashref.html#Here-Documents)
+## [Here Documents](https://www.gnu.org/software/bash/manual/bashref.html#Here-Documents)
 
 ```
 [n]<<[-]delimiter
@@ -14,7 +17,7 @@ delimiter
 
 `delimiter` 可以是 `EOF` 或者其他任意字符。
 
-#### 例子
+### 例子
 
 ```
 cat <<EOF > file.txt
@@ -24,11 +27,11 @@ $PATH
 EOF
 ```
 
-#### <<-
+### <<-
 
 > If the redirection operator is ‘<<-’, then all leading tab characters are stripped from input lines and the line containing delimiter. This allows here-documents within shell scripts to be indented in a natural fashion.
 
-#### 避免符号替换
+### 避免符号替换
 
 默认 here-document 会执行 `$var` 和 `$()` shell 的语法替换，只有在 delimiter 两边加上单括号可以防止替换。
 
@@ -38,7 +41,7 @@ EOF
 delimiter
 ```
 
-#### 例子
+### 例子
 
 ```
 cat <<'EOF' > file.txt

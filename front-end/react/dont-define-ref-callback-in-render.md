@@ -1,4 +1,6 @@
-## 不要在 render 里直接定义 ref callback
+---
+title: 不要在 render 里直接定义 ref callback
+---
 
 [示例代码](https://jsfiddle.net/ADoyle/3Lve6zw8/)
 

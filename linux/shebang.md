@@ -1,4 +1,7 @@
-## shebang
+---
+title: shebang
+---
+
 
 例如 `#!/usr/bin/env bash`
 

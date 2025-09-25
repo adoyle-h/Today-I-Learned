@@ -1,4 +1,7 @@
-# Windows WSL
+---
+title: Windows WSL
+---
+
 
 ## BIOS 设置
 

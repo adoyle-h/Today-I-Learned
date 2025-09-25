@@ -1,4 +1,7 @@
-## 如何在 github 项目里搜索代码
+---
+title: 如何在 github 项目里搜索代码
+---
+
 
 [Github Help - Searching code](https://help.github.com/articles/searching-code/)
 

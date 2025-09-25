@@ -1,4 +1,7 @@
-## sudo :write
+---
+title: sudo :write
+---
+
 
 vim 有个小技巧 `:w !sudo -S tee % >/dev/null` 用来以 sudo 权限写文件。
 

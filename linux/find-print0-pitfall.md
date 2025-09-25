@@ -1,4 +1,7 @@
-## find -print0 的坑
+---
+title: find -print0 的坑
+---
+
 
 ```bash
 find . -name x -print0

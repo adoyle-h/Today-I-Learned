@@ -1,4 +1,7 @@
-# Debuger
+---
+title: Debuger
+---
+
 
 ## GDB
 

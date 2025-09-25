@@ -1,4 +1,7 @@
-# curl 快速失败
+---
+title: curl 快速失败
+---
+
 
 `curl -f` 有助于快速判断错误。如果不加 `-f` 参数，curl 执行后的 exit code 永远都是 0。这在编写 shell 脚本时可能会引发问题。
 

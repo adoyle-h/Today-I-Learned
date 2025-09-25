@@ -1,4 +1,7 @@
-# docker for mac
+---
+title: docker for mac
+---
+
 
 > 在 2021 年 4 月时，Docker for Mac（Docker Desktop）发布了对 Apple Silicon 的实验性支持，它会使用 QEMU 运行一个 ARM 架构的 Linux 虚拟机，默认运行 ARM 架构的镜像，但也支持运行 x86 的镜像。
 

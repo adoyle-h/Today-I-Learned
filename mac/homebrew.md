@@ -1,10 +1,13 @@
-## Homebrew
+---
+title: Homebrew
+---
 
-### brew update 慢的问题
+
+## brew update 慢的问题
 
 `brew update --verbose` 看慢在哪里。
 
-### 备份 Homebrew
+## 备份 Homebrew
 
 缅怀已弃用的 [homebrew-backup](https://github.com/rstacruz/homebrew-backup)
 
@@ -12,19 +15,19 @@
 
 执行 `brew bundle dump` 会生成 `Brewfile` 文件。
 
-### 使用 Homebrew 镜像
+## 使用 Homebrew 镜像
 
 - Homebrew 镜像: https://lug.ustc.edu.cn/wiki/mirrors/help/brew.git
 - Homebrew Bottles 镜像: https://lug.ustc.edu.cn/wiki/mirrors/help/homebrew-bottles
 - Homebrew Cask 镜像: https://mirrors.ustc.edu.cn/help/homebrew-cask.git.html
 
-### 使用 ALL_PROXY 代理
+## 使用 ALL_PROXY 代理
 
 例如使用 shadowsocks 的 socks5 代理，端口号为 1080，在终端运行：
 
 `ALL_PROXY=socks5://127.0.0.1:1080 brew install ...`
 
-### 使用 brewfile
+## 使用 brewfile
 
 `brew bundle dump` 能够将系统已安装的程序到处到 brewfile 中。
 通过 `brew bundle install` 可以从 brewfile 安装到当前系统。
@@ -32,7 +35,7 @@
 
 具体看 `brew help bundle`。
 
-### brew bundle 结合 mas
+## brew bundle 结合 mas
 
 [mas](https://github.com/mas-cli/mas) 可以用命令来操作 Mac App Store。
 

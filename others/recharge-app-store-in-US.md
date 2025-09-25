@@ -1,4 +1,7 @@
-# 在美区 app store 充值
+---
+title: 在美区 app store 充值
+---
+
 
 首先要有一个 apple 的美区账号。略过不提。
 

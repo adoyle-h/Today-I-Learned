@@ -1,4 +1,7 @@
-## require 路径名大小写问题
+---
+title: require 路径名大小写问题
+---
+
 
 以 `moment` 这个库为例。
 
@@ -6,7 +9,7 @@
 
 然而在 Linux 下同样执行 `require('Moment')` 就会报错 `Cannot find module 'Moment'`。
 
-### 原因
+## 原因
 
 震惊吧！mac 的文件系统居然是大小写不敏感的！
 
@@ -17,6 +20,6 @@
 
 参考: http://stackoverflow.com/q/23289065
 
-### 所以
+## 所以
 
 npm 包名必须为小写。

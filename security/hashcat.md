@@ -1,4 +1,7 @@
-# hashcat
+---
+title: hashcat
+---
+
 
 ## hashcat --help
 

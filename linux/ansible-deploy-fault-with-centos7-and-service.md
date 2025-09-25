@@ -1,4 +1,7 @@
-## ansible 部署到 centos7 时，不能找到 service
+---
+title: ansible 部署到 centos7 时，不能找到 service
+---
+
 
 我的远端机器是基于 centos 7 的系统，我的 task 是这样的，
 

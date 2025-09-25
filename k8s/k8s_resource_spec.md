@@ -1,6 +1,9 @@
-## K8S Resource Spec
+---
+title: K8S Resource Spec
+---
 
-### Container env 的 value 必须是字符串
+
+## Container env 的 value 必须是字符串
 
 如果是数字，就会报错。
 例子，

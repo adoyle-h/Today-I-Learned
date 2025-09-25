@@ -1,4 +1,7 @@
-# 一个复杂的小 bug: cd 补全问题
+---
+title: '一个复杂的小 bug: cd 补全问题'
+---
+
 
 如果你同时在使用 [fnm](https://github.com/Schniz/fnm)，[bash-completion](https://github.com/scop/bash-completion), bash-it 的 [aliases.completion.bash](https://github.com/Bash-it/bash-it/blob/master/completion/available/aliases.completion.bash) 这三个工具，你会遇到一个 BUG。
 

@@ -1,6 +1,9 @@
-## 乱码问题
+---
+title: 乱码问题
+---
 
-### 基本概念
+
+## 基本概念
 
 - 字符集 (Charset: Character Set)：是一种让计算机知道如何识别 Character 的编码系统，这些字符包括字母、数字、标点符号和空白字符。早期，由于各国使用的语言不同而发展出各自的字符集，例如日语的 Kanji JIS(例如 Shift-JIS, EUC-JP 等)，繁体中文的 Big5 和俄罗斯的 KOI8-R。
 - 码点 (Code Point) 或 码位 (Code Position) ：是组成码空间（或代码页）的数值。例如，ASCII 码包含 128 个码位，范围是 `0x00` 到 `0x7F`，而 Unicode 包含 1,114,112 个码位，范围是 `0x00` 到 `0x10FFFF`。
@@ -20,10 +23,10 @@
 
 详见 [W3C - Character encodings: Essential concepts](https://www.w3.org/International/articles/definitions-characters/)。
 
-### 中文字符集
+## 中文字符集
 
 GB18030 > GBK > GB2313 （包含关系）
 
-### 参考
+## 参考
 
 - [UNICODE CHARACTER ENCODING MODEL](https://www.unicode.org/reports/tr17/)

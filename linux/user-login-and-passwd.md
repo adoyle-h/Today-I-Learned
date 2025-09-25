@@ -1,4 +1,7 @@
-# 用户登录与 passwd
+---
+title: 用户登录与 passwd
+---
+
 
 当 `/etc/passwd` 显示某个用户 `/sbin/nologin` 或者 `/bin/false`，这个用户就不能登录了。
 

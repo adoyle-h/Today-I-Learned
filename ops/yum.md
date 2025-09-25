@@ -1,34 +1,20 @@
-## YUM
+---
+title: YUM
+---
+
 
 yum 的学习使用。
 
-### TOC
-
-<!-- MarkdownTOC GFM -->
-
-- [YUM 资料手册](#yum-资料手册)
-- [查看 YUM](#查看-yum)
-- [配置目录](#配置目录)
-- [/etc/yum.conf](#etcyumconf)
-- [/etc/yum.repos.d](#etcyumreposd)
-    - [mirrorlist](#mirrorlist)
-- [/etc/yum/pluginconf.d](#etcyumpluginconfd)
-- [RPM 仓库](#rpm-仓库)
-- [YUM 指定仓库](#yum-指定仓库)
-- [yum 缓存](#yum-缓存)
-
-<!-- /MarkdownTOC -->
-
-### YUM 资料手册
+## YUM 资料手册
 
 - http://yum.baseurl.org/
 - http://yum.baseurl.org/wiki/Guides.html
 
-### 查看 YUM
+## 查看 YUM
 
 `rpm -qa|grep yum` 查看已安装的 yum 信息
 
-### 配置目录
+## 配置目录
 
 ```
 /etc/yum
@@ -57,18 +43,18 @@ yum 的学习使用。
 └── taobao.repo.saveyum.20200224
 ```
 
-### /etc/yum.conf
+## /etc/yum.conf
 
 http://man7.org/linux/man-pages/man5/yum.conf.5.html
 
-### /etc/yum.repos.d
+## /etc/yum.repos.d
 
 http://man7.org/linux/man-pages/man5/yum.conf.5.html#[repository]_OPTIONS
 
-#### mirrorlist
+### mirrorlist
 
 
-### /etc/yum/pluginconf.d
+## /etc/yum/pluginconf.d
 
 - YUM 常用插件
   - [yum-plugin-fastestmirror](https://wiki.centos.org/zh/PackageManagement/Yum/FastestMirror)
@@ -93,7 +79,7 @@ http://man7.org/linux/man-pages/man5/yum.conf.5.html#[repository]_OPTIONS
 - YUM 其他插件
   - yum-plugin-versionlock
 
-### RPM 仓库
+## RPM 仓库
 
 - RpmForge：是 RHEL 系统下的软件仓库，拥有 10000 多个软件包，被认为是最安全、最稳定的一个软件仓库。
   - 清华镜像: https://mirror.tuna.tsinghua.edu.cn/help/repoforge/
@@ -101,7 +87,7 @@ http://man7.org/linux/man-pages/man5/yum.conf.5.html#[repository]_OPTIONS
   - 清华镜像：https://mirror.tuna.tsinghua.edu.cn/help/epel/
 
 
-### YUM 指定仓库
+## YUM 指定仓库
 
 `yum install --enablerepo=<repo-name> <package-name>`
 
@@ -117,7 +103,7 @@ http://man7.org/linux/man-pages/man5/yum.conf.5.html#[repository]_OPTIONS
 
 这两个命令结果是不一样的，disablerepo=* 在后，会禁用所有 repo。
 
-### yum 缓存
+## yum 缓存
 
 `cat /etc/yum.conf  | grep cache` 一般会看到如下结果，
 ```

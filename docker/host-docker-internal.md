@@ -1,4 +1,7 @@
-# host.docker.internal
+---
+title: host.docker.internal
+---
+
 
 `host.docker.internal` 是 Docker 容器可访问的特殊域名。它指向宿主机的内部 IP。用途是在容器内访问宿主机 IP。
 

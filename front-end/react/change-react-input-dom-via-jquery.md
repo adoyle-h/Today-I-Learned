@@ -1,4 +1,6 @@
-## 使用 jquery 改变 React 的 input DOM
+---
+title: 使用 jquery 改变 React 的 input DOM
+---
 
 由于 React 组件的状态都是存在内存里的，没法得到组件对象，就不能直接改变 state。
 所以只能通过模拟鼠标和键盘的事件来与 React 组件交互。

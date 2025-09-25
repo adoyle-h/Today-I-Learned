@@ -1,4 +1,7 @@
-# mkisofs
+---
+title: mkisofs
+---
+
 
 网上很多资料都会用 `-b isolinux/isolinux.bin -c isolinux/boot.cat` 参数，但是会包找不到 isolinux 目录。这是因为你要先自己下载 isolinux 文件作为 boot。
 

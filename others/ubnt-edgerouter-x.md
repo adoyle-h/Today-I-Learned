@@ -1,4 +1,7 @@
-# Ubnt EdgeRouter-X
+---
+title: Ubnt EdgeRouter-X
+---
+
 
 ## EdgeOS
 

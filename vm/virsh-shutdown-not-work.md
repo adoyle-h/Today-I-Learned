@@ -1,16 +1,22 @@
-## virsh shutdown 命令无效
+---
+title: virsh shutdown 命令无效
+---
 
-### 问题描述
+
+## 问题描述
 
 `virsh shutdown <domain>` 后虚拟机依然是 runnning 状态。
 
 `virsh shutdown` 默认发的是 acpi 命令到虚拟机。
 虚拟机需要监听 ACPI 事件通知。如果没有监听，并做对应的处理，就不会有反应。
 
-### 解决方案
+## 解决方案
 
 ```sh
-# 安装 acpid 服务
+---
+title: 安装 acpid 服务
+---
+
 apt install acpid
 
 # 确认服务已启动
@@ -60,7 +66,7 @@ button/power LNXPWRBN:00 00000080 0000000b
 
 实际上 `virsh reboot` 是可以正常重启的。没弄明白原理，可能是 `virsh reboot` 监听到 vm 已关机后就 `virsh start` 了。
 
-### 参考
+## 参考
 
 - https://linux.die.net/man/8/acpid
 - https://wiki.archlinux.org/title/Acpid_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)

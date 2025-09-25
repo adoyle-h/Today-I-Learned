@@ -1,4 +1,7 @@
-# networking.service
+---
+title: networking.service
+---
+
 
 networking.service 管理 `/etc/network/interfaces` 里配置的网络接口。
 

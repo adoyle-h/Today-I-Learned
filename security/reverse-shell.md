@@ -1,4 +1,7 @@
-## Reverse Shell
+---
+title: Reverse Shell
+---
+
 
 当遇到这些情况，推荐使用反向 Shell 来渗透。
 
@@ -15,6 +18,6 @@
 
 反向 shell 命令具体见 [Reverse Shell Cheat Sheet](https://archive.ph/W7dTG)
 
-### nc 不支持 -e 选项的问题
+## nc 不支持 -e 选项的问题
 
 使用 [pwncat](https://github.com/cytopia/pwncat)。

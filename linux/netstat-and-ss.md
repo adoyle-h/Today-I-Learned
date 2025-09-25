@@ -1,4 +1,7 @@
-## netstat 与 ss
+---
+title: netstat 与 ss
+---
+
 
 ss 是 iproute2 工具包提供的一个命令，用来代替 netstat，执行速度更快。
 

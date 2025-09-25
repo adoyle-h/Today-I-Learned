@@ -1,4 +1,7 @@
-# UFW
+---
+title: UFW
+---
+
 
 UFW (Uncomplicated Firewall) 是 iptables 和 nftables 的前端。
 

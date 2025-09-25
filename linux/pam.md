@@ -1,4 +1,7 @@
-# PAM
+---
+title: PAM
+---
+
 
 插入式验证模块 (PAM, Pluggable Authentication Module) 是 Linux 系统级用户认证框架。
 

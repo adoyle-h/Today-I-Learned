@@ -1,4 +1,7 @@
-# Connection closed by UNKNOWN port 65535
+---
+title: Connection closed by UNKNOWN port 65535
+---
+
 
 git fetch 或者 git push 时看到这个错误。
 

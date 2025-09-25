@@ -1,4 +1,7 @@
-# linuxserver 镜像与 rootless docker
+---
+title: linuxserver 镜像与 rootless docker
+---
+
 
 linuxserver 的所有镜像通常[使用 PUID 和 PGID 环境变量来控制进程的 uid 和 gid](https://docs.linuxserver.io/general/understanding-puid-and-pgid/)。为了避免挂载宿主机的 local volume 时，文件的 uid/gid 权限问题。
 注意：linuxserver 的所有镜像不使用 `docker run --user` 参数或者 docker-compose 的 `user: uid:gid`，这是为了兼容历史设计。

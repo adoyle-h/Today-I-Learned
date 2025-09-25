@@ -1,9 +1,15 @@
-## CPU
+---
+title: CPU
+---
 
-### 用一行代码占满 CPU
+
+## 用一行代码占满 CPU
 
 ```sh
-# 占满单核
+---
+title: 占满单核
+---
+
 dd if=/dev/zero of=/dev/null
 
 # 占满多核

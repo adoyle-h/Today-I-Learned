@@ -1,4 +1,7 @@
-## chrome 开发者工具观察响应 Failed to load response data
+---
+title: chrome 开发者工具观察响应 Failed to load response data
+---
+
 
 在前端更改 window.location 做跳转，想在 chrome 开发者工具中观察跳转之前发的一个 xhr 请求，勾上了 Preserve log，发现请求是 200 status code，但是 Response 是 Failed to load response data。
 

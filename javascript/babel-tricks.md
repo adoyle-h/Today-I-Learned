@@ -1,6 +1,9 @@
-## babel 小技巧
+---
+title: babel 小技巧
+---
 
-### [babel-polyfill][] 与 [babel-runtime][]
+
+## [babel-polyfill][] 与 [babel-runtime][]
 
 - 写类库要用 babel-runtime。并且不能使用扩展基本类型的语法，例如 `Array.includes`。
 - 写服务项目要用 babel-polyfill。注意 babel-polyfill 会污染全局基本类型。

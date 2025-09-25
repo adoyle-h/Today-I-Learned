@@ -1,4 +1,7 @@
-# shell 中改变光标样式
+---
+title: shell 中改变光标样式
+---
+
 
 对于 XTerm，可使用 XTerm Control Sequences。
 在 shell 中执行 `printf -- '\x1b[6 q'` 可将光标改成细长的。`printf -- '\x1b[1 q'` 可将光标改成方块。

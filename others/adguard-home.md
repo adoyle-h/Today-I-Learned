@@ -1,4 +1,7 @@
-# adguard home
+---
+title: adguard home
+---
+
 
 ## 开启 DoH
 

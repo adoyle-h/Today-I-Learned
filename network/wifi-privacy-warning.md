@@ -1,4 +1,7 @@
-# WiFi 隐私警告 (Wi-Fi Privacy Warning)
+---
+title: WiFi 隐私警告 (Wi-Fi Privacy Warning)
+---
+
 
 Wi-Fi 的“隐私警告”通常是手机、平板或电脑连接某个无线网络时，系统给出的提示，意思是：
 

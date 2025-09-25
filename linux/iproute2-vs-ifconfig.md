@@ -1,4 +1,7 @@
-## iproute2 与 ifconfig 命令
+---
+title: iproute2 与 ifconfig 命令
+---
+
 
 [iproute2](https://wiki.linuxfoundation.org/networking/iproute2) 提供一系列网络命令工具，代替 `ifconfig` 和 `route` 等命令。
 

@@ -1,6 +1,9 @@
-## Dockerfile
+---
+title: Dockerfile
+---
 
-### 制作镜像
+
+## 制作镜像
 
 必读:
 
@@ -11,7 +14,7 @@
 - [phusion/baseimage-docker](https://github.com/phusion/baseimage-docker)
 
 
-### Entrypoint 和 CMD
+## Entrypoint 和 CMD
 
 用数组形式的组合，其他的组合都不灵活。
 
@@ -26,7 +29,7 @@ CMD ["/home/user/bin/xxx"]
 
 这样编译出来的镜像，可以用 `docker run -it <image> bash` 方便进入 shell 进行调试。
 
-### 默认 SHELL
+## 默认 SHELL
 
 在执行 RUN 时，默认 shell 是 sh 而不是 bash。这会导致必须使用 POSIX shell 语法，且无法使用 `source` 等 bash 内置命令。
 有两种解决方案：
@@ -39,7 +42,7 @@ CMD ["/home/user/bin/xxx"]
 若使用 `SHELL` 修改默认 shell 需要注意当前镜像内有无对应的 shell 程序。
 比如 alpine 镜像就没有预装 bash，所以执行 `SHELL ["/bin/bash", "-c"]` 后会报错找不到 `/bin/bash` 文件。
 
-### 条件判断用 `[ ]` 不要用 `[[ ]]`
+## 条件判断用 `[ ]` 不要用 `[[ ]]`
 
 因为在执行 RUN 时，默认 shell 是 sh 而不是 bash。
 
@@ -47,7 +50,7 @@ CMD ["/home/user/bin/xxx"]
 
 需要改写成 `RUN if [ -n "true" ]; then echo abc > abc ; fi` 才正确执行。
 
-### 减少镜像体积的方法
+## 减少镜像体积的方法
 
 
 - 通用方法
@@ -57,7 +60,7 @@ CMD ["/home/user/bin/xxx"]
 - alpine 镜像
   - `RUN apk update && apk add --no-cache CMD`
 
-### dockerfile 支持 heredoc
+## dockerfile 支持 heredoc
 
 ```dockerfile
 RUN <<EOF

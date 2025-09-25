@@ -1,4 +1,7 @@
-## XMLHttpRequest 的继承者：Fetch
+---
+title: XMLHttpRequest 的继承者：Fetch
+---
+
 
 为了替代 XMLHttpRequest。
 使用 Promise，结合 es6、es7 语法，提供更简洁的 API。

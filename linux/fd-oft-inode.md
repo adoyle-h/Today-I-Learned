@@ -1,4 +1,7 @@
-## 文件描述符，open file table 与 inode
+---
+title: 文件描述符，open file table 与 inode
+---
+
 
 推荐阅读以下内容：
 

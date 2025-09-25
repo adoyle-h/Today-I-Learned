@@ -1,4 +1,7 @@
-# Github Template (模板)
+---
+title: Github Template (模板)
+---
+
 
 ## Repository Template
 

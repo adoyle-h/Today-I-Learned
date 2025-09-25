@@ -1,6 +1,9 @@
-## 编译前端 JS 库
+---
+title: 编译前端 JS 库
+---
 
-### package.json 的 main 和输出格式
+
+## package.json 的 main 和输出格式
 
 作为应用，编译一个 UMD 模块就够了，因为不会被其他项目依赖。
 
@@ -27,7 +30,7 @@ webpack 解析这三个字段用的是 [resolve.mainFields](https://www.webpackj
 如果读的是 UMD 的包，Rollup 可能无法解析 UMD 模块的 export，会报 [name is not exported by module](https://rollupjs.org/guide/en#error-name-is-not-exported-by-module-) 的错误。
 
 
-### 参考文章
+## 参考文章
 
 - [Bundling Your JavaScript Library with Rollup](https://bagja.net/blog/bundling-your-javascript-library-with-rollup.html)
 - [package.json 中 你还不清楚的 browser，module，main 字段优先级](https://github.com/Weiyu-Chen/blog/issues/8)

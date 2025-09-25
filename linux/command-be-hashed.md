@@ -1,4 +1,7 @@
-## linux 命令被 hash 缓存
+---
+title: linux 命令被 hash 缓存
+---
+
 
 假设有个叫 xxx 的程序，当你执行 `type xxx` 会看到这样。
 

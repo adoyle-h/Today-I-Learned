@@ -1,4 +1,7 @@
-## 尾递归优化
+---
+title: 尾递归优化
+---
+
 
 [Elixir 对于尾递归的介绍](http://elixir-lang.org/getting-started/recursion.html)
 

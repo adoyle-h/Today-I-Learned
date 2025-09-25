@@ -1,4 +1,7 @@
-# systemd-resolved
+---
+title: systemd-resolved
+---
+
 
 systemd-resolved 是 systemd 的一部分，作为 systemd-resolved.service 启动。
 

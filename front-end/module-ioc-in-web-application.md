@@ -1,4 +1,7 @@
-## 前端工程的模块控制反转
+---
+title: 前端工程的模块控制反转
+---
+
 
 有一篇非常棒的文章 《[Designing very large (JavaScript) applications][B1]》提出了「Enhance」这个概念。
 实现去中心化模块加载。
@@ -19,7 +22,7 @@
 
 [B1]: https://medium.com/@cramforce/designing-very-large-javascript-applications-6e013a3291a3
 
-### Webpack 的 require.context
+## Webpack 的 require.context
 
 官网的例子有些不详细，特别注明一下。
 

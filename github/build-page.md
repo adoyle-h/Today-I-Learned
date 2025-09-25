@@ -1,4 +1,7 @@
-# 构建 github page
+---
+title: 构建 github page
+---
+
 
 ## 使用 github action
 

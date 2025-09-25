@@ -1,4 +1,7 @@
-## netns
+---
+title: netns
+---
+
 
 `ip netns list` 只列出 /var/run/netns 下的 netns。
 

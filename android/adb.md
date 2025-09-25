@@ -1,4 +1,7 @@
-# ADB
+---
+title: ADB
+---
+
 
 - `adb connect $ip` 连接设备
 - `adb devices -l` 列出已连接的设备

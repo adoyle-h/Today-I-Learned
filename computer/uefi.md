@@ -1,4 +1,7 @@
-# UEFI
+---
+title: UEFI
+---
+
 
 ## UEFI shell
 

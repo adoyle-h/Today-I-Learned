@@ -1,4 +1,7 @@
-# 在 arch linux 中升级 curl 碰到的问题
+---
+title: 在 arch linux 中升级 curl 碰到的问题
+---
+
 
 用 `sudo pacman -S curl` 升级了 curl，结果 curl 用不了了。
 `curl: /usr/lib/libssl.so.3: version 'OPENSSL_3.2.0' not found (required by /usr/lib/libcurl.so.4)`

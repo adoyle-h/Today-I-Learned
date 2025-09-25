@@ -1,4 +1,7 @@
-## 浮动侧边栏
+---
+title: 浮动侧边栏
+---
+
 
 [这篇文章很好](http://www.pixelbind.com/make-a-div-stick-when-you-scroll/) ([链接备份](https://web.archive.org/web/20220925043633/https://pixelbind.com/80-make-a-div-stick-when-you-scroll/))
 

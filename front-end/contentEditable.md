@@ -1,4 +1,7 @@
-## contentEditable
+---
+title: contentEditable
+---
+
 
 `document.body.contentEditable = true`
 

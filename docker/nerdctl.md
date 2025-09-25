@@ -1,8 +1,11 @@
-## nerdctl
+---
+title: nerdctl
+---
+
 
 [nerdctl](https://github.com/containerd/nerdctl) 是 Containerd 的上层封装工具。实现了 container、volume, network 的创建和管理。与它同层次的替代方案还有 `docker`、`podman`、`K8S`（K8S 的使用场景更复杂）。
 
-### nerdctl 的组成
+## nerdctl 的组成
 
 - 容器
   - Containerd
@@ -15,7 +18,7 @@
 - 其他
   - [RootlessKit](https://github.com/rootless-containers/rootlesskit) and [slirp4netns](https://github.com/rootless-containers/slirp4netns): for [Rootless mode](https://docs.docker.com/engine/security/rootless/)
 
-### data_root
+## data_root
 
 data_root 是存储 nerdctl 数据的根目录。根据 nerdctl 的全局选项 (Global Flags) `--data-root` 指定。
 
@@ -24,7 +27,7 @@ data_root 是存储 nerdctl 数据的根目录。根据 nerdctl 的全局选项 
 data_root 是根据 nerdctl run --data-root 指定的路径。
 linux 系统下，如果是 rootful 模式，默认值 `/var/lib/nerdctl`。如果是 [rootless 模式](https://rootlesscontaine.rs/getting-started/docker/)，默认值是 `<XDGDataHome>/nerdctl`。
 
-### dataStore
+## dataStore
 
 dataStore 存储 nerdctl 的数据的目录。它的路径是 `dataStore=<data_root>/<addr_hash>`。
 

@@ -1,16 +1,22 @@
-## npm 发包
+---
+title: npm 发包
+---
 
-### npm publish
+
+## npm publish
 
 ```sh
-# 发布到 latest tag
+---
+title: 发布到 latest tag
+---
+
 npm publish
 
 # 发布到指定 tag
 npm publish --tag $tag
 ```
 
-### npm tag
+## npm tag
 
 ```sh
 # 查看某个包的所有 tag

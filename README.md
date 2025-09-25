@@ -84,7 +84,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
   - [Systemd](#systemd)
 - [Language Server Protocol (LSP)](#language-server-protocol-(lsp))
 - [Lua](#lua)
-- [Mac](#mac)
+- [MacOS](#macos)
 - [数学](#数学)
 - [机器学习](#机器学习)
 - [网络](#网络)
@@ -99,8 +99,8 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [Redis](#redis)
 - [Ruby](#ruby)
 - [安全攻防](#安全攻防)
-- [Shell](#shell)
-- [Startup](#startup)
+- [终端](#终端)
+- [创业](#创业)
 - [存储](#存储)
   - [Etcd](#etcd)
   - [Mongo](#mongo)
@@ -110,7 +110,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [Typescript](#typescript)
 - [Vim](#vim)
 - [虚拟机](#虚拟机)
-- [Web](#web)
+- [互联网](#互联网)
 - [Windows](#windows)
 
 <!-- </details> -->
@@ -235,7 +235,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 
 ## 嵌入式
 
-- [zephyr与 esp32](embedded/zephyr-esp32.md)
+- [zephyr 与 esp32](embedded/zephyr-esp32.md)
 
 [`⬆ 返回目录`](#toc)
 
@@ -252,7 +252,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 
 - [SSR (Server Side Render)](front-end/SSR.md)
 - [关于 webpack 2](front-end/all-about-webpack-2.md)
-- [`<script async>` 与 `<script defer>`](front-end/async-defer-script-dom.md)
+- [<script async> 与 <script defer>](front-end/async-defer-script-dom.md)
 - [圆角的玩法](front-end/border-radius-tricks.md)
 - [Chrome 浏览器 DNS 解析](front-end/chrome-dns-resolver.md)
 - [Chrome Stalled 请求](front-end/chrome-stalled-requests.md)
@@ -649,7 +649,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 
 [`⬆ 返回目录`](#toc)
 
-## Mac
+## MacOS
 
 - [MacOS 通过命令行修改 IP 地址](mac/change-ip-address-via-cmd.md)
 - [Mac 的 DNS 问题](mac/dns-troubles-in-mac.md)
@@ -935,7 +935,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 
 [`⬆ 返回目录`](#toc)
 
-## Shell
+## 终端
 
 - [给命令的每一行输出加前缀的方法](shell/add-prefix-to-each-output-line.md)
 - [多行字符串赋值给变量](shell/assign-multi-lines-string-to-variable.md)
@@ -966,7 +966,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 
 [`⬆ 返回目录`](#toc)
 
-## Startup
+## 创业
 
 - [商标注册](startup/trademark-registration.md)
 
@@ -1033,7 +1033,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 
 ## Vim
 
-- [`<C-I>` 在 nvim 里等同于 `<Tab>`](vim/ctrl-i-in-neovim.md)
+- [<C-I> 在 nvim 里等同于 <Tab>](vim/ctrl-i-in-neovim.md)
 - [用于调试的最小 neovim 配置](vim/minimal-nvim-config-for-reproduce.md)
 - [学习 Neovim](vim/neovim-learning.md)
 - [在 vim 中执行 shell 命令，同时将结果输出到 buffer](vim/pipe-shell-output-to-buffer.md)
@@ -1059,7 +1059,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 
 [`⬆ 返回目录`](#toc)
 
-## Web
+## 互联网
 
 记录 Web 服务开发涉及的相关知识。
 

@@ -1,20 +1,8 @@
-## CPU 缓存
+---
+title: CPU 缓存
+---
 
-<!-- MarkdownTOC GFM -->
-
-- [多级缓存](#多级缓存)
-- [CPU Cache Line](#cpu-cache-line)
-- [Cache Line 映射到主存](#cache-line-映射到主存)
-- [CPU 包含策略 (Cache Inclusion Policy)](#cpu-包含策略-cache-inclusion-policy)
-- [CPU 写策略 (Write policies)](#cpu-写策略-write-policies)
-- [CPU Cache Coherence](#cpu-cache-coherence)
-    - [嗅探协议](#嗅探协议)
-    - [Cache Line False Sharing](#cache-line-false-sharing)
-- [参考资料](#参考资料)
-
-<!-- /MarkdownTOC -->
-
-### 多级缓存
+## 多级缓存
 
 CPU 采用多级缓存的架构，是效率和成本的权衡结果。
 
@@ -27,7 +15,7 @@ L1/L2/L3 Cache 的存储介质都是静态随机存取存储器 (SRAM)，而主�
 
 L1/L2/L3 Cache 也有人分别称为 FLC(First-Level Cache), MLC(Mid-Level Cache), LLC (Last-Level Cache)。
 
-### CPU Cache Line
+## CPU Cache Line
 
 一个 Cache 由 N 个 Cache Line 组成, 一般大小为 32 或 64 字节。Cache Line 是和内存进行数据交换的最小单位。
 
@@ -56,12 +44,12 @@ LEVEL4_CACHE_ASSOC                 0
 LEVEL4_CACHE_LINESIZE              0
 ```
 
-### Cache Line 映射到主存
+## Cache Line 映射到主存
 
 组相联映射。组间采用直接映射，组内为全相联。
 
 
-### CPU 包含策略 (Cache Inclusion Policy)
+## CPU 包含策略 (Cache Inclusion Policy)
 
 表示同一个 CL 读取/删除，在其他层的反应的关系策略。
 CPU 包含策略作用在 L1/L2/L3，具体策略分配是厂商实现 CPU 指定的。
@@ -74,16 +62,16 @@ CPU 包含策略作用在 L1/L2/L3，具体策略分配是厂商实现 CPU 指�
 
 具体看[这里的图](https://www.wikiwand.com/en/Cache_inclusion_policy)。
 
-### CPU 写策略 (Write policies)
+## CPU 写策略 (Write policies)
 
 - Write Through
 - Write Back
 
-### CPU Cache Coherence
+## CPU Cache Coherence
 
 CPU 缓存一致性协议，有两种：嗅探协议和目录协议。
 
-#### 嗅探协议
+### 嗅探协议
 
 MESI 协议：
 
@@ -94,11 +82,11 @@ MESI 协议：
 
 - [cache之多核一致性(一) - 总线上没有秘密](https://zhuanlan.zhihu.com/p/94811032) ([链接备份](https://web.archive.org/web/20210926113028/https://zhuanlan.zhihu.com/p/94811032))
 
-#### Cache Line False Sharing
+### Cache Line False Sharing
 
 Cache Coherence 还会引起 [Cache Line False Sharing 问题](./cpu-cache-line-false-sharing.md)。
 
-### 参考资料
+## 参考资料
 
 - [Wikipedia - CPU缓存](https://www.wikiwand.com/zh-hans/CPU%E7%BC%93%E5%AD%98)
 - [Cache 是怎么组织和工作的？](https://zhuanlan.zhihu.com/p/31859105) ([链接备份](https://web.archive.org/web/20200921100404/https://zhuanlan.zhihu.com/p/31859105))

@@ -1,4 +1,7 @@
-# nftables
+---
+title: nftables
+---
+
 
 ## syntax error near unexpected token `}`
 

@@ -1,8 +1,11 @@
-## 容器里装 K3S
+---
+title: 容器里装 K3S
+---
+
 
 目前卡在问题一，方案未成功。记录一下折腾的方案。
 
-### compose.yaml 配置
+## compose.yaml 配置
 
 ```yaml
 version: '3'
@@ -44,13 +47,16 @@ services:
     - ./data:/output
 ```
 
-### k3s 配置
+## k3s 配置
 
 k3s-server-conf.yaml 文件内容：
 
 ```yaml
 node-name: m1
-# docker: true
+---
+title: docker: true
+---
+
 container-runtime-endpoint: unix:///run/containerd/containerd.sock
 pause-image: rancher/pause:3.6
 
@@ -71,7 +77,7 @@ kubelet-arg:
 
 这样能启动 K3S，只是仍有问题。
 
-### 问题一
+## 问题一
 
 K8S 的 projected volume 是以 tmpfs 保存的。比如 POD 无法获得 ServiceAccountToken。
 

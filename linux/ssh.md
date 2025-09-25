@@ -1,33 +1,39 @@
-## SSH
+---
+title: SSH
+---
 
-### SSH Config
+
+## SSH Config
 
 使用 ssh config 来管理远端。
 
 使用 `Include` 关键词来加载其他 ssh 配置文件，这样方便分开管理。
 
 ```
-# ~/.ssh/config
+---
+title: ~/.ssh/config
+---
+
 Include config.d/*
 ```
 
-### One-Off Command
+## One-Off Command
 
 `ssh <host> <command>` 可以直接在远端机器执行命令，比如 `ssh <host> hostname` 。
 
-### 快速把本地的 public key 添加到远端的 authorized_keys
+## 快速把本地的 public key 添加到远端的 authorized_keys
 
 `ssh-copy-id <host>`
 
 如果没有 ssh-copy-id，也可以执行 `cat ~/.ssh/id_rsa.pub | ssh <host> 'mkdir -p ~/.ssh; cat >> ~/.ssh/authorized_keys'`
 
-### 编程方式输入 ssh 密码
+## 编程方式输入 ssh 密码
 
 [sshpass](https://github.com/kevinburke/sshpass) 通过编程方式在 ssh 时输入用户名和密码。不安全，勿用在生产环境。
 
 [参考文章](https://linux.cn/article-8086-1.html)。
 
-### ssh 隧道
+## ssh 隧道
 
 ssh 隧道 (ssh turnnel) 一般用来做端口转发。
 
@@ -37,14 +43,14 @@ ssh 隧道 (ssh turnnel) 一般用来做端口转发。
 
 - https://www.zsythink.net/archives/2450
 
-### ssh SOCKS 代理
+## ssh SOCKS 代理
 
 ```sh
 # To create a SOCKS proxy on localhost and port 9999
 ssh -D 9999 <host>
 ```
 
-### 创建持久连接
+## 创建持久连接
 
 改 `~/.ssh/config` 配置
 
@@ -61,7 +67,7 @@ ControlPersist 1h
 
 但这可能会导致一些问题：比如 usermod 修改后，重新登录账户依然不生效。因为 sshd 还保留着链接进程，并没有真正登出当前账户。
 
-### ssh -O
+## ssh -O
 
 可以用 `ssh -O <ctl_cmd>` 来告知远端 sshd 如何操作 ssh 链接。
 

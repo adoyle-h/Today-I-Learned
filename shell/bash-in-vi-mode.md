@@ -1,4 +1,7 @@
-## bash 开启 vi 模式
+---
+title: bash 开启 vi 模式
+---
+
 
 bash 默认使用的是 `emacs mode`。
 

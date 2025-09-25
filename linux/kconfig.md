@@ -1,4 +1,7 @@
-# kconfig
+---
+title: kconfig
+---
+
 
 在编译 linux 内核常见的 `make *config` 命令都是来自于 [kconfig](https://www.kernel.org/doc/html/latest/kbuild/kconfig.html)。
 可以 `make help` 查看相关命令。

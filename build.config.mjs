@@ -24,4 +24,10 @@ export const categoryNameMap = {
     hardware: '硬件',
     ml: '机器学习',
     embedded: '嵌入式',
+    startup: '创业',
+    shell: '终端',
+    web: '互联网',
+    mac: 'MacOS',
+    windows: 'Windows',
+    linux: 'Linux',
 };

@@ -1,4 +1,7 @@
-# mount
+---
+title: mount
+---
+
 
 ## 展示挂载点
 

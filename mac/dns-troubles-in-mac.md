@@ -1,6 +1,9 @@
-## Mac 的 DNS 问题
+---
+title: Mac 的 DNS 问题
+---
 
-### nslookup 能解析域名，但是 ping 解析不了域名
+
+## nslookup 能解析域名，但是 ping 解析不了域名
 
 `sudo killall -HUP mDNSResponder` 可以解决这个问题。
 

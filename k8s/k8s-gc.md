@@ -1,4 +1,7 @@
-## K8S 垃圾回收 (GC)
+---
+title: K8S 垃圾回收 (GC)
+---
+
 
 需要回收的是无用的 pod、container、image。
 

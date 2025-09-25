@@ -1,4 +1,7 @@
-## vim textwidth=78 的约定
+---
+title: vim textwidth=78 的约定
+---
+
 
 [解答](http://stackoverflow.com/questions/28026110/what-is-the-reason-origin-of-textwidth-78-rather-than-80)
 

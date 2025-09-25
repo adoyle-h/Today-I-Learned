@@ -1,4 +1,7 @@
-## 配置 node 开发环境
+---
+title: 配置 node 开发环境
+---
+
 
 1. 安装 [nvm](https://github.com/nvm-sh/nvm)
 2. `nvm ls-remote --lts` 查看最新 LTS 版本

@@ -1,4 +1,7 @@
-## git credentials
+---
+title: git credentials
+---
+
 
 存储 git 验证信息
 

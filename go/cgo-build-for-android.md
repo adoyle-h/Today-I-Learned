@@ -1,4 +1,7 @@
-# go 交叉编译安卓程序
+---
+title: go 交叉编译安卓程序
+---
+
 
 首先需要安装 [NDK](https://developer.android.com/ndk/downloads)。可以直接从官网下载，也可以用 homebrew 安装。
 

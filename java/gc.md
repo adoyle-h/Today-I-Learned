@@ -1,14 +1,17 @@
-## Java GC
+---
+title: Java GC
+---
+
 
 [基本概念](../language/gc.md)。
 
 https://juejin.im/post/6874810532730404878/
 
-### Minor GC
+## Minor GC
 
-### Full GC
+## Full GC
 
-### 垃圾回收器 (Garbage Collector)
+## 垃圾回收器 (Garbage Collector)
 
 垃圾回收器是垃圾回收算法（标记-清除算法、复制算法、标记-整理算法、火车算法）的具体实现。不同商家、不同版本的 JVM 所提供的垃圾收集器可能会有很在差别。
 

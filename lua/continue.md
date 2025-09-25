@@ -1,4 +1,7 @@
-## lua 没有 continue 关键字
+---
+title: lua 没有 continue 关键字
+---
+
 
 可以用 `goto` 代替。
 

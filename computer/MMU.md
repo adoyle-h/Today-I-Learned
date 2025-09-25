@@ -1,4 +1,7 @@
-# 内存管理单元 MMU
+---
+title: 内存管理单元 MMU
+---
+
 
 内存管理单元 (MMU)，或称存储器管理单元，或称分页内存管理单元 (PMMU: Paged Memory Management Unit)。MMU 是一种负责 CPU 的内存访问请求的计算机硬件设备。是 CPU 的一部分。
 

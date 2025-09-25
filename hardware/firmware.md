@@ -1,4 +1,7 @@
-# 固件 (Firmware)
+---
+title: 固件 (Firmware)
+---
+
 
 固件（台湾称呼为韌體）。
 

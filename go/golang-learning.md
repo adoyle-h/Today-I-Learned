@@ -1,6 +1,9 @@
-## Golang 学习
+---
+title: Golang 学习
+---
 
-### 配置 Golang 开发环境
+
+## 配置 Golang 开发环境
 
 1. 安装 [gvm](https://github.com/moovweb/gvm)
 1. `gvm listall` 查看可用版本
@@ -16,7 +19,7 @@
 1. 安装 [gotags](https://github.com/jstemmer/gotags)
 1. 配置你的编辑器
 
-### 入门资料
+## 入门资料
 
 1. [Go by Example 中文版](https://gobyexample-cn.github.io/)
 2. [X 分钟速成 Y - Go](https://learnxinyminutes.com/docs/zh-cn/go-cn)
@@ -26,22 +29,22 @@
 6. https://go.dev/ref/spec
 7. [Go 语言圣经](http://shouce.jb51.net/gopl-zh)
 
-### 命令
+## 命令
 
 https://golang.org/cmd/go
 
-### REPL
+## REPL
 
 - https://play.golang.org/
 - https://github.com/motemen/gore
 
-### 目录规范
+## 目录规范
 
 一般遵循 [project-layout](https://github.com/golang-standards/project-layout)。
 
 但也有少部分项目是直接源代码平铺在项目根目录的。
 
-### 编码规范
+## 编码规范
 
 - [Uber Go Style Guide](https://github.com/uber-go/guide/blob/master/style.md)
 - [Effective Go](https://golang.org/doc/effective_go.html)

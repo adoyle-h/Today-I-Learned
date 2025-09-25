@@ -1,4 +1,7 @@
-## github 中 markdown 折叠文本
+---
+title: github 中 markdown 折叠文本
+---
+
 
 ```
 <details>

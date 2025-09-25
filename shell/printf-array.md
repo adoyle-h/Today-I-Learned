@@ -1,4 +1,7 @@
-# printf 打印多行
+---
+title: printf 打印多行
+---
+
 
 ## `printf '%s\n' $@` 为何可以打印多行？
 

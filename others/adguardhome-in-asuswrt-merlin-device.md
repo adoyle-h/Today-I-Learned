@@ -1,4 +1,7 @@
-# 在梅林固件路由器里安装 AdGuard Home
+---
+title: 在梅林固件路由器里安装 AdGuard Home
+---
+
 
 ## 安装
 

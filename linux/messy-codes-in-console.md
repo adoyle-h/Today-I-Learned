@@ -1,6 +1,9 @@
-## 命令行中的乱码
+---
+title: 命令行中的乱码
+---
 
-### tree 命令，中文路径乱码
+
+## tree 命令，中文路径乱码
 
 使用 `tree -N` 即可。
 
@@ -8,7 +11,7 @@
 -N     Print non-printable characters as is instead of as escaped octal numbers.
 ```
 
-### git status 中文路径乱码
+# git status 中文路径乱码
 
 `git config --global core.quotepath false`
 

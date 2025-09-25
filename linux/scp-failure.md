@@ -1,4 +1,7 @@
-# scp: Connection closed
+---
+title: 'scp: Connection closed'
+---
+
 
 scp 拷贝文件到本地时，发现仅有一个报错：`scp: Connection closed`，没有其他提示。
 

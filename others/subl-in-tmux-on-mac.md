@@ -1,4 +1,7 @@
-## mac 里的 tmux 内无法用 sublime 打开文件
+---
+title: mac 里的 tmux 内无法用 sublime 打开文件
+---
+
 
 解决方案：使用 [tmux-MacOSX-pasteboard](https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard)。
 

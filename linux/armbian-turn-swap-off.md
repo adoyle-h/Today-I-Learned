@@ -1,4 +1,7 @@
-# Armbian 关闭 swap
+---
+title: Armbian 关闭 swap
+---
+
 
 如果 `systemctl status armbian-zram-config.service` 看到是在运行的。那么就编辑 `/etc/default/armbian-zram-config`，把 `SWAP=false` 这行注释取消。
 

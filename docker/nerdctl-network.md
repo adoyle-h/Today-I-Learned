@@ -1,6 +1,9 @@
-## nerdctl 网络
+---
+title: nerdctl 网络
+---
 
-### 创建流程
+
+## 创建流程
 
 1. 创建 CNI 配置文件
 2. 创建 resolv.conf 文件
@@ -23,7 +26,7 @@
 
 所以 containerd 不负责容器网络的创建，这都是由 nerdctl 直接控制的。
 
-### CNI 配置
+## CNI 配置
 
 CNI 就两个相关配置，插件可执行文件和插件配置文件。这两类文件的搜索路径在 [containerd config.toml](./containerd.md#config.toml) 中设置。
 
@@ -34,11 +37,11 @@ CNI 就两个相关配置，插件可执行文件和插件配置文件。这两�
   - 目录在 config.toml 中 `[plugins."io.containerd.grpc.v1.cri".cni]` 的 `conf_dir` 路径。通常是 `/usr/lib/cni`
   - 插件的配置文件通常是以 .conflist（或 .conf 或 .json）文件名结尾的文件。
 
-### CNI 插件
+## CNI 插件
 
 调用插件是通过环境变量和配置文件传递给插件，配置内容通过 stdin 输入，插件把 JSON 输出到 stdout 来返回结果。
 
-### resolv.conf
+## resolv.conf
 
 resolv.conf 文件路径是 `<dataStore>/containers/<NS>/<ID>/resolv.conf`。
 它的内容由三部分组成：
@@ -57,19 +60,19 @@ nameserver 192.168.1.2
 
 这个文件在创建容器时会被 mount --bind 到容器的 /etc/resolv.conf。
 
-### hosts
+## hosts
 
 hosts 文件路径是 `<dataStore>/etchosts/<NS>/<ID>/hosts`。
 
 这个文件在创建容器时会被 mount --bind 到容器的 /etc/hosts。
 
-### hostname
+## hostname
 
 hostname 文件路径是 `<dataStore>/containers/<NS>/<ID>/hostname`。
 
 这个文件在创建容器时会被 mount --bind 到容器的 /etc/hostname。
 
-### meta.json
+## meta.json
 
 meta.json 文件路径是 `<dataStore>/etchosts/<NS>/<ID>/meta.json`
 
@@ -94,7 +97,10 @@ $ ls /var/lib/nerdctl/1935db59/etchosts/default/3c41e9ff441d6282bed1d170c3d4abde
 hosts  meta.json
 
 $ cat /var/lib/nerdctl/1935db59/etchosts/default/3c41e9ff441d6282bed1d170c3d4abde79e563a17c658b23f75501662cff5bf5/hosts
-# <nerdctl>
+---
+title: <nerdctl>
+---
+
 127.0.0.1          localhost localhost.localdomain
 :1                 localhost localhost.localdomain
 10.4.10.15         server server.k3s_default k3s_server_1 k3s_server_1.k3s_default
@@ -143,7 +149,7 @@ $ python3 -m json.tool /var/lib/nerdctl/1935db59/etchosts/default/3c41e9ff441d62
 }
 ```
 
-### ipam 插件
+## ipam 插件
 
 - dhcp : Runs a daemon on the host to make DHCP requests on behalf of a container
 - host-local : Maintains a local database of allocated IPs

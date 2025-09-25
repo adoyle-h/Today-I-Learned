@@ -1,16 +1,6 @@
-# rootless docker 网络
-
-<!-- MarkdownTOC GFM -->
-
-- [安装](#安装)
-- [网络](#网络)
-- [rootlesskit --net=vpnkit](#rootlesskit---netvpnkit)
-    - [源码分析](#源码分析)
-- [rootlesskit --net=slirp4netns](#rootlesskit---netslirp4netns)
-    - [10.0.2.3](#10023)
-- [CNI](#cni)
-
-<!-- /MarkdownTOC -->
+---
+title: rootless docker 网络
+---
 
 ## 安装
 
@@ -54,8 +44,6 @@ default via 192.168.65.1 dev tap0
 ```
 
 192.168.65.1 是 [vpnkit 配置的默认网关 ip](https://github.com/moby/vpnkit/blob/dc331cb22850be0cdd97c84a9cfecaf44a1afb6e/src/hostnet/configuration.ml#L96)。通过 tap0 设备可以访问到。
-
-在 []()
 
 当系统没有安装 slirp4netns，rootlesskit 会启动 vpnkit 来作为默认网关代理。
 vpnkit 的作用有三个：[网关，端口转发，HTTP 透明代理](https://github.com/moby/vpnkit#design)。

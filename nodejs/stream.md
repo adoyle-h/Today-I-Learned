@@ -1,7 +1,8 @@
-## 流 (stream)
+---
+title: 流 (stream)
+---
 
-
-### 'finish' 与 'end' 事件的区别
+## 'finish' 与 'end' 事件的区别
 
 node 官方文档：
 

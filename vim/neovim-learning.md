@@ -1,4 +1,7 @@
-# 学习 Neovim
+---
+title: 学习 Neovim
+---
+
 
 ## 安装 neovim
 

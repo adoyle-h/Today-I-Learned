@@ -1,7 +1,8 @@
 ---
+title: Bash xtrace
 tags: [bash, xtrace, bash-tricks]
 ---
-# Bash xtrace
+
 
 使用 `set -o xtrace` 来跟踪命令，获取更详细的 debug 信息。
 

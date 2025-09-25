@@ -1,4 +1,7 @@
-# alpine 的 /sbin/init
+---
+title: alpine 的 /sbin/init
+---
+
 
 在 alpine 中，/sbin/init 是指向 /bin/busybox 的软链接。
 

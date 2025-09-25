@@ -1,4 +1,7 @@
-## 中断
+---
+title: 中断
+---
+
 
 - Top-half
 - Bottom-half
@@ -14,6 +17,6 @@
   - 伪中断（spurious interrupt）。一类不希望被产生的硬件中断。发生的原因有很多种，如中断线路上电气信号异常，或是中断请求设备本身有问题。
 
 
-### 参考
+## 参考
 
 - https://www.cnblogs.com/LoyenWang/p/13124803.html

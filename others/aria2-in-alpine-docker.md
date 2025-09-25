@@ -1,4 +1,7 @@
-# 在 Alpine docker 容器里启动 aria2
+---
+title: 在 Alpine docker 容器里启动 aria2
+---
+
 
 基于 alpine 镜像安装 aria2。`apk add aria2 aria2-daemon`。
 

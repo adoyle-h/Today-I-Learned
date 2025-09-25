@@ -1,15 +1,18 @@
-## tuple 与 list 的选择
+---
+title: tuple 与 list 的选择
+---
+
 
 tuple 和 list 在读取和修改有性能方面的差异。具体请阅读官方文档。
 
-### 问题
+## 问题
 
 很多函数都以 tuple 的形式返回结果，为何不以 list 的形式返回，如 `[:ok, "hello"]`？
 官方文档上说 guide you to do the right thing，但这个例子没看出来有什么性能上的区别。
 
 `[:ok, result] = [:ok, "hello"]` ， `{:ok, result} = {:ok, "hello"}` 我觉得都可以啊。
 
-### 解答
+## 解答
 
 参照 [stackoverflow 上的解答][1]，我觉得最主要是取决于：
 

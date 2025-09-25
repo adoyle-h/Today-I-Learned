@@ -1,4 +1,7 @@
-# boot.img
+---
+title: boot.img
+---
+
 
 ## 从手机上提取 boot.img
 

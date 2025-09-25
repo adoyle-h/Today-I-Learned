@@ -1,6 +1,9 @@
-## Podman
+---
+title: Podman
+---
 
-### podman 内部结构
+
+## podman 内部结构
 
 - 容器
   - [conmon](https://github.com/containers/conmon) 是容器守护进程，负责一对一监控和管理每个 podman 容器
@@ -22,6 +25,6 @@ podman 没有 daemon，一个 podman 进程管理一个容器。docker 有 daemo
 
 容器、镜像、volume 等数据存储在 `/var/lib/containers/` 目录。
 
-### podman rm -f 容器后，进程可能仍存在
+## podman rm -f 容器后，进程可能仍存在
 
 `podman rm -f` 只是删除了容器自身的数据，进程仍有可能存留。ps 看一下，如果还在就需要手动 kill 进程。

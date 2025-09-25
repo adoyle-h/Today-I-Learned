@@ -1,7 +1,8 @@
 ---
+title: Bash 的 subshell 与子进程
 tags: [bash, bash-tricks, subshell]
 ---
-# Bash 的 subshell 与子进程
+
 
 subshell 也是子进程，区别在于 subshell 继承父进程的变量，而子进程只能继承父进程 export 的变量。
 

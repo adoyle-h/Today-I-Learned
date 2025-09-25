@@ -1,1 +1,4 @@
-# nix flake
+---
+title: nix flake
+---
+

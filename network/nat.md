@@ -1,6 +1,9 @@
-## NAT
+---
+title: NAT
+---
 
-### SNAT
+
+## SNAT
 
 适用于局域网内的用户用同一个公网 IP 来访问外网。
 
@@ -8,13 +11,13 @@
 
 `iptables -t nat -I POSTROUTING -o 外网网卡 -s 内网网段 -j SNAT --to-source 公网IP地址`
 
-### DNAT
+## DNAT
 
 适用于局域网内的服务映射到公网 IP，对外网提供服务。
 
 `iptables -t nat -I PREROUTING -i 外网网卡 -d 外网ip tcp --dport 发布的端口 -j DNAT --to-destination 内网服务ip:端口`
 
-### MASQUERADE
+## MASQUERADE
 
 MASQUERADE 是 SNAT 的一个特例。
 用网卡的 IP 来替换源 IP，因此，对于那些 IP 不固定的场合，比如拨号网络或者通过 DHCP 分配 IP 的情况下，就得用 MASQUERADE。

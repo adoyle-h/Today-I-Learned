@@ -1,4 +1,7 @@
-## go generate
+---
+title: go generate
+---
+
 
 `go generate` 是 Go 自带的工具。使用命令 `go generate` 执行。它是利用源代码中的注释工作的。格式如下：
 
@@ -17,7 +20,7 @@
 学习[这个用 stringer 例子][1]。
 
 
-### 参考资料
+## 参考资料
 
 - [深入理解Go之generate][1]
 - https://blog.golang.org/generate

@@ -1,11 +1,14 @@
-## Sketch 的文本样式与颜色
+---
+title: Sketch 的文本样式与颜色
+---
 
-### Question
+
+## Question
 
 我想有一套固定的文本样式 (text style) ，在设计组件时选择对应的文本样式，方便一键同步文本样式。
 但是设计某些特殊组件时需要将文本改成其他颜色，但修改颜色会导致文本样式被修改。无法统一。
 
-### Answer
+## Answer
 
 [这篇文章](https://blog.prototypr.io/sketch-overriding-the-color-of-text-layers-in-symbols-69d54577158b) 非常有用，虽然是 2017 年写的，但 Sketch 62 依然有效。
 

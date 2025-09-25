@@ -1,4 +1,7 @@
-## git ssh 代理
+---
+title: git ssh 代理
+---
+
 
 `.gitconfig` 只能改走 http 和 https 协议的代理。
 对于走 ssh 协议，要改的是 `~/.ssh/config`。

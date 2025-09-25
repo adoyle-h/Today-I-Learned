@@ -1,6 +1,9 @@
-## URI 转义
+---
+title: URI 转义
+---
 
-### 什么是转义
+
+## 什么是转义
 
 转义的字符会按如下格式来表达
 
@@ -12,11 +15,11 @@ hex         = digit | "A" | "B" | "C" | "D" | "E" | "F" |
 
 比如 `+` 转义后是 `%2B`。
 
-### 问题
+## 问题
 
 url 里出现的 `;/?:@&=+$,#[]!'()*` 字符串，客户端要不要转义？服务端如何解码？
 
-### 原因
+## 原因
 
 1994 年提出的 [RFC1738][] 定义了 URI 最初的规范，1998 年提出的 [RFC2396][] 有较为完整的规范，2005 年提出的 [RFC3986][] 最终成为主流规范。
 其过程对保留字的定义等有所改变，所以存在历史的变（包）迁（袱）。
@@ -42,14 +45,14 @@ function fixedEncodeURIComponent(str) {
 又比如 JAVA 标准库里的 [java.net.URLEncoder][]。
 又比如 [PHP 的 urlencode][PHP]。
 
-### 区别
+## 区别
 
 | 标准    | 提出年号 | 保留字（需要转义）   | 非保留字（不用转义）    |
 |:--------|:---------|:---------------------|-------------------------|
 | RFC2396 | 1998     | `;/?:@&=+$,`         | alphanum 和 `-_.~!*'()` |
 | RFC3986 | 2005     | `;/?:@&=+$,#[]!'()*` | alphanum 和 `-_.~`      |
 
-### 何时转义
+## 何时转义
 
 RFC2396 的描述
 
@@ -111,9 +114,9 @@ RFC3986 的描述
 >   data octet as the beginning of a percent-encoding, or vice versa in
 >   the case of percent-encoding an already percent-encoded string.
 
-### 其他坑
+## 其他坑
 
-#### 空格被转成加号
+### 空格被转成加号
 
 因为早期 url component encode/decode 遵循 application/x-www-form-urlencoded 的转换规则。
 

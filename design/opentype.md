@@ -1,8 +1,11 @@
-## OpenType
+---
+title: OpenType
+---
+
 
 https://www.wikiwand.com/zh-hans/OpenType
 
-### .OTF 和 .TTF 哪个好
+## .OTF 和 .TTF 哪个好
 
 .OTF 更好
 

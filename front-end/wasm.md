@@ -1,4 +1,7 @@
-## wasm
+---
+title: wasm
+---
+
 
 WebAssembly 官方网站: http://webassembly.org.cn/
 

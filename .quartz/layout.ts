@@ -20,6 +20,10 @@ const breadcrumbs = Component.Breadcrumbs(layout.breadcrumbs)
 
 const explorer = Component.Explorer({
   filterFn: (node: FileTrieNode) => {
+    // hide "databse" folder in explorer
+    if (['database/index'].includes(node.slug)) {
+      return false
+    }
     return node.isFolder || !node.slug.includes('/')
   },
   ...layout.explorer,
@@ -37,7 +41,12 @@ const recnetNotes = Component.ConditionalRender({
     sort: (f1, f2) => {
       if (f1.dates && f2.dates) {
         // sort descending
-        return f2.dates?.modified!.getTime() - f1.dates?.modified!.getTime()
+        const d = f2.dates?.modified!.getTime() - f1.dates?.modified!.getTime()
+        if (d > 0.1) {
+          return d
+        } else {
+          return f2.dates?.created!.getTime() - f1.dates?.created!.getTime()
+        }
       } else if (f1.dates && !f2.dates) {
         // prioritize files with dates
         return -1
@@ -54,7 +63,6 @@ const recnetNotes = Component.ConditionalRender({
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
-    Component.Banner(),
     Component.ConditionalRender({
       component: breadcrumbs,
       condition: (page) => page.fileData.slug !== "index",
@@ -83,7 +91,11 @@ export const defaultContentPageLayout: PageLayout = {
       ],
     }),
     explorer,
-    Component.DesktopOnly(Component.Graph()),
+    Component.ConditionalRender({
+      component: Component.DesktopOnly(Component.Graph()),
+      // not show graph in homepage
+      condition: ((page) => page.fileData.slug !== 'index'),
+    })
   ],
 
   right: [
@@ -101,7 +113,6 @@ export const defaultContentPageLayout: PageLayout = {
 // components for pages that display lists of pages  (e.g. tags or folders)
 export const defaultListPageLayout: PageLayout = {
   beforeBody: [
-    Component.Banner(),
     breadcrumbs,
     Component.ArticleTitle(),
     Component.ConditionalRender({

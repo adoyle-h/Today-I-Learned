@@ -1,4 +1,7 @@
-# dig 命令
+---
+title: dig 命令
+---
+
 
 macos 内置的 dig 命令不支持 `+tls` 与 `+https` 参数请求 DoT/DoH。
 

@@ -1,4 +1,7 @@
-# 文件的创建日期
+---
+title: 文件的创建日期
+---
+
 
 用 `stat $filepath` 查看文件的 atime/ctime/mtime/btime。
 其中 btime 是文件的创建日期，ctime 不是。

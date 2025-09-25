@@ -1,6 +1,9 @@
-## Libvirt
+---
+title: Libvirt
+---
 
-### 挂载块设备
+
+## 挂载块设备
 
 ```sh
 cat <<EOF > vdc.xml
@@ -20,19 +23,22 @@ virsh detach-device $domain ./vdc.xml --persistent
 
 参数详见 [libvirt - Domain XML format](https://libvirt.org/formatdomain.html)。
 
-### 退出 cdrom
+## 退出 cdrom
 
 ```sh
 domain=
 
-# 把 cdrom 对应的那段 XML 复制到 cdrom.xml 文件里。
+---
+title: 把 cdrom 对应的那段 XML 复制到 cdrom.xml 文件里。
+---
+
 virsh dumpxml $domain
 # cdrom 只能在虚拟机关机时退出，因为它说不支持热拔插: This type of device cannot be hot unplugged
 virsh shutdown $domain
 virsh detach-device $domain ./cdrom.xml --persistent
 ```
 
-### No more available PCI slots
+## No more available PCI slots
 
 因为 PCI 插槽不够了，没法挂载新设备。所以需要新增 PCI 插槽。
 先看一眼文章 [PCI topology and hotplug](https://libvirt.org/pci-hotplug.html)，了解大概。

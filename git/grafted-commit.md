@@ -1,4 +1,7 @@
-## grafted commit
+---
+title: grafted commit
+---
+
 
 git log 看到 grafted 标签时，意味着 git clone 时用了 `--depth` 参数，当前仓库是 shadow 的，即 commit 历史不完整的。
 使用 `git fetch origin --unshallow` 来拉取完整 commit 历史。

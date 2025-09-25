@@ -1,4 +1,7 @@
-# 关闭 Mac 的 Gatekeeper
+---
+title: 关闭 Mac 的 Gatekeeper
+---
+
 
 为了让 Mac 能够安装所有来源的 App，需要临时关闭 Gatekeeper。
 

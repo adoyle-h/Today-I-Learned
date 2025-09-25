@@ -1,4 +1,6 @@
-# systemd-mount
+---
+title: systemd-mount
+---
 
 由 systemd 管理的文件系统挂载点。可以替代 /etc/fstab。
 

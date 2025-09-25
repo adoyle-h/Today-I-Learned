@@ -1,4 +1,7 @@
-# ASCII 与 ANSI
+---
+title: ASCII 与 ANSI
+---
+
 
 ## ASCII 与 ANSI Code
 

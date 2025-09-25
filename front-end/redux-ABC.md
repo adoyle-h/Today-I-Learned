@@ -1,4 +1,7 @@
-## redux 入门
+---
+title: redux 入门
+---
+
 
 入门必读：[redux 官方文档中文翻译](http://cn.redux.js.org/)
 

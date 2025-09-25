@@ -1,4 +1,7 @@
-# sysctl
+---
+title: sysctl
+---
+
 
 sysctl 是一种用于在运行时检查和更改内核参数的工具。sysctl 在 procfs 中实现，procfs 是位于/proc/的虚拟进程文件系统。
 

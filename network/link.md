@@ -1,4 +1,7 @@
-# link
+---
+title: link
+---
+
 
 ## ethtool
 

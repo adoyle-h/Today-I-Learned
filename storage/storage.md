@@ -1,6 +1,9 @@
-## 存储
+---
+title: 存储
+---
 
-### 概念
+
+## 概念
 
 ![Linux-storage-stack-diagram_v4.10.png](https://www.thomas-krenn.com/de/wikiDE/images/e/e0/Linux-storage-stack-diagram_v4.10.png) ([链接备份](https://web.archive.org/web/20230103013337/https://www.thomas-krenn.com/de/wikiDE/images/e/e0/Linux-storage-stack-diagram_v4.10.png))
 
@@ -23,7 +26,7 @@
     - CIFS
 - 分布式存储 (DFS, Distributed File System)
 
-### 程序服务
+## 程序服务
 
 - Ceph：支持块存储、文件存储、对象存储
 - SAMBA：支持 SMB

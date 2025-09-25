@@ -1,4 +1,7 @@
-## Safari 浏览器的类继承 Bug
+---
+title: Safari 浏览器的类继承 Bug
+---
+
 
 ![safari_class_extend_bug_20191201_214626.png](https://cdn.adoyle.top/TIL/safari_class_extend_bug_20191201_214626.png)
 

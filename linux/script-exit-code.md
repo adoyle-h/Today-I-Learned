@@ -1,4 +1,7 @@
-## 程序的退出码 (Exit Code)
+---
+title: 程序的退出码 (Exit Code)
+---
+
 
 退出码的有效范围是 0~255。0 代表正常，其他都是异常。
 
@@ -16,7 +19,7 @@
 - `130` - Script terminated by Control-C
 - `255` - Exit status out of range
 
-### 参考
+## 参考
 
 - https://tldp.org/LDP/abs/html/exitcodes.html
 - http://www.gnu.org/savannah-checkouts/gnu/libc/manual/html_node/Exit-Status.html

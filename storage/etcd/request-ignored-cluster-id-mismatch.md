@@ -1,6 +1,8 @@
-## ETCD 报错 request ignored (cluster ID mismatch)
+---
+title: ETCD 报错 request ignored (cluster ID mismatch)
+---
 
-### 原因
+## 原因
 
 > 查看 etcd 运行日志，如果看到如下日志：
 
@@ -20,7 +22,7 @@
 详见 https://web.archive.org/web/20190504110907/https://bingohuang.com/etcd-operation-5/
 
 
-### 解决方案
+## 解决方案
 
 三种
 

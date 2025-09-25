@@ -1,4 +1,7 @@
-# iptables 与 nftables
+---
+title: iptables 与 nftables
+---
+
 
 iptables 基于 [netfilter](./netfilter.md)。主要用于网络防火墙的场景。
 

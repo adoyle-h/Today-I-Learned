@@ -1,4 +1,7 @@
-# Termux
+---
+title: Termux
+---
+
 
 Termux 是 Android 手机上的一个终端 App。
 不用 root 手机，普通权限就能很方便地使用了。

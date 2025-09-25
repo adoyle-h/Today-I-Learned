@@ -1,4 +1,7 @@
-# fakeroot
+---
+title: fakeroot
+---
+
 
 [fakeroot](https://wiki.debian.org/FakeRoot) 类似 sudo。只不过实际上它没有 root 权限，只不过让进程以为自己有 root 权限。通常用在编译场景。
 

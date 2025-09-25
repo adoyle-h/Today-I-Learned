@@ -1,4 +1,7 @@
-# 学习 Nix
+---
+title: 学习 Nix
+---
+
 
 ## [nix flake](./flake.md)
 
