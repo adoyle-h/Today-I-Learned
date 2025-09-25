@@ -34,3 +34,8 @@ docker for mac 的配置在 `~/Library/Group\ Containers/group.com.docker/settin
 比如宿主机的代理程序暴露端口 7890，设置 `orb config set network_proxy http://localhost:7890`
 
 详见 https://docs.orbstack.dev/machines/network#proxies
+
+
+### OrbStack 目前存在的问题
+
+- [挂载的文件会丢失 birth time](https://github.com/orbstack/orbstack/issues/2064)

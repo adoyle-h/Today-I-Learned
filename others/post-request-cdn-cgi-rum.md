@@ -6,3 +6,5 @@
 https://community.cloudflare.com/t/strange-post-request-when-xhr-requests-are-made/270537/4
 
 https://blog.cloudflare.com/zh-cn/start-measuring-web-vitals-with-browser-insights/
+
+#cloudflare

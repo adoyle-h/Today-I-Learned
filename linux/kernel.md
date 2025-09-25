@@ -9,7 +9,7 @@
 
 ## 升级内核
 
-以 debian 系统为例。
+### 以 debian 系统为例
 
 ```sh
 # 升级前先做好快照和备份
@@ -36,3 +36,20 @@ dpkg --list | grep -e linux-image -e linux-headers
 # 用 apt remove 删除旧的内核文件，只保留最新的
 # 如果有删内核文件，还要再 update-grub 一遍
 ```
+
+### 以 arch linux 系统为例
+
+```sh
+# 更新系统和所有软件包
+sudo pacman -Syu
+# （可选）如果在上一步没有自动安装新内核，可以使用以下命令升级新内核
+sudo pacman -S linux
+# 安装新内核后，需要更新引导加载程序（如 GRUB）的配置文件，使其能够识别并启动新内核生成新的 GRUB 配置文件
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+# 重启系统来生效
+sudo reboot
+```
+
+## 升级内核且不重启
+
+虽然有 kpatch、livepatch、kgraft 等工具，但不推荐。
