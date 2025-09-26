@@ -1,5 +1,7 @@
 ---
 title: Ubnt EdgeRouter X (er-x) 刷 OpenWRT
+created: 2024-04-28T22:58:03+0800
+updated: 2024-04-28T22:58:03+0800
 ---
 
 

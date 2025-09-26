@@ -1,5 +1,7 @@
 ---
 title: adduser 与 useradd
+created: 2023-07-05T11:32:57+0800
+updated: 2023-07-05T11:32:57+0800
 ---
 
 

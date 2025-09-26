@@ -1,5 +1,7 @@
 ---
 title: Here Strings 与 Here Documents
+created: 2017-07-27T01:14:44+0800
+updated: 2017-07-27T01:14:44+0800
 ---
 
 

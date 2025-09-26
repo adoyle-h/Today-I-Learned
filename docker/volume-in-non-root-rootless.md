@@ -1,5 +1,7 @@
 ---
 title: 在 rootless 容器中，用非 root 用户无法操作 volume 里的文件
+created: 2023-07-05T11:32:57+0800
+updated: 2023-07-05T11:32:57+0800
 ---
 
 

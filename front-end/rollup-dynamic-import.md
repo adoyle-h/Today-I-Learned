@@ -1,5 +1,7 @@
 ---
 title: Rollup Dynamic Import
+created: 2019-04-24T00:15:26+0800
+updated: 2019-04-24T00:15:26+0800
 ---
 
 

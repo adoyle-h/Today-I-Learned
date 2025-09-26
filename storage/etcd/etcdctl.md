@@ -1,5 +1,7 @@
 ---
 title: etcdctl
+created: 2021-11-28T01:17:57+0800
+updated: 2021-11-28T01:17:57+0800
 ---
 
 [官方文档](https://github.com/etcd-io/etcd/tree/master/etcdctl)

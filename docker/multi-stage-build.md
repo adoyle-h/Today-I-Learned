@@ -1,5 +1,7 @@
 ---
 title: docker 多阶段构建 (Multi-Stage Build)
+created: 2023-02-08T18:12:13+0800
+updated: 2023-02-08T18:12:13+0800
 ---
 
 

@@ -1,5 +1,7 @@
 ---
 title: Toulmin Model
+created: 2019-10-08T00:35:28+0800
+updated: 2019-10-08T00:35:28+0800
 ---
 
 

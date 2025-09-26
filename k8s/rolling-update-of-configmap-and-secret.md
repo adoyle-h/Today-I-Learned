@@ -1,5 +1,7 @@
 ---
 title: configmap 和 secret 的滚动更新
+created: 2020-04-15T22:35:56+0800
+updated: 2020-04-15T22:35:56+0800
 ---
 
 

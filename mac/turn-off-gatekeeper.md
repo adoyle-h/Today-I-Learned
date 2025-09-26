@@ -1,5 +1,7 @@
 ---
 title: 关闭 Mac 的 Gatekeeper
+created: 2023-02-12T08:36:52+0800
+updated: 2023-02-12T08:36:52+0800
 ---
 
 

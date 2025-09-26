@@ -1,5 +1,7 @@
 ---
 title: editorconfig
+created: 2024-09-13T14:20:19+0800
+updated: 2024-09-13T14:20:19+0800
 ---
 
 

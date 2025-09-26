@@ -1,5 +1,7 @@
 ---
 title: 重定向 window.location 是异步的
+created: 2018-01-23T23:52:33+0800
+updated: 2018-01-23T23:52:33+0800
 ---
 
 

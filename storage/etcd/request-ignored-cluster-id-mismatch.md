@@ -1,5 +1,7 @@
 ---
 title: ETCD 报错 request ignored (cluster ID mismatch)
+created: 2021-11-28T01:17:57+0800
+updated: 2021-11-28T01:17:57+0800
 ---
 
 ## 原因

@@ -1,5 +1,7 @@
 ---
 title: Hostname in Linux
+created: 2018-09-29T00:06:41+0800
+updated: 2018-09-29T00:06:41+0800
 ---
 
 

@@ -1,5 +1,7 @@
 ---
 title: 在 MacOS 上使用 gvm install
+created: 2021-12-06T21:49:14+0800
+updated: 2021-12-06T21:49:14+0800
 ---
 
 

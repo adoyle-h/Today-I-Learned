@@ -1,5 +1,7 @@
 ---
 title: LVM (Logical Volume Manager)
+created: 2021-11-09T00:43:21+0800
+updated: 2021-11-09T00:43:21+0800
 ---
 
 

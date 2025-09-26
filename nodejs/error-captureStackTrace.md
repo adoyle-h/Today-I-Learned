@@ -1,5 +1,7 @@
 ---
 title: Error.captureStackTrace 的 stack 缺少 message 问题
+created: 2016-06-23T19:56:16+0800
+updated: 2016-06-23T19:56:16+0800
 ---
 
 

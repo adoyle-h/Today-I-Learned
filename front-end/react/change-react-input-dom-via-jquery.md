@@ -1,5 +1,7 @@
 ---
 title: 使用 jquery 改变 React 的 input DOM
+created: 2019-04-13T00:17:20+0800
+updated: 2019-04-13T00:17:20+0800
 ---
 
 由于 React 组件的状态都是存在内存里的，没法得到组件对象，就不能直接改变 state。

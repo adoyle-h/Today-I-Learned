@@ -1,5 +1,7 @@
 ---
 title: vim 插件教程
+created: 2016-12-02T21:06:04+0800
+updated: 2016-12-02T21:06:04+0800
 ---
 
 ## [EasyAlign](https://github.com/junegunn/vim-easy-align)

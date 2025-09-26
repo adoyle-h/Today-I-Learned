@@ -1,5 +1,7 @@
 ---
 title: OpenRC
+created: 2023-02-11T15:50:05+0800
+updated: 2023-02-11T15:50:05+0800
 tags: [init]
 ---
 

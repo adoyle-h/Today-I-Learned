@@ -1,5 +1,7 @@
 ---
 title: 在 arch linux 中升级 curl 碰到的问题
+created: 2024-06-04T15:36:29+0800
+updated: 2024-06-04T15:36:29+0800
 ---
 
 

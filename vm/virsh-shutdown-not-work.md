@@ -1,5 +1,7 @@
 ---
 title: virsh shutdown 命令无效
+created: 2021-11-14T00:09:49+0800
+updated: 2021-11-14T00:09:49+0800
 ---
 
 

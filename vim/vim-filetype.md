@@ -1,5 +1,7 @@
 ---
 title: VIM filetype
+created: 2021-12-31T18:24:44+0800
+updated: 2021-12-31T18:24:44+0800
 ---
 
 

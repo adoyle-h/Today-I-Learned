@@ -1,5 +1,7 @@
 ---
 title: virt-install Couldn't find kernel for install tree
+created: 2021-11-14T00:09:49+0800
+updated: 2021-11-14T00:09:49+0800
 ---
 
 

@@ -1,5 +1,7 @@
 ---
 title: 进入 docker for mac 的虚拟机
+created: 2016-11-13T00:00:01+0800
+updated: 2016-11-13T00:00:01+0800
 ---
 
 

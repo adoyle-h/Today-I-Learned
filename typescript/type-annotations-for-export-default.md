@@ -1,5 +1,7 @@
 ---
 title: export default 的类型注明
+created: 2019-03-13T00:31:05+0800
+updated: 2019-03-13T00:31:05+0800
 ---
 
 ## 问题

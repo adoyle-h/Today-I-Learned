@@ -1,5 +1,7 @@
 ---
 title: MongoDB 的丢数据问题
+created: 2021-11-28T01:17:57+0800
+updated: 2021-11-28T01:17:57+0800
 ---
 
 根据[这篇文章](http://www.mongoing.com/archives/1723)的解释，MongoDB 丢数据的问题，在 2.6 版本以后已经完全解决。现如今 Mongo 已出到 3.2 版本。剩余的就是效率与安全的权衡。

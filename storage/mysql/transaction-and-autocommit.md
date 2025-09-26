@@ -1,5 +1,7 @@
 ---
 title: Transaction 与 autocommit
+created: 2021-11-28T01:17:57+0800
+updated: 2021-11-28T01:17:57+0800
 ---
 
 有些 ORM 框架（比如 sequelize [这个坑][issue]），在 `start transaction` 后提供 `set autocommit = 0` 的操作。

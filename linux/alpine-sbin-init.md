@@ -1,5 +1,7 @@
 ---
 title: alpine 的 /sbin/init
+created: 2023-12-01T01:27:55+0800
+updated: 2023-12-01T01:27:55+0800
 ---
 
 

@@ -1,5 +1,7 @@
 ---
 title: 'ping: Operation not permitted'
+created: 2021-11-27T02:06:21+0800
+updated: 2021-11-27T02:06:21+0800
 ---
 
 

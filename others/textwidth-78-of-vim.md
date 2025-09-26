@@ -1,5 +1,7 @@
 ---
 title: vim textwidth=78 的约定
+created: 2016-05-01T20:56:32+0800
+updated: 2016-05-01T20:56:32+0800
 ---
 
 

@@ -1,5 +1,7 @@
 ---
 title: 文件描述符，open file table 与 inode
+created: 2016-04-05T00:13:49+0800
+updated: 2016-04-05T00:13:49+0800
 ---
 
 

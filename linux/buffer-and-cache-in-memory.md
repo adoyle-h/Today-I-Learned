@@ -1,5 +1,7 @@
 ---
 title: 内存的 buffer 和 cache
+created: 2022-02-06T23:12:29+0800
+updated: 2022-02-06T23:12:29+0800
 ---
 
 

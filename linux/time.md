@@ -1,5 +1,7 @@
 ---
 title: time 命令
+created: 2020-10-18T23:08:55+0800
+updated: 2020-10-18T23:08:55+0800
 ---
 
 <!-- editorconfig-checker-disable-file -->

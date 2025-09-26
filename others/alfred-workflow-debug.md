@@ -1,5 +1,7 @@
 ---
 title: Alfred Workflow debug 技巧
+created: 2018-01-27T22:37:56+0800
+updated: 2018-01-27T22:37:56+0800
 ---
 
 

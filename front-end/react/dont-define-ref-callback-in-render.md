@@ -1,5 +1,7 @@
 ---
 title: 不要在 render 里直接定义 ref callback
+created: 2016-09-27T23:27:11+0800
+updated: 2016-09-27T23:27:11+0800
 ---
 
 [示例代码](https://jsfiddle.net/ADoyle/3Lve6zw8/)

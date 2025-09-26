@@ -1,5 +1,7 @@
 ---
 title: ref callback 何时触发？
+created: 2016-09-29T22:12:59+0800
+updated: 2016-09-29T22:12:59+0800
 ---
 
 > Note that when the referenced component is unmounted and whenever the ref changes, the old ref will be called with null as an argument.

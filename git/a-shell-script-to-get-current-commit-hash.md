@@ -1,5 +1,7 @@
 ---
 title: 用 shell 脚本查询 git commit hash
+created: 2017-06-15T01:27:55+0800
+updated: 2017-06-15T01:27:55+0800
 ---
 
 

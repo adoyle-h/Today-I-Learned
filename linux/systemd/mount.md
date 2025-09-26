@@ -1,5 +1,7 @@
 ---
 title: systemd-mount
+created: 2024-03-29T03:03:53+0800
+updated: 2024-03-29T03:03:53+0800
 ---
 
 由 systemd 管理的文件系统挂载点。可以替代 /etc/fstab。

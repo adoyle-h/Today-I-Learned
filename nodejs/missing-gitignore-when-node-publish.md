@@ -1,5 +1,7 @@
 ---
 title: npm publish 不会包含 .gitignore 文件
+created: 2016-12-14T21:17:00+0800
+updated: 2016-12-14T21:17:00+0800
 ---
 
 

@@ -1,5 +1,7 @@
 ---
 title: Javascript Proxy
+created: 2018-01-29T23:13:11+0800
+updated: 2018-01-29T23:13:11+0800
 ---
 
 

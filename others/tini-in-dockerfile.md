@@ -1,5 +1,7 @@
 ---
 title: Dockerfile 里使用 tini
+created: 2024-04-26T05:20:24+0800
+updated: 2024-04-26T05:20:24+0800
 ---
 
 
