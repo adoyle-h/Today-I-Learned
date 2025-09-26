@@ -1,0 +1,18 @@
+{
+  "baseFontSize": 17,
+  "cssTheme": "Minimal",
+  "enabledCssSnippets": [
+    "canvas",
+    "better-bullet-points-in-edit-mode",
+    "bullet-point-relationship-lines",
+    "callout-spoiler",
+    "lists",
+    "Colored Sidebar Items",
+    "01-variables",
+    "table",
+    "footnotes",
+    "comments"
+  ],
+  "accentColor": "#286ac8",
+  "translucency": true
+}

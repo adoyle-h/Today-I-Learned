@@ -1,0 +1,301 @@
+/* @settings
+
+name: Numerals
+id: numerals-style
+settings:
+    - 
+        id: numerals-comment
+        title: In-line Comment Color
+        description: Color of the text in in-line comments. Default is `--code-comment`.
+        type: variable-themed-color
+        format: hex
+        opacity: false
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: numerals-heading
+        title: Heading / Comment Line Color
+        description: Color of lines with only a comment. Default is `--code-comment`.
+        type: variable-themed-color
+        format: hex
+        opacity: false
+        default-light: '#'
+        default-dark: '#'
+    - 
+        id: numerals-background
+        title: Block background color
+        description: Background color of the block. Default is same as code-block background. 
+        type: variable-themed-color
+        format: hex
+        opacity: false
+        default-light: '#'
+        default-dark: '#'         
+    - 
+        id: numerals-alternating-row-color
+        title: Alternating Row Color
+        description: Background color for the row when alternating rows (when enabled)
+        type: variable-themed-color
+        format: hex
+        opacity: false
+        default-light: '#'
+        default-dark: '#'            
+    - 
+        id: numerals-font
+        title: Numerals block font
+        description: Font used for Numerals block. Default is same as a code-block
+        type: variable-text
+        default: ''
+    - 
+        id: numerals-size
+        title: Numerals block font size
+        description: Accepts an CSS font-size value. Default is same as a code-block
+        type: variable-text
+        default: ''
+    - 
+        id: numerals-emitter-input-weight
+        title: Annotated Result Input Font Weight
+        description: Font weight for input which has result annotation (`=>`) (accepts CSS font-weight value). Default is `var(--normal-weight)`.
+        type: variable-text
+        default: ''        
+*/
+
+/***********************************/
+/******** Non-setting specific   **/
+
+body {
+    --numerals-comment: var(--code-comment);
+    --numerals-heading: var(--code-comment);
+    --numerals-background: var(--code-background);
+    --numerals-font: var(--font-monospace);
+    --numerals-size: var(--code-size);
+    --numerals-emitter-input-weight: var(--normal-weight);
+    --numerals-alternating-row-color: var(--background-modifier-hover);
+}
+
+.numerals-syntax .numerals-input span {
+    padding: 0 2px;
+}
+.numerals-syntax .numerals-input {
+    overflow-wrap: break-word;
+}
+.numerals-block .numerals-input .math-parenthesis,
+ .numerals-block .numerals-input .math-paranthesis {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.numerals-block .numerals-input .math-number {
+    color: var(--code-value);
+}
+.numerals-block .numerals-input .math-string {
+    color: var(--code-string);
+}
+.numerals-block .numerals-input .math-boolean {
+    color: var(--code-value);
+}
+.numerals-block .numerals-input .math-undefined {
+    color: var(--code-keyword);
+    display: none;
+}
+.numerals-block .numerals-input .math-function {
+    color: var(--code-function);
+}
+.numerals-block .numerals-input .math-parameter {
+    color: var(--code-property);
+}
+.numerals-block .numerals-input .math-property {
+    color: var(--code-property);
+}
+.numerals-block .numerals-input .math-symbol {
+    color: var(--code-property);
+}
+.numerals-block .numerals-input .math-operator {
+    color: var(--code-operator);
+}
+.numerals-block .numerals-input .math-parenthesis,
+ .numerals-block .numerals-input .math-paranthesis {
+    color: var(--code-punctuation);
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.numerals-block .numerals-input .math-separator {
+    color: var(--code-punctuation);
+}
+
+.numerals-block  {
+    color: var(--code-normal);
+    background-color: var(--numerals-background);
+    font-family: var(--numerals-font);    
+    font-size: var(--numerals-size);    
+    padding: var(--size-4-4);    
+} 
+
+.numerals-block .MathJax {
+    text-align: left !important;
+    margin-top: .5em !important;
+    margin-bottom: .5em !important;
+} 
+
+.numerals-input.numerals-empty {
+    font-weight: bold;
+    color: var(--numerals-heading);
+}
+
+.numerals-input .numerals-tex {
+    display:inline-block;
+}
+
+.numerals-input .numerals-inline-comment {
+    display: inline-block;
+    padding-left: 1em;
+    color: var(--numerals-comment);
+}
+.numerals-input .numerals-sum {
+    font-style: italic;
+}
+
+.numerals-alt-row-color .numerals-line:nth-child(even){
+    background-color: var(--numerals-alternating-row-color);
+}
+
+.numerals-alt-row-color .numerals-line .numerals-input{
+    padding-left: var(--size-2-2);
+}
+
+.numerals-alt-row-color .numerals-line .numerals-result {
+    padding-right: var(--size-2-2);        
+}
+
+.numerals-error-name {
+    color:var(--color-red);
+    padding-right: var(--size-4-2);
+}
+
+/**********************************/
+/* ** Right-aligned Style ** */
+
+/* TODO Switch to a diffent display layout so that result can be centered */
+
+.numerals-answer-right .numerals-line {
+    line-height: var(--line-height-tight);
+    clear: both;
+    overflow: auto;    
+}
+
+.numerals-answer-right .numerals-input {
+    float: left;
+}
+
+.numerals-answer-right .numerals-result {
+    float: right;
+    color: var(--code-punctuation);
+}
+
+/**********************************/
+/* ** Two Panes Style ** */
+/* this leads to filling all the way to the bottom of the container. probably bigger than desired */
+.numerals-panes .numerals-line {
+    line-height: var(--line-height-tight);
+ 
+}
+
+.numerals-panes .numerals-line {
+    display: flex;
+ }
+ 
+.numerals-panes .numerals-input {
+    width:75%;
+}
+
+.numerals-panes .numerals-result {
+    color: var(--code-punctuation);
+    background-color: var(--background-modifier-hover);
+    width: 25%;
+    text-align: left;
+    padding-left: var(--size-2-2);
+    border-left: 1px solid var(--background-modifier-border-focus);
+}
+
+/* .numerals-panes .MathJax {
+    float:left;
+} */
+
+
+/**********************************/
+/* ** Result on following line ** */
+
+.numerals-answer-below .numerals-line {
+    line-height: var(--line-height-tight);
+}
+
+.numerals-answer-below .numerals-line .numerals-result,
+.numerals-answer-below .numerals-line .numerals-input  {
+    display:block;
+}
+
+.numerals-answer-below .numerals-line .numerals-result {
+    color: var(--code-punctuation);
+    padding-left: var(--size-4-4);
+    padding-bottom: var(--size-2-1);
+}
+
+.numerals-answer-below .numerals-line .numerals-input {
+    padding-top: var(--size-2-1);
+}
+
+.numerals-answer-below .numerals-input.numerals-empty {
+    padding-top: var(--size-4-3);
+    padding-bottom: var(--size-4-1);
+}
+
+.numerals-answer-below .numerals-result.numerals-empty {
+    display: none;
+}
+
+/* Don't show text in .numerals-result that and aren't descendents of .numerals-emitter */
+.numerals-emitters-present:not(.numerals-hide-non-emitters) .numerals-result:not(.numerals-emitter .numerals-result) {
+    color: var(--code-comment);
+}
+
+.numerals-emitter .numerals-input {
+    font-weight: var(--numerals-emitter-input-weight)
+}
+
+.numerals-emitters-present.numerals-hide-non-emitters .numerals-result:not(.numerals-emitter .numerals-result) {
+    color: transparent;
+}
+
+
+/**********************************/
+/* ** Inline Style ** */
+/* TODO Switch to a diffent display layout so that result can be centered */
+
+.numerals-answer-right .numerals-line {
+    line-height: var(--line-height-tight);
+    /* clear: both; */
+    /* overflow: auto;     */
+}
+
+.numerals-answer-inline .numerals-input {
+    display:inline-block;
+    padding-right: 20px;
+    /* float: left; */
+}
+
+.numerals-answer-inline .numerals-result {
+    /* float: right; */
+    color: var(--code-punctuation);
+    display:inline-block;
+}
+
+
+/***************************/
+/* ** Suggestion Style ** */
+
+/* .numerals-suggestion-icon {
+  --icon-size: 1em;
+} */
+.numerals-suggestion {
+    font-family: var(--numerals-font);
+    font-size: var(--numerals-size);
+}

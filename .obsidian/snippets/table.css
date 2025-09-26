@@ -1,0 +1,10 @@
+.markdown-preview-view table thead th {
+    background-color: #303030;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.markdown-preview-view table tbody td {
+    padding-left: 16px;
+    padding-right: 16px;
+}

@@ -3,6 +3,19 @@ index.md
 /makefile-utils/*
 !/makefile-utils/*.mk
 
+# 忽略 Obsidian 的本地缓存与布局
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/graph.json
+.obsidian/app.json
+
+# 插件里的临时数据（只保留插件设置）
+.obsidian/plugins/*/data.json
+
+# 如果不想同步主题或插件，可以放开注释
+# .obsidian/themes/
+# .obsidian/plugins/
+
 ### Jekyll
 _site/
 .sass-cache/

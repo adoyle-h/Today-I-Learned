@@ -1,0 +1,11 @@
+{
+  "types": {
+    "aliases": "aliases",
+    "cssclasses": "multitext",
+    "tags": "tags",
+    "created": "datetime",
+    "updated": "datetime",
+    "标签": "multitext",
+    "价格": "text"
+  }
+}

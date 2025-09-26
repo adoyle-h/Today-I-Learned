@@ -1,0 +1,26 @@
+{
+  "name": "Market Proxy",
+  "version": "2.0.0",
+  "description": "Provide network proxy functionality for the plugin and theme markets, aiming to solve the issue of inaccessible plugin and theme markets for users in mainland China. Supports both PC and mobile devices. 为插件市场和主题市场提供网络代理功能，旨在解决中国大陆用户插件市场和主题市场无法使用的问题,支持PC和移动端。",
+  "main": "main.js",
+  "scripts": {
+    "dev": "node esbuild.config.mjs",
+    "devcss": "sass --watch src/styles.scss styles.css",
+    "build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@typescript-eslint/eslint-plugin": "^8.18.1",
+    "@typescript-eslint/parser": "^8.18.1",
+    "builtin-modules": "^4.0.0",
+    "esbuild": "^0.24.0",
+    "obsidian": "^1.7.2",
+    "tslib": "^2.8.1",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {},
+  "packageManager": "pnpm@9.12.3+sha512.cce0f9de9c5a7c95bef944169cc5dfe8741abfb145078c0d508b868056848a87c81e626246cb60967cbd7fd29a6c062ef73ff840d96b3c86c40ac92cf4a813ee"
+}

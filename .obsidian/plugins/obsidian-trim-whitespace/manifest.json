@@ -1,0 +1,10 @@
+{
+	"id": "obsidian-trim-whitespace",
+	"name": "Trim Whitespace",
+	"version": "0.3.0",
+	"minAppVersion": "0.14.15",
+	"description": "Trims unnecessary whitespace from your Obsidian documents",
+	"author": "zlovatt",
+	"authorUrl": "https://github.com/zlovatt",
+	"isDesktopOnly": false
+}

@@ -1,0 +1,11 @@
+{
+	"id": "canvas-css-class",
+	"name": "Canvas CSS class",
+	"version": "2.5.0",
+	"minAppVersion": "1.1.0",
+	"description": "Add a CSS class to the canvas, but also other attributes.",
+	"author": "Mara-Li",
+	"authorUrl": "https://github.com/Mara-Li",
+	"fundingUrl": "https://ko-fi.com/Mara__Li",
+	"isDesktopOnly": false
+}

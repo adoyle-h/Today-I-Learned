@@ -1,0 +1,10 @@
+{
+    "id": "slash-commander",
+    "name": "Slash Commander",
+    "version": "0.3.7",
+    "minAppVersion": "1.8.0",
+    "description": "Customize the slash command list, assign each command an icon.",
+    "author": "alephpiece",
+    "authorUrl": "https://github.com/alephpiece",
+    "isDesktopOnly": false
+}

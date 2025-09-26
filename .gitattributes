@@ -1,0 +1,12 @@
+# 默认所有文本文件使用 LF
+* text=auto eol=lf
+
+# 指定语言文件也强制 LF
+# *.sh text eol=lf
+# *.py text eol=lf
+# *.md text eol=lf
+
+# 二进制文件不做转换
+*.png binary
+*.jpg binary
+*.pdf binary

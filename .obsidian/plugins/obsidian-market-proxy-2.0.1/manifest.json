@@ -1,0 +1,11 @@
+{
+  "id": "market-proxy",
+  "name": "Market Proxy",
+  "version": "2.0.1",
+  "minAppVersion": "1.6.5",
+  "description": "Provide network proxy functionality for the plugin and theme markets, aiming to solve the issue of inaccessible plugin and theme markets for users in mainland China. Supports both PC and mobile devices. 为插件市场和主题市场提供网络代理功能，旨在解决中国大陆用户插件市场和主题市场无法使用的问题,支持PC和移动端。",
+  "author": "HaierKeys",
+  "authorUrl": "https://blog.diybeta.com",
+  "isDesktopOnly": false,
+  "fundingUrl": "https://ko-fi.com/haierkeys"
+}

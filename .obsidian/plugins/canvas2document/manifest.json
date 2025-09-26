@@ -1,0 +1,10 @@
+{
+	"id": "canvas2document",
+	"name": "Canvas2Document",
+	"version": "1.3.1",
+	"minAppVersion": "1.5.12",
+	"description": "Convert a complete Canvas to a long form document, integrating all cards, notes, images and other media content into a single markdown file.",
+	"author": "slnsys",
+	"authorUrl": "https://github.com/slnsys",
+	"isDesktopOnly": true
+}
