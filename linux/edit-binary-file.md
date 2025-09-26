@@ -5,9 +5,7 @@ title: 编辑二进制文件
 
 ```sh
 vim -b <file>
----
-title: In vim ex mode
----
+# In vim ex mode
 
 # binary => hex
 :%!xxd

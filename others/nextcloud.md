@@ -14,10 +14,7 @@ title: nextcloud
 如果这时候显示 `"smbclient" 未安装。无法挂载 "SMB / CIFS", "SMB / CIFS 使用 OC 登录信息"`，需要手动安装 smbclient。
 
 ```sh
----
-title: 安装 libsmbclient.so 文件
----
-
+# 安装 libsmbclient.so 文件
 apt install libsmbclient-devel -y
 # nextcloud 是 php 写的，因此 php 也要安装 smb 客户端插件
 pecl install smbclient

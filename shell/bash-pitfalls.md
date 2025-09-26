@@ -89,10 +89,7 @@ load ./a.sh
 ```
 chmod +x ./b.sh
 ./b.sh hello
----
-title: 输出
----
-
+# 输出
 # hello
 # ./a.sh
 ```

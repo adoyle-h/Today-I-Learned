@@ -37,10 +37,7 @@ https://arthurchiao.art/blog/cilium-life-of-a-packet-pod-to-service/
 ### 复现问题
 
 ```sh
----
-title: 查询得到 POD ID
----
-
+# 查询得到 POD ID
 $ sudo crictl ps --name coredns
 CONTAINER           IMAGE               CREATED             STATE               NAME                ATTEMPT             POD ID
 5a9e848f25468       8d147537fb7d1       3 hours ago         Running             coredns             0                   f7c44073c6765

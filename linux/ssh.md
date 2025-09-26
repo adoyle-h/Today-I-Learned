@@ -9,10 +9,8 @@ title: SSH
 
 使用 `Include` 关键词来加载其他 ssh 配置文件，这样方便分开管理。
 
-```
----
-title: ~/.ssh/config
----
+```conf
+# ~/.ssh/config
 
 Include config.d/*
 ```

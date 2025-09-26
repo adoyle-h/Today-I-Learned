@@ -10,10 +10,7 @@ grep 通常用来过滤匹配的字符串，加 `-v` 参数能删除匹配的字
 ## grep 不列出自身进程
 
 ```sh
----
-title: 通常 grep 会把自身进程也给列出来
----
-
+# 通常 grep 会把自身进程也给列出来
 $ ps -ef | grep echo
 501 93992 92583   0 12:29上午 ttys007    0:00.00 grep --color=auto echo
 

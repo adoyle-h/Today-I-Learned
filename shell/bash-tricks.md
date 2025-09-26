@@ -113,10 +113,8 @@ https://stackoverflow.com/a/30362832/4622308
 
 ```sh
 path=$(pwd)      # 例如 /a/b/c
----
-title: 移除掉从末尾匹配到 `/*` 的部分
----
 
+# 移除掉从末尾匹配到 `/*` 的部分
 echo ${path%/*}  # => /a/b
 ```
 

@@ -21,10 +21,7 @@ Linux 内核 2.4 版本之后，buffer cache 被合并到了 page cache，因此
 ## 清空 cache
 
 ```sh
----
-title: 清空 page cache
----
-
+# 清空 page cache
 sudo sh -c 'echo 1 > /proc/sys/vm/drop_caches'
 
 # 清空可回收的 slab objects (包括 dentries and inodes)

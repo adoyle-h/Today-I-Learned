@@ -87,10 +87,7 @@ WORKDIR /app
 
 SHELL ["/bin/bash", "-c"]
 
----
-title: See https://github.com/pyenv/pyenv/wiki/Common-build-problems
----
-
+# See https://github.com/pyenv/pyenv/wiki/Common-build-problems
 RUN yum install -y @development \
       zlib-devel bzip2 bzip2-devel readline-devel \
       sqlite sqlite-devel openssl-devel xz xz-devel libffi-devel findutils

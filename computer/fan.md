@@ -11,10 +11,7 @@ title: 风扇
 pwmconfig 生成 /etc/fancontrol 文件，执行 `systemctl start fancontrol` 生效。
 
 ```sh
----
-title: 查看是否检测到风扇
----
-
+# 查看是否检测到风扇
 $ sensors
 
 nct6779-isa-0a20

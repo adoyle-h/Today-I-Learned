@@ -48,10 +48,7 @@ https://docs.docker.com/config/formatting/
 ## 查看已退出的容器里的文件
 
 ```sh
----
-title: 先将容器导出成镜像
----
-
+# 先将容器导出成镜像
 docker commit <container> <image>
 # 再从镜像启动新容器
 docker run --entrypoint sh --rm -it <image>

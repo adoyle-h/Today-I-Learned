@@ -24,10 +24,7 @@ libvirt 是目前使用最为广泛的对 KVM 虚拟机进行管理的工具和 
 查看系统是否开启硬件虚拟化。
 
 ```sh
----
-title: 对于 Intel CPU 可用命令判断
----
-
+# 对于 Intel CPU 可用命令判断
 grep vmx /proc/cpuinfo
 
 # 对于 AMD CPU 可用命令判断

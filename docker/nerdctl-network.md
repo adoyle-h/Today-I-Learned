@@ -97,10 +97,8 @@ $ ls /var/lib/nerdctl/1935db59/etchosts/default/3c41e9ff441d6282bed1d170c3d4abde
 hosts  meta.json
 
 $ cat /var/lib/nerdctl/1935db59/etchosts/default/3c41e9ff441d6282bed1d170c3d4abde79e563a17c658b23f75501662cff5bf5/hosts
----
-title: <nerdctl>
----
 
+# <nerdctl>
 127.0.0.1          localhost localhost.localdomain
 :1                 localhost localhost.localdomain
 10.4.10.15         server server.k3s_default k3s_server_1 k3s_server_1.k3s_default

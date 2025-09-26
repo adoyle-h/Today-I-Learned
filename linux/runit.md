@@ -27,10 +27,7 @@ tags: [init]
 #### 创建一个 sshd service
 
 ```sh
----
-title: 创建 sshd service 进程
----
-
+# 创建 sshd service 进程
 $ mkdir -p /usr/var/service/sshd
 $ cat <<EOF > /usr/var/service/sshd/run
 #!/usr/bin/sh

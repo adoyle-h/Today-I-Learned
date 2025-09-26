@@ -13,10 +13,7 @@ title: virsh shutdown 命令无效
 ## 解决方案
 
 ```sh
----
-title: 安装 acpid 服务
----
-
+# 安装 acpid 服务
 apt install acpid
 
 # 确认服务已启动

@@ -13,10 +13,7 @@ title: 网关 gateway
 使用 ip route 命令的修改在主机重启或者网络服务重启后，就会重置。
 
 ```sh
----
-title: `onlink` 假设下一跳地址是能够在链路层连通的，即使实际不连通也没关系，还是会发布 ARP 之类的请求。
----
-
+# `onlink` 假设下一跳地址是能够在链路层连通的，即使实际不连通也没关系，还是会发布 ARP 之类的请求。
 $ ip route add default via 192.168.1.1 dev enp1s0 onlink
 # 如果没有下面这条规则，外部请求会收不到响应，导致 HTTP 请求 Connection reset by peer
 # `src 192.168.1.101` 表示发送给下一跳的包，IP 源改成 `192.168.1.101` 这个地址。

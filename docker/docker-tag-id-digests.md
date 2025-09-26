@@ -65,9 +65,7 @@ docker pull DIGEST 时，导出的镜像的 name 和 tag 都是 `<none>`。
         "Container": "0a80155a31551fcc1a36fccbbda79fcd3f0b1c7d270653d00310e6e2217c57e6",
         "ContainerConfig": {
 
----
-title: 分别根据 SHA、Tag、Id 导出镜像
----
+# 分别根据 SHA、Tag、Id 导出镜像
 
 > docker save alpine@sha256:72c42ed48c3a2db31b7dafe17d275b634664a708d901ec9fd57b1529280f01fb -o image-sha
 > docker save alpine:latest -o image-tag

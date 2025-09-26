@@ -18,10 +18,7 @@ title: Docker Run With Namespace
 还可以指定别的容器的，
 
 ```sh
----
-title: 启动一个 redis 容器
----
-
+# 启动一个 redis 容器
 docker run -d --rm --name redis redis
 
 # 监控 redis 容器的 top 信息

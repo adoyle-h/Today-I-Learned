@@ -53,10 +53,7 @@ k3s-server-conf.yaml 文件内容：
 
 ```yaml
 node-name: m1
----
-title: docker: true
----
-
+# docker: true
 container-runtime-endpoint: unix:///run/containerd/containerd.sock
 pause-image: rancher/pause:3.6
 

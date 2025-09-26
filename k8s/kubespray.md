@@ -24,10 +24,7 @@ https://github.com/kubernetes-sigs/kubespray
 因此 Kubespray 的 Vagrantfile 做了一点处理，生成一个软连接，把 `.vagrant/provisioners/ansible/inventory` 指向到 `kubespray/inventory/test_local/`，以此来复用 kubespray 里的 inventory。（这里的 `test_local` 是我的 inventory 目录）
 
 ```ruby
----
-title: if $inventory is not set, try to use example
----
-
+# if $inventory is not set, try to use example
 $inventory = "inventory/sample" if ! $inventory
 $inventory = File.absolute_path($inventory, File.dirname(__FILE__))
 

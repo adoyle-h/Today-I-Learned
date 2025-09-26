@@ -28,10 +28,7 @@ rmdir /media/cdrom1
 如果安装失败 VBoxLinuxAdditions.run，屏幕打印出 `Kernel headers not found for target kernel`，很可能是 kernel-headers 不匹配。因为 VBoxGuestAdditions 依赖 kernel-devel 和 kernel-headers，即使主机上装了，也不一定版本匹配。所以先确认版本。
 
 ```sh
----
-title: 确认本机 kernel 版本
----
-
+# 确认本机 kernel 版本
 uname -r
 # 确认 kernel-devel 的 rpm 包 (我用的是 CentOS，其他系统对应自己找)
 rpm -qa | grep kernel-devel

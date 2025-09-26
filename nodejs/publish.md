@@ -6,10 +6,7 @@ title: npm 发包
 ## npm publish
 
 ```sh
----
-title: 发布到 latest tag
----
-
+# 发布到 latest tag
 npm publish
 
 # 发布到指定 tag

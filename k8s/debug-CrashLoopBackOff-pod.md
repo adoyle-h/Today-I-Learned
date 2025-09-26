@@ -11,10 +11,7 @@ CrashLoopBackOff 状态，之前的容器就已退出并删除了，难以复现
 POD=pod_name
 kubectl get pod $POD -oyaml > debug-pod.yaml
 vim debug-pod.yaml
----
-title: 修改 container 加上 command: [tail, -f, /dev/null]，让它什么都不做
----
-
+# 修改 container 加上 command: [tail, -f, /dev/null]，让它什么都不做
 # 修改 pod name
 # 删除其他不必要的参数
 kubectl apply -f debug-pod.yaml

@@ -19,9 +19,7 @@ title: Helm
 支持本地文件的引用
 
 ```yaml
----
-title: requirements.yaml
----
+# requirements.yaml
 
 dependencies:
 - name: nginx

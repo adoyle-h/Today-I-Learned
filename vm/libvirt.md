@@ -28,10 +28,7 @@ virsh detach-device $domain ./vdc.xml --persistent
 ```sh
 domain=
 
----
-title: 把 cdrom 对应的那段 XML 复制到 cdrom.xml 文件里。
----
-
+# 把 cdrom 对应的那段 XML 复制到 cdrom.xml 文件里。
 virsh dumpxml $domain
 # cdrom 只能在虚拟机关机时退出，因为它说不支持热拔插: This type of device cannot be hot unplugged
 virsh shutdown $domain
