@@ -1,5 +1,7 @@
 ---
 title: 构建多架构镜像
+created: 2016-03-03T23:27:52+0800
+updated: 2016-03-03T23:27:52+0800
 tags: [docker, build, buildx]
 ---
 

@@ -1,5 +1,7 @@
 ---
 title: mac 里的 tmux 内无法用 sublime 打开文件
+created: 2016-03-03T23:27:52+0800
+updated: 2016-03-03T23:27:52+0800
 ---
 
 

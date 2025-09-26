@@ -1,5 +1,7 @@
 ---
 title: permission denied for schema public
+created: 2016-03-03T23:27:52+0800
+updated: 2016-03-03T23:27:52+0800
 ---
 
 当 Postgres 从 14 升级到 15 后，大概率会遇到这个错误。这是因为在 PG 15 中，只要不是超级用户或者 pg_database_owner 中指定的用户，都不能在默认的 schema public 中创建对象。这是 PG 为了督促用户控制权限的精细度，提高安全性。

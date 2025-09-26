@@ -1,5 +1,7 @@
 ---
 title: EventEmitter 需要注意的三个地方
+created: 2016-03-03T23:27:52+0800
+updated: 2016-03-03T23:27:52+0800
 ---
 
 ## eventEmitter.emit 是同步回调的！

@@ -1,5 +1,7 @@
 ---
 title: Compound Components
+created: 2016-03-03T23:27:52+0800
+updated: 2016-03-03T23:27:52+0800
 ---
 
 Compound Components 的开发模式很不错，适合于构建复杂层次的组件类库。主要是由于 React Context API 的出现组件的结构更方便了。

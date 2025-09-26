@@ -1,5 +1,7 @@
 ---
 title: 使用 browserify 和 uglifyjs
+created: 2016-03-03T23:27:52+0800
+updated: 2016-03-03T23:27:52+0800
 ---
 
 ## 推荐使用 browserify 编译成 UMD 格式

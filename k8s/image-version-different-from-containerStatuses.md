@@ -1,5 +1,7 @@
 ---
 title: Pod containerStatuses 的镜像版本与 Pod 指定版本不同
+created: 2016-03-03T23:27:52+0800
+updated: 2016-03-03T23:27:52+0800
 ---
 
 

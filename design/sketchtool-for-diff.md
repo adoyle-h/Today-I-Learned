@@ -1,5 +1,7 @@
 ---
 title: 使用 sketchtool 操作 sketch 文档：diff 以及其他功能
+created: 2016-03-03T23:27:52+0800
+updated: 2016-03-03T23:27:52+0800
 ---
 
 

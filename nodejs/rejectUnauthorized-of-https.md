@@ -1,5 +1,7 @@
 ---
 title: 调整 rejectUnauthorized 选项来容许 https 证书无效
+created: 2016-03-03T23:27:52+0800
+updated: 2016-03-03T23:27:52+0800
 ---
 
 
