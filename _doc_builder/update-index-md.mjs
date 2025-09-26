@@ -17,14 +17,19 @@ const toc = [];
 async function createIndexForEachFolder() {
     for (const key in categoryNameMap) {
         const name = categoryNameMap[key];
+        let c2 = ''
+        const p2 = absPath(`${key}/README.md`)
         try {
-            const s = await stat(absPath(key))
-            const p2 = absPath(`${key}/README.md`)
             const s2 = await stat(p2)
-            let c2 = ''
             if (s2.isFile()) {
                 c2 = await readFile(p2)
             }
+        } catch (err) {
+            // ignore err
+        }
+
+        try {
+            const s = await stat(absPath(key))
 
             if (s.isDirectory()) {
                 const content = `---
@@ -38,8 +43,7 @@ ${c2}
                 console.log(`Created file: ${path}`)
             }
         } catch (err) {
-            // ignore err
-            // console.log(err.stack)
+            console.log(err.stack)
         }
     }
 }

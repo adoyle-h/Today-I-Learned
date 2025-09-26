@@ -25,10 +25,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
 
       - name: Set up Docker Compose
         uses: docker/setup-compose-action@v1
@@ -50,7 +49,7 @@ jobs:
       - run: make index-update
 
       - name: Checkout quartz-deploy
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: adoyle-h/quartz-deploy
           path: ./quartz-deploy
@@ -58,11 +57,14 @@ jobs:
       - name: Build with quartz-deploy
         run: ./quartz-deploy/quartz-deploy build . 6
 
+      - run: ls -al ./ && mv .public public
+      - run: ls -al ./public
+
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: public-${{ github.sha }}
-          path: .public
+          path: public
           retention-days: 29 # 4 weeks
 
   # Deployment job
@@ -71,7 +73,6 @@ jobs:
     needs: build
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Download artifact
         uses: actions/download-artifact@v5
@@ -84,5 +85,5 @@ jobs:
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          environment: production
-          workingDirectory: ./public
+          command: pages deploy ./public --project-name til --branch production
+          wranglerVersion: "4.40.1"

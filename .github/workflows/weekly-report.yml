@@ -2,7 +2,7 @@ name: Create a report on Discussion weekly
 
 on:
   schedule:
-    - cron: 0 0 * * 1  # At 00:00 (UTC-0) on every monday.
+    - cron: 0 0 * * 1 # At 00:00 (UTC-0) on every monday.
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -12,11 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: date
-        run:
-          echo "DATE=$(date +'%Y-%m-%d')" >> "$GITHUB_OUTPUT"
+        run: echo "DATE=$(date +'%Y-%m-%d')" >> "$GITHUB_OUTPUT"
 
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 30
 

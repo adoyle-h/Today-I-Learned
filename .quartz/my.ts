@@ -3,7 +3,7 @@ export const config: Record<string, any> = {
   pageTitleSuffix: " - 今天我学了什么",
   baseUrl: "til.adoyle.me",
   description: 'ADoyle 的碎片化知识笔记。\n博观而约取，厚积而薄发。',
-  ignorePatterns: ['.*', '_doc_builder', '_docs', 'quartz-deploy', 'wrangler.toml', 'node_modules', '**/README.md', '404.md'],
+  ignorePatterns: ['.*', '*.yml', '*.mjs', '*.json', '*.toml', 'Makefile', '_doc_builder', '_docs', 'quartz-deploy', 'node_modules', '**/README.md', '404.md'],
   analytics: {
     provider: 'umami',
     host: 'https://u.adoyle.me',
