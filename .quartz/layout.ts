@@ -17,6 +17,7 @@ export const sharedPageComponents: SharedLayout = {
 }
 
 const breadcrumbs = Component.Breadcrumbs(layout.breadcrumbs)
+const onlyHomepageAndFolder = (page) => page.fileData.slug.endsWith('/index') || (page.fileData.slug === 'index')
 
 const explorer = Component.Explorer({
   filterFn: (node: FileTrieNode) => {
@@ -57,7 +58,7 @@ const recnetNotes = Component.ConditionalRender({
     ...layout.recnetNotes,
   }),
   // only show recent notes in homepage and folder
-  condition: layout.recnetNotesCondition || ((page) => page.fileData.slug.endsWith('index')),
+  condition: layout.recnetNotesCondition || onlyHomepageAndFolder,
 })
 
 // components for pages that display a single page (e.g. a single note)
@@ -70,7 +71,8 @@ export const defaultContentPageLayout: PageLayout = {
     Component.ArticleTitle(),
     Component.ConditionalRender({
       component: Component.ContentMeta(),
-      condition: (page) => page.fileData.slug !== "index",
+      // not show meta in homepage and folder
+      condition: (page) => page.fileData.slug !== 'index',
     }),
     Component.TagList(),
     Component.MetaCard(),
@@ -117,7 +119,7 @@ export const defaultListPageLayout: PageLayout = {
     Component.ArticleTitle(),
     Component.ConditionalRender({
       component: Component.ContentMeta(),
-      condition: (page) => page.fileData.slug !== "index",
+      condition: (page) => !page.fileData.slug.endsWith('/index'),
     }),
   ],
   left: [
