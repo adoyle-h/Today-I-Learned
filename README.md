@@ -374,8 +374,10 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [ET X08 鼠标](hardware/mouse-et-x08.md)
 - [网件 R6900 刷梅林固件](hardware/netgear-R6900-asuswrt-merlin.md)
 - [网络交换机](hardware/network-switch.md)
+- [玩客云与 OneKVM](hardware/onecloud-with-onekvm.md)
 - [无线电波 (Radio Waves)](hardware/radio-waves.md)
 - [USB](hardware/usb.md)
+- [网心云 OES](hardware/wxy-oes.md)
 
 [`⬆ 返回目录`](#toc)
 
@@ -478,6 +480,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [configfs](linux/configfs.md)
 - [连接 tty](linux/connect-tty.md)
 - [conntrack](linux/conntrack.md)
+- [console 与 framebuffer](linux/conosle-and-framebuffer.md)
 - [上下文切换](linux/context-switch.md)
 - [CPU](linux/cpu.md)
 - [判断文件编码](linux/detect-encoding-of-file.md)
@@ -551,6 +554,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [netstat 与 ss](linux/netstat-and-ss.md)
 - [网络接口配置 (ifcfg)](linux/network-interface-configuration.md)
 - [网络配置工具](linux/network-manage-tools.md)
+- [nf_conntrack_helper](linux/nf_conntrack_helper.md)
 - [nftables](linux/nftables.md)
 - [硬盘空间占满问题](linux/no-space-left-on-device.md)
 - [nsenter](linux/nsenter.md)
@@ -831,6 +835,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 - [jellyfin 中文字体](others/jellyfin-chinese-font.md)
 - [Jinja2](others/jinja2.md)
 - [Language Server Protocol](others/language-server-protocol.md)
+- [lazygit](others/lazygit.md)
 - [Makefile](others/makefile.md)
 - [箴言](others/maxim.md)
 - [修改进程的内存数据](others/memory-cheat.md)
@@ -1006,6 +1011,7 @@ Read the [NOTICE](./NOTICE) file distributed with this work for additional infor
 ### Postgres
 
 - [permission denied for schema public](storage/postgres/permission-denied-for-schema-public.md)
+- [postgres 与 rootless docker](storage/postgres/postgres-with-rootless-docker.md)
 
 [`⬆ 返回目录`](#toc)
 

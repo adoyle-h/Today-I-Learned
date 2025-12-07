@@ -1,7 +1,7 @@
 ---
 title: 运维小技巧 - 硬件
 created: 2021-11-03T03:58:59+0800
-updated: 2021-11-03T03:58:59+0800
+updated: 2025-12-05T22:40:35+0800
 ---
 
 ## 关机/重启
@@ -121,15 +121,27 @@ Flags:               fpu vme ...
 
 ### 硬盘待机
 
-- `hdparm -C /dev/sda` 查看状态
+- `hdparm -I /dev/sda` 查看详细信息
+- `hdparm -C /dev/sda` 查看待机状态。`active/idle` 表示运行中，`standby` 表示待机。
 - `hdparm -y /dev/sda` 待机 (standby/spindown)，降低硬盘转速
 - `hdparm -Y /dev/sda` 睡眠 (sleep)，完全停止硬盘转动
 - `fdisk -l /dev/sda` 唤醒硬盘
 
-- `hdparm -B` 设置待机转速
-- `hdparm -S` 设置空闲多少时间后待机
+- `hdparm -B` 设置硬盘的 APM（Advanced Power Management，高级电源管理）等级。
+  - 这是 HDD 固件本身的电源管理策略，会影响是否容易休眠、噪音、性能、头部停靠策略等。
+  - APM 级别范围为 1–255，但不是线性关系。
+    | 数值范围    | 硬盘行为   | 典型效果                          |
+    | ------- | ------ | ----------------------------- |
+    | 1–127   | 省电优先   | 更容易休眠，更快停转，旋转速度可能降低，噪音低，但性能下降 |
+    | 128–254 | 性能优先   | 不易休眠，读写更积极，噪音略高，性能更稳定         |
+    | 255     | 关闭 APM | 不会自动休眠，始终全速运行                 |
 
-对于西部数码 (Western Digital) 的机械硬盘，hdparm `-B` 和 `-S` 选项可能无效。可以试试 [https://github.com/adelolmo/hd-idle](https://github.com/adelolmo/hd-idle)。
+
+- `hdparm -S` 设置空闲多少时间后待机
+  - 1–240 表示每单位 5 秒。120 = 10 分钟。240 = 20 分钟。 241–246 表示 30–960 分钟。
+  - 255：关闭 APM
+
+对于 hdparm `-B` 和 `-S` 选项无效的情况。可以试试 [https://github.com/adelolmo/hd-idle](https://github.com/adelolmo/hd-idle)。
 
 ## 挂载
 
