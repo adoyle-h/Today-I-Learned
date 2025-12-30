@@ -1,7 +1,7 @@
 ---
 title: docker 代理
 created: 2024-06-24T05:49:47+0800
-updated: 2024-06-24T05:49:47+0800
+updated: 2025-12-26T00:50:13+0800
 ---
 
 
@@ -68,6 +68,8 @@ docker [registry-mirror](https://docs.docker.com/docker-hub/image-library/mirror
  }
 }
 ```
+
+该配置会导致每个新容器会自动注入 HTTP_PROXY、HTTPS_PROXY、NO_PROXY 这三个变量。这种用法可能对容器内的服务造成影响，不建议使用。
 
 ## docker push, docker login 失败
 
